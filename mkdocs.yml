@@ -99,38 +99,38 @@ nav:
         - 4.3.4. Biometric Identification (생체 정보 예측 - 나이, 성별 등): ecg/4-ecg-데이터셋의-정제-및-활용-방안/4-3-downstream-task/4-3-4-biometric-identification-생체-정보-예측-나.md
     - 5. 데이터셋별 상세 소개:
       - ecg/5-데이터셋별-상세-소개/index.md
-      - Apnea Dataset: ecg/apnea-dataset.md
-      - BIDMC Congestive Heart Failure Database: ecg/bidmc-congestive-heart-failure-database.md
-      - Cardiologist: ecg/cardiologist.md
-      - Chapman Shaoxing: ecg/chapman-shaoxing.md
-      - CODE 15% ECG Dataset: ecg/code-15-ecg-dataset.md
-      - ECG-ID Database: ecg/ecg-id-database.md
-      - ECG5000 Dataset: ecg/ecg5000-dataset.md
-      - ECGFM-KED Clinical Dataset: ecg/ecgfm-ked-clinical-dataset.md
-      - European ST-T Database: ecg/european-st-t-database.md
-      - Fantasia: ecg/fantasia.md
-      - IKEM ECG Dataset: ecg/ikem-ecg-dataset.md
-      - Long-Term AF Database: ecg/long-term-af-database.md
-      - Long-term ST Database: ecg/long-term-st-database.md
-      - LUDB: ecg/ludb.md
-      - MIMIC-IV-ECG: ecg/mimic-iv-ecg.md
+      - PhysioNet 2017: ecg/physionet-2017.md
       - MIT-BIH Arrythmia database: ecg/mit-bih-arrythmia-database.md
       - MIT-BIH Atrial Fibrillation: ecg/mit-bih-atrial-fibrillation.md
-      - MIT-BIH Long-Term ECG Database: ecg/mit-bih-long-term-ecg-database.md
-      - MIT-BIH Malignant Ventricular Ectopy Database: ecg/mit-bih-malignant-ventricular-ectopy-database.md
-      - MIT-BIH Noise Stress Test Database: ecg/mit-bih-noise-stress-test-database.md
-      - MIT-BIH Normal Sinus Rhythm Database: ecg/mit-bih-normal-sinus-rhythm-database.md
-      - MIT-BIH ST Change Database: ecg/mit-bih-st-change-database.md
       - MIT-BIH supraventricular arrhythmia database: ecg/mit-bih-supraventricular-arrhythmia-database.md
+      - MIT-BIH Noise Stress Test Database: ecg/mit-bih-noise-stress-test-database.md
+      - MIT-BIH Malignant Ventricular Ectopy Database: ecg/mit-bih-malignant-ventricular-ectopy-database.md
+      - MIT-BIH ST Change Database: ecg/mit-bih-st-change-database.md
+      - MIT-BIH Normal Sinus Rhythm Database: ecg/mit-bih-normal-sinus-rhythm-database.md
+      - MIT-BIH Long-Term ECG Database: ecg/mit-bih-long-term-ecg-database.md
+      - Fantasia: ecg/fantasia.md
+      - LUDB: ecg/ludb.md
+      - Long-term ST Database: ecg/long-term-st-database.md
       - music-sudden-cardiac-death-in-chronic-heart-failure-1.0.1: ecg/music-sudden-cardiac-death-in-chronic-heart-failur.md
-      - NINGBO: ecg/ningbo.md
-      - PhysioNet 2017: ecg/physionet-2017.md
-      - PhysioNet Challenge 2020: ecg/physionet-challenge-2020.md
+      - Cardiologist: ecg/cardiologist.md
+      - Apnea Dataset: ecg/apnea-dataset.md
+      - CODE 15% ECG Dataset: ecg/code-15-ecg-dataset.md
+      - ECG-ID Database: ecg/ecg-id-database.md
+      - European ST-T Database: ecg/european-st-t-database.md
+      - IKEM ECG Dataset: ecg/ikem-ecg-dataset.md
       - QT Database: ecg/qt-database.md
       - SaMi-Trop ECG Dataset: ecg/sami-trop-ecg-dataset.md
-      - SensSmartTech Dataset: ecg/senssmarttech-dataset.md
-      - SHDB-AF: ecg/shdb-af.md
       - Sudden Cardiac Death Holter Database: ecg/sudden-cardiac-death-holter-database.md
+      - SensSmartTech Dataset: ecg/senssmarttech-dataset.md
+      - Chapman Shaoxing: ecg/chapman-shaoxing.md
+      - SHDB-AF: ecg/shdb-af.md
+      - MIMIC-IV-ECG: ecg/mimic-iv-ecg.md
+      - ECG5000 Dataset: ecg/ecg5000-dataset.md
+      - BIDMC Congestive Heart Failure Database: ecg/bidmc-congestive-heart-failure-database.md
+      - PhysioNet Challenge 2020: ecg/physionet-challenge-2020.md
+      - ECGFM-KED Clinical Dataset: ecg/ecgfm-ked-clinical-dataset.md
+      - Long-Term AF Database: ecg/long-term-af-database.md
+      - NINGBO: ecg/ningbo.md
     - 6. ECG 기반 모델: ecg/7-ecg-기반모델-연구-동향.md
     - 7. 결론: ecg/6-결론.md
   - EEG:
@@ -154,49 +154,49 @@ nav:
       - 4.2. 통합 활용 방안: eeg/4-eeg-데이터셋의-정제-및-활용-방안/4-2-통합-활용-방안.md
     - 5. 데이터셋별 상세 소개:
       - eeg/5-데이터셋별-상세-소개/index.md
-      - 2018 Physionnet Challenge: eeg/2018-physionnet-challenge.md
-      - BCI IV-1: eeg/bci-iv-1.md
-      - BCI IV-2a: eeg/bci-iv-2a.md
-      - BCI IV-2b: eeg/bci-iv-2b.md
+      - TUEG: eeg/tueg.md
+      - Resting State EEG Data: eeg/resting-state-eeg-data.md
+      - TUSZ: eeg/tusz.md
+      - TUSL: eeg/tusl.md
+      - Neonate: eeg/neonate.md
+      - Siena: eeg/siena.md
+      - CHB-MIT: eeg/chb-mit.md
+      - Fatigueset: eeg/fatigueset.md
+      - SPIS Resting State Dataset: eeg/spis-resting-state-dataset.md
+      - NMT(Events): eeg/nmtevents.md
+      - TUEV: eeg/tuev.md
+      - NMT(Scalp-EEG): eeg/nmtscalp-eeg.md
+      - TUAB: eeg/tuab.md
+      - Raw EEG Data: eeg/raw-eeg-data.md
+      - Stew: eeg/stew.md
+      - SEED: eeg/seed.md
+      - SEED-IV: eeg/seed-iv.md
+      - SEED-V: eeg/seed-v.md
+      - DREAMER: eeg/dreamer.md
+      - DEAP: eeg/deap.md
+      - Emobrain: eeg/emobrain.md
+      - HCI-Tagging (Emotion): eeg/hci-tagging-emotion.md
+      - HCI-Tagging (ERP): eeg/hci-tagging-erp.md
       - BCI-NER Challenge: eeg/bci-ner-challenge.md
-      - BCI2020-3: eeg/bci2020-3.md
+      - Mental Arithmetic: eeg/mental-arithmetic.md
       - Berlin (dsr): eeg/berlin-dsr.md
       - Berlin (nback): eeg/berlin-nback.md
       - Berlin (wg): eeg/berlin-wg.md
-      - CHB-MIT: eeg/chb-mit.md
-      - DEAP: eeg/deap.md
-      - DREAMER: eeg/dreamer.md
-      - Emobrain: eeg/emobrain.md
-      - Fatigueset: eeg/fatigueset.md
-      - Grasp and Lift Challenge: eeg/grasp-and-lift-challenge.md
-      - HCI-Tagging (Emotion): eeg/hci-tagging-emotion.md
-      - HCI-Tagging (ERP): eeg/hci-tagging-erp.md
+      - Mumtaz2016: eeg/mumtaz2016.md
+      - BCI IV-1: eeg/bci-iv-1.md
+      - BCI IV-2a: eeg/bci-iv-2a.md
+      - BCI IV-2b: eeg/bci-iv-2b.md
+      - Physionet MI EEG: eeg/physionet-mi-eeg.md
+      - SHU-MI: eeg/shu-mi.md
       - High Gamma: eeg/high-gamma.md
       - Inria BCI Challenge: eeg/inria-bci-challenge.md
-      - ISRUC Sleep: eeg/isruc-sleep.md
-      - Mental Arithmetic: eeg/mental-arithmetic.md
-      - MoBI: eeg/mobi.md
-      - Mumtaz2016: eeg/mumtaz2016.md
-      - Neonate: eeg/neonate.md
-      - NMT(Events): eeg/nmtevents.md
-      - NMT(Scalp-EEG): eeg/nmtscalp-eeg.md
-      - Physionet MI EEG: eeg/physionet-mi-eeg.md
-      - Raw EEG Data: eeg/raw-eeg-data.md
-      - Resting State EEG Data: eeg/resting-state-eeg-data.md
-      - SEED-IV: eeg/seed-iv.md
-      - SEED-V: eeg/seed-v.md
-      - SEED: eeg/seed.md
-      - SHU-MI: eeg/shu-mi.md
-      - Siena: eeg/siena.md
-      - Sleep-EDF: eeg/sleep-edf.md
-      - SPIS Resting State Dataset: eeg/spis-resting-state-dataset.md
-      - Stew: eeg/stew.md
       - Target Versus Non Target: eeg/target-versus-non-target.md
-      - TUAB: eeg/tuab.md
-      - TUEG: eeg/tueg.md
-      - TUEV: eeg/tuev.md
-      - TUSL: eeg/tusl.md
-      - TUSZ: eeg/tusz.md
+      - 2018 Physionnet Challenge: eeg/2018-physionnet-challenge.md
+      - ISRUC Sleep: eeg/isruc-sleep.md
+      - Sleep-EDF: eeg/sleep-edf.md
+      - BCI2020-3: eeg/bci2020-3.md
+      - MoBI: eeg/mobi.md
+      - Grasp and Lift Challenge: eeg/grasp-and-lift-challenge.md
     - 6. EEG 기반 모델: eeg/7-eeg-기반모델.md
     - 7. 결론: eeg/6-결론.md
   - EMG:
@@ -227,26 +227,26 @@ nav:
       - 4.3. Downstream Task: emg/4-데이터셋의-정제-및-활용-방안/4-3-downstream-task.md
     - 5. 데이터셋별 상세소개:
       - emg/5-데이터셋별-상세소개/index.md
-      - BioPatRec: emg/biopatrec.md
-      - Camargo, et al.: emg/camargo-et-al.md
+      - NinaproDB: emg/ninaprodb.md
       - CapgMyo-db: emg/capgmyo-db.md
-      - EMG data VR: emg/emg-data-vr.md
-      - EMG-EPN-12: emg/emg-epn-12.md
-      - EMG-UKA: emg/emg-uka.md
-      - ENABL3S: emg/enabl3s.md
+      - UCI-sEMG for basic hand movements: emg/uci-semg-for-basic-hand-movements.md
       - FlexWear: emg/flexwear.md
-      - FSC: emg/fsc.md
-      - Human kinematic-kinetic EMG: emg/human-kinematic-kinetic-emg.md
       - Hyser: emg/hyser.md
       - MCS: emg/mcs.md
-      - NinaproDB: emg/ninaprodb.md
-      - PME4: emg/pme4.md
-      - R. V. Schulte. et al: emg/r-v-schulte-et-al.md
       - SeNic: emg/senic.md
-      - SIAT-LLMD: emg/siat-llmd.md
+      - BioPatRec: emg/biopatrec.md
+      - EMG-EPN-12: emg/emg-epn-12.md
+      - FSC: emg/fsc.md
+      - EMG data VR: emg/emg-data-vr.md
       - Silent speech: emg/silent-speech.md
-      - UCI EMG Data for Gestures: emg/uci-emg-data-for-gestures.md
+      - EMG-UKA: emg/emg-uka.md
+      - PME4: emg/pme4.md
+      - ENABL3S: emg/enabl3s.md
+      - Camargo, et al.: emg/camargo-et-al.md
+      - Human kinematic-kinetic EMG: emg/human-kinematic-kinetic-emg.md
+      - R. V. Schulte. et al: emg/r-v-schulte-et-al.md
       - UCI EMG dataset in lower limb: emg/uci-emg-dataset-in-lower-limb.md
-      - UCI-sEMG for basic hand movements: emg/uci-semg-for-basic-hand-movements.md
+      - SIAT-LLMD: emg/siat-llmd.md
+      - UCI EMG Data for Gestures: emg/uci-emg-data-for-gestures.md
     - 6. EMG 기반 모델: emg/6-결론.md
     - 7. 결론: emg/7-참고문헌.md

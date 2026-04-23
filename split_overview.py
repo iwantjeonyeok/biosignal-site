@@ -215,7 +215,15 @@ def write_section_files(skey: str, lines: list, sections: list, file_map: dict):
         own = adjust_paths(own, up)
 
         num_str = ".".join(str(p) for p in s["parts"])
-        content = f"# {num_str}. {s['title']}\n\n" + "\n".join(own)
+        title_str = s["title"]
+        # Rename sections 6/7 for ECG/EEG (기반모델→6, 결론→7)
+        if skey in ("ecg", "eeg"):
+            if s["parts"] == [7]:
+                num_str = "6"
+                title_str = f"{skey.upper()} 기반 모델"
+            elif s["parts"] == [6]:
+                num_str = "7"
+        content = f"# {num_str}. {title_str}\n\n" + "\n".join(own)
 
         # Fix 4: strip bold markers (**) from dataset section link titles
         if is_dataset_section(s):
@@ -257,9 +265,9 @@ def build_nav(sections: list, skey: str, file_map: dict, dataset_pages: list) ->
         num = ".".join(str(p) for p in s["parts"])
         return f"{num}. {s['title']}"
 
-    def build_entry(parts_tup):
+    def build_entry(parts_tup, title_override=None):
         s = by_parts[parts_tup]
-        title = nav_title(s)
+        title = title_override if title_override else nav_title(s)
         fp = file_map[parts_tup]
         children_keys = sorted(
             [p for p in by_parts if len(p) == len(parts_tup) + 1 and p[: len(parts_tup)] == parts_tup]
@@ -271,11 +279,12 @@ def build_nav(sections: list, skey: str, file_map: dict, dataset_pages: list) ->
             return {title: rp(fp)}
 
         if is_ds:
-            # Fix 4/5: path-only entry (navigation.indexes) = no "개요" label
+            # path-only entry (navigation.indexes) = no label, section title links to index
             sub = [rp(fp)]
             sub.extend({d["title"]: d["rel"]} for d in dataset_pages)
         else:
-            sub = [{"개요": rp(fp)}]
+            # path-only entry so navigation.indexes makes section title the link
+            sub = [rp(fp)]
             for cp in children_keys:
                 sub.append(build_entry(cp))
 
@@ -293,7 +302,17 @@ def build_nav(sections: list, skey: str, file_map: dict, dataset_pages: list) ->
             l[idx6], l[idx7] = l[idx7], l[idx6]
         level1 = l
 
-    return [build_entry(t) for t in level1]
+    result = []
+    for t in level1:
+        if skey in ("ecg", "eeg") and t == (7,):
+            # Original section 7 (기반모델) → displayed as "6. X 기반 모델"
+            result.append(build_entry(t, f"6. {skey.upper()} 기반 모델"))
+        elif skey in ("ecg", "eeg") and t == (6,):
+            # Original section 6 (결론) → displayed as "7. 결론"
+            result.append(build_entry(t, "7. 결론"))
+        else:
+            result.append(build_entry(t))
+    return result
 
 
 # ── Update index.md ───────────────────────────────────────────────────────────
@@ -315,11 +334,19 @@ def update_index(skey: str, lines: list, sections: list, file_map: dict):
         fp = file_map[tuple(s["parts"])]
         rel = fp.relative_to(DOCS_ROOT / skey)
         num = ".".join(str(p) for p in s["parts"])
+        title = s["title"]
         if rel.name == "index.md":
             link = str(rel.parent).replace("\\", "/") + "/"
         else:
             link = str(rel).replace("\\", "/")
-        links.append(f"[{num}. {s['title']}]({link})")
+        # Rename sections 6/7 for ECG/EEG
+        if skey in ("ecg", "eeg"):
+            if s["parts"] == [7]:
+                num = "6"
+                title = f"{skey.upper()} 기반 모델"
+            elif s["parts"] == [6]:
+                num = "7"
+        links.append(f"[{num}. {title}]({link})")
 
     new_text = title_line.rstrip() + "\n\n" + "\n\n".join(links) + "\n"
     (DOCS_ROOT / skey / "index.md").write_text(new_text, encoding="utf-8")

@@ -1,4 +1,4 @@
-# 7. EEG 기반모델
+# 6. EEG 기반 모델
 
 
 ## LaBraM (ICLR 2024)

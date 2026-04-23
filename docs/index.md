@@ -1,6 +1,6 @@
 # Biosignal Dataset
 
-안녕하세요. **생체신호 데이터셋 노션 페이지**에 오신 것을 환영합니다.
+안녕하세요. **생체신호 데이터셋 페이지**에 오신 것을 환영합니다.
 
 
 !!! note ""
@@ -28,8 +28,6 @@
 > 본 백서에서는 EEG 데이터셋의 기술적 개요, 채널 구성과 수집 조건, 신호의 특성과 라벨링 방식 등을 정리하였으며, 대표적인 공개 데이터셋들의 비교와 실제 활용 사례, 그리고 전이 학습, few-shot 학습 등 최신 AI 기법을 적용한 연구 동향을 종합적으로 소개해 드립니다. 아울러 발작 탐지, 감정 인식, 운동 상상 등 16가지 주요 다운스트림 테스크별로 적합한 EEG 데이터셋과 그 활용 방안에 대해서도 함께 제시하고 있습니다.
 > 
 > [EEG Dataset](eeg/)
-> 
-> [EEG Dataset (1)](eeg/eeg-dataset-2/)
 > 
 
 ![Figure: Ruslan Klymentiev, "EEG Data Analysis", *Kaggle Notebooks*, [https://www.kaggle.com/code/ruslankl/eeg-data-analysis](https://www.kaggle.com/code/ruslankl/eeg-data-analysis)](images/image.png)

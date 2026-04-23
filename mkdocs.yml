@@ -6,6 +6,7 @@ repo_name: "biosignal-site"
 theme:
   name: material
   language: ko
+  homepage: https://iwantjeonyeok.github.io/biosignal-site/
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
@@ -134,7 +135,6 @@ nav:
     - 7. 결론: ecg/6-결론.md
   - EEG:
     - EEG Overview: eeg/index.md
-    - EEG Dataset (상세): eeg/eeg-dataset-2.md
     - 1. 서론: eeg/1-서론.md
     - 2. EEG 데이터 설명:
       - eeg/2-eeg-데이터-설명/index.md
@@ -166,7 +166,6 @@ nav:
       - CHB-MIT: eeg/chb-mit.md
       - DEAP: eeg/deap.md
       - DREAMER: eeg/dreamer.md
-      - EEG Dataset (1): eeg/eeg-dataset-2.md
       - Emobrain: eeg/emobrain.md
       - Fatigueset: eeg/fatigueset.md
       - Grasp and Lift Challenge: eeg/grasp-and-lift-challenge.md

@@ -62,104 +62,193 @@ nav:
   - Home: index.md
   - ECG:
     - ECG Overview: ecg/index.md
-    - Apnea Dataset: ecg/apnea-dataset.md
-    - BIDMC Congestive Heart Failure Database: ecg/bidmc-congestive-heart-failure-database.md
-    - Cardiologist: ecg/cardiologist.md
-    - Chapman Shaoxing: ecg/chapman-shaoxing.md
-    - CODE 15% ECG Dataset: ecg/code-15-ecg-dataset.md
-    - ECG-ID Database: ecg/ecg-id-database.md
-    - ECG5000 Dataset: ecg/ecg5000-dataset.md
-    - ECGFM-KED Clinical Dataset: ecg/ecgfm-ked-clinical-dataset.md
-    - European ST-T Database: ecg/european-st-t-database.md
-    - Fantasia: ecg/fantasia.md
-    - IKEM ECG Dataset: ecg/ikem-ecg-dataset.md
-    - Long-Term AF Database: ecg/long-term-af-database.md
-    - Long-term ST Database: ecg/long-term-st-database.md
-    - LUDB: ecg/ludb.md
-    - MIMIC-IV-ECG: ecg/mimic-iv-ecg.md
-    - MIT-BIH Arrythmia database: ecg/mit-bih-arrythmia-database.md
-    - MIT-BIH Atrial Fibrillation: ecg/mit-bih-atrial-fibrillation.md
-    - MIT-BIH Long-Term ECG Database: ecg/mit-bih-long-term-ecg-database.md
-    - MIT-BIH Malignant Ventricular Ectopy Database: ecg/mit-bih-malignant-ventricular-ectopy-database.md
-    - MIT-BIH Noise Stress Test Database: ecg/mit-bih-noise-stress-test-database.md
-    - MIT-BIH Normal Sinus Rhythm Database: ecg/mit-bih-normal-sinus-rhythm-database.md
-    - MIT-BIH ST Change Database: ecg/mit-bih-st-change-database.md
-    - MIT-BIH supraventricular arrhythmia database: ecg/mit-bih-supraventricular-arrhythmia-database.md
-    - music-sudden-cardiac-death-in-chronic-heart-failur: ecg/music-sudden-cardiac-death-in-chronic-heart-failur.md
-    - NINGBO: ecg/ningbo.md
-    - PhysioNet 2017: ecg/physionet-2017.md
-    - PhysioNet Challenge 2020: ecg/physionet-challenge-2020.md
-    - QT Database: ecg/qt-database.md
-    - SaMi-Trop ECG Dataset: ecg/sami-trop-ecg-dataset.md
-    - SensSmartTech Dataset: ecg/senssmarttech-dataset.md
-    - SHDB-AF: ecg/shdb-af.md
-    - Sudden Cardiac Death Holter Database: ecg/sudden-cardiac-death-holter-database.md
+    - 1. 서론: ecg/1-서론.md
+    - 2. ECG 데이터 설명:
+      - 개요: ecg/2-ecg-데이터-설명/index.md
+      - 2.1. Lead (리드)와 전극 배치: ecg/2-ecg-데이터-설명/2-1-lead-리드와-전극-배치.md
+      - 2.2. Duration (측정 시간, 기록 길이): ecg/2-ecg-데이터-설명/2-2-duration-측정-시간-기록-길이.md
+      - 2.3. Sampling Frequency (샘플링 주파수, 신호 해상도): ecg/2-ecg-데이터-설명/2-3-sampling-frequency-샘플링-주파수-신호-해상도.md
+      - 2.4. P-QRS-T 복합체 (ECG 신호의 기본 구성 요소): ecg/2-ecg-데이터-설명/2-4-p-qrs-t-복합체-ecg-신호의-기본-구성-요소.md
+      - 2.5. Annotation (주석, 라벨링 정보): ecg/2-ecg-데이터-설명/2-5-annotation-주석-라벨링-정보.md
+    - 3. ECG 연구 동향:
+      - 개요: ecg/3-ecg-연구-동향/index.md
+      - 3.1. 전통적 ECG 분석과 딥러닝으로의 전환: ecg/3-ecg-연구-동향/3-1-전통적-ecg-분석과-딥러닝으로의-전환.md
+      - 3.2. 학계 및 산업계 동향:
+        - 개요: ecg/3-ecg-연구-동향/3-2-학계-및-산업계-동향/index.md
+        - 3.2.1. 학계 동향: ecg/3-ecg-연구-동향/3-2-학계-및-산업계-동향/3-2-1-학계-동향.md
+        - 3.2.2. 산업계 동향: ecg/3-ecg-연구-동향/3-2-학계-및-산업계-동향/3-2-2-산업계-동향.md
+        - 3.2.3. ECG 기반 AI의 미래 전망: ecg/3-ecg-연구-동향/3-2-학계-및-산업계-동향/3-2-3-ecg-기반-ai의-미래-전망.md
+    - 4. ECG 데이터셋의 정제 및 활용 방안:
+      - 개요: ecg/4-ecg-데이터셋의-정제-및-활용-방안/index.md
+      - 4.1. Preprocessing 방법:
+        - 개요: ecg/4-ecg-데이터셋의-정제-및-활용-방안/4-1-preprocessing-방법/index.md
+        - 4.1.1. Sampling Frequency 및 Duration 통일: ecg/4-ecg-데이터셋의-정제-및-활용-방안/4-1-preprocessing-방법/4-1-1-sampling-frequency-및-duration-통일.md
+        - 4.1.2. 채널 수(Lead) 차이에 따른 처리: ecg/4-ecg-데이터셋의-정제-및-활용-방안/4-1-preprocessing-방법/4-1-2-채널-수lead-차이에-따른-처리.md
+        - 4.1.3. Noise Filtering: ecg/4-ecg-데이터셋의-정제-및-활용-방안/4-1-preprocessing-방법/4-1-3-noise-filtering.md
+        - 4.1.4. Normalization & Imputation: ecg/4-ecg-데이터셋의-정제-및-활용-방안/4-1-preprocessing-방법/4-1-4-normalization-imputation.md
+      - 4.2. 통합 활용 방안:
+        - 개요: ecg/4-ecg-데이터셋의-정제-및-활용-방안/4-2-통합-활용-방안/index.md
+        - 4.2.1. 단일 모델 학습: ecg/4-ecg-데이터셋의-정제-및-활용-방안/4-2-통합-활용-방안/4-2-1-단일-모델-학습.md
+        - 4.2.2. Transfer Learning: ecg/4-ecg-데이터셋의-정제-및-활용-방안/4-2-통합-활용-방안/4-2-2-transfer-learning.md
+        - 4.2.3. Foundation Model: ecg/4-ecg-데이터셋의-정제-및-활용-방안/4-2-통합-활용-방안/4-2-3-foundation-model.md
+      - 4.3. Downstream Task:
+        - 개요: ecg/4-ecg-데이터셋의-정제-및-활용-방안/4-3-downstream-task/index.md
+        - 4.3.1. Arrhythmia Detection (부정맥 검출): ecg/4-ecg-데이터셋의-정제-및-활용-방안/4-3-downstream-task/4-3-1-arrhythmia-detection-부정맥-검출.md
+        - 4.3.2. Rhythm Detection (심장 리듬 분석): ecg/4-ecg-데이터셋의-정제-및-활용-방안/4-3-downstream-task/4-3-2-rhythm-detection-심장-리듬-분석.md
+        - 4.3.3. Abnormality Detection (환자 분류): ecg/4-ecg-데이터셋의-정제-및-활용-방안/4-3-downstream-task/4-3-3-abnormality-detection-환자-분류.md
+        - 4.3.4. Biometric Identification (생체 정보 예측 - 나이, 성별 등): ecg/4-ecg-데이터셋의-정제-및-활용-방안/4-3-downstream-task/4-3-4-biometric-identification-생체-정보-예측-나.md
+    - 5. 데이터셋별 상세 소개:
+      - 개요: ecg/5-데이터셋별-상세-소개.md
+      - Apnea Dataset: ecg/apnea-dataset.md
+      - BIDMC Congestive Heart Failure Database: ecg/bidmc-congestive-heart-failure-database.md
+      - Cardiologist: ecg/cardiologist.md
+      - Chapman Shaoxing: ecg/chapman-shaoxing.md
+      - CODE 15% ECG Dataset: ecg/code-15-ecg-dataset.md
+      - ECG-ID Database: ecg/ecg-id-database.md
+      - ECG5000 Dataset: ecg/ecg5000-dataset.md
+      - ECGFM-KED Clinical Dataset: ecg/ecgfm-ked-clinical-dataset.md
+      - European ST-T Database: ecg/european-st-t-database.md
+      - Fantasia: ecg/fantasia.md
+      - IKEM ECG Dataset: ecg/ikem-ecg-dataset.md
+      - Long-Term AF Database: ecg/long-term-af-database.md
+      - Long-term ST Database: ecg/long-term-st-database.md
+      - LUDB: ecg/ludb.md
+      - MIMIC-IV-ECG: ecg/mimic-iv-ecg.md
+      - MIT-BIH Arrythmia database: ecg/mit-bih-arrythmia-database.md
+      - MIT-BIH Atrial Fibrillation: ecg/mit-bih-atrial-fibrillation.md
+      - MIT-BIH Long-Term ECG Database: ecg/mit-bih-long-term-ecg-database.md
+      - MIT-BIH Malignant Ventricular Ectopy Database: ecg/mit-bih-malignant-ventricular-ectopy-database.md
+      - MIT-BIH Noise Stress Test Database: ecg/mit-bih-noise-stress-test-database.md
+      - MIT-BIH Normal Sinus Rhythm Database: ecg/mit-bih-normal-sinus-rhythm-database.md
+      - MIT-BIH ST Change Database: ecg/mit-bih-st-change-database.md
+      - MIT-BIH supraventricular arrhythmia database: ecg/mit-bih-supraventricular-arrhythmia-database.md
+      - music-sudden-cardiac-death-in-chronic-heart-failure-1.0.1: ecg/music-sudden-cardiac-death-in-chronic-heart-failur.md
+      - NINGBO: ecg/ningbo.md
+      - PhysioNet 2017: ecg/physionet-2017.md
+      - PhysioNet Challenge 2020: ecg/physionet-challenge-2020.md
+      - QT Database: ecg/qt-database.md
+      - SaMi-Trop ECG Dataset: ecg/sami-trop-ecg-dataset.md
+      - SensSmartTech Dataset: ecg/senssmarttech-dataset.md
+      - SHDB-AF: ecg/shdb-af.md
+      - Sudden Cardiac Death Holter Database: ecg/sudden-cardiac-death-holter-database.md
+    - 6. 결론: ecg/6-결론.md
+    - 7. ECG 기반모델 연구 동향: ecg/7-ecg-기반모델-연구-동향.md
   - EEG:
     - EEG Overview: eeg/index.md
     - EEG Dataset (상세): eeg/eeg-dataset-2.md
-    - 2018 Physionnet Challenge: eeg/2018-physionnet-challenge.md
-    - BCI IV-1: eeg/bci-iv-1.md
-    - BCI IV-2a: eeg/bci-iv-2a.md
-    - BCI IV-2b: eeg/bci-iv-2b.md
-    - BCI-NER Challenge: eeg/bci-ner-challenge.md
-    - BCI2020-3: eeg/bci2020-3.md
-    - Berlin (dsr): eeg/berlin-dsr.md
-    - Berlin (nback): eeg/berlin-nback.md
-    - Berlin (wg): eeg/berlin-wg.md
-    - CHB-MIT: eeg/chb-mit.md
-    - DEAP: eeg/deap.md
-    - DREAMER: eeg/dreamer.md
-    - Emobrain: eeg/emobrain.md
-    - Fatigueset: eeg/fatigueset.md
-    - Grasp and Lift Challenge: eeg/grasp-and-lift-challenge.md
-    - HCI-Tagging (Emotion): eeg/hci-tagging-emotion.md
-    - HCI-Tagging (ERP): eeg/hci-tagging-erp.md
-    - High Gamma: eeg/high-gamma.md
-    - Inria BCI Challenge: eeg/inria-bci-challenge.md
-    - ISRUC Sleep: eeg/isruc-sleep.md
-    - Mental Arithmetic: eeg/mental-arithmetic.md
-    - MoBI: eeg/mobi.md
-    - Mumtaz2016: eeg/mumtaz2016.md
-    - Neonate: eeg/neonate.md
-    - NMT(Events): eeg/nmtevents.md
-    - NMT(Scalp-EEG): eeg/nmtscalp-eeg.md
-    - Physionet MI EEG: eeg/physionet-mi-eeg.md
-    - Raw EEG Data: eeg/raw-eeg-data.md
-    - Resting State EEG Data: eeg/resting-state-eeg-data.md
-    - SEED: eeg/seed.md
-    - SEED-IV: eeg/seed-iv.md
-    - SEED-V: eeg/seed-v.md
-    - SHU-MI: eeg/shu-mi.md
-    - Siena: eeg/siena.md
-    - Sleep-EDF: eeg/sleep-edf.md
-    - SPIS Resting State Dataset: eeg/spis-resting-state-dataset.md
-    - Stew: eeg/stew.md
-    - Target Versus Non Target: eeg/target-versus-non-target.md
-    - TUAB: eeg/tuab.md
-    - TUEG: eeg/tueg.md
-    - TUEV: eeg/tuev.md
-    - TUSL: eeg/tusl.md
-    - TUSZ: eeg/tusz.md
+    - 1. 서론: eeg/1-서론.md
+    - 2. EEG 데이터 설명:
+      - 개요: eeg/2-eeg-데이터-설명/index.md
+      - 2.1. 전극 배치 및 채널 수 (Electrode Placement & Channels): eeg/2-eeg-데이터-설명/2-1-전극-배치-및-채널-수-electrode-placement-ch.md
+      - 2.2. 기록 시간 (Recording Duration): eeg/2-eeg-데이터-설명/2-2-기록-시간-recording-duration.md
+      - 2.3. 샘플링 주파수 (Sampling Frequency): eeg/2-eeg-데이터-설명/2-3-샘플링-주파수-sampling-frequency.md
+      - 2.4. 주파수 밴드와 의미 (Frequency Bands): eeg/2-eeg-데이터-설명/2-4-주파수-밴드와-의미-frequency-bands.md
+      - 2.5. 다운스트림 태스크 설명 (Downsteam Task): eeg/2-eeg-데이터-설명/2-5-다운스트림-태스크-설명-downsteam-task.md
+    - 3. EEG 연구 동향:
+      - 개요: eeg/3-eeg-연구-동향/index.md
+      - "3.1. 과거: 전통적 EEG 해석 방식의 한계와 전환 배경": eeg/3-eeg-연구-동향/3-1-과거-전통적-eeg-해석-방식의-한계와-전환-배경.md
+      - "3.2. 현재: 딥러닝 기반 EEG 분석 기술의 급속한 확산": eeg/3-eeg-연구-동향/3-2-현재-딥러닝-기반-eeg-분석-기술의-급속한-확산.md
+      - "3.3. 미래 전망: 실시간, 맞춤형, 설명 가능한 EEG AI의 진화": eeg/3-eeg-연구-동향/3-3-미래-전망-실시간-맞춤형-설명-가능한-eeg-ai의-진화.md
+    - 4. EEG 데이터셋의 정제 및 활용 방안:
+      - 개요: eeg/4-eeg-데이터셋의-정제-및-활용-방안/index.md
+      - 4.1. 전처리(Preprocessing) 방법: eeg/4-eeg-데이터셋의-정제-및-활용-방안/4-1-전처리preprocessing-방법.md
+      - 4.2. 통합 활용 방안: eeg/4-eeg-데이터셋의-정제-및-활용-방안/4-2-통합-활용-방안.md
+    - 5. 데이터셋별 상세 소개:
+      - 개요: eeg/5-데이터셋별-상세-소개.md
+      - 2018 Physionnet Challenge: eeg/2018-physionnet-challenge.md
+      - BCI IV-1: eeg/bci-iv-1.md
+      - BCI IV-2a: eeg/bci-iv-2a.md
+      - BCI IV-2b: eeg/bci-iv-2b.md
+      - BCI-NER Challenge: eeg/bci-ner-challenge.md
+      - BCI2020-3: eeg/bci2020-3.md
+      - Berlin (dsr): eeg/berlin-dsr.md
+      - Berlin (nback): eeg/berlin-nback.md
+      - Berlin (wg): eeg/berlin-wg.md
+      - CHB-MIT: eeg/chb-mit.md
+      - DEAP: eeg/deap.md
+      - DREAMER: eeg/dreamer.md
+      - EEG Dataset (1): eeg/eeg-dataset-2.md
+      - Emobrain: eeg/emobrain.md
+      - Fatigueset: eeg/fatigueset.md
+      - Grasp and Lift Challenge: eeg/grasp-and-lift-challenge.md
+      - HCI-Tagging (Emotion): eeg/hci-tagging-emotion.md
+      - HCI-Tagging (ERP): eeg/hci-tagging-erp.md
+      - High Gamma: eeg/high-gamma.md
+      - Inria BCI Challenge: eeg/inria-bci-challenge.md
+      - ISRUC Sleep: eeg/isruc-sleep.md
+      - Mental Arithmetic: eeg/mental-arithmetic.md
+      - MoBI: eeg/mobi.md
+      - Mumtaz2016: eeg/mumtaz2016.md
+      - Neonate: eeg/neonate.md
+      - NMT(Events): eeg/nmtevents.md
+      - NMT(Scalp-EEG): eeg/nmtscalp-eeg.md
+      - Physionet MI EEG: eeg/physionet-mi-eeg.md
+      - Raw EEG Data: eeg/raw-eeg-data.md
+      - Resting State EEG Data: eeg/resting-state-eeg-data.md
+      - SEED-IV: eeg/seed-iv.md
+      - SEED-V: eeg/seed-v.md
+      - SEED: eeg/seed.md
+      - SHU-MI: eeg/shu-mi.md
+      - Siena: eeg/siena.md
+      - Sleep-EDF: eeg/sleep-edf.md
+      - SPIS Resting State Dataset: eeg/spis-resting-state-dataset.md
+      - Stew: eeg/stew.md
+      - Target Versus Non Target: eeg/target-versus-non-target.md
+      - TUAB: eeg/tuab.md
+      - TUEG: eeg/tueg.md
+      - TUEV: eeg/tuev.md
+      - TUSL: eeg/tusl.md
+      - TUSZ: eeg/tusz.md
+    - 6. 결론: eeg/6-결론.md
+    - 7. EEG 기반모델: eeg/7-eeg-기반모델.md
   - EMG:
     - EMG Overview: emg/index.md
-    - BioPatRec: emg/biopatrec.md
-    - Camargo, et al: emg/camargo-et-al.md
-    - CapgMyo-db: emg/capgmyo-db.md
-    - EMG data VR: emg/emg-data-vr.md
-    - EMG-EPN-12: emg/emg-epn-12.md
-    - EMG-UKA: emg/emg-uka.md
-    - ENABL3S: emg/enabl3s.md
-    - FlexWear: emg/flexwear.md
-    - FSC: emg/fsc.md
-    - Human kinematic-kinetic EMG: emg/human-kinematic-kinetic-emg.md
-    - Hyser: emg/hyser.md
-    - MCS: emg/mcs.md
-    - NinaproDB: emg/ninaprodb.md
-    - PME4: emg/pme4.md
-    - R V Schulte et al: emg/r-v-schulte-et-al.md
-    - SeNic: emg/senic.md
-    - SIAT-LLMD: emg/siat-llmd.md
-    - Silent speech: emg/silent-speech.md
-    - UCI EMG Data for Gestures: emg/uci-emg-data-for-gestures.md
-    - UCI EMG dataset in lower limb: emg/uci-emg-dataset-in-lower-limb.md
-    - UCI-sEMG for basic hand movements: emg/uci-semg-for-basic-hand-movements.md
+    - 1. 서론: emg/1-서론.md
+    - 2. Electromyogram (EMG) 개요:
+      - 개요: emg/2-electromyogram-emg-개요/index.md
+      - 2.1. EMG 정의: emg/2-electromyogram-emg-개요/2-1-emg-정의.md
+      - 2.2. EMG 신호적 특징: emg/2-electromyogram-emg-개요/2-2-emg-신호적-특징.md
+    - 3. 연구동향:
+      - 개요: emg/3-연구동향/index.md
+      - 3.1. Hand gesture recognition: emg/3-연구동향/3-1-hand-gesture-recognition.md
+      - 3.2. Human activity recognition: emg/3-연구동향/3-2-human-activity-recognition.md
+      - 3.3. Others: emg/3-연구동향/3-3-others.md
+    - 4. 데이터셋의 정제 및 활용 방안:
+      - 개요: emg/4-데이터셋의-정제-및-활용-방안/index.md
+      - 4.1. Preprocessing 방법:
+        - 개요: emg/4-데이터셋의-정제-및-활용-방안/4-1-preprocessing-방법/index.md
+        - 4.1.1. Sampling Frequency 통일: emg/4-데이터셋의-정제-및-활용-방안/4-1-preprocessing-방법/4-1-1-sampling-frequency-통일.md
+        - 4.1.2. 채널 수 차이에 따른 처리: emg/4-데이터셋의-정제-및-활용-방안/4-1-preprocessing-방법/4-1-2-채널-수-차이에-따른-처리.md
+        - 4.1.3. Noise Filtering: emg/4-데이터셋의-정제-및-활용-방안/4-1-preprocessing-방법/4-1-3-noise-filtering.md
+        - 4.1.4. Normalization & Imputation: emg/4-데이터셋의-정제-및-활용-방안/4-1-preprocessing-방법/4-1-4-normalization-imputation.md
+      - 4.2. 통합 활용 방안:
+        - 개요: emg/4-데이터셋의-정제-및-활용-방안/4-2-통합-활용-방안/index.md
+        - 4.2.1. 단일 모델 학습: emg/4-데이터셋의-정제-및-활용-방안/4-2-통합-활용-방안/4-2-1-단일-모델-학습.md
+        - 4.2.2. Transfer Learning: emg/4-데이터셋의-정제-및-활용-방안/4-2-통합-활용-방안/4-2-2-transfer-learning.md
+        - 4.2.3. Foundation Model: emg/4-데이터셋의-정제-및-활용-방안/4-2-통합-활용-방안/4-2-3-foundation-model.md
+      - 4.3. Downstream Task: emg/4-데이터셋의-정제-및-활용-방안/4-3-downstream-task.md
+    - 5. 데이터셋별 상세소개:
+      - 개요: emg/5-데이터셋별-상세소개.md
+      - BioPatRec: emg/biopatrec.md
+      - Camargo, et al.: emg/camargo-et-al.md
+      - CapgMyo-db: emg/capgmyo-db.md
+      - EMG data VR: emg/emg-data-vr.md
+      - EMG-EPN-12: emg/emg-epn-12.md
+      - EMG-UKA: emg/emg-uka.md
+      - ENABL3S: emg/enabl3s.md
+      - FlexWear: emg/flexwear.md
+      - FSC: emg/fsc.md
+      - Human kinematic-kinetic EMG: emg/human-kinematic-kinetic-emg.md
+      - Hyser: emg/hyser.md
+      - MCS: emg/mcs.md
+      - NinaproDB: emg/ninaprodb.md
+      - PME4: emg/pme4.md
+      - R. V. Schulte. et al: emg/r-v-schulte-et-al.md
+      - SeNic: emg/senic.md
+      - SIAT-LLMD: emg/siat-llmd.md
+      - Silent speech: emg/silent-speech.md
+      - UCI EMG Data for Gestures: emg/uci-emg-data-for-gestures.md
+      - UCI EMG dataset in lower limb: emg/uci-emg-dataset-in-lower-limb.md
+      - UCI-sEMG for basic hand movements: emg/uci-semg-for-basic-hand-movements.md
+    - 6. 결론: emg/6-결론.md
+    - 7. 참고문헌: emg/7-참고문헌.md

@@ -1,0 +1,21 @@
+/* Korean typography */
+body {
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+/* Admonition content: allow markdown rendering */
+.admonition p,
+.admonition li {
+  line-height: 1.7;
+}
+
+/* Image captions */
+img + em,
+img + p > em {
+  display: block;
+  text-align: center;
+  font-size: 0.85em;
+  color: var(--md-default-fg-color--lighter);
+  margin-top: 0.25em;
+}

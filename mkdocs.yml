@@ -26,7 +26,6 @@ theme:
     code: Roboto Mono
   features:
     - navigation.tabs
-    - navigation.sections
     - navigation.top
     - navigation.indexes
     - search.highlight
@@ -250,5 +249,5 @@ nav:
       - UCI EMG Data for Gestures: emg/uci-emg-data-for-gestures.md
       - UCI EMG dataset in lower limb: emg/uci-emg-dataset-in-lower-limb.md
       - UCI-sEMG for basic hand movements: emg/uci-semg-for-basic-hand-movements.md
-    - 6. 결론: emg/6-결론.md
-    - 7. 참고문헌: emg/7-참고문헌.md
+    - 6. EMG 기반 모델: emg/6-결론.md
+    - 7. 결론: emg/7-참고문헌.md

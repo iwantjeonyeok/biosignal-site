@@ -18,24 +18,11 @@
 
 | Label Type | #of recordings | EEG Mean | EEG Std | EEG Max | EEG Median | EEG Min |
 | --- | --- | --- | --- | --- | --- | --- |
-|
-  Left hand
-   | 1227 | 
- 0.00 | 
-  0.000006
-   | 
-  0.000100
-   | 
+| Left hand | 1227 | 0.00 | 0.000006 | 0.000100 |
 0.00   | 
   -0.0001
    |
-|
-  Right hand
-   | 1226 | 0.00 | 
-  0.000006
-   | 
-  0.000100
-   | 
+| Right hand | 1226 | 0.00 | 0.000006 | 0.000100 |
 0.00   | 
   -0.0001
    |
@@ -84,31 +71,9 @@ BCI IV-2b 데이터셋은 하나의 폴더 안에 총 45개의 GDF 파일로 구
 
 | 인용 논문 | 연구 과제 | 모델 구조 | 방법론 |
 | --- | --- | --- | --- |
-|
-  Kim (2023) [^2] 
-   | 
-  EEG 기반 Motor Imagery 데이터 증강 및 분류 성능
-  향상    
-   | 
-  CropCat 기반 데이터 증강 기법         
-   | 
-  서로 다른 라벨의 데이터를
-  공간 및 시간 축에서 자른 후 연결하는 CropCat-spatial과 CropCat-temporal 기법을 통해 새로운 데이터를 생성하고, 비율
-  기반 라벨 조정으로 데이터 부족 문제를 해결하여 모델의 feature distribution 을
-  개선 및 분류 성능 향상
-   
+| Kim (2023) [^2] | EEG 기반 Motor Imagery 데이터 증강 및 분류 성능 향상 | CropCat 기반 데이터 증강 기법 | 서로 다른 라벨의 데이터를 공간 및 시간 축에서 자른 후 연결하는 CropCat-spatial과 CropCat-temporal 기법을 통해 새로운 데이터를 생성하고, 비율 기반 라벨 조정으로 데이터 부족 문제를 해결하여 모델의 feature distribution 을 개선 및 분류 성능 향상 | 서로 다른 라벨의 데이터를 공간 및 시간 축에서 자른 후 연결하는 CropCat-spatial과 CropCat-temporal 기법을 통해 새로운 데이터를 생성하고, 비율 기반 라벨 조정으로 데이터 부족 문제를 해결하여 모델의 feature distribution 을 개선 및 분류 성능 향상 |
    |
-|
-  Wang (2023) [^3]         
-   | 
-  EEG 기반 Motor Imagery 분류 및 재활 BCI 시스템 개발    
-   | 
-  Channel-Attention 기반 Swin Transformer
-  모델         
-   | 
-  EEG 채널 간 상관관계를 반영하는 channel-attention과 Swin Transformer 구조를 결합하여 EEG의 시간-스펙트럼-공간적 특징을 효과적으로 추출하고, 고차원 데이터 문제를 극복하여 motor imagery 분류
-  성능 향상
-   
+| Wang (2023) [^3] | EEG 기반 Motor Imagery 분류 및 재활 BCI 시스템 개발 | Channel-Attention 기반 Swin Transformer 모델 | EEG 채널 간 상관관계를 반영하는 channel-attention과 Swin Transformer 구조를 결합하여 EEG의 시간-스펙트럼-공간적 특징을 효과적으로 추출하고, 고차원 데이터 문제를 극복하여 motor imagery 분류 성능 향상 | EEG 채널 간 상관관계를 반영하는 channel-attention과 Swin Transformer 구조를 결합하여 EEG의 시간-스펙트럼-공간적 특징을 효과적으로 추출하고, 고차원 데이터 문제를 극복하여 motor imagery 분류 성능 향상 |
    |
 
 # 4. References

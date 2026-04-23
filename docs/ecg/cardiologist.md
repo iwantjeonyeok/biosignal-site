@@ -10,15 +10,7 @@
 
 | # of Leads | Sampling Frequency (Hz) | Recording Duration (min) | File Fomat |
 | --- | --- | --- | --- |
-|
- 1
-   | 
- 200Hz
-   | 
-  30s
-   | ECG signal - Raw binary
-Episodes - JSON |
-
+| 1 | 200Hz | 30s | ECG signal - Raw binary Episodes - JSON | | 30s | ECG signal - Raw binary Episodes - JSON | |
 ## 2.2 Data Statistics
 
 | Label Type | # of recordings |

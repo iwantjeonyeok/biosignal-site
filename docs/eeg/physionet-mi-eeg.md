@@ -82,15 +82,7 @@
 
 | 인용 논문 | 연구 과제 | 모델 구조 | 방법론 |
 | --- | --- | --- | --- |
-|
-  Kim (2023) [^2] 
-   | EEG 기반 Motor Imagery 데이터 증강 및 과적합 완화 | Spatial Variation Generation (SVG) 알고리즘 | 전극 위치 및 뇌 공간 패턴의 변이를 활용해 EEG 데이터를 증강함으로써 raw sample 주변의 밀도를 높이고, 데이터의 vicinal 분포를 생성하여 모델의 과적합 문제를 완화하고 분류 성능을 향상시킴 |
-|
-  Wang (2023) [^3]         
-   | 
-  EEG 기반 Motor Imagery 분류 및 재활 BCI 시스템 개발    
-   | 다중 feature extractor 기반 앙상블 모델 + Curriculum Learning + Collaborative Training | 각 feature extractor에 대해 curriculum learning을 적용하고, knowledge distillation 기반의 협업 학습을 통해 모델 간 지식을 공유함으로써 cross-subject 일반화 성능을 향상시키고, 다양한 EEG 특성을 효과적으로 반영함 |
-
+| Kim (2023) [^2] | EEG 기반 Motor Imagery 데이터 증강 및 과적합 완화 | Spatial Variation Generation (SVG) 알고리즘 | 전극 위치 및 뇌 공간 패턴의 변이를 활용해 EEG 데이터를 증강함으로써 raw sample 주변의 밀도를 높이고, 데이터의 vicinal 분포를 생성하여 모델의 과적합 문제를 완화하고 분류 성능을 향상시킴 | | Wang (2023) [^3] | EEG 기반 Motor Imagery 분류 및 재활 BCI 시스템 개발 | 다중 feature extractor 기반 앙상블 모델 + Curriculum Learning + Collaborative Training | 각 feature extractor에 대해 curriculum learning을 적용하고, knowledge distillation 기반의 협업 학습을 통해 모델 간 지식을 공유함으로써 cross-subject 일반화 성능을 향상시키고, 다양한 EEG 특성을 효과적으로 반영함 | | EEG 기반 Motor Imagery 분류 및 재활 BCI 시스템 개발 | 다중 feature extractor 기반 앙상블 모델 + Curriculum Learning + Collaborative Training | 각 feature extractor에 대해 curriculum learning을 적용하고, knowledge distillation 기반의 협업 학습을 통해 모델 간 지식을 공유함으로써 cross-subject 일반화 성능을 향상시키고, 다양한 EEG 특성을 효과적으로 반영함 | |
 # 4. References
 
 [^1]: Goldberger, A.L., Amaral, L.A., Glass, L., Hausdorff, J.M., Ivanov, P.C., Mark, R.G., Mietus, J.E., Moody, G.B., Peng, C.K., Stanley, H.E. and PhysioBank, P., PhysioNet: components of a new research resource for complex physiologic signals Circulation 2000 Volume 101 Issue 23 pp. E215–E220.

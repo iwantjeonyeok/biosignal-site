@@ -18,51 +18,9 @@ BCI IV 1 데이터셋[^1]은 총 7명의 건강한 피실험자를 대상으로 
 
 | Label Type | #of recordings | EEG Mean | EEG Std | EEG Max | EEG Median | EEG Min |
 | --- | --- | --- | --- | --- | --- | --- |
-|
-  Left hand
-   | 
-  701
-   | 
-  404.373595
-   | 
-  640.654519
-   | 
-  19775
-   | 
-  317.0
-   | 
-  -7453
-   |
-|
-  Right hand
-   | 
-  501
-   | 
-  247.893381
-   | 
-  594.385310
-   | 
-  10144
-   | 
-  140.0
-   | 
-  -9382
-   |
-|
-  Foot
-   | 
-  198
-   | 
-  703.739417
-   | 
-  704.763899
-   | 
-  22352
-   | 
-  699.0
-   | 
-  -12633
-   |
+| Left hand | 701 | 404.373595 | 640.654519 | 19775 | 317.0 | -7453 |
+| Right hand | 501 | 247.893381 | 594.385310 | 10144 | 140.0 | -9382 |
+| Foot | 198 | 703.739417 | 704.763899 | 22352 | 699.0 | -12633 |
 | **Total** | 1400 | 353.497880 | 920.587126 | 22352 | 292 |   -12633 |
 
  
@@ -110,25 +68,8 @@ BCI IV 1 데이터셋[^1]은 총 7명의 건강한 피실험자를 대상으로 
 
 | 인용 논문 | 연구 과제 | 모델 구조 | 방법론 |
 | --- | --- | --- | --- |
-|
-  Raoof & Gupta (2024) [^2]
-   | 
-  EEG 기반 Motor Imagery 데이터 생성 및 분류
-   | 
-  GANs 및 Transfer Learning 기반 하이브리드 모델
-   | 
-  GAN 기반 데이터 증강과 TL 기법을 활용하여 데이터 부족 및 EEG의 비정상성 문제를 해결하고 MI EEG 데이터를 효과적으로
-  생성 및 분류하는 방법 제안
-   |
-|
-  Leotta et al. (2021) [^3]
-   | 
-  EEG 기반 Motor Imagery 분류 (특히 cross-subject 성능 개선)
-   | 
-  CNN 기반
-   | 
-  DynamicNet 툴로 EEGNet을 구현하고, 전통적 FBCSP 대비 성능을 비교하여 cross-subject MI 분류 정확도를 약 25% 향상
-   |
+| Raoof & Gupta (2024) [^2] | EEG 기반 Motor Imagery 데이터 생성 및 분류 | GANs 및 Transfer Learning 기반 하이브리드 모델 | GAN 기반 데이터 증강과 TL 기법을 활용하여 데이터 부족 및 EEG의 비정상성 문제를 해결하고 MI EEG 데이터를 효과적으로 생성 및 분류하는 방법 제안 |
+| Leotta et al. (2021) [^3] | EEG 기반 Motor Imagery 분류 (특히 cross-subject 성능 개선) | CNN 기반 | DynamicNet 툴로 EEGNet을 구현하고, 전통적 FBCSP 대비 성능을 비교하여 cross-subject MI 분류 정확도를 약 25% 향상 |
 
 # 4. References
 

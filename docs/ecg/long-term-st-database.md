@@ -14,15 +14,7 @@ Long-Term ST Databses는 80명의 인간 피험자에 대한 86개의 장기 ECG
 
 | # of Leads | Sampling Frequency (Hz) | Recording Duration (min) | File Fomat |
 | --- | --- | --- | --- |
-|
-  2 or 3
-   | 
-  Fixed 250 Hz
-   | 
-  21-24h
-   | 
-  WFDB format
-   |
+| 2 or 3 | Fixed 250 Hz | 21-24h | WFDB format |
 - Lead 정보 : laeds 종류별 환자를 기록함, leads 정보가 없는 경우 [‘ECG’, ‘ECG’]로 표기
     - ['ML2', 'MV2'] : s20011, s20201 ~ s20241
     - ['MLIII', 'V4'] : s20021, s20161, s20181, s20191, s20291, s20551
@@ -41,138 +33,20 @@ Long-Term ST Databses는 80명의 인간 피험자에 대한 86개의 장기 ECG
 
 | Label Type | # of recordings | Time length (s) - Mean | Time length (s) - Standard Deviation |
 | --- | --- | --- | --- |
-|
-  N
-   | 
-  97.43% (8,669,297/8,897,780)
-   | 
-  73.58
-   | 
-  867.75
-   |
-|
-  B
-   | 
-  1.00% (88,720/8,897,780)
-   | 
-  349.29
-   | 
-  809.66
-   |
-|
-  V
-   | 
-  0.82%
-  (72,852/8,897,780)
-   | 
-  1.02
-   | 
-  0.14
-   |
-|
-  S
-   | 
-  0.64% (57,311/8,897,780)
-   | 
-  1.55
-   | 
-  20.82
-   |
-|
-  A
-   | 
-  0.10%
-  (8,730/8,897,780)
-   | 
-  1.04
-   | 
-  0.20
-   |
-|
-  F
-   | 
-  0.01% (597/8,897,780)
-   | 
-  1.00
-   | 
-  0.04
-   |
-|
-  a
-   | 
-  0.00%
-  (162/8,897,780)
-   | 
-  1.03
-   | 
-  0.25
-   |
-|
-  E
-   | 
-  0.00% (71/8,897,780)
-   | 
-  1.01
-   | 
-  0.12
-   |
-|
-  e
-   | 
-  0.00%
-  (30/8,897,780)
-   | 
-  1.0
-   | 
-  0.0
-   |
-|
-  j
-   | 
-  0.00% (6/8,897,780)
-   | 
-  1.17
-   | 
-  0.37
-   |
-|
-  Q
-   | 
-  0.00%
-  (2/8,897,780)
-   | 
-  1.0
-   | 
-  0.0
-   |
-|
-  /
-   | 
-  0.00% (1/8,897,780)
-   | 
-  1.0
-   | 
-  0.0
-   |
-|
-  J
-   | 
-  0.00%
-  (1/8,897,780)
-   | 
-  1.0
-   | 
-  0.0
-   |
-|
-  Total
-   | 
-  1 (8,897,780)
-   | 
-  37.72
-   | 
-  615.03
-   |
+| N | 97.43% (8,669,297/8,897,780) | 73.58 | 867.75 |
+| B | 1.00% (88,720/8,897,780) | 349.29 | 809.66 |
+| V | 0.82% (72,852/8,897,780) | 1.02 | 0.14 |
+| S | 0.64% (57,311/8,897,780) | 1.55 | 20.82 |
+| A | 0.10% (8,730/8,897,780) | 1.04 | 0.20 |
+| F | 0.01% (597/8,897,780) | 1.00 | 0.04 |
+| a | 0.00% (162/8,897,780) | 1.03 | 0.25 |
+| E | 0.00% (71/8,897,780) | 1.01 | 0.12 |
+| e | 0.00% (30/8,897,780) | 1.0 | 0.0 |
+| j | 0.00% (6/8,897,780) | 1.17 | 0.37 |
+| Q | 0.00% (2/8,897,780) | 1.0 | 0.0 |
+| / | 0.00% (1/8,897,780) | 1.0 | 0.0 |
+| J | 0.00% (1/8,897,780) | 1.0 | 0.0 |
+| Total | 1 (8,897,780) | 37.72 | 615.03 |
 - N : 정상 박동 (Normal beat)
 - B : 좌각차단 박동 (Left bundle branch block beat, LBBB)
 - V : 심실 기원 박동 (Premature ventricular contraction, PVC)
@@ -397,49 +271,10 @@ The Long Term ST Database는 arrhythims classification 문제를 해결하는데
 
 | 인용 논문 | 연구 과제 | 모델 구조 | 방법론 |
 | --- | --- | --- | --- |
-|
-  Zekai Wang et al. (2023) [^1]
-   | 
-  Arrhythmia Classification
-   | 
-  Generative Adversarial Network (GAN)
-   | 
-  Hierarchical deep learning with GAN for
-  anomaly detection and multi-class arrhythmia classification using transfer
-  learning
-   |
-|
-  Guijin Wang et al. (2018) [^2]
-   | 
-  Arrhythmia Classification
-   | 
-  Recurrent Neural Network (RNN)
-   | 
-  Global and updatable ECG classification
-  system with active learning to improve performance over time
-   |
-|
-  Saman Parvaneh et al. (2018) [^3]
-   | 
-  Atrial Fibrillation Detection
-   | 
-  Dense Convolutional Neural Network (DenseNet)
-   | 
-  Combination of densely connected CNNs with
-  feature-based post-processing to detect atrial fibrillation from single-lead
-  ECG
-   |
-|
-  Ran Xiao et al. (2018) [^4]
-   | 
-  Ischemic ST Change Detection
-   | 
-  Convolutional Neural Network (CNN)
-   | 
-  Image-based ECG transformation with deep
-  learning to improve detection of ST depression changes, leveraging Google
-  Inception V3 via transfer learning.
-   |
+| Zekai Wang et al. (2023) [^1] | Arrhythmia Classification | Generative Adversarial Network (GAN) | Hierarchical deep learning with GAN for anomaly detection and multi-class arrhythmia classification using transfer learning |
+| Guijin Wang et al. (2018) [^2] | Arrhythmia Classification | Recurrent Neural Network (RNN) | Global and updatable ECG classification system with active learning to improve performance over time |
+| Saman Parvaneh et al. (2018) [^3] | Atrial Fibrillation Detection | Dense Convolutional Neural Network (DenseNet) | Combination of densely connected CNNs with feature-based post-processing to detect atrial fibrillation from single-lead ECG |
+| Ran Xiao et al. (2018) [^4] | Ischemic ST Change Detection | Convolutional Neural Network (CNN) | Image-based ECG transformation with deep learning to improve detection of ST depression changes, leveraging Google Inception V3 via transfer learning. |
 - Arrhythmia Classification
   [^2], [^3] Arrhythmia classification 는 다양한 종류의 arrhythimias를 ECG 신호를 이용해 식별하는 것을 목표로 합니다. 연구들은 ari와 atr 파일을 이용하여 ECG 기록에서 발생한 arrhythimias의 종류를 식별하고자 합니다.
 - Atrial Fibrillation Detection

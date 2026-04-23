@@ -132,7 +132,10 @@ def build_maps(sections: list, skey: str):
         base = DOCS_ROOT / skey
         if d == 1:
             sl = slug_map[tuple(parts)]
-            return base / sl / "index.md" if s["has_children"] else base / f"{sl}.md"
+            if s["has_children"] or is_dataset_section(s):
+                return base / sl / "index.md"
+            else:
+                return base / f"{sl}.md"
         elif d == 2:
             p1 = slug_map[tuple(parts[:1])]
             sl = slug_map[tuple(parts)]
@@ -156,7 +159,7 @@ def build_maps(sections: list, skey: str):
 def up_levels(sec: dict) -> int:
     d = len(sec["parts"])
     if d == 1:
-        return 1 if sec["has_children"] else 0
+        return 1 if (sec["has_children"] or is_dataset_section(sec)) else 0
     elif d == 2:
         return 2 if sec["has_children"] else 1
     elif d == 3:
@@ -213,6 +216,10 @@ def write_section_files(skey: str, lines: list, sections: list, file_map: dict):
 
         num_str = ".".join(str(p) for p in s["parts"])
         content = f"# {num_str}. {s['title']}\n\n" + "\n".join(own)
+
+        # Fix 4: strip bold markers (**) from dataset section link titles
+        if is_dataset_section(s):
+            content = re.sub(r'\*\*([^*\n]+)\*\*', r'\1', content)
 
         # Fix 2: add clickable child links to parent pages
         if s["has_children"]:
@@ -276,7 +283,8 @@ def build_nav(sections: list, skey: str, file_map: dict, dataset_pages: list) ->
 
     level1 = sorted(p for p in by_parts if len(p) == 1)
 
-    # Fix 3: swap sections 6 and 7 for ECG and EEG (기반모델 before 결론)
+    # Fix 3: swap sections 6 and 7 so 기반모델 appears before 결론 (ECG/EEG only)
+    # EMG has no 기반모델 section, so skip
     if skey in ("ecg", "eeg"):
         l = list(level1)
         idx6 = next((i for i, p in enumerate(l) if p == (6,)), -1)
@@ -294,10 +302,16 @@ def update_index(skey: str, lines: list, sections: list, file_map: dict):
     """Replace index.md with title + section link list."""
     title_line = lines[0] if lines else f"# {skey.upper()} Dataset"
 
+    level1 = [s for s in sections if len(s["parts"]) == 1]
+    # Apply same 6/7 swap as nav (ECG/EEG only)
+    if skey in ("ecg", "eeg"):
+        idx6 = next((i for i, s in enumerate(level1) if s["parts"] == [6]), -1)
+        idx7 = next((i for i, s in enumerate(level1) if s["parts"] == [7]), -1)
+        if idx6 >= 0 and idx7 >= 0:
+            level1[idx6], level1[idx7] = level1[idx7], level1[idx6]
+
     links = []
-    for s in sections:
-        if len(s["parts"]) != 1:
-            continue
+    for s in level1:
         fp = file_map[tuple(s["parts"])]
         rel = fp.relative_to(DOCS_ROOT / skey)
         num = ".".join(str(p) for p in s["parts"])
@@ -371,6 +385,13 @@ def process(skey: str):
     slug_map, file_map = build_maps(sections, skey)
     dataset_pages = get_dataset_pages(skey)
     print(f"  {len(dataset_pages)} dataset pages")
+
+    # Remove old flat .md files that have been converted to directory/index.md
+    for key, fp in file_map.items():
+        if fp.name == "index.md":
+            old_flat = fp.parent.parent / f"{fp.parent.name}.md"
+            if old_flat.exists():
+                old_flat.unlink()
 
     write_section_files(skey, lines, sections, file_map)
     update_index(skey, lines, sections, file_map)

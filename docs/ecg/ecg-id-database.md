@@ -10,9 +10,7 @@ ECG-ID 데이터베이스는 ECG 기반 생체 인식 연구를 위해 설계된
 
 | # of Leads | Sampling Frequency | Recording Duration | File Format |
 | --- | --- | --- | --- |
-| 1 | Fixed 500 Hz | 20 seconds | .atr(annotations)
-.dat (ECG signal)
-.hea (Metadata) |
+| 1 | Fixed 500 Hz | 20 seconds | .atr(annotations) .dat (ECG signal) .hea (Metadata) |
 
 ## 2.2 Raw Dataset
 
@@ -79,8 +77,7 @@ ECG-ID Database는 생체 인식 및 개인 인증 연구에서 널리 사용되
 | Citation | Prediction task | Architectures | Unique Methodology |
 | --- | --- | --- | --- |
 | AlDuwaile et al. (2021) | Biometric Identification | CNN | Demonstrated the potential for high-accuracy personal recognition with just a single heartbeat (0.5 seconds) |
-| Chu et al. (2019) | Biometric Identification
-& Verification | ResNet | Parallel Multi-Scale filter |
+| Chu et al. (2019) | Biometric Identification & Verification | ResNet | Parallel Multi-Scale filter |
 | Melzi et al. (2023) | Biometric Verification | Autoencoder, CNN | Feature Extraction model supporting both Multi-lead & Single-lead ECG signals |
 
 이 데이터셋은 생체 인식을 위한 여러 연구에서 활용되고 있습니다. AlDuwaile et al. (2021) 연구에서는 CNN 모델을 사용하여 단일 심박만으로 높은 정확도의 개인 식별 성능을 달성하였습니다. Chu et al. (2019) 연구에서는 Parallel Multi-Scale One-Dimensional ResNet 구조를 도입하여 ECG 기반 인증 모델의 성능을 향상시켰습니다. Melzi et al. (2023) 연구에서는 Autoencoder와 CNN을 활용한 특징 추출 모델을 개발하여 단일 리드 및 다중 리드 ECG 신호를 모두 지원하는 Biometric Verification에 활용되었습니다.

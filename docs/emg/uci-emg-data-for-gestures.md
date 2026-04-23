@@ -12,8 +12,7 @@
 
 | Channel | Sampling Frequency | Recording Duration | File Format |
 | --- | --- | --- | --- |
-| 8 | 250Hz
- | 3. seconds | .txt |
+| 8 | 250Hz | 3. seconds | .txt |
 
 ## 2.2 Data Statistics
 

@@ -18,8 +18,7 @@ MyPredict3 = 10aud 대상, 8채널의 Bipolar sEMG전극, 다중 배열 전극 �
 
 | **Channel** | **Sampling Frequency** | **Recording Duration** | **File Format** |
 | --- | --- | --- | --- |
-| 8+2 | 1000 / 2000 Hz
- | 1.5 minutes, 85trials | .MAT |
+| 8+2 | 1000 / 2000 Hz | 1.5 minutes, 85trials | .MAT |
 
 ## 2.2 Data Statistics
 

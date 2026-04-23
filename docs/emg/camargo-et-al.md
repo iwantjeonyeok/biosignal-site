@@ -12,9 +12,7 @@
 
 | **Channel** | **Sampling Frequency** | **Recording Duration** | **File Format** |
 | --- | --- | --- | --- |
-| 11 | 1000 Hz
- | 트레드밀 보행 : 30초
-기타 보행 : 5회 반복 실험 | .CSV, .MAT |
+| 11 | 1000 Hz | 트레드밀 보행 : 30초 기타 보행 : 5회 반복 실험 | .CSV, .MAT |
 
 ## 2.2 Data Statistics
 

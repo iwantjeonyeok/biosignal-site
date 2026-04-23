@@ -14,7 +14,7 @@ Long-Term ST Databses는 80명의 인간 피험자에 대한 86개의 장기 ECG
 
 | # of Leads | Sampling Frequency (Hz) | Recording Duration (min) | File Fomat |
 | --- | --- | --- | --- |
-| 
+|
   2 or 3
    | 
   Fixed 250 Hz
@@ -39,11 +39,9 @@ Long-Term ST Databses는 80명의 인간 피험자에 대한 86개의 장기 ECG
 
 ## 2.2 Data Statistics
 
-| Label Type | # of recordings | Time length (s)
-- Mean | Time length (s)
-- Standard Deviation |
+| Label Type | # of recordings | Time length (s) - Mean | Time length (s) - Standard Deviation |
 | --- | --- | --- | --- |
-| 
+|
   N
    | 
   97.43% (8,669,297/8,897,780)
@@ -52,7 +50,7 @@ Long-Term ST Databses는 80명의 인간 피험자에 대한 86개의 장기 ECG
    | 
   867.75
    |
-| 
+|
   B
    | 
   1.00% (88,720/8,897,780)
@@ -61,7 +59,7 @@ Long-Term ST Databses는 80명의 인간 피험자에 대한 86개의 장기 ECG
    | 
   809.66
    |
-| 
+|
   V
    | 
   0.82%
@@ -71,7 +69,7 @@ Long-Term ST Databses는 80명의 인간 피험자에 대한 86개의 장기 ECG
    | 
   0.14
    |
-| 
+|
   S
    | 
   0.64% (57,311/8,897,780)
@@ -80,7 +78,7 @@ Long-Term ST Databses는 80명의 인간 피험자에 대한 86개의 장기 ECG
    | 
   20.82
    |
-| 
+|
   A
    | 
   0.10%
@@ -90,7 +88,7 @@ Long-Term ST Databses는 80명의 인간 피험자에 대한 86개의 장기 ECG
    | 
   0.20
    |
-| 
+|
   F
    | 
   0.01% (597/8,897,780)
@@ -99,7 +97,7 @@ Long-Term ST Databses는 80명의 인간 피험자에 대한 86개의 장기 ECG
    | 
   0.04
    |
-| 
+|
   a
    | 
   0.00%
@@ -109,7 +107,7 @@ Long-Term ST Databses는 80명의 인간 피험자에 대한 86개의 장기 ECG
    | 
   0.25
    |
-| 
+|
   E
    | 
   0.00% (71/8,897,780)
@@ -118,7 +116,7 @@ Long-Term ST Databses는 80명의 인간 피험자에 대한 86개의 장기 ECG
    | 
   0.12
    |
-| 
+|
   e
    | 
   0.00%
@@ -128,7 +126,7 @@ Long-Term ST Databses는 80명의 인간 피험자에 대한 86개의 장기 ECG
    | 
   0.0
    |
-| 
+|
   j
    | 
   0.00% (6/8,897,780)
@@ -137,7 +135,7 @@ Long-Term ST Databses는 80명의 인간 피험자에 대한 86개의 장기 ECG
    | 
   0.37
    |
-| 
+|
   Q
    | 
   0.00%
@@ -147,7 +145,7 @@ Long-Term ST Databses는 80명의 인간 피험자에 대한 86개의 장기 ECG
    | 
   0.0
    |
-| 
+|
   /
    | 
   0.00% (1/8,897,780)
@@ -156,7 +154,7 @@ Long-Term ST Databses는 80명의 인간 피험자에 대한 86개의 장기 ECG
    | 
   0.0
    |
-| 
+|
   J
    | 
   0.00%
@@ -166,7 +164,7 @@ Long-Term ST Databses는 80명의 인간 피험자에 대한 86개의 장기 ECG
    | 
   0.0
    |
-| 
+|
   Total
    | 
   1 (8,897,780)
@@ -399,7 +397,7 @@ The Long Term ST Database는 arrhythims classification 문제를 해결하는데
 
 | 인용 논문 | 연구 과제 | 모델 구조 | 방법론 |
 | --- | --- | --- | --- |
-| 
+|
   Zekai Wang et al. (2023) [^1]
    | 
   Arrhythmia Classification
@@ -410,7 +408,7 @@ The Long Term ST Database는 arrhythims classification 문제를 해결하는데
   anomaly detection and multi-class arrhythmia classification using transfer
   learning
    |
-| 
+|
   Guijin Wang et al. (2018) [^2]
    | 
   Arrhythmia Classification
@@ -420,7 +418,7 @@ The Long Term ST Database는 arrhythims classification 문제를 해결하는데
   Global and updatable ECG classification
   system with active learning to improve performance over time
    |
-| 
+|
   Saman Parvaneh et al. (2018) [^3]
    | 
   Atrial Fibrillation Detection
@@ -431,7 +429,7 @@ The Long Term ST Database는 arrhythims classification 문제를 해결하는데
   feature-based post-processing to detect atrial fibrillation from single-lead
   ECG
    |
-| 
+|
   Ran Xiao et al. (2018) [^4]
    | 
   Ischemic ST Change Detection

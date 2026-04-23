@@ -65,10 +65,10 @@
 
 | 인용 논문 | 연구 과제 | 모델 구조 | 방법론 |
 | --- | --- | --- | --- |
-| 
+|
 Guerrero-Mendez (2023) [^2] 
    | MI-BCI 초보 사용자에서의 EEG 분류 성능 향상 및 BCI illiteracy 극복 | CNN+LSTM 혼합 구조 | 25명의 naive 사용자 EEG 데이터를 이용해 CNN, LSTM, BiLSTM 기반 딥러닝 모델을 학습. 초보자 대상 BCI 시스템의 실용성과 제어성, 신뢰성을 높이는 데 효과적. |
-| 
+|
   Pham (2023) [^3]         
    | 대규모 MI-EEG 데이터셋 기반 웨이블릿 특징 융합 분류 성능 향상
    | Wavelet Scattering Features + SVM + Fuzzy Rule-based Classifier Fusion | 웨이블릿-시간 특성과 반복성 플롯을 기반으로 두 개 분류기(SVM 등)를 훈련시킨 후 fuzzy rule 기반 융합 시스템으로 최종 분류.  |

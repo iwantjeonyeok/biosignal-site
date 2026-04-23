@@ -190,10 +190,8 @@ CHB-MIT[^1] 데이터셋은 소아 간질 환자 23명을 대상으로 수집된
 
 | 인용 논문 | 연구 과제 | 모델 구조 | 방법론 |
 | --- | --- | --- | --- |
-| Yang et al. (2023) [^2] | EEG 기반 발작 탐지 및 다양한 생체신호 분류 | Transformer 기반 Attention 모델 (BIOT) | 다양한 생체신호 간 차이를 보정할 수 있도록 biosignal sentence 생성 후 Transformer에 입력. CHB-MIT 등에서 전이 학습을 수행하며, 발작 탐지 정확도 검증.
- |
-| Mir et al. (2023) [^3] | EEG 기반 간질 발작 자동 진단 | 심층 오토인코더와 양방향 순환신경망 기반 모델 (Deep-EEG) | CHB-MIT 및 실제 병원 데이터셋을 기반으로 EEG를 세그먼트화 후 Bi-LSTM으로 분류. 민감도 99.8%, 정밀도 99.9% 달성.
- |
+| Yang et al. (2023) [^2] | EEG 기반 발작 탐지 및 다양한 생체신호 분류 | Transformer 기반 Attention 모델 (BIOT) | 다양한 생체신호 간 차이를 보정할 수 있도록 biosignal sentence 생성 후 Transformer에 입력. CHB-MIT 등에서 전이 학습을 수행하며, 발작 탐지 정확도 검증. |
+| Mir et al. (2023) [^3] | EEG 기반 간질 발작 자동 진단 | 심층 오토인코더와 양방향 순환신경망 기반 모델 (Deep-EEG) | CHB-MIT 및 실제 병원 데이터셋을 기반으로 EEG를 세그먼트화 후 Bi-LSTM으로 분류. 민감도 99.8%, 정밀도 99.9% 달성. |
 | Wang et al. (2025) [^4] | EEG 기반 범용 BCI 모델 학습 (Foundation Model) | Criss-Cross Transformer 기반 모델 (CBraMod) | 12개 공개 EEG 데이터셋 중 하나로 CHB-MIT 포함. Masked EEG reconstruction 기반 self-supervised pretraining, spatial-temporal attention 분리 학습 구조. |
 
 # 4. References

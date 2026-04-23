@@ -81,8 +81,7 @@ Grasp-and-Lift EEG Challenge 데이터셋은 train과 test 두 개의 하위 폴
 | 인용 논문 | 연구 과제 | 모델 구조 | 방법론 |
 | --- | --- | --- | --- |
 | Pancholi (2022) [^2] | EEG 기반 손 운동 궤적 복원을 위한 연속 운동 추정 및 소스 정보 통합 | MLP, CNN-LSTM, WPD CNN-LSTM + sLORETA | 뇌 소스 위치 정보(sLORETA 기반)를 활용하여 EEG 채널 선택 및 세그먼트 분할 정확도 향상. 다중 deep 모델(MLP, CNN-LSTM, WPD-CNN-LSTM)을 이용해 손 궤적을 연속적으로 추정. |
-| Ma (2023) [^3]         
-   | 개인 맞춤형 MI EEG 신호 분류 정확도 향상 | MBGA-Net (Multi-Branch Graph Adaptive Network) | EEG의 시공간적 도메인 특징에 따라 신호를 적절한 시간-주파수 도메인 브랜치로 분류하고, 그래프 attention 및 잔차 연결 기반 CNN으로 intra/inter-channel 정보를 추출. 각 브랜치가 format에 특화된 표현을 학습. |
+| Ma (2023) [^3] | 개인 맞춤형 MI EEG 신호 분류 정확도 향상 | MBGA-Net (Multi-Branch Graph Adaptive Network) | EEG의 시공간적 도메인 특징에 따라 신호를 적절한 시간-주파수 도메인 브랜치로 분류하고, 그래프 attention 및 잔차 연결 기반 CNN으로 intra/inter-channel 정보를 추출. 각 브랜치가 format에 특화된 표현을 학습. |
 
 # 4. References
 

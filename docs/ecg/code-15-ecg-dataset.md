@@ -10,11 +10,7 @@ CODE 15% ECG 데이터셋은 12-리드 심전도(ECG) 기록을 기반으로 한
 
 | # of Leads | Sampling Frequency | Recording Duration | File Format |
 | --- | --- | --- | --- |
-| 12 | Fixed 400 Hz | 7 seconds
-(2800 sample)
-10 seconds
-(4000 sample) | Exams.csv(metadata)
-Exams.hdf5(signal) |
+| 12 | Fixed 400 Hz | 7 seconds (2800 sample) 10 seconds (4000 sample) | Exams.csv(metadata) Exams.hdf5(signal) |
 
 ## 2.2 Raw Dataset
 
@@ -69,12 +65,8 @@ CODE 15% ECG Dataset은 자동화된 심전도 진단(Automated ECG Diagnosis), 
 
 | Citation | Prediction task | Architectures | Unique Methodology |
 | --- | --- | --- | --- |
-| Ribeiro et al.
-(2020) | Automated Diagnosis of Cardiac Abnormalities | ResNet-based CNN | Multi-label Classification
- |
-| Song et al. (2024) | Multi-class ECG Disease Classification,
-Heart Age Estimation from ECG | Hybrid Self-Supervised Learning
-based Foundation model | Self-supervised Learning based ECG model |
+| Ribeiro et al. (2020) | Automated Diagnosis of Cardiac Abnormalities | ResNet-based CNN | Multi-label Classification |
+| Song et al. (2024) | Multi-class ECG Disease Classification, Heart Age Estimation from ECG | Hybrid Self-Supervised Learning based Foundation model | Self-supervised Learning based ECG model |
 
 이 데이터셋을 활용한 연구중 Ribeiro et al. (2020) 연구에서는 ResNet 기반 CNN 모델을 활용하여 12-리드 ECG 데이터를 자동으로 분석하고 심장 이상을 감지하는 다중 레이블 분류(Multi-label Classification) 모델을 개발하였습니다. 그리고 Song et al. (2024) 연구에서는 Hybrid Self-Supervised Learning 기반 ECG Foundation Model을 구축하여 다중 클래스 심장 질환 분류 및 심장 나이 예측을 수행하였습니다.
 

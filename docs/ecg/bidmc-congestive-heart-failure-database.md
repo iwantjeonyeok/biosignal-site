@@ -14,9 +14,7 @@ BIDMC Congestive Heart Failure Database는 심부전(CHF) 환자의 ECG, 혈압,
 
 | # of Subjects | # of Leads | Sampling Frequency (Hz) | Recording Duration (min) | File Fomat |
 | --- | --- | --- | --- | --- |
-|  | 2 | Fixed 250 Hz | Approximately 20 hours | .hea (Metadata)
-.ecg (ECG)
-.dat (ECG + Rhythm annotation) |
+|  | 2 | Fixed 250 Hz | Approximately 20 hours | .hea (Metadata) .ecg (ECG) .dat (ECG + Rhythm annotation) |
 - 2개의 Lead: Lead I, Lead II
 
 ## 2.2 Data Statistics

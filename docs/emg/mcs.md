@@ -16,8 +16,7 @@ MCS(Multi-Channel Surface Electromyography) 데이터셋은 Izmir Katip Celebi U
 
 | **Channel** | **Sampling frequency** | **Recording duration** | **File format** |
 | --- | --- | --- | --- |
-| 4 | 2000Hz | 640second | .csv
-.mat |
+| 4 | 2000Hz | 640second | .csv .mat |
 
 ## 2.2 Data Statistics
 

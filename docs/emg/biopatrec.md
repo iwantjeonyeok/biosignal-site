@@ -18,26 +18,16 @@ BioPatRec 데이터셋은 의수(보철 손) 제어 연구를 위해 Chalmers Un
 
 | **Label** | **Description** | **# of recording** |
 | --- | --- | --- |
-| OH
-(Open Hand) | 손을 편 상태 | 10% |
-| CH
-(Close Hand) | 손을 쥔 상태 | 10% |
-| FH
-(Flex Hand) | 손을 안쪽으로 당기는 상태 | 10% |
-| EH
-(Extend Hand) | 손을 바깥쪽으로 당기는 상태 | 10% |
-| PR
-(Pronation) | 손바닥을 아래로 회전 | 10% |
-| SP
-(Supination) | 손바닥을 위로 회전 | 10% |
-| SG
-(Side Grip) | 손가락을 측면으로 모으기 | 10% |
-| FG
-(Fine Grip) | 작은 물체를 잡는 동작 | 10% |
-| AG
-(Thumb up) | 엄지 손가락을 올리는 동작 | 10% |
-| PT
-(Pointer) | 검지 손가락을 펴고 나머지는 접기 | 10% |
+| OH (Open Hand) | 손을 편 상태 | 10% |
+| CH (Close Hand) | 손을 쥔 상태 | 10% |
+| FH (Flex Hand) | 손을 안쪽으로 당기는 상태 | 10% |
+| EH (Extend Hand) | 손을 바깥쪽으로 당기는 상태 | 10% |
+| PR (Pronation) | 손바닥을 아래로 회전 | 10% |
+| SP (Supination) | 손바닥을 위로 회전 | 10% |
+| SG (Side Grip) | 손가락을 측면으로 모으기 | 10% |
+| FG (Fine Grip) | 작은 물체를 잡는 동작 | 10% |
+| AG (Thumb up) | 엄지 손가락을 올리는 동작 | 10% |
+| PT (Pointer) | 검지 손가락을 펴고 나머지는 접기 | 10% |
 
 ## 2.3 Raw Dataset
 

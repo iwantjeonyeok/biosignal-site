@@ -12,8 +12,7 @@
 
 | **Channel** | **Sampling frequency** | **Recording duration** | **File format** |
 | --- | --- | --- | --- |
-| 5 | 1000 Hz | 10 seconds | .csv
-.mat |
+| 5 | 1000 Hz | 10 seconds | .csv .mat |
 
 ## 2.2 Data Statistics
 

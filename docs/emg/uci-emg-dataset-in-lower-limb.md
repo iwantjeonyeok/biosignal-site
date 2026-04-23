@@ -12,8 +12,7 @@
 
 | **Channels** | **Sampling Frequency** | **Recording Duration** | **File Format** |
 | --- | --- | --- | --- |
-| 4 | 1000 Hz
- | 5 trials | .txt |
+| 4 | 1000 Hz | 5 trials | .txt |
 
 ## 2.2 Data Statistics
 

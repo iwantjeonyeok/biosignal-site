@@ -10,8 +10,7 @@ MIMIC-IV-ECG dataset은 Beth Israel Deaconess Medical Center (BIDMC)에서 수�
 
 | # of Subjects | # of Leads | Sampling Frequency (Hz) | Recording Duration (min) | File Fomat |
 | --- | --- | --- | --- | --- |
-| More than 80,000 (80,035 records) | 12 | Fixed 500 Hz | 10 seconds | .dat (ECG)
-.hea (Metadata) |
+| More than 80,000 (80,035 records) | 12 | Fixed 500 Hz | 10 seconds | .dat (ECG) .hea (Metadata) |
 
 ## 2.2 Data Statistics
 
@@ -113,12 +112,8 @@ csv_files 폴더에는 개별 신호 데이터를 담고 있는 ()_data.csv 파�
 
 | 인용 논문 | 연구 과제 | 모델 구조 | 방법론 |
 | --- | --- | --- | --- |
-| Tian et al. (2024) [^1] | Arrhythmia & Abnormality detection (+ Generate textual explanations for ECG patterns and findings) | Signal-Language Architecture (ECG Encoder + Knowledge Encoder + Label Query Network) | 1. Employed a Large Language Model (LLM) to unify ECG signals and medical text
-2. Allowed text queries for disease likelihood3. GPT-based explanations with Grad-CAM visualization to enhance interpretability |
-| Carbonati et al. (2024) [^2] | 1. Detection of regional wall motion abnormalities (RWMA)
-2. Detection of global RV hypokinesis
-3. Risk stratification for future acute coronary events | Convolutional Neural Network (modified ResNet-101) | 1. Integrated echocardiography reports with ECG data to predict wall motion abnormalities, rather than relying on ECG alone
-2. Defined stepwise classification for LVEF cutoffs and RWMA localization
+| Tian et al. (2024) [^1] | Arrhythmia & Abnormality detection (+ Generate textual explanations for ECG patterns and findings) | Signal-Language Architecture (ECG Encoder + Knowledge Encoder + Label Query Network) | 1. Employed a Large Language Model (LLM) to unify ECG signals and medical text 2. Allowed text queries for disease likelihood3. GPT-based explanations with Grad-CAM visualization to enhance interpretability |
+| Carbonati et al. (2024) [^2] | 1. Detection of regional wall motion abnormalities (RWMA) 2. Detection of global RV hypokinesis 3. Risk stratification for future acute coronary events | Convolutional Neural Network (modified ResNet-101) | 1. Integrated echocardiography reports with ECG data to predict wall motion abnormalities, rather than relying on ECG alone 2. Defined stepwise classification for LVEF cutoffs and RWMA localization
   
    |
 

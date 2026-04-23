@@ -14,11 +14,7 @@ SHDB-AF(Saitama Heart Database Atrial Fibrillation)는 일본에서 수집된 �
 
 | # of Subjects | # of Leads | Sampling Frequency (Hz) | Recording Duration (min) | File Fomat |
 | --- | --- | --- | --- | --- |
-| More than 10,000,000 (10,574,142 records) | 2 | Fixed 200 Hz
-(Resampled 125Hz) | Approximately 9-24 hours | .dat (ECG)
-.hea (Metadata)
-.atr (Rhythm annotation)
-.qrs (R-peak annotation) |
+| More than 10,000,000 (10,574,142 records) | 2 | Fixed 200 Hz (Resampled 125Hz) | Approximately 9-24 hours | .dat (ECG) .hea (Metadata) .atr (Rhythm annotation) .qrs (R-peak annotation) |
 
 ## 2.2 Data Statistics
 

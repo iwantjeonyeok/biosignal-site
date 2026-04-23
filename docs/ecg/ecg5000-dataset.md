@@ -21,14 +21,11 @@ ECG5000 데이터셋은 전처리가 완료된 상태로 제공되어 바로 학
 
 | # of Subjects | # of Leads | Sampling Frequency (Hz) | Recording Duration (min) | File Fomat |
 | --- | --- | --- | --- | --- |
-| 5,000 records | 1 | Fixed 500 Hz | 20 hours | .arff (ECG + Rhythm annotation)
-.ts (ECG)
-.txt (ECG) |
+| 5,000 records | 1 | Fixed 500 Hz | 20 hours | .arff (ECG + Rhythm annotation) .ts (ECG) .txt (ECG) |
 
 ## 2.2 Data Statistics
 
-| Label Type | Label Meaning | # of recordings | Time length (s)
-- Fixed |
+| Label Type | Label Meaning | # of recordings | Time length (s) - Fixed |
 | --- | --- | --- | --- |
 | 1 | Normal (N) | 2919 (58.38%) | 140 |
 | 2 | R-on-T PVC (R) | 1767 (35.34%) | 140 |

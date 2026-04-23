@@ -90,7 +90,7 @@
 | 인용 논문 | 연구 과제 | 모델 구조 | 방법론 |
 | --- | --- | --- | --- |
 | Song (2022) [^2] | EEG 기반 Motor Imagery 및 감정 인식 EEG 분류 및 시각화 | Convolution + Transformer 기반 EEG Conformer | CNN으로 시간 및 공간상의 로컬 특징을 추출하고, Self-Attention 모듈로 글로벌 시계열 상관관계를 포착하여 통합된 EEG 분류 수행. 클래스 활성 시각화 기법을 도입해 해석 가능성 강화.  |
-| 
+|
 Altaheri (2023) [^3]         
    | 
   EEG 기반 Motor Imagery 분류 및 재활 BCI 시스템 개발    

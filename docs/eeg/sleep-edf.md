@@ -83,8 +83,7 @@ Sleep-EDF Expanded 데이터셋은 sleep-cassette와 sleep-telemetry 두 하위 
 | 인용 논문 | 연구 과제 | 모델 구조 | 방법론 |
 | --- | --- | --- | --- |
 | Kostas (2021) [^2] | 대규모 EEG 데이터를 활용한 범용 feature 학습 및 다운스트림 BCI/EEG 분류로의 적응 | Transformer + Contrastive Self-Supervised Learning (BENDR) | raw EEG에 대해 transformer 기반 encoder를 사용하고, contrastive self-supervised objective로 시계열 representation을 학습. 사전학습된 BENDR는 다양한 장비, 과제, 피험자 간에도 일반화 가능하며, 다운스트림 EEG 분류/수면 단계 분류에서 fine-tuning 시 높은 전이 학습 성능을 보임. |
-| Alickovic (2018) [^3]         
-   | 단일 채널 EEG 기반 수면 단계 자동 분류   | DWT + MSPCA + Rotational SVM (RotSVM) 앙상블 | Pz-Oz 단일 채널 EEG 신호에 대해 MSPCA로 노이즈 제거, DWT로 서브밴드 분해 및 통계량 추출 후, 해당 feature들을 RotSVM 기반 앙상블 분류기로 입력. PCA 기반 차원 축소와 비선형 SVM을 조합하여 고성능 수면 분류 모델을 구성함.  |
+| Alickovic (2018) [^3] | 단일 채널 EEG 기반 수면 단계 자동 분류   | DWT + MSPCA + Rotational SVM (RotSVM) 앙상블 | Pz-Oz 단일 채널 EEG 신호에 대해 MSPCA로 노이즈 제거, DWT로 서브밴드 분해 및 통계량 추출 후, 해당 feature들을 RotSVM 기반 앙상블 분류기로 입력. PCA 기반 차원 축소와 비선형 SVM을 조합하여 고성능 수면 분류 모델을 구성함.  |
 
 # 4. References
 

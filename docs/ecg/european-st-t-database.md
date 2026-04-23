@@ -10,9 +10,7 @@ European ST-T Database는 심근 허혈의 ECG 표현을 연구하고, ST 및 T 
 
 | # of Leads | Sampling Frequency | Recording Duration | File Format |
 | --- | --- | --- | --- |
-| 2 | Fixed 250 Hz | 2h | .dat(ecg)
-.atr (annotation)
-.hea (Metadata) |
+| 2 | Fixed 250 Hz | 2h | .dat(ecg) .atr (annotation) .hea (Metadata) |
 
 ## 2.2 Label distribution
 

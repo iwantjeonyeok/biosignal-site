@@ -18,14 +18,10 @@ SEED-IV 데이터셋[^1] 은 15명의 피험자에 대한 EEG 및 안구 운동 
 
 | Label Type | #of recordings | EEG Mean | EEG Std | EEG Max | EEG Median | EEG Min |
 | --- | --- | --- | --- | --- | --- | --- |
-| Neutral (0) | 270
-(25.0%) | 0.010212 | 47.149811 | 1233.485474  | 0.089297   | -1053.78686 |
-| Sad (1) | 270
-(25.0%) | -0.039660    | 38.263618 | 836.776794   | 0.076445   | -689.507080   |
-| Fear (2) | 270
-(25.0%) | -0.036877   | 44.068462 | 1270.304688   | 0.014129   | -804.638000   |
-| Happy (3) | 270
-(25.0%) | 0.039550   | 49.441860 | 1728.114136   | 0.092222   | -994.331604   |
+| Neutral (0) | 270 (25.0%) | 0.010212 | 47.149811 | 1233.485474  | 0.089297   | -1053.78686 |
+| Sad (1) | 270 (25.0%) | -0.039660    | 38.263618 | 836.776794   | 0.076445   | -689.507080   |
+| Fear (2) | 270 (25.0%) | -0.036877   | 44.068462 | 1270.304688   | 0.014129   | -804.638000   |
+| Happy (3) | 270 (25.0%) | 0.039550   | 49.441860 | 1728.114136   | 0.092222   | -994.331604   |
 | **Total** | 1080 | -0.007 | 44.730938 | 1267.17027 | 0.068023 | -885.565886 |
 
 ## 2.3 Raw Dataset
@@ -129,8 +125,7 @@ Raw EEG data는 .mat형식으로 제공되며,  SEED-IV_stimulation.xlsx와 Read
 
 | 인용 논문 | 연구 과제 | 모델 구조 | 방법론 |
 | --- | --- | --- | --- |
-| Wei-Long Zheng et al. (2023) [^2] | EEG 기반 감정 인식 (Emotion Recognition) | DFF-Net (Domain Adaptation with Few-shot Fine-tuning Network)	 | EEG 신호를 세그먼트로 분할하고 δ, θ, α, β, γ 대역에서 Differential Entropy(DE) 특징 추출; Vision Transformer(ViT)를 특징 추출기로 사용; Emo-DA 모듈을 이용한 도메인 적응과 소량의 타겟 도메인 데이터로 파인튜닝 수행해 교차 피험자 인식 성능 향상
- |
+| Wei-Long Zheng et al. (2023) [^2] | EEG 기반 감정 인식 (Emotion Recognition) | DFF-Net (Domain Adaptation with Few-shot Fine-tuning Network)	 | EEG 신호를 세그먼트로 분할하고 δ, θ, α, β, γ 대역에서 Differential Entropy(DE) 특징 추출; Vision Transformer(ViT)를 특징 추출기로 사용; Emo-DA 모듈을 이용한 도메인 적응과 소량의 타겟 도메인 데이터로 파인튜닝 수행해 교차 피험자 인식 성능 향상 |
 | Xitsuka et al. (2024) [^3] | EEG 기반 감정 인식 (Emotion Recognition)	 | SH-MDA (Sample Hybridization-based Multi-source Domain Adaptation)	 | 소스 도메인과 타겟 도메인 표본 간 코사인 유사도 기반 하이브리드 표본 생성; 공통 특징 추출기와 다중 브랜치 네트워크로 각 도메인별 분포 정렬; 최대 평균 차이(MMD) 및 조건부 엔트로피 손실을 적용하여 교차 피험자 및 교차 세션 감정 인식 성능 향상 |
 
 # 4. References

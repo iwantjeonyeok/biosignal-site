@@ -12,19 +12,15 @@ EMG-UKA 데이터셋은 표면 근전도를 활용한 무음 음성 인식(Silen
 
 | **Channel** | **Sampling frequency** | **Recording duration** | **File format** |
 | --- | --- | --- | --- |
-| 6 | 600Hz | 7 hours 32 minutes | .adc
-.txt |
+| 6 | 600Hz | 7 hours 32 minutes | .adc .txt |
 
 ## 2.2 Data Statistics
 
 | **Label** | **Description** | **# of recording** |
 | --- | --- | --- |
-| 일반 발화
-(Audible) | 61개의 일반 크기의 발화 | 42.26% |
-| 속삭임 발화
-(Whispered) | 32개의 작은 크기의 발화 | 23.67% |
-| 무음 발화
-(Silent) | 목소리를 내지 않는 발화 | 23.45% |
+| 일반 발화 (Audible) | 61개의 일반 크기의 발화 | 42.26% |
+| 속삭임 발화 (Whispered) | 32개의 작은 크기의 발화 | 23.67% |
+| 무음 발화 (Silent) | 목소리를 내지 않는 발화 | 23.45% |
 
 EMG-UKA의 라벨 (10.62%의 경우, 라벨이 되지 않은 Nan 영역임)
 

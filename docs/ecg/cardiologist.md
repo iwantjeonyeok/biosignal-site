@@ -10,7 +10,7 @@
 
 | # of Leads | Sampling Frequency (Hz) | Recording Duration (min) | File Fomat |
 | --- | --- | --- | --- |
-| 
+|
  1
    | 
  200Hz

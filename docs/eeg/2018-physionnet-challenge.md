@@ -112,7 +112,7 @@
 | 인용 논문 | 연구 과제 | 모델 구조 | 방법론 |
 | --- | --- | --- | --- |
 | Perslev (2021[^2] | EEG 기반 자동 수면 단계 분류 (sleep staging) | Fully Convolutional Network (U-Sleep) | 전-합성곱 신경망 구조를 사용하여 EEG/EOG 시계열 데이터를 입력받고, 수면 단계를 프레임 단위(최소 30초 간격 이하)로 예측. 다양한 수면 주기 길이와 채널 조합을 처리할 수 있도록 설계되었으며, 각 레이어는 시간 축 정보를 유지한 채 특징을 추출하여 최종적으로 다중 클래스 분류기에서 수면 단계를 출력함.  |
-| 
+|
 Phan (2022) [^3]         
    | 자동 수면 단계 분류 (Sleep Staging) 
    | ATCNet (Attention-based Temporal Convolutional Network)Multi-view Sequence-to-Sequence 모델 (XSleepNet) | 원시 신호와 시간-주파수 이미지의 두 가지 뷰를 동시에 입력으로 받아 각각의 뷰에 대해 generalization/overfitting 수준을 기반으로 동적으로 학습률을 조정. 두 뷰의 특징을 조합하여 통합 표현을 학습하며, 이때 각 뷰의 gradient를 blending하여 정보 손실 없이 융합. 이를 통해 데이터셋 크기나 특성에 강인한 수면 단계 분류 성능 확보. |

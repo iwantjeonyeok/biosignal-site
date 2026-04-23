@@ -90,7 +90,7 @@
 | 인용 논문 | 연구 과제 | 모델 구조 | 방법론 |
 | --- | --- | --- | --- |
 | Fu (2025) [^2] | EEG 기반 보행 패턴 디코딩 및 재활 응용 | Hierarchical GCN Pyramid + HTSR Loss | EEG 채널의 시공간 패턴을 GCN Pyramid 구조로 모델링하고, 시간/주파수/보상 기반 손실(HTSR)을 결합해 디코딩 성능 향상. EEG-Gait Dataset 수집 및 MoBI 기반 fMRI와의 연계 분석을 통해 실험 검증 수행.  |
-| 
+|
 Wang (2024) [^3]         
    | 범용 EEG 표현 학습을 위한 대규모 self-supervised pretraining   | Transformer | Depthwise separable convolution을 기반으로 한 경량 CNN 아키텍처를 통해 다양한 BCI 패러다임(P300, MRCP, ERN, SMR)에 대해 적은 데이터로도 높은 성능을 달성. EEGNet은 해석 가능한 EEG feature를 학습. |
 

@@ -82,10 +82,10 @@
 
 | 인용 논문 | 연구 과제 | 모델 구조 | 방법론 |
 | --- | --- | --- | --- |
-| 
+|
   Kim (2023) [^2] 
    | EEG 기반 Motor Imagery 데이터 증강 및 과적합 완화 | Spatial Variation Generation (SVG) 알고리즘 | 전극 위치 및 뇌 공간 패턴의 변이를 활용해 EEG 데이터를 증강함으로써 raw sample 주변의 밀도를 높이고, 데이터의 vicinal 분포를 생성하여 모델의 과적합 문제를 완화하고 분류 성능을 향상시킴 |
-| 
+|
   Wang (2023) [^3]         
    | 
   EEG 기반 Motor Imagery 분류 및 재활 BCI 시스템 개발    

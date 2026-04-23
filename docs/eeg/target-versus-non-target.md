@@ -81,7 +81,7 @@
 | 인용 논문 | 연구 과제 | 모델 구조 | 방법론 |
 | --- | --- | --- | --- |
 | Ahmadi (2024) [^2] | Brain-to-BrainCommunication 시스템의 보안 및 견고성 향상 | Adversarial Neural Network + ERP 기반 B2B 통신 시스템 | 8개 EEG 데이터셋 기반 이벤트 연관 전위(ERP) 신호를 이용해 적대적 공격에 강건한 신경망 훈련 수행. trial duration 및 sampling rate 최적화를 통해 보안 성능 향상. |
-| 
+|
 Fallahi (2023) [^3]         
    | EEG 기반 바이오메트릭 인증 및 사용자 식별 정확도 향상 | Siamese Network | EG 입력 쌍 간의 유사도를 측정하도록 시암 네트워크를 학습시켜 신원 확인 및 식별 수행. 연속적 활동 대신 시간 고정형 자극 반응 기반 EEG 사용으로 정확도 및 실용성 향상. |
 

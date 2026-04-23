@@ -76,8 +76,7 @@ SPIS 데이터셋[^1]은 총 10명의 건강한 성인을 대상으로 수집된
 
 | 인용 논문 | 연구 과제 | 모델 구조 | 방법론 |
 | --- | --- | --- | --- |
-| Jiang et al. (2024) [^2] | EEG 기반 범용 표현 학습 및 다양한 과제 전이 | Transformer 기반 EEG 인코더 모델 (LaBraM) | 마스킹 기반 자기지도 학습 방식을 통해 2,500시간 이상의 EEG 데이터를 사전학습하며, 복원 기반 학습을 통해 일반화 가능한 표현을 확보함. 이후 감정 인식, 보행 예측 등 다양한 다운스트림 과제에 전이하여 기존 최고 성능을 초과함.
- |
+| Jiang et al. (2024) [^2] | EEG 기반 범용 표현 학습 및 다양한 과제 전이 | Transformer 기반 EEG 인코더 모델 (LaBraM) | 마스킹 기반 자기지도 학습 방식을 통해 2,500시간 이상의 EEG 데이터를 사전학습하며, 복원 기반 학습을 통해 일반화 가능한 표현을 확보함. 이후 감정 인식, 보행 예측 등 다양한 다운스트림 과제에 전이하여 기존 최고 성능을 초과함. |
 | Feng et al. (2023) [^3] | M/EEG 기반 뇌 source activity 추정 향상 | Microstate 기반 segmentation과 Bayesian source imaging 모델 | EEG 데이터를 microstate 단위로 나누고, 각 구간에서 spatio-temporal priors를 적용하여 source를 추정함. SPIS 데이터로 성능 검증. |
 
 # 4. References

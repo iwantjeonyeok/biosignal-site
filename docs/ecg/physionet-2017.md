@@ -20,9 +20,7 @@ PhysioNet/Computing in Cardiology Challenge 2017[^1]은 단일 리드 ECG 신호
 
 ## 2.2 Data Statistics
 
-| Label Type | # of recordings | Time length (s)
-- Mean | Time length (s)
-- Standard Deviation |
+| Label Type | # of recordings | Time length (s) - Mean | Time length (s) - Standard Deviation |
 | --- | --- | --- | --- |
 | Normal | 5154 (60.44%)  | 31.9 | 10.0 |
 | AF | 771 (9.04%) | 31.6 | 12.5 |
@@ -130,16 +128,10 @@ csv_files 폴더에는 개별 신호 데이터를 담고 있는 ()_re_data.csv �
 | --- | --- | --- | --- |
 | Mei et al. (2018) [^2] | Arrhythmia detection | SVM, bagging trees | Feature extraction from heart rate variability and spectral analysis |
 | Parvaneh et  al. (2018) [^3] | Atrial fibrillation | CNN + RNN | Signal quality analysis integrated with deep learning |
-| Xiong et al. (2018) [^4]
-  | Arrhythmia  detection | CNN | Robust ECG signal classification using novel neural network architecture
-   |
-| Han et al. (2020) [^5] | Atrial fibrillation | CNN | Investigation of deep learning model vulnerabilities to adversarial attacks in ECG analysis
-   |
-| Datta et al.(2017) [^6] | Atrial fibrillation   | Cascaded Binary Classifier | Identification of normal, AF, and other abnormal rhythms using a cascaded approach
-   |
-| Zhao et al. (2020) [^7]
-   | Atrial fibrillation   | CNN | Kalman-based spectro-temporal ECG analysis combined with deep convolutional networks
-   |
+| Xiong et al. (2018) [^4] | Arrhythmia  detection | CNN | Robust ECG signal classification using novel neural network architecture |
+| Han et al. (2020) [^5] | Atrial fibrillation | CNN | Investigation of deep learning model vulnerabilities to adversarial attacks in ECG analysis |
+| Datta et al.(2017) [^6] | Atrial fibrillation   | Cascaded Binary Classifier | Identification of normal, AF, and other abnormal rhythms using a cascaded approach |
+| Zhao et al. (2020) [^7] | Atrial fibrillation   | CNN | Kalman-based spectro-temporal ECG analysis combined with deep convolutional networks |
 - Atrial fibrillation detection
 
 [2][3][4][^7] N(정상), A(심방세동), O(기타 부정맥), Noise로 이루어진 4가지 클래스(label)를 활용해 Atrial fibrillation을 검출하고, ECG 데이터를 분류하는 Arrhythmia detection 모델을 학습하고 평가하였습니다.

@@ -14,7 +14,7 @@ MUSIC(MUerte Subita en Insuficiencia Cardiaca) 연구는 만성 심부전(CHF)�
 
 | # of Leads | Sampling Frequency (Hz) | Recording Duration (min) | File Fomat |
 | --- | --- | --- | --- |
-| 
+|
   2-(4%) or 3-(96%)
    | 
   Hotler - 200Hz
@@ -40,35 +40,35 @@ MUSIC(MUerte Subita en Insuficiencia Cardiaca) 연구는 만성 심부전(CHF)�
 
 | Label Type | # of recordings |
 | --- | --- |
-| 
+|
   Survivors
    | 
   70.06048387% (695/992)
    |
-| 
+|
   Lost during follow-up
    | 
   1.10887096% (11/992)
    |
-| 
+|
   Cardiac transplantation | 
   2.01612903% (20/992)
    |
-| 
+|
   Non-cardiac deaths
    | 
   6.14919354% (61/992)
    |
-| 
+|
   Death due to SCD
    | 
   9.47580645% (94/992)
    |
-| 
+|
   Death due to Pump-failure death(PFD) | 
   11.18951612% (111/992)
    |
-| 
+|
   Total
    | 
   1 (992/992)

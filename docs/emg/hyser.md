@@ -22,8 +22,7 @@ EMG신호를 담고있는 .DAT파일과 메타데이터가 담긴 .hea파일이 
 
 | **Channel** | **Sampling frequency** | **Recording duration** | **File format** |
 | --- | --- | --- | --- |
-| 256 | 2048Hz | 4 seconds | .dat
-.hea |
+| 256 | 2048Hz | 4 seconds | .dat .hea |
 
 ## 2.2 Data Statistics
 
@@ -31,17 +30,11 @@ Label
 
 | Hand close | Hand open | Wrist supination | Wrist supination combined with hand open | Extension of index, middle, ring and little fingers |
 | --- | --- | --- | --- | --- |
-| Thumb
-extension | Index finger
-extension | Middle finger
-extension | Ring finger
-extension | Little finger
-extension |
+| Thumb extension | Index finger extension | Middle finger extension | Ring finger extension | Little finger extension |
 | Wrist flexion | Wrist extension | Wrist radial | Wrist ulnar | Wrist pronation |
 | Wrist flexion combined with hand close | Wrist extension combined with hand close | Wrist radial combined with hand close | Wrist ulnar combined with hand close | Wrist pronation combined with hand close |
 | Wrist flexion combined with hand open | Wrist extension combined with hand open | Wrist radial combined with hand open | Wrist ulnar combined with hand open | Wrist pronation combined with hand open |
-| Extension of thumb and 
-index fingers | Extension of thumb, index and middle fingers | Extension of index, middle and ring fingers | Extension of middle, ring and little fingers |  |
+| Extension of thumb and index fingers | Extension of thumb, index and middle fingers | Extension of index, middle and ring fingers | Extension of middle, ring and little fingers |  |
 | Thumb and index fingers pinch | Thumb, index and middle fingers pinch | Thumb and middle fingers pinch | Wrist supination combined with hand close |  |
 
 ## 2.3 Raw Dataset

@@ -10,9 +10,7 @@ Chapman_shaoxing dataset은 12리드 ECG 데이터로 구성된 대규모 데이
 
 | # of Subjects | # of Leads | Sampling Frequency (Hz) | Recording Duration (min) | File Fomat |
 | --- | --- | --- | --- | --- |
-| More than 10,000 (10,247 records) | 12 | Fixed 500 Hz | 10 seconds | MATLAB V4 files
-.mat (ECG)
-.hea (Metadata) |
+| More than 10,000 (10,247 records) | 12 | Fixed 500 Hz | 10 seconds | MATLAB V4 files .mat (ECG) .hea (Metadata) |
 
 ## 2.2 Data Statistics
 
@@ -145,13 +143,9 @@ Chapman_shaoxing 데이터셋에는 각 ECG 파일에 해당하는 patient의 Ag
 
 | 인용 논문 | 연구 과제 | 모델 구조 | 방법론 |
 | --- | --- | --- | --- |
-| Zheng et al. (2020) [^1] | Arrhythmia classification | Ensemble Tree Classifiers (Gradient Boosting, XGBoost) | 1. Robust noise removal
-2. Multi-stage pipeline including filtering (Butterworth, LOESS, Non-Local Means
-3. Feature Extraction |
-| Soltanieh et al. (2024) [^2] | Arrhythmia classification | Self-Supervised Learning pipelines (SimCLR, BYOL, SwAV) + CNN backbones | 1. Extensive analysis of augmentations
-2. Demonstrates competitive ID/OOD performance and conducts per-disease performance breakdown |
-| Zeng et al. (2024) [^3] | Arrhythmia classification | Cascading Deep Neural Network (CNN-based) | 1. Converts Lead II ECG signals into images using Relative Positioning Matrix (RPM)
-2. Employs explainability techniques (Grad-CAM, SHAP)  |
+| Zheng et al. (2020) [^1] | Arrhythmia classification | Ensemble Tree Classifiers (Gradient Boosting, XGBoost) | 1. Robust noise removal 2. Multi-stage pipeline including filtering (Butterworth, LOESS, Non-Local Means 3. Feature Extraction |
+| Soltanieh et al. (2024) [^2] | Arrhythmia classification | Self-Supervised Learning pipelines (SimCLR, BYOL, SwAV) + CNN backbones | 1. Extensive analysis of augmentations 2. Demonstrates competitive ID/OOD performance and conducts per-disease performance breakdown |
+| Zeng et al. (2024) [^3] | Arrhythmia classification | Cascading Deep Neural Network (CNN-based) | 1. Converts Lead II ECG signals into images using Relative Positioning Matrix (RPM) 2. Employs explainability techniques (Grad-CAM, SHAP)  |
 - Arrhythmia classification
 
 [1][^2] chapman_shaoxing 데이터셋에서 총 11종류의 세부 Rhythm Label을 4개의 그룹(Sinus Bradycardia, Atrial Fibrillation, General Supraventricular Tachycardia, Sinus Rhythm)으로 통합하여 Arrhythmia Classification를 수행하였습니다.

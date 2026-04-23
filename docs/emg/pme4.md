@@ -12,8 +12,7 @@ ME4 데이터셋은 오디오(Audio), 비디오(Video), 뇌파(EEG), 근전도(E
 
 | **Channel** | **Sampling frequency** | **Recording duration** | **File format** |
 | --- | --- | --- | --- |
-| 6 | 600Hz | 7 hours 32 minutes | .adc
-.txt |
+| 6 | 600Hz | 7 hours 32 minutes | .adc .txt |
 
 ## 2.2 Data Statistics
 

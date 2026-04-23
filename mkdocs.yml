@@ -98,7 +98,7 @@ nav:
         - 4.3.3. Abnormality Detection (환자 분류): ecg/4-ecg-데이터셋의-정제-및-활용-방안/4-3-downstream-task/4-3-3-abnormality-detection-환자-분류.md
         - 4.3.4. Biometric Identification (생체 정보 예측 - 나이, 성별 등): ecg/4-ecg-데이터셋의-정제-및-활용-방안/4-3-downstream-task/4-3-4-biometric-identification-생체-정보-예측-나.md
     - 5. 데이터셋별 상세 소개:
-      - 개요: ecg/5-데이터셋별-상세-소개.md
+      - ecg/5-데이터셋별-상세-소개.md
       - Apnea Dataset: ecg/apnea-dataset.md
       - BIDMC Congestive Heart Failure Database: ecg/bidmc-congestive-heart-failure-database.md
       - Cardiologist: ecg/cardiologist.md
@@ -131,8 +131,8 @@ nav:
       - SensSmartTech Dataset: ecg/senssmarttech-dataset.md
       - SHDB-AF: ecg/shdb-af.md
       - Sudden Cardiac Death Holter Database: ecg/sudden-cardiac-death-holter-database.md
-    - 6. 결론: ecg/6-결론.md
     - 7. ECG 기반모델 연구 동향: ecg/7-ecg-기반모델-연구-동향.md
+    - 6. 결론: ecg/6-결론.md
   - EEG:
     - EEG Overview: eeg/index.md
     - EEG Dataset (상세): eeg/eeg-dataset-2.md
@@ -154,7 +154,7 @@ nav:
       - 4.1. 전처리(Preprocessing) 방법: eeg/4-eeg-데이터셋의-정제-및-활용-방안/4-1-전처리preprocessing-방법.md
       - 4.2. 통합 활용 방안: eeg/4-eeg-데이터셋의-정제-및-활용-방안/4-2-통합-활용-방안.md
     - 5. 데이터셋별 상세 소개:
-      - 개요: eeg/5-데이터셋별-상세-소개.md
+      - eeg/5-데이터셋별-상세-소개.md
       - 2018 Physionnet Challenge: eeg/2018-physionnet-challenge.md
       - BCI IV-1: eeg/bci-iv-1.md
       - BCI IV-2a: eeg/bci-iv-2a.md
@@ -199,8 +199,8 @@ nav:
       - TUEV: eeg/tuev.md
       - TUSL: eeg/tusl.md
       - TUSZ: eeg/tusz.md
-    - 6. 결론: eeg/6-결론.md
     - 7. EEG 기반모델: eeg/7-eeg-기반모델.md
+    - 6. 결론: eeg/6-결론.md
   - EMG:
     - EMG Overview: emg/index.md
     - 1. 서론: emg/1-서론.md
@@ -228,7 +228,7 @@ nav:
         - 4.2.3. Foundation Model: emg/4-데이터셋의-정제-및-활용-방안/4-2-통합-활용-방안/4-2-3-foundation-model.md
       - 4.3. Downstream Task: emg/4-데이터셋의-정제-및-활용-방안/4-3-downstream-task.md
     - 5. 데이터셋별 상세소개:
-      - 개요: emg/5-데이터셋별-상세소개.md
+      - emg/5-데이터셋별-상세소개.md
       - BioPatRec: emg/biopatrec.md
       - Camargo, et al.: emg/camargo-et-al.md
       - CapgMyo-db: emg/capgmyo-db.md

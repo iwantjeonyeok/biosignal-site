@@ -164,6 +164,10 @@ def up_levels(sec: dict) -> int:
     return 0
 
 
+def is_dataset_section(s: dict) -> bool:
+    return len(s["parts"]) == 1 and s["parts"][0] == 5 and "데이터셋" in s.get("title", "")
+
+
 # ── Dataset page discovery ────────────────────────────────────────────────────
 
 def get_dataset_pages(skey: str) -> list:
@@ -197,6 +201,8 @@ def get_dataset_pages(skey: str) -> list:
 # ── Write section files ───────────────────────────────────────────────────────
 
 def write_section_files(skey: str, lines: list, sections: list, file_map: dict):
+    by_parts = {tuple(s["parts"]): s for s in sections}
+
     for s in sections:
         key = tuple(s["parts"])
         fp = file_map[key]
@@ -207,6 +213,26 @@ def write_section_files(skey: str, lines: list, sections: list, file_map: dict):
 
         num_str = ".".join(str(p) for p in s["parts"])
         content = f"# {num_str}. {s['title']}\n\n" + "\n".join(own)
+
+        # Fix 2: add clickable child links to parent pages
+        if s["has_children"]:
+            child_keys = sorted(
+                [p for p in by_parts if len(p) == len(key) + 1 and p[: len(key)] == key]
+            )
+            child_links = []
+            for ck in child_keys:
+                cs = by_parts[ck]
+                child_fp = file_map[ck]
+                rel = child_fp.relative_to(fp.parent)
+                if rel.name == "index.md":
+                    link = str(rel.parent).replace("\\", "/") + "/"
+                else:
+                    link = str(rel).replace("\\", "/")
+                child_num = ".".join(str(p) for p in cs["parts"])
+                child_links.append(f"[{child_num}. {cs['title']}]({link})")
+            if child_links:
+                content = content.rstrip() + "\n\n" + "\n\n".join(child_links) + "\n"
+
         fp.parent.mkdir(parents=True, exist_ok=True)
         fp.write_text(content, encoding="utf-8")
         print(f"    {fp.relative_to(DOCS_ROOT)}")
@@ -232,21 +258,33 @@ def build_nav(sections: list, skey: str, file_map: dict, dataset_pages: list) ->
             [p for p in by_parts if len(p) == len(parts_tup) + 1 and p[: len(parts_tup)] == parts_tup]
         )
 
-        # Is this the "datasets" section (section 5)?
-        is_dataset_sec = parts_tup[0] == 5 and "데이터셋" in s["title"]
+        is_ds = is_dataset_section(s)
 
-        if not s["has_children"] and not is_dataset_sec:
+        if not s["has_children"] and not is_ds:
             return {title: rp(fp)}
 
-        sub = [{"개요": rp(fp)}]
-        for cp in children_keys:
-            sub.append(build_entry(cp))
-        if is_dataset_sec:
+        if is_ds:
+            # Fix 4/5: path-only entry (navigation.indexes) = no "개요" label
+            sub = [rp(fp)]
             sub.extend({d["title"]: d["rel"]} for d in dataset_pages)
+        else:
+            sub = [{"개요": rp(fp)}]
+            for cp in children_keys:
+                sub.append(build_entry(cp))
 
         return {title: sub}
 
     level1 = sorted(p for p in by_parts if len(p) == 1)
+
+    # Fix 3: swap sections 6 and 7 for ECG and EEG (기반모델 before 결론)
+    if skey in ("ecg", "eeg"):
+        l = list(level1)
+        idx6 = next((i for i, p in enumerate(l) if p == (6,)), -1)
+        idx7 = next((i for i, p in enumerate(l) if p == (7,)), -1)
+        if idx6 >= 0 and idx7 >= 0:
+            l[idx6], l[idx7] = l[idx7], l[idx6]
+        level1 = l
+
     return [build_entry(t) for t in level1]
 
 
@@ -267,9 +305,9 @@ def update_index(skey: str, lines: list, sections: list, file_map: dict):
             link = str(rel.parent).replace("\\", "/") + "/"
         else:
             link = str(rel).replace("\\", "/")
-        links.append(f"- [{num}. {s['title']}]({link})")
+        links.append(f"[{num}. {s['title']}]({link})")
 
-    new_text = title_line.rstrip() + "\n\n" + "\n".join(links) + "\n"
+    new_text = title_line.rstrip() + "\n\n" + "\n\n".join(links) + "\n"
     (DOCS_ROOT / skey / "index.md").write_text(new_text, encoding="utf-8")
 
 
@@ -287,13 +325,17 @@ def nav_to_yaml(items, indent=1):
     prefix = "  " * indent
     lines = []
     for item in items:
-        for k, v in item.items():
-            yk = yaml_key(k)
-            if isinstance(v, list):
-                lines.append(f"{prefix}- {yk}:")
-                lines.append(nav_to_yaml(v, indent + 1))
-            else:
-                lines.append(f"{prefix}- {yk}: {v}")
+        if isinstance(item, str):
+            # path-only entry for navigation.indexes section index
+            lines.append(f"{prefix}- {item}")
+        else:
+            for k, v in item.items():
+                yk = yaml_key(k)
+                if isinstance(v, list):
+                    lines.append(f"{prefix}- {yk}:")
+                    lines.append(nav_to_yaml(v, indent + 1))
+                else:
+                    lines.append(f"{prefix}- {yk}: {v}")
     return "\n".join(lines)
 
 

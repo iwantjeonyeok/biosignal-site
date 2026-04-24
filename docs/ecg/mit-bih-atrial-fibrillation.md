@@ -104,6 +104,7 @@ MIT-BIH 심방세동(Atrial Fibrillation) 데이터베이스는 심방세동(AF)
     ```
 
 MIT-BIH Atrial Fibrillation database의 .hea 및 .dat 파일을 이용하여 data.csv, pid.csv 파일로 변환합니다. 다음은 00735_data.csv 파일을 변환 후 시각화한 결과입니다.
+
 이 시각화 자료는 MIT-BIH 심방세동(Atrial Fibrillation) 데이터베이스의 환자 00735에 대한 10초간의 ECG 데이터를 나타냅니다. ECG 기록은 두 개의 리드(ECG1 및 ECG2)로 구성되며, 250Hz로 샘플링되었습니다.
 
 ![](mit-bih-atrial-fibrillation/image-1.png)
@@ -120,14 +121,21 @@ MIT-BIH Atrial Fibrillation database의 .hea 및 .dat 파일을 이용하여 dat
 | Zhang et al. (2017) [6] | ECG 기반 생체 인증 | 다중 해상도 CNN | 스마트 헬스 응용을 위한 ECG 기반 생체 인증 모델 HeartID 개발 (다중 해상도 CNN 활용) |
 
 MIT-BIH Atrial Fibrillation database는 심방세동(AF) 탐지, ECG 분류, 실시간 모니터링, 생체 인증과 관련된 연구에서 광범위하게 활용되고 있습니다.[1],[2],[4] 이 데이터셋은 딥러닝 기반 AF 탐지, 자동 ECG 분류, 웨어러블 센서 기술의 발전을 가능하게 했습니다.[5]
+
 MIT-BIH Atrial Fibrillation database는 심방세동 탐지 및 부정맥 분류 연구의 발전을 촉진하고 있습니다. 특히 딥러닝(CNN, LSTM) 기법은 실시간 심방세동 탐지 및 ECG 분류의 정확도를 크게 향상시켰습니다.[2],[3],[5],[6]
 
 # 4. References
 
 [1] Rajpurkar, P., Hannun, A. Y., Haghpanahi, M., Bourn, C., & Ng, A. Y. (2017). "Cardiologist-level arrhythmia detection with convolutional neural networks." *arXiv preprint arXiv:1707.01836*.
+
 [2] Faust, O., Shenfield, A., Kareem, M., San, T. R., & Acharya, U. R. (2018). "Automated detection of atrial fibrillation using long short-term memory network with RR interval signals." *Computers in Biology and Medicine, 102*, 327-335.
+
 [3] Mathunjwa, B. M., Lin, Y. T., Lin, C. H., Abbod, M. F., & Shieh, J. S. (2021). "ECG arrhythmia classification by using a recurrence plot and convolutional neural network." *Biomedical Signal Processing and Control, 64*, 102262.
+
 [4] Liu, F., Liu, C., Zhao, L., Zhang, X., Wu, X., Xu, X., & Li, J. (2018). "An open access database for evaluating the algorithms of electrocardiogram rhythm and morphology abnormality detection." *Journal of Medical Imaging and Health Informatics, 8(7)*, 1368-1373.
+
 [5] Pereira, T., Tran, N., Gadhoumi, K., Pelter, M. M., Do, D. H., & Lee, R. J. (2020). "Photoplethysmography-based atrial fibrillation detection: a review." *NPJ Digital Medicine, 3(1)*, 1-12.
+
 [6] Zhang, Q., Zhou, D., & Zeng, X. (2017). "HeartID: A multiresolution convolutional neural network for ECG-based biometric human identification in smart health applications." *IEEE Access, 5*, 11805-11816.
+
 [7] Moody GB, Mark RG. A new method for detecting atrial fibrillation using R-R intervals. Computers in Cardiology. 10:227-230 (1983).

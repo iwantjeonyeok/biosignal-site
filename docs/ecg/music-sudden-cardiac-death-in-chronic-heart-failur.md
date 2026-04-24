@@ -75,7 +75,9 @@ Column E : Cause of death
 ![](music-sudden-cardiac-death-in-chronic-heart-failur/image.png)
 
 데이터셋은 두개의 파일(Hotler_ECG, High-resolution_ECG)로 이루어져 있습니다.
+
 좌측은 Holter_ECG 파일의 P0001.hea, P0001.dat 입니다.
+
 ECG 신호에 대한 정보와 ECG 신호 데이터를 포함합니다.
 
 subject-info.csv에 환자들의 임상정보들을 아래와 같이 포함하고 있습니다.

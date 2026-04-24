@@ -71,4 +71,5 @@ STEW 데이터셋[1]은 총 48명의 건강한 성인 남성 피험자를 대상
 [1] Lim, W. L., Sourina, O., & Wang, L. P. (2018). STEW: Simultaneous Task EEG Workload Data Set. *IEEE Transactions on Neural Systems and Rehabilitation Engineering, 26*(11), 2106–2114.
 
 [2] Foumani, N. M., Mackellar, G., Ghane, S., Irtza, S., Nguyen, N., and Salehi, M. (2024). EEG2Rep: Enhancing Self-supervised EEG Representation Through Informative Masked Inputs. *Proceedings of the 30th ACM SIGKDD Conference on Knowledge Discovery and Data Mining (KDD '24)*.
+
 [3] Jammisetty, Y., Sunkara, K., Vankayalapati, R., Kondaveeti, S., Anumothu, M., & Krishna, Y. M. (2025). Cognitive load detection through EEG lead wise feature optimization and ensemble classification. *Scientific Reports*, **15**, Article 842.

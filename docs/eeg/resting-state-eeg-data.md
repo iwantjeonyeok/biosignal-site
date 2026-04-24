@@ -60,5 +60,6 @@ Resting_State_EEG_Data 폴더는 휴식 상태에서 측정된 EEG 신호를 포
 
 # 4. References
 
-[1] Trujillo, L. T., Stanfield, C. T., & Vela, R. D. (2017). The Effect of Electroencephalogram (EEG) Reference Choice on Information-Theoretic Measures of the Complexity and Integration of EEG Signals. *Frontiers in Neuroscience, 11*, Article 425. 
+[1] Trujillo, L. T., Stanfield, C. T., & Vela, R. D. (2017). The Effect of Electroencephalogram (EEG) Reference Choice on Information-Theoretic Measures of the Complexity and Integration of EEG Signals. *Frontiers in Neuroscience, 11*, Article 425.
+
 [2] Jiang, W., Zhao, L.-M., & Lu, B.-L. (2024). LaBraM: Large Brain Model for Learning Generic Representations with Tremendous EEG Data in BCI. *International Conference on Learning Representations (ICLR)*.

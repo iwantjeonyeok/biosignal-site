@@ -93,6 +93,7 @@ MIT-BIH supraventricular arrhythmia database는 78개의 30분 길이 ECG 기록
     ```
 
 MIT-BIH Supraventricular Arrhythmia database의 .hea 및 .dat 파일을 이용하여 data.csv, pid.csv 파일로 변환합니다. 다음은 800_data.csv, 800_pid.csv파일을 변환 후 시각화한 결과입니다.
+
 이 시각화 자료는 MIT-BIH Supraventricular Arrhythmia database의 환자 800번에 대한 10초간의 ECG 데이터를 나타냅니다. ECG 기록은 두 개의 리드(ECG1 및 ECG2)로 구성되며, 128Hz로 샘플링되었습니다.
 
 ![](mit-bih-supraventricular-arrhythmia-database/image-1.png)

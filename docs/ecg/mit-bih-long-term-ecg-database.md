@@ -105,5 +105,7 @@ MIT-BIH Long-Term ECG database는 장기 ECG 분류, 적응형 QRS 검출, 박�
 # 4. References
 
 [1] Li, X., Zhang, H., Zhao, G., & Xu, X. (2021). Personalized long-term ECG classification: A systematic approach. IEEE Transactions on Biomedical Engineering, 68(4), 1234-1245.
+
 [2] Elgendi, M., Eskofier, B., Abbott, D., & Dokos, S. (2020). An adaptive QRS detection algorithm for ultra-long-term ECG recordings. Computers in Biology and Medicine, 116, 103545.
+
 [3] Nurmaini, S., Darmawahyuni, A., Rachmatullah, M. N., Firdaus, F., & Tutuko, B. (2021). Beat-to-beat electrocardiogram waveform classification based on a stacked convolutional and bidirectional long short-term memory. IEEE Access, 9, 56789-56801.

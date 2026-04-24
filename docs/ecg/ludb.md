@@ -69,6 +69,7 @@ LUDB의 주석은 ECG 파형의 시작, 정점(peak), 종료를 나타내는 구
 ![](ludb/image.png)
 
 이러한 구조는 각 ECG 파형 요소의 시작, 정점, 종료를 명확하게 정의하여 정확한
+
 ECG 분석을 가능하게 합니다.
 
 ## 2.4 Raw Dataset Example
@@ -113,6 +114,7 @@ ECG 분석을 가능하게 합니다.
     ```
 
 data.csv 파일 예시: data 파일에는 12개 채널의 신호 데이터가 들어가 있다. 12 X 5000
+
 의 크기를 가지고 있습니다
 
 ![](ludb/image-1.png)
@@ -143,7 +145,11 @@ LUDB(Lobachevsky University ECG Database)는 ECG 신호 분할(delineation), QRS
 # 4. References
 
 [1] Kalyakulina, Alena I., et al. "LUDB: a new open-access validation tool for electrocardiogram delineation algorithms." IEEE access8 (2020): 186181-186190.
+
 [2] Islam, Saidul, et al. "A comprehensive survey on applications of transformers for deep learning tasks." Expert Systems with Applications241 (2024): 122666.
+
 [3] Chen, Zhenqin, et al. "Post-processing refined ECG delineation based on 1D-UNet." Biomedical Signal Processing and Control79 (2023): 104106.
+
 [4] Liang, Xiaohong, et al. "ECG_SegNet: An ECG delineation model based on the encoder-decoder structure." Computers in biology and medicine145 (2022): 105445.
+
 [5] Han, Chuang, et al. "QRS complexes and T waves localization in multi-lead ECG signals based on deep learning and electrophysiology knowledge." Expert Systems with Applications199 (2022): 117187.

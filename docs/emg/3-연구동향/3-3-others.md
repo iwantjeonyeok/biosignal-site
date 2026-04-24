@@ -7,4 +7,4 @@
 
 (**그림 4, c**) 다른 생체신호와 함께 질병진단에도 EMG는 많이 활용되고 있다. Jha, P. K. 와 그 연구진들은 EMG와 EEG를 통해 쥐의 수면 상태를 분류하는 연구를 수행하였다 [^37]. 이때, ResNet을 직접 적용시켜, 높은 정확도를 이끌어낸 성과를 보이고 있다.
 
-![**그림 4.** (a) Transformer 기반 silent speech recognition 모델 [^35], (b) ResNET의 Inception block을 활용한 수화 인식 모델 [^36], (c) EEG, EMG를 활용한 ResNET 기반 수면 상태 분류 모델 [^37].   ](images/image-5.png)
+![**그림 4.** (a) Transformer 기반 silent speech recognition 모델 [^35], (b) ResNET의 Inception block을 활용한 수화 인식 모델 [^36], (c) EEG, EMG를 활용한 ResNET 기반 수면 상태 분류 모델 [^37].](../images/image-5.png)

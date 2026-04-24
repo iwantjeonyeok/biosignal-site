@@ -26,7 +26,9 @@ SIAT-LLMD의 데이터 획득 실험 과정 순서도
 | 기타 하지 운동 | 5~10 trials |
 
 기타 하지운동에는 13가지의 활동이 포함된다
+
 Standing : 정지
+
 Sitting, Standing up, Knee Lift, Tip Toe, Leg Lift Forward, Leg Lift Backward, Leg Lift Sideward, Heel Strike, Toe-Off, Lunge Forward, Lunge Backward, Maximum Swing Flexion
 
 ## 2.3 Raw Dataset

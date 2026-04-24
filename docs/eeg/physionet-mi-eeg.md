@@ -24,28 +24,30 @@
 ## 2.3 Raw Dataset
 
 !!! note ""
-     Physionet MI-EEG/
-     ├── S001/
-     │   ├── S001R01.edf
-     │   ├── S001R01.edf.event
-     │   └── S001R02.edf
-     │   ... (25 more files)
-     ├── S002/
-     │   ├── S002R01.edf
-     │   ├── S002R01.edf.event
-     │   └── S002R02.edf
-     │   ... (25 more files)
-     …
-     ├── S109/
-     │   ├── S109R01.edf
-     │   ├── S109R01.edf.event
-     │   └── S109R02.edf
-     │   ... (25 more files)
-     ├── 64_channel_sharbrough-old.png
-     ├── 64_channel_sharbrough.pdf
-     └── 64_channel_sharbrough.png
-     ... (4 more files)
+    ```
+    Physionet MI-EEG/
+    ├── S001/
+    │   ├── S001R01.edf
+    │   ├── S001R01.edf.event
+    │   └── S001R02.edf
+    │   ... (25 more files)
+    ├── S002/
+    │   ├── S002R01.edf
+    │   ├── S002R01.edf.event
+    │   └── S002R02.edf
+    │   ... (25 more files)
+    …
+    ├── S109/
+    │   ├── S109R01.edf
+    │   ├── S109R01.edf.event
+    │   └── S109R02.edf
+    │   ... (25 more files)
+    ├── 64_channel_sharbrough-old.png
+    ├── 64_channel_sharbrough.pdf
+    └── 64_channel_sharbrough.png
+    ... (4 more files)
     109 directories, 3059 files
+    ```
 
 이 데이터셋은 PhysioNet에서 제공하는 motor/imagery 기반 EEG 데이터로, 총 109명의 피험자가 참여하였으며, 각 피험자별로 최대 14개의 세션이 존재합니다. 예를 들어 S001 폴더에는 S001R01.edf부터 S001R14.edf까지의 EDF 형식 파일과 해당 세션에 대한 이벤트 정보를 담은 .event 파일이 쌍으로 존재합니다. 각 EDF 파일에는 64채널 EEG가 포함되어 있으며, 피험자는 실제 또는 상상으로 손/발을 움직이는 다양한 과제를 수행하였습니다. .event 파일에는 자극의 위치 및 동작 구간이 포함되어 있어 trial 단위의 정밀 분석이 가능합니다.
 
@@ -56,15 +58,17 @@
 ## 2.5 Preprocessed Dataset
 
 !!! note ""
-     Physionet_MI_EEG/
-     ├── npy_files/
-     │   ├── sess100_sub10_trial0.npy
-     │   ├── sess100_sub10_trial1.npy
-     │   └── sess100_sub10_trial10.npy
-     │   ... (39372 more files)
-     ├── channels.csv
-     └── labels.csv
+    ```
+    Physionet_MI_EEG/
+    ├── npy_files/
+    │   ├── sess100_sub10_trial0.npy
+    │   ├── sess100_sub10_trial1.npy
+    │   └── sess100_sub10_trial10.npy
+    │   ... (39372 more files)
+    ├── channels.csv
+    └── labels.csv
     1 directories, 39377 files
+    ```
 
 # 3. Applications and Use Cases
 
@@ -76,5 +80,7 @@
 # 4. References
 
 [1] Goldberger, A.L., Amaral, L.A., Glass, L., Hausdorff, J.M., Ivanov, P.C., Mark, R.G., Mietus, J.E., Moody, G.B., Peng, C.K., Stanley, H.E. and PhysioBank, P., PhysioNet: components of a new research resource for complex physiologic signals Circulation 2000 Volume 101 Issue 23 pp. E215–E220.
+
 [2] Qin, Chengxuan, et al. "Spatial variation generation algorithm for motor imagery data augmentation: Increasing the density of sample vicinity." *IEEE Transactions on Neural Systems and Rehabilitation Engineering* 31 (2023): 3675-3686.
+
 [3] Zoumpourlis, Georgios, and Ioannis Patras. "Motor imagery decoding using ensemble curriculum learning and collaborative training." *2024 12th International Winter Conference on Brain-Computer Interface (BCI)*. IEEE, 2024.

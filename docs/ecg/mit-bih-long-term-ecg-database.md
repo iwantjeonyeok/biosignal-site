@@ -33,23 +33,26 @@ P
 ## 2.3 Raw Dataset
 
 !!! note ""
-     ├── mit-bih-long-term-ecg-database-1.0.0/
-     │   ├── 14046.atr
-     │   ├── 14046.dat
-     │   ├── 14046.hea
-     │   ├── 14046.hea-
-     │   ├── 14046.xws
-     │   ├── 14134.atr
-     │   ├── 14134.dat
-     │   ├── 14134.hea
-     │   ├── 14134.hea-
-     │   ├── 14134.xws
-     │   └── ... (38 파일, 각각 .atr + .dat + .hea + .hea- + .xws 세트)
+    ```
+    ├── mit-bih-long-term-ecg-database-1.0.0/
+    │   ├── 14046.atr
+    │   ├── 14046.dat
+    │   ├── 14046.hea
+    │   ├── 14046.hea-
+    │   ├── 14046.xws
+    │   ├── 14134.atr
+    │   ├── 14134.dat
+    │   ├── 14134.hea
+    │   ├── 14134.hea-
+    │   ├── 14134.xws
+    │   └── ... (38 파일, 각각 .atr + .dat + .hea + .hea- + .xws 세트)
     1 directories, 약 48 files
+    ```
 
 ![](mit-bih-long-term-ecg-database/image.png)
 
 헤더 파일은 ECG 기록에 대한 메타데이터를 제공합니다.
+
 - 첫 번째 줄: 기록 번호(14046), 두 개의 ECG 채널(ECG1 및 ECG2), 샘플링 주파수 128Hz, 총 10,828,800개의 샘플
 - 두 번째 및 세 번째 줄: 각 ECG 리드(ECG1, ECG2)는 14046.dat에 16비트 형식(코드 212), 12비트 해상도, ±10mV의 ADC 범위로 기록됨. 신호 기준값과 최소/최대 값도 제공됨.
 - 네 번째 줄: 환자 정보로 나이(46세), 성별(남성, M) 포함.
@@ -63,25 +66,28 @@ P
 ## 2.5 Preprocessed Dataset
 
 !!! note ""
-     ├── mit-bih-long-term-ecg-database-1.0.0/
-     │   ├── channel_info.csv
-     │   ├── mit-bih-long-term-ecg-database-1.0.0_pretrain.npz
-     │   ├── mit-bih-long-term-ecg-database-1.0.0_pretrain_record_ids.csv
-     │       ├── csv_files/
-     │       │   ├── 14046_data.csv
-     │       │   ├── 14046_label.csv
-     │       │   ├── 14134_data.csv
-     │       │   ├── 14134_label.csv
-     │       │   ├── 14149_data.csv
-     │       │   ├── 14149_label.csv
-     │       │   ├── 14157_data.csv
-     │       │   ├── 14157_label.csv
-     │       │   ├── 14172_data.csv
-     │       │   ├── 14172_label.csv
-     │       │   └── ... (14 파일)
+    ```
+    ├── mit-bih-long-term-ecg-database-1.0.0/
+    │   ├── channel_info.csv
+    │   ├── mit-bih-long-term-ecg-database-1.0.0_pretrain.npz
+    │   ├── mit-bih-long-term-ecg-database-1.0.0_pretrain_record_ids.csv
+    │       ├── csv_files/
+    │       │   ├── 14046_data.csv
+    │       │   ├── 14046_label.csv
+    │       │   ├── 14134_data.csv
+    │       │   ├── 14134_label.csv
+    │       │   ├── 14149_data.csv
+    │       │   ├── 14149_label.csv
+    │       │   ├── 14157_data.csv
+    │       │   ├── 14157_label.csv
+    │       │   ├── 14172_data.csv
+    │       │   ├── 14172_label.csv
+    │       │   └── ... (14 파일)
     2 directories, 약 27 files
+    ```
 
 MIT-BIH Long-Term ECG Database의 .hea 및 .dat 파일을 이용하여 data.csv, pid.csv 파일로 변환합니다.다음은 16265_data.csv, 16265_pid.csv파일을 변환 후 시각화한 결과입니다.
+
 이 시각화 자료는 MIT-BIH Long-Term ECG database의 환자 16265번에 대한 10초간의 ECG 데이터를 나타냅니다. ECG 기록은 두 개의 리드(ECG1 및 ECG2)로 구성되며, 128Hz로 샘플링되었습니다.
 
 ![](mit-bih-long-term-ecg-database/image-1.png)

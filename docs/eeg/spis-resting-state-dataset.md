@@ -23,15 +23,17 @@ SPIS 데이터셋[1]은 총 10명의 건강한 성인을 대상으로 수집된 
 ## 2.3 Raw Dataset
 
 !!! note ""
-     SPIS-Resting-State-Dataset/
-     ├── Pre-SART EEG/
-     │ ├── Dataset Description
-     │ ├── S02_restingPre_EC.mat
-     │ └── S02_restingPre_EO.mat
-     │ ... (19 more files)
-     ├── LICENSE
-     └── [README.md](http://readme.md/)
-     1 directories, 24 files
+    ```
+    SPIS-Resting-State-Dataset/
+    ├── Pre-SART EEG/
+    │ ├── Dataset Description
+    │ ├── S02_restingPre_EC.mat
+    │ └── S02_restingPre_EO.mat
+    │ ... (19 more files)
+    ├── LICENSE
+    └── [README.md](http://readme.md/)
+    1 directories, 24 files
+    ```
 
 ## 2.4 Raw Dataset Example
 
@@ -40,25 +42,27 @@ SPIS 데이터셋[1]은 총 10명의 건강한 성인을 대상으로 수집된 
 ## 2.5 Preprocessed Dataset
 
 !!! note ""
-     SPIS_Resting_State_Dataset/
-     ├── SPIS_Resting_State_Dataset_npy/
-     │   ├── S02_EC.npy
-     │   ├── S02_EO.npy
-     │   └── S03_EC.npy
-     │   ... (17 more files)
-     ├── npy_files/
-     │   ├── sess1_sub10_trial1.npy
-     │   ├── sess1_sub11_trial1.npy
-     │   └── sess1_sub2_trial1.npy
-     │   ... (17 more files)
-     ├── preprocessed/
-     ├── SPIS_Resting_State_Dataset.h5
-     ├── SPIS_Resting_State_Dataset.npz
+    ```
+    SPIS_Resting_State_Dataset/
+    ├── SPIS_Resting_State_Dataset_npy/
+    │   ├── S02_EC.npy
+    │   ├── S02_EO.npy
+    │   └── S03_EC.npy
+    │   ... (17 more files)
+    ├── npy_files/
+    │   ├── sess1_sub10_trial1.npy
+    │   ├── sess1_sub11_trial1.npy
+    │   └── sess1_sub2_trial1.npy
+    │   ... (17 more files)
+    ├── preprocessed/
+    ├── SPIS_Resting_State_Dataset.h5
     ├── SPIS_Resting_State_Dataset.npz
-    ├── labels.csv
-    ├── labels(raw_encoded).csv
-    └── channels.csv
+    ├── SPIS_Resting_State_Dataset.npz
+├── labels.csv
+├── labels(raw_encoded).csv
+└── channels.csv
     3 directories, 46 files
+    ```
 
 # 3. Applications and Use Cases
 
@@ -70,5 +74,7 @@ SPIS 데이터셋[1]은 총 10명의 건강한 성인을 대상으로 수집된 
 # 4. References
 
 [1] Torkamani-Azar, M., Kanik, S. D., Aydin, S., & Cetin, M. (2020). Prediction of Reaction Time and Vigilance Variability From Spatio-Spectral Features of Resting-State EEG in a Long Sustained Attention Task. *IEEE Journal of Biomedical and Health Informatics*, 24(9), 2550–2558.
+
 [2] Jiang, W., Zhao, L.-M., & Lu, B.-L. (2024). LaBraM: Large Brain Model for Learning Generic Representations with Tremendous EEG Data in BCI. *International Conference on Learning Representations (ICLR)*.
+
 [3] Feng, Z., Wang, S., Qian, L., Xu, M., Wu, K., Kakkos, I., Guan, C., & Sun, Y. (2023). *μ-STAR: A novel framework for spatio-temporal M/EEG source imaging optimized by microstates*. NeuroImage, 282, 120372.

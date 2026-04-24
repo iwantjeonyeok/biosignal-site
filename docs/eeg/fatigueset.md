@@ -33,205 +33,206 @@ Fatigueset 데이터셋[1]은 정신적 피로와 피로화의 상호작용 및 
 ## 2.3 Raw Dataset
 
 !!! note ""
-     Fatigueset/
-     ├── 01/
-     │   ├── 01/
-     │   │   ├── chest_bb_interval.csv
-     │   │   ├── chest_physiology_summary.csv
-     │   │   └── chest_raw_acc.csv
-     │   │   ... (36 more files)
-     │   ├── 02/
-     │   │   ├── chest_bb_interval.csv
-     │   │   ├── chest_physiology_summary.csv
-     │   │   └── chest_raw_acc.csv
-     │   │   ... (36 more files)
-     │   ├── 03/
-     │   │   ├── chest_bb_interval.csv
-     │   │   ├── chest_physiology_summary.csv
-     │   │   └── chest_raw_acc.csv
-     │   │   ... (36 more files)
-     ├── 02/
-     │   ├── 01/
-     │   │   ├── chest_bb_interval.csv
-     │   │   ├── chest_physiology_summary.csv
-     │   │   └── chest_raw_acc.csv
-     │   │   ... (42 more files)
-     │   ├── 02/
-     │   │   ├── chest_bb_interval.csv
-     │   │   ├── chest_physiology_summary.csv
-     │   │   └── chest_raw_acc.csv
-     │   │   ... (42 more files)
-     │   └── 03/
-     │       ├── chest_bb_interval.csv
-     │       ├── chest_physiology_summary.csv
-     │       └── chest_raw_acc.csv
-     │       ... (36 more files)
-     ├── 03/
-     │   ├── 01/
-     │   │   ├── chest_bb_interval.csv
-     │   │   ├── chest_physiology_summary.csv
-     │   │   └── chest_raw_acc.csv
-     │   │   ... (36 more files)
-     │   ├── 02/
-     │   │   ├── chest_bb_interval.csv
-     │   │   ├── chest_physiology_summary.csv
-     │   │   └── chest_raw_acc.csv
-     │   │   ... (36 more files)
-     │   └── 03/
-     │       ├── chest_bb_interval.csv
-     │       ├── chest_physiology_summary.csv
-     │       └── chest_raw_acc.csv
-     │       ... (36 more files)
-     ├── 04/
-     │   ├── 01/
-     │   │   ├── chest_bb_interval.csv
-     │   │   ├── chest_physiology_summary.csv
-     │   │   └── chest_raw_acc.csv
-     │   │   ... (53 more files)
-     │   ├── 02/
-     │   │   ├── chest_bb_interval.csv
-     │   │   ├── chest_physiology_summary.csv
-     │   │   └── chest_raw_acc.csv
-     │   │   ... (36 more files)
-     │   └── 03/
-     │       ├── chest_bb_interval.csv
-     │       ├── chest_physiology_summary.csv
-     │       └── chest_raw_acc.csv
-     │       ... (36 more files)
-     ├── 05/
-     │   ├── 01/
-     │   │   ├── chest_bb_interval.csv
-     │   │   ├── chest_physiology_summary.csv
-     │   │   └── chest_raw_acc.csv
-     │   │   ... (36 more files)
-     │   ├── 02/
-     │   │   ├── chest_bb_interval.csv
-     │   │   ├── chest_physiology_summary.csv
-     │   │   └── chest_raw_acc.csv
-     │   │   ... (42 more files)
-     │   └── 03/
-     │       ├── chest_bb_interval.csv
-     │       ├── chest_physiology_summary.csv
-     │       └── chest_raw_acc.csv
-     │       ... (36 more files)
-     ├── 06/
-     │   ├── 01/
-     │   │   ├── chest_bb_interval.csv
-     │   │   ├── chest_physiology_summary.csv
-     │   │   └── chest_raw_acc.csv
-     │   │   ... (42 more files)
-     │   ├── 02/
-     │   │   ├── chest_bb_interval.csv
-     │   │   ├── chest_physiology_summary.csv
-     │   │   └── chest_raw_acc.csv
-     │   │   ... (42 more files)
-     │   └── 03/
-     │       ├── chest_bb_interval.csv
-     │       ├── chest_physiology_summary.csv
-     │       └── chest_raw_acc.csv
-     │       ... (36 more files)
-     ├── 07/
-     │   ├── 01/
-     │   │   ├── chest_bb_interval.csv
-     │   │   ├── chest_physiology_summary.csv
-     │   │   └── chest_raw_acc.csv
-     │   │   ... (36 more files)
-     │   ├── 02/
-     │   │   ├── chest_bb_interval.csv
-     │   │   ├── chest_physiology_summary.csv
-     │   │   └── chest_raw_acc.csv
-     │   │   ... (36 more files)
-     │   └── 03/
-     │       ├── chest_bb_interval.csv
-     │       ├── chest_physiology_summary.csv
-     │       └── chest_raw_acc.csv
-     │       ... (36 more files)
-     ├── 08/
-     │   ├── 01/
-     │   │   ├── chest_bb_interval.csv
-     │   │   ├── chest_physiology_summary.csv
-     │   │   └── chest_raw_acc.csv
-     │   │   ... (36 more files)
-     │   ├── 02/
-     │   │   ├── chest_bb_interval.csv
-     │   │   ├── chest_physiology_summary.csv
-     │   │   └── chest_raw_acc.csv
-     │   │   ... (36 more files)
-     │   └── 03/
-     │       ├── chest_bb_interval.csv
-     │       ├── chest_physiology_summary.csv
-     │       └── chest_raw_acc.csv
-     │       ... (36 more files)
-     ├── 09/
-     │   ├── 01/
-     │   │   ├── chest_bb_interval.csv
-     │   │   ├── chest_physiology_summary.csv
-     │   │   └── chest_raw_acc.csv
-     │   │   ... (36 more files)
-     │   ├── 02/
-     │   │   ├── chest_bb_interval.csv
-     │   │   ├── chest_physiology_summary.csv
-     │   │   └── chest_raw_acc.csv
-     │   │   ... (42 more files)
-     │   └── 03/
-     │       ├── chest_bb_interval.csv
-     │       ├── chest_physiology_summary.csv
-     │       └── chest_raw_acc.csv
-     │       ... (36 more files)
-     ├── 10/
-     │   ├── 01/
-     │   │   ├── chest_bb_interval.csv
-     │   │   ├── chest_physiology_summary.csv
-     │   │   └── chest_raw_acc.csv
-     │   │   ... (42 more files)
-     │   ├── 02/
-     │   │   ├── chest_bb_interval.csv
-     │   │   ├── chest_physiology_summary.csv
-     │   │   └── chest_raw_acc.csv
-     │   │   ... (36 more files)
-     │   └── 03/
-     │       ├── chest_bb_interval.csv
-     │       ├── chest_physiology_summary.csv
-     │       └── chest_raw_acc.csv
-     │       ... (42 more files)
-     ├── 11/
-     │   ├── 01/
-     │   │   ├── chest_bb_interval.csv
-     │   │   ├── chest_physiology_summary.csv
-     │   │   └── chest_raw_acc.csv
-     │   │   ... (36 more files)
-     │   ├── 02/
-     │   │   ├── chest_bb_interval.csv
-     │   │   ├── chest_physiology_summary.csv
-     │   │   └── chest_raw_acc.csv
-     │   │   ... (36 more files)
-     │   └── 03/
-     │       ├── chest_bb_interval.csv
-     │       ├── chest_physiology_summary.csv
-     │       └── chest_raw_acc.csv
-     │       ... (36 more files)
-     ├── 12/
-     │   ├── 01/
-     │   │   ├── chest_bb_interval.csv
-     │   │   ├── chest_physiology_summary.csv
-     │   │   └── chest_raw_acc.csv
-     │   │   ... (36 more files)
-     │   ├── 02/
-     │   │   ├── chest_bb_interval.csv
-     │   │   ├── chest_physiology_summary.csv
-     │   │   └── chest_raw_acc.csv
-     │   │   ... (36 more files)
-     │   └── 03/
-     │       ├── chest_bb_interval.csv
-     │       ├── chest_physiology_summary.csv
-     │       └── chest_raw_acc.csv
-     │       ... (36 more files)
-     ├── README.md
-     ├── metadata.csv
-     └── pre_task_survey.xlsx
-     ... (1 more files)
+    ```
+    Fatigueset/
+    ├── 01/
+    │   ├── 01/
+    │   │   ├── chest_bb_interval.csv
+    │   │   ├── chest_physiology_summary.csv
+    │   │   └── chest_raw_acc.csv
+    │   │   ... (36 more files)
+    │   ├── 02/
+    │   │   ├── chest_bb_interval.csv
+    │   │   ├── chest_physiology_summary.csv
+    │   │   └── chest_raw_acc.csv
+    │   │   ... (36 more files)
+    │   ├── 03/
+    │   │   ├── chest_bb_interval.csv
+    │   │   ├── chest_physiology_summary.csv
+    │   │   └── chest_raw_acc.csv
+    │   │   ... (36 more files)
+    ├── 02/
+    │   ├── 01/
+    │   │   ├── chest_bb_interval.csv
+    │   │   ├── chest_physiology_summary.csv
+    │   │   └── chest_raw_acc.csv
+    │   │   ... (42 more files)
+    │   ├── 02/
+    │   │   ├── chest_bb_interval.csv
+    │   │   ├── chest_physiology_summary.csv
+    │   │   └── chest_raw_acc.csv
+    │   │   ... (42 more files)
+    │   └── 03/
+    │       ├── chest_bb_interval.csv
+    │       ├── chest_physiology_summary.csv
+    │       └── chest_raw_acc.csv
+    │       ... (36 more files)
+    ├── 03/
+    │   ├── 01/
+    │   │   ├── chest_bb_interval.csv
+    │   │   ├── chest_physiology_summary.csv
+    │   │   └── chest_raw_acc.csv
+    │   │   ... (36 more files)
+    │   ├── 02/
+    │   │   ├── chest_bb_interval.csv
+    │   │   ├── chest_physiology_summary.csv
+    │   │   └── chest_raw_acc.csv
+    │   │   ... (36 more files)
+    │   └── 03/
+    │       ├── chest_bb_interval.csv
+    │       ├── chest_physiology_summary.csv
+    │       └── chest_raw_acc.csv
+    │       ... (36 more files)
+    ├── 04/
+    │   ├── 01/
+    │   │   ├── chest_bb_interval.csv
+    │   │   ├── chest_physiology_summary.csv
+    │   │   └── chest_raw_acc.csv
+    │   │   ... (53 more files)
+    │   ├── 02/
+    │   │   ├── chest_bb_interval.csv
+    │   │   ├── chest_physiology_summary.csv
+    │   │   └── chest_raw_acc.csv
+    │   │   ... (36 more files)
+    │   └── 03/
+    │       ├── chest_bb_interval.csv
+    │       ├── chest_physiology_summary.csv
+    │       └── chest_raw_acc.csv
+    │       ... (36 more files)
+    ├── 05/
+    │   ├── 01/
+    │   │   ├── chest_bb_interval.csv
+    │   │   ├── chest_physiology_summary.csv
+    │   │   └── chest_raw_acc.csv
+    │   │   ... (36 more files)
+    │   ├── 02/
+    │   │   ├── chest_bb_interval.csv
+    │   │   ├── chest_physiology_summary.csv
+    │   │   └── chest_raw_acc.csv
+    │   │   ... (42 more files)
+    │   └── 03/
+    │       ├── chest_bb_interval.csv
+    │       ├── chest_physiology_summary.csv
+    │       └── chest_raw_acc.csv
+    │       ... (36 more files)
+    ├── 06/
+    │   ├── 01/
+    │   │   ├── chest_bb_interval.csv
+    │   │   ├── chest_physiology_summary.csv
+    │   │   └── chest_raw_acc.csv
+    │   │   ... (42 more files)
+    │   ├── 02/
+    │   │   ├── chest_bb_interval.csv
+    │   │   ├── chest_physiology_summary.csv
+    │   │   └── chest_raw_acc.csv
+    │   │   ... (42 more files)
+    │   └── 03/
+    │       ├── chest_bb_interval.csv
+    │       ├── chest_physiology_summary.csv
+    │       └── chest_raw_acc.csv
+    │       ... (36 more files)
+    ├── 07/
+    │   ├── 01/
+    │   │   ├── chest_bb_interval.csv
+    │   │   ├── chest_physiology_summary.csv
+    │   │   └── chest_raw_acc.csv
+    │   │   ... (36 more files)
+    │   ├── 02/
+    │   │   ├── chest_bb_interval.csv
+    │   │   ├── chest_physiology_summary.csv
+    │   │   └── chest_raw_acc.csv
+    │   │   ... (36 more files)
+    │   └── 03/
+    │       ├── chest_bb_interval.csv
+    │       ├── chest_physiology_summary.csv
+    │       └── chest_raw_acc.csv
+    │       ... (36 more files)
+    ├── 08/
+    │   ├── 01/
+    │   │   ├── chest_bb_interval.csv
+    │   │   ├── chest_physiology_summary.csv
+    │   │   └── chest_raw_acc.csv
+    │   │   ... (36 more files)
+    │   ├── 02/
+    │   │   ├── chest_bb_interval.csv
+    │   │   ├── chest_physiology_summary.csv
+    │   │   └── chest_raw_acc.csv
+    │   │   ... (36 more files)
+    │   └── 03/
+    │       ├── chest_bb_interval.csv
+    │       ├── chest_physiology_summary.csv
+    │       └── chest_raw_acc.csv
+    │       ... (36 more files)
+    ├── 09/
+    │   ├── 01/
+    │   │   ├── chest_bb_interval.csv
+    │   │   ├── chest_physiology_summary.csv
+    │   │   └── chest_raw_acc.csv
+    │   │   ... (36 more files)
+    │   ├── 02/
+    │   │   ├── chest_bb_interval.csv
+    │   │   ├── chest_physiology_summary.csv
+    │   │   └── chest_raw_acc.csv
+    │   │   ... (42 more files)
+    │   └── 03/
+    │       ├── chest_bb_interval.csv
+    │       ├── chest_physiology_summary.csv
+    │       └── chest_raw_acc.csv
+    │       ... (36 more files)
+    ├── 10/
+    │   ├── 01/
+    │   │   ├── chest_bb_interval.csv
+    │   │   ├── chest_physiology_summary.csv
+    │   │   └── chest_raw_acc.csv
+    │   │   ... (42 more files)
+    │   ├── 02/
+    │   │   ├── chest_bb_interval.csv
+    │   │   ├── chest_physiology_summary.csv
+    │   │   └── chest_raw_acc.csv
+    │   │   ... (36 more files)
+    │   └── 03/
+    │       ├── chest_bb_interval.csv
+    │       ├── chest_physiology_summary.csv
+    │       └── chest_raw_acc.csv
+    │       ... (42 more files)
+    ├── 11/
+    │   ├── 01/
+    │   │   ├── chest_bb_interval.csv
+    │   │   ├── chest_physiology_summary.csv
+    │   │   └── chest_raw_acc.csv
+    │   │   ... (36 more files)
+    │   ├── 02/
+    │   │   ├── chest_bb_interval.csv
+    │   │   ├── chest_physiology_summary.csv
+    │   │   └── chest_raw_acc.csv
+    │   │   ... (36 more files)
+    │   └── 03/
+    │       ├── chest_bb_interval.csv
+    │       ├── chest_physiology_summary.csv
+    │       └── chest_raw_acc.csv
+    │       ... (36 more files)
+    ├── 12/
+    │   ├── 01/
+    │   │   ├── chest_bb_interval.csv
+    │   │   ├── chest_physiology_summary.csv
+    │   │   └── chest_raw_acc.csv
+    │   │   ... (36 more files)
+    │   ├── 02/
+    │   │   ├── chest_bb_interval.csv
+    │   │   ├── chest_physiology_summary.csv
+    │   │   └── chest_raw_acc.csv
+    │   │   ... (36 more files)
+    │   └── 03/
+    │       ├── chest_bb_interval.csv
+    │       ├── chest_physiology_summary.csv
+    │       └── chest_raw_acc.csv
+    │       ... (36 more files)
+    ├── README.md
+    ├── metadata.csv
+    └── pre_task_survey.xlsx
+    ... (1 more files)
     48 directories, 1473 files
-    
+    ```
 
 폴더는 참가자 번호(예: 01, 02, ..., 12)와 각 참가자의 세션 번호(01, 02, 03)로 계층화되어 있으며, 각 세션 폴더에는 가슴 ECG 밴드로부터 수집된 호흡 간격(chest_bb_interval.csv), 생리 요약 정보(chest_physiology_summary.csv), 원시 가속도 데이터(chest_raw_acc.csv) 등 총 30개 이상의 센서 데이터 파일이 포함되어 있습니다. 최상위 디렉토리에는 전체 메타데이터(metadata.csv), 참가자 설문(pre_task_survey.xlsx), 안내 문서(README.md)가 함께 포함되어 있어 실험 설계와 측정 환경을 참고할 수 있습니다.
 
@@ -242,18 +243,20 @@ Fatigueset 데이터셋[1]은 정신적 피로와 피로화의 상호작용 및 
 ## 2.5 Preprocessed Dataset
 
 !!! note ""
-     Fatigueset/
-     ├── npy_files/
-     │   ├── sess01_sub01_trial01.npy
-     │   ├── sess01_sub02_trial01.npy
-     │   └── sess01_sub03_trial01.npy
-     │   ... (33 more files)
-     ├── Fatigueset.h5
-     ├── Fatigueset.npz
+    ```
+    Fatigueset/
+    ├── npy_files/
+    │   ├── sess01_sub01_trial01.npy
+    │   ├── sess01_sub02_trial01.npy
+    │   └── sess01_sub03_trial01.npy
+    │   ... (33 more files)
+    ├── Fatigueset.h5
+    ├── Fatigueset.npz
     ├── fatigue_objective_labels.csv
-    ├── fatigue_subjective_labels.csv
-    └── channels.csv
+├── fatigue_subjective_labels.csv
+└── channels.csv
     1 directories, 41 files
+    ```
 
 # 3. Applications and Use Cases
 
@@ -264,6 +267,7 @@ Fatigueset 데이터셋[1]은 정신적 피로와 피로화의 상호작용 및 
 # 4. References
 
 [1] Kalanadhabhatta, M., Min, C., Montanari, A., & Kawsar, F. (2023). FatigueSet: A Multi-modal Dataset for Modeling Mental Fatigue and Fatigability. In *Proceedings of the 2023 ACM International Joint Conference on Pervasive and Ubiquitous Computing *(UbiComp ’23).
+
 [2] Kodikara, C., Wijekoon, S., & Meegahapola, L. (2024). *FatigueSense: Multi-Device and Multi-Modal Wearable Sensing for Detecting Mental Fatigue*. ACM Transactions on Computing for Healthcare (ACM Trans. Comput. Healthcare), Article No. 3709363.
 
 ---

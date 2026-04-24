@@ -23,12 +23,14 @@ Mumtaz2016 데이터셋[1] 은 우울장애(MDD) 환자의 치료 반응을 EEG 
 ## 2.3 Raw Dataset
 
 !!! note ""
-     Mumtaz2016/
-     ├── 6921143_H S15 EO.edf
-     ├── 6921959_H S15 EO.edf
-     └── H S1 EC.edf
-     ... (178 more files)
+    ```
+    Mumtaz2016/
+    ├── 6921143_H S15 EO.edf
+    ├── 6921959_H S15 EO.edf
+    └── H S1 EC.edf
+    ... (178 more files)
     0 directories, 181 files
+    ```
 
 EO.edf는 eyes-open, EC.edf는 eyes-closed, Task.edf는 Task 상태의 기록입니다.
 
@@ -39,17 +41,19 @@ EO.edf는 eyes-open, EC.edf는 eyes-closed, Task.edf는 Task 상태의 기록입
 ## 2.5 Preprocessed Dataset
 
 !!! note ""
-     Mumtaz2016/
-     ├── npy_files/
-     │   ├── sessH_sub01_trialEC.npy
-     │   ├── sessH_sub01_trialEO.npy
-     │   └── sessH_sub02_trialEC.npy
-     │   ... (116 more files)
-     ├── Mumtaz2016.h5
-     ├── Mumtaz2016.npz
-     └── channels.csv
-     ... (1 more files)
+    ```
+    Mumtaz2016/
+    ├── npy_files/
+    │   ├── sessH_sub01_trialEC.npy
+    │   ├── sessH_sub01_trialEO.npy
+    │   └── sessH_sub02_trialEC.npy
+    │   ... (116 more files)
+    ├── Mumtaz2016.h5
+    ├── Mumtaz2016.npz
+    └── channels.csv
+    ... (1 more files)
     1 directories, 123 files
+    ```
 
 한 trial(자극)별로 split하고 .npy로 변환하였으며 이 파일명은 labels.csv의 1열과 대응되고, 2열엔 정수형 레이블이 있습니다. 일부 세션인 Task 파트는 제거하였습니다.
 
@@ -63,4 +67,5 @@ EO.edf는 eyes-open, EC.edf는 eyes-closed, Task.edf는 Task 상태의 기록입
 # 4. References
 
 [1] Mumtaz, W., Xia, L., Yasin, M. A. M., Ali, A. A., & Malik, A. S. (2017). A wavelet-based technique to predict treatment outcome for Major Depressive Disorder. *PLOS ONE*, 12(2), e0171409. [https://doi.org/10.1371/journal.pone.0171409](https://doi.org/10.1371/journal.pone.0171409)
+
 [2] Wang, J., Zhao, S., Luo, Z., Zhou, Y., Jiang, H., Li, S., Li, T., & Pan, G. (2024). *CBraMod: A criss-cross brain foundation model for EEG decoding*. arXiv preprint arXiv:2403.06752.

@@ -13,76 +13,78 @@ TUEG 데이터셋[1]은 실제 임상 환경에서 총 10,874명의 피실험자
 ## 2.2 Raw Dataset
 
 !!! note ""
-     TUEG/
-     ├── DOCS/
-     │   └── headers.tar.gz
-     ├── edf/
-     │   ├── 000/
-     │   │   ├── aaaaaaaa/
-     │   │   │   └── s001_2015/
-     │   │   │       └── 01_tcp_ar/
-     │   │   │           └── aaaaaaaa_s001_t000.edf
-     │   │   ├── aaaaaaab/
-     │   │   │   ├── s001_2002/
-     │   │   │   │   └── 02_tcp_le/
-     │   │   │   │       ├── aaaaaaab_s001_t000.edf
-     │   │   │   │       ├── aaaaaaab_s001_t001.edf
-     │   │   │   │       └── aaaaaaab_s001_t003.edf
-     │   │   │   │       ... (2 more files)
-     │   │   │   ├── s002_2002/
-     │   │   │   │   └── 02_tcp_le/
-     │   │   │   │       ├── aaaaaaab_s002_t000.edf
-     │   │   │   │       └── aaaaaaab_s002_t001.edf
-     │   │   │   └── s003_2002/
-     │   │   │       └── 02_tcp_le/
-     │   │   │           ├── aaaaaaab_s003_t000.edf
-     │   │   │           ├── aaaaaaab_s003_t001.edf
-     │   │   │           └── aaaaaaab_s003_t002.edf
-     │   │   ├── aaaaaaac/
-     │   │   │   ├── s001_2002/
-     │   │   │   │   └── 02_tcp_le/
-     │   │   │   │       ├── aaaaaaac_s001_t000.edf
-     │   │   │   │       └── aaaaaaac_s001_t001.edf
-     │   │   │   ├── s002_2002/
-     │   │   │   │   └── 02_tcp_le/
-     │   │   │   │       └── aaaaaaac_s002_t000.edf
-     │   │   │   ├── s003_2002/
-     │   │   │   │   └── 02_tcp_le/
-     │   │   │   │       └── aaaaaaac_s003_t000.edf
-     │   │   │   ├── s004_2002/
-     │   │   │   │   └── 02_tcp_le/
-     │   │   │   │       ├── aaaaaaac_s004_t000.edf
-     │   │   │   │       └── aaaaaaac_s004_t002.edf
-     │   │   │   ├── s005_2002/
-     │   │   │   │   └── 02_tcp_le/
-     │   │   │   │       ├── aaaaaaac_s005_t000.edf
-     │   │   │   │       ├── aaaaaaac_s005_t001.edf
-     │   │   │   │       └── aaaaaaac_s005_t002.edf
-     │   │   │   │       ... (1 more files)
-     │   │   │   ├── s006_2003/
-     │   │   │   │   └── 02_tcp_le/
-     │   │   │   │       └── aaaaaaac_s006_t001.edf
-     │   │   │   ├── s007_2003/
-     │   │   │   │   └── 02_tcp_le/
-     │   │   │   │       └── aaaaaaac_s007_t000.edf
-     │   │   │   ├── s008_2003/
-     │   │   │   │   └── 02_tcp_le/
-     │   │   │   │       ├── aaaaaaac_s008_t000.edf
-     │   │   │   │       └── aaaaaaac_s008_t001.edf
-     │   │   │   └── s009_2006/
-     │   │   │       └── 02_tcp_le/
-     │   │   │           └── aaaaaaac_s009_t000.edf
-     │   │   ├── aaaaaaad/
-     │   │   │   └── s001_2002/
-     │   │   │       └── 02_tcp_le/
-     │   │   │           └── aaaaaaad_s001_t000.edf
-     │   │   ├── aaaaaaae/
-     │   │   │   └── s001_2002/
-     │   │   │       └── 02_tcp_le/
-     │   │   │           ├── aaaaaaae_s001_t000.edf
-     │   │   │           └── aaaaaaae_s001_t001.edf
-     │   │
+    ```
+    TUEG/
+    ├── DOCS/
+    │   └── headers.tar.gz
+    ├── edf/
+    │   ├── 000/
+    │   │   ├── aaaaaaaa/
+    │   │   │   └── s001_2015/
+    │   │   │       └── 01_tcp_ar/
+    │   │   │           └── aaaaaaaa_s001_t000.edf
+    │   │   ├── aaaaaaab/
+    │   │   │   ├── s001_2002/
+    │   │   │   │   └── 02_tcp_le/
+    │   │   │   │       ├── aaaaaaab_s001_t000.edf
+    │   │   │   │       ├── aaaaaaab_s001_t001.edf
+    │   │   │   │       └── aaaaaaab_s001_t003.edf
+    │   │   │   │       ... (2 more files)
+    │   │   │   ├── s002_2002/
+    │   │   │   │   └── 02_tcp_le/
+    │   │   │   │       ├── aaaaaaab_s002_t000.edf
+    │   │   │   │       └── aaaaaaab_s002_t001.edf
+    │   │   │   └── s003_2002/
+    │   │   │       └── 02_tcp_le/
+    │   │   │           ├── aaaaaaab_s003_t000.edf
+    │   │   │           ├── aaaaaaab_s003_t001.edf
+    │   │   │           └── aaaaaaab_s003_t002.edf
+    │   │   ├── aaaaaaac/
+    │   │   │   ├── s001_2002/
+    │   │   │   │   └── 02_tcp_le/
+    │   │   │   │       ├── aaaaaaac_s001_t000.edf
+    │   │   │   │       └── aaaaaaac_s001_t001.edf
+    │   │   │   ├── s002_2002/
+    │   │   │   │   └── 02_tcp_le/
+    │   │   │   │       └── aaaaaaac_s002_t000.edf
+    │   │   │   ├── s003_2002/
+    │   │   │   │   └── 02_tcp_le/
+    │   │   │   │       └── aaaaaaac_s003_t000.edf
+    │   │   │   ├── s004_2002/
+    │   │   │   │   └── 02_tcp_le/
+    │   │   │   │       ├── aaaaaaac_s004_t000.edf
+    │   │   │   │       └── aaaaaaac_s004_t002.edf
+    │   │   │   ├── s005_2002/
+    │   │   │   │   └── 02_tcp_le/
+    │   │   │   │       ├── aaaaaaac_s005_t000.edf
+    │   │   │   │       ├── aaaaaaac_s005_t001.edf
+    │   │   │   │       └── aaaaaaac_s005_t002.edf
+    │   │   │   │       ... (1 more files)
+    │   │   │   ├── s006_2003/
+    │   │   │   │   └── 02_tcp_le/
+    │   │   │   │       └── aaaaaaac_s006_t001.edf
+    │   │   │   ├── s007_2003/
+    │   │   │   │   └── 02_tcp_le/
+    │   │   │   │       └── aaaaaaac_s007_t000.edf
+    │   │   │   ├── s008_2003/
+    │   │   │   │   └── 02_tcp_le/
+    │   │   │   │       ├── aaaaaaac_s008_t000.edf
+    │   │   │   │       └── aaaaaaac_s008_t001.edf
+    │   │   │   └── s009_2006/
+    │   │   │       └── 02_tcp_le/
+    │   │   │           └── aaaaaaac_s009_t000.edf
+    │   │   ├── aaaaaaad/
+    │   │   │   └── s001_2002/
+    │   │   │       └── 02_tcp_le/
+    │   │   │           └── aaaaaaad_s001_t000.edf
+    │   │   ├── aaaaaaae/
+    │   │   │   └── s001_2002/
+    │   │   │       └── 02_tcp_le/
+    │   │   │           ├── aaaaaaae_s001_t000.edf
+    │   │   │           └── aaaaaaae_s001_t001.edf
+    │   │
     132573 directories, 131528 files
+    ```
 
 각 EDF 파일 안에는 EEG 신호 데이터가 포함되어 있으며, 채널 구성과 샘플링 주파수는 파일마다 다를 수 있습니다. 파일 경로 중 edf/000/aaaaaaab/s001_2002_12_30/02_tcp_le/aaaaaaab_s001_t000.edf의 예로 000은 100명 단위 그룹, aaaaaaab는 무작위 환자 ID, s001_2002_12_30는 세션 번호 및 날짜, 마지막으로 02_tcp_le 몽타주 구성 정보를 나타냅니다.
 
@@ -93,14 +95,16 @@ TUEG 데이터셋[1]은 실제 임상 환경에서 총 10,874명의 피실험자
 ## 2.4 Preprocessed Dataset
 
 !!! note ""
-     TUEG/
-     ├── npy_files/
-     │   ├── sess10_sub10081_trial000_REF.npy
-     │   ├── sess10_sub10081_trial001_REF.npy
-     │   └── sess10_sub10081_trial002_REF.npy
-     │   ... (69665 more files)
-     ├── channels.csv
+    ```
+    TUEG/
+    ├── npy_files/
+    │   ├── sess10_sub10081_trial000_REF.npy
+    │   ├── sess10_sub10081_trial001_REF.npy
+    │   └── sess10_sub10081_trial002_REF.npy
+    │   ... (69665 more files)
+    ├── channels.csv
     1 directories, 69669 files
+    ```
 
 # 3. Applications and Use Cases
 
@@ -114,7 +118,11 @@ TUEG 데이터셋[1]은 실제 임상 환경에서 총 10,874명의 피실험자
 # 4. References
 
 [1]  Obeid, I., & Picone, J. (2016). The Temple University Hospital EEG Data Corpus. Frontiers in Neuroscience, Section Neural Technology,10, 196.
+
 [2] Yuqi Chen, Kan Ren, Kaitao Song, Yansen Wang, Yifan Wang, Dongsheng Li, and Lili Qiu.EEG-Former: Towards Transferable and Interpretable Large-Scale EEG Foundation Model.*arXiv preprint arXiv:2401.10278*, 2024.
+
 [3] Demetres Kostas, Stéphane Aroca-Ouellette, and Frank Rudzicz. BENDR: Using Transformers and a Contrastive Self-supervised Learning Task to Learn from Massive Amounts of EEG Data.*arXiv preprint arXiv:2101.12037*, 2021.
+
 [4] Wenhui Cui, Woojae Jeong, Philipp Thölke, Takfarinas Medani, Karim Jerbi, Anand A. Joshi, and Richard M. Leahy. Neuro-GPT: Towards a Foundation Model for EEG. *arXiv preprint arXiv:2311.03764*, 2024.
+
 [5] Jiquan Wang, Sha Zhao, Zhiling Luo, Yangxuan Zhou, Haiteng Jiang, Shijian Li, Tao Li, and Gang Pan. CBraMod: A Criss-Cross Brain Foundation Model for EEG Decoding. *Proceedings of the International Conference on Learning Representations (ICLR)*, 2025.

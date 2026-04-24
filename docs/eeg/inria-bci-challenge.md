@@ -23,22 +23,23 @@
 ## 2.3 Raw Dataset
 
 !!! note ""
-     new_Inria_BCI_Challenge/
-     ├── test/
-     │   ├── Data_S01_Sess01.csv
-     │   ├── Data_S01_Sess02.csv
-     │   └── Data_S01_Sess03.csv
-     │   ... (47 more files)
-     ├── train/
-     │   ├── Data_S02_Sess01.csv
-     │   ├── Data_S02_Sess02.csv
-     │   └── Data_S02_Sess03.csv
-     │   ... (77 more files)
-     ├── SampleSubmission.csv
-     ├── TrainLabels.csv
-     └── true_labels.csv
+    ```
+    new_Inria_BCI_Challenge/
+    ├── test/
+    │   ├── Data_S01_Sess01.csv
+    │   ├── Data_S01_Sess02.csv
+    │   └── Data_S01_Sess03.csv
+    │   ... (47 more files)
+    ├── train/
+    │   ├── Data_S02_Sess01.csv
+    │   ├── Data_S02_Sess02.csv
+    │   └── Data_S02_Sess03.csv
+    │   ... (77 more files)
+    ├── SampleSubmission.csv
+    ├── TrainLabels.csv
+    └── true_labels.csv
     2 directories, 133 files
-    
+    ```
 
 이 데이터셋은 56채널 EEG 데이터를 200Hz로 다운샘플링한 것으로, 각 피험자의 세션별 EEG 신호가 CSV 파일 형식으로 저장되어 있다. train.zip은 16명 × 5세션으로 총 80개 파일, test.zip은 10명 × 5세션으로 총 50개 파일로 구성되어 있으며, 각 CSV 파일에는 타임스탬프와 채널별 EEG 값이 포함된다. 채널의 위치 정보는 ChannelsLocation.csv에 저장되어 있고, 정답 레이블은 TrainLabels.csv에 제공된다.
 
@@ -49,15 +50,17 @@
 ## 2.5 Preprocessed Dataset
 
 !!! note ""
-     Inria_BCI_Challenge/
-     ├── npy_files/
-     │   ├── sess1_sub11_trial1.npy
-     │   ├── sess1_sub11_trial10.npy
-     │   └── sess1_sub11_trial11.npy
-     │   ... (5437 more files)
-     ├── channels.csv
-     └── labels.csv
+    ```
+    Inria_BCI_Challenge/
+    ├── npy_files/
+    │   ├── sess1_sub11_trial1.npy
+    │   ├── sess1_sub11_trial10.npy
+    │   └── sess1_sub11_trial11.npy
+    │   ... (5437 more files)
+    ├── channels.csv
+    └── labels.csv
     1 directories, 5442 files
+    ```
 
 # 3. Applications and Use Cases
 
@@ -69,5 +72,7 @@
 # 4. References
 
 [1] Margaux, Perrin, et al. "Objective and Subjective Evaluation of Online Error Correction during P300‐Based Spelling." *Advances in Human‐Computer Interaction* 2012.1 (2012): 578295.
+
 [2] Lawhern, Vernon J., et al. "EEGNet: a compact convolutional neural network for EEG-based brain–computer interfaces." *Journal of neural engineering* 15.5 (2018): 056013.
+
 [3] Wang, Guangyu, et al. "Eegpt: Pretrained transformer for universal and reliable representation of eeg signals." *Advances in Neural Information Processing Systems* 37 (2024): 39249-39280.

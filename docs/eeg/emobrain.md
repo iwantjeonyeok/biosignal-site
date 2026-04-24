@@ -24,28 +24,30 @@ Emobrain 데이터셋 [1] 은 eNTERFACE’06 워크숍에서 수집된 것으로
 ## 2.3 Raw Dataset
 
 !!! note ""
-     Emobrain
-     enterface06_EMOBRAIN/
-     ├── Data/
-     │ ├── Common/
-     │ │ ├── IAPS_Classes_EEG_fNIRS.txt
-     │ │ ├── IAPS_Eval_Arousal_EEG_fNIRS.txt
-     │ │ └── IAPS_Eval_Valence_EEG_fNIRS.txt
-     │ │ ... (16 more files)
-     │ ├── EEG/
-     │ │ ├── Part1_IAPS_SES1_EEG_fNIRS_03082006.bdf
-     │ │ ├── Part1_IAPS_SES1_EEG_fNIRS_03082006.bdf.mrk
-     │ │ └── Part1_IAPS_SES2_EEG_fNIRS_07082006.bdf
-     │ │ ... (27 more files)
-     │ └── fNIRS/
-     │ ├── PART1_IAPS_SES1_EEG_fNIRS_03082006.txt
-     │ ├── PART1_IAPS_SES1_EEG_fNIRS_06082006.txt
-     │ └── PART1_IAPS_SES3_EEG_fNIRS_08082006.txt
-     │ ... (13 more files)
-     ├── eNTERFACE06_EMOBRAIN.JPG
-     ├── eNTERFACE06_EMOBRAIN.html
-     └── eNTERFACE06_EMOBRAIN_license.txt
-     4 directories, 68 files
+    ```
+    Emobrain
+    enterface06_EMOBRAIN/
+    ├── Data/
+    │ ├── Common/
+    │ │ ├── IAPS_Classes_EEG_fNIRS.txt
+    │ │ ├── IAPS_Eval_Arousal_EEG_fNIRS.txt
+    │ │ └── IAPS_Eval_Valence_EEG_fNIRS.txt
+    │ │ ... (16 more files)
+    │ ├── EEG/
+    │ │ ├── Part1_IAPS_SES1_EEG_fNIRS_03082006.bdf
+    │ │ ├── Part1_IAPS_SES1_EEG_fNIRS_03082006.bdf.mrk
+    │ │ └── Part1_IAPS_SES2_EEG_fNIRS_07082006.bdf
+    │ │ ... (27 more files)
+    │ └── fNIRS/
+    │ ├── PART1_IAPS_SES1_EEG_fNIRS_03082006.txt
+    │ ├── PART1_IAPS_SES1_EEG_fNIRS_06082006.txt
+    │ └── PART1_IAPS_SES3_EEG_fNIRS_08082006.txt
+    │ ... (13 more files)
+    ├── eNTERFACE06_EMOBRAIN.JPG
+    ├── eNTERFACE06_EMOBRAIN.html
+    └── eNTERFACE06_EMOBRAIN_license.txt
+    4 directories, 68 files
+    ```
 
 ## 2.4 Raw Dataset Example
 
@@ -54,22 +56,24 @@ Emobrain 데이터셋 [1] 은 eNTERFACE’06 워크숍에서 수집된 것으로
 ## 2.5 Preprocessed Dataset
 
 !!! note ""
-     Emobrain/
-     ├── Emobrain_npy/
-     │   ├── part0_ses0_0.npy
-     │   ├── part0_ses0_1.npy
-     │   └── part0_ses0_10.npy
-     │   ... (552 more files)
-     ├── npy_files/
-     │   ├── sess1_sub1_trial1.npy
-     │   ├── sess1_sub1_trial10.npy
-     │   └── sess1_sub1_trial100.npy
-     │   ... (552 more files)
-     ├── Emobrain.h5
-     ├── Emobrain.npz
-     └── channels.csv
-     ... (3 more files)
+    ```
+    Emobrain/
+    ├── Emobrain_npy/
+    │   ├── part0_ses0_0.npy
+    │   ├── part0_ses0_1.npy
+    │   └── part0_ses0_10.npy
+    │   ... (552 more files)
+    ├── npy_files/
+    │   ├── sess1_sub1_trial1.npy
+    │   ├── sess1_sub1_trial10.npy
+    │   └── sess1_sub1_trial100.npy
+    │   ... (552 more files)
+    ├── Emobrain.h5
+    ├── Emobrain.npz
+    └── channels.csv
+    ... (3 more files)
     2 directories, 1116 files
+    ```
 
 한 trial(자극)별로 split하고 .npy로 변환하였으며 이 파일명은 labels.csv의 1열과 대응되고, 2열엔 정수형 레이블이 있습니다.
 
@@ -83,4 +87,5 @@ Emobrain 데이터셋 [1] 은 eNTERFACE’06 워크숍에서 수집된 것으로
 # 4. References
 
 [1] Savran, A., Ciftci, K., Chanel, G., Cruz Mota, J., Viet, L. H., Sankur, B., Akarun, L., Caplier, A., & Rombaut, M. (2006). *Emotion Detection in the Loop from Brain Signals and Facial Images*. Final Report, eNTERFACE'06 Workshop, Dubrovnik, Croatia. Retrieved from [http://www.enterface.net](http://www.enterface.net/)
+
 [2] Jiang, W.-B., Zhao, L.-M., & Lu, B.-L. (2024). *Large brain model for learning generic representations with tremendous EEG data in BCI*. In Proceedings of the International Conference on Learning Representations (ICLR). [https://github.com/935963004/LaBraM](https://github.com/935963004/LaBraM)

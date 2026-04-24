@@ -7,8 +7,11 @@
 ## 2.1 Data information
 
 이 데이터는 55명의 건강한 피험자가 85개의 실험세션에서 다양한 보행 및 이동활동을 수행하는 동안 데이터가 기록되었다. 실험에서는 8개의 Delsys Trigno, Cometa Wave의 Bipolar sEMG 전극과 2채널의 Sessantaquattro 시스템 다중 배열 sEMG가 사용되었다. 각 실험은 또한 MyPredict1,2,3 총 3가지의 실험조건으로 나뉘어서 진행되었다.
+
 MyPredict 1 = 10명 대상, 8채널의 Bipolar sEMG 전극 사용
+
 MyPredict 2 = 35명 대상, 2 채널의 다중 배열 sEMG 전극 사용(4x8, 간격 10mm)
+
 MyPredict3 = 10aud 대상, 8채널의 Bipolar sEMG전극, 다중 배열 전극 모두 사용(4x16, 간격 20mm)
 
 | **Channel** | **Sampling Frequency** | **Recording Duration** | **File Format** |

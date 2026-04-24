@@ -41,23 +41,26 @@ MIT-BIH supraventricular arrhythmia database는 78개의 30분 길이 ECG 기록
 ## 2.3 Raw Dataset
 
 !!! note ""
-     ├── mit-bih-supraventricular-arrhythmia-database-1.0.0/
-     │   ├── 800.atr
-     │   ├── 800.dat
-     │   ├── 800.hea
-     │   ├── 800.hea-
-     │   ├── 800.xws
-     │   ├── 801.atr
-     │   ├── 801.atr-
-     │   ├── 801.dat
-     │   ├── 801.hea
-     │   ├── 801.hea-
-     │   └── ... (417 파일, 각각 .atr + .dat + .hea + .hea- + .xws 세트)
+    ```
+    ├── mit-bih-supraventricular-arrhythmia-database-1.0.0/
+    │   ├── 800.atr
+    │   ├── 800.dat
+    │   ├── 800.hea
+    │   ├── 800.hea-
+    │   ├── 800.xws
+    │   ├── 801.atr
+    │   ├── 801.atr-
+    │   ├── 801.dat
+    │   ├── 801.hea
+    │   ├── 801.hea-
+    │   └── ... (417 파일, 각각 .atr + .dat + .hea + .hea- + .xws 세트)
     1 directories, 약 427 files
+    ```
 
 ![](mit-bih-supraventricular-arrhythmia-database/image.png)
 
 헤더 파일은 ECG 기록에 대한 메타데이터를 제공합니다.
+
 - 첫 번째 줄: 기록 번호(04043), 두 개의 ECG 채널, 샘플링 주파수 250Hz, 총 9,205,760개의 샘플, 그리고 기록 시작 시간(15:00:00)이 포함됩니다. ECG 신호는 약 10시간 14분 동안 250Hz로 샘플링되었습니다.
 - 두 번째 및 세 번째 줄: 각 ECG 리드(ECG1, ECG2)는 04043.dat 파일에 16비트 형식(코드 212), 12비트 해상도, ±10mV ADC 범위로 저장됩니다. 또한, ADC 기준값 및 최소/최대 신호 진폭이 제공됩니다.
 
@@ -70,22 +73,24 @@ MIT-BIH supraventricular arrhythmia database는 78개의 30분 길이 ECG 기록
 ## 2.5 Preprocessed Dataset
 
 !!! note ""
-     ├── mit-bih-supraventricular-arrhythmia-database-1.0.0/
-     │   ├── channel_info.csv
-     │   ├── mit-bih-supraventricular-arrhythmia-database-1.0.0_pretrain.npz
-     │   ├── mit-bih-supraventricular-arrhythmia-database-1.0.0_pretrain_record_ids.csv
-     │       ├── csv_files/
-     │       │   ├── 800_data.csv
-     │       │   ├── 800_label.csv
-     │       │   ├── 801_data.csv
-     │       │   ├── 801_label.csv
-     │       │   ├── 802_data.csv
-     │       │   ├── 802_label.csv
-     │       │   ├── 803_data.csv
-     │       │   ├── 803_label.csv
-     │       │   ├── 804_data.csv
-     │       │   ├── 804_label.csv
-     │       │   └── ... (156 파일)
+    ```
+    ├── mit-bih-supraventricular-arrhythmia-database-1.0.0/
+    │   ├── channel_info.csv
+    │   ├── mit-bih-supraventricular-arrhythmia-database-1.0.0_pretrain.npz
+    │   ├── mit-bih-supraventricular-arrhythmia-database-1.0.0_pretrain_record_ids.csv
+    │       ├── csv_files/
+    │       │   ├── 800_data.csv
+    │       │   ├── 800_label.csv
+    │       │   ├── 801_data.csv
+    │       │   ├── 801_label.csv
+    │       │   ├── 802_data.csv
+    │       │   ├── 802_label.csv
+    │       │   ├── 803_data.csv
+    │       │   ├── 803_label.csv
+    │       │   ├── 804_data.csv
+    │       │   ├── 804_label.csv
+    │       │   └── ... (156 파일)
+    ```
 
 MIT-BIH Supraventricular Arrhythmia database의 .hea 및 .dat 파일을 이용하여 data.csv, pid.csv 파일로 변환합니다. 다음은 800_data.csv, 800_pid.csv파일을 변환 후 시각화한 결과입니다.
 이 시각화 자료는 MIT-BIH Supraventricular Arrhythmia database의 환자 800번에 대한 10초간의 ECG 데이터를 나타냅니다. ECG 기록은 두 개의 리드(ECG1 및 ECG2)로 구성되며, 128Hz로 샘플링되었습니다.
@@ -108,9 +113,15 @@ MIT-BIH Supraventricular Arrhythmia database는 부정맥 탐지 및 ECG 분류 
 # 4. References
 
 [1] Paparrizos, J., Kang, Y., Boniol, P., Tsay, R. S., Palpanas, T., & Franklin, M. J. (2022). TSB-UAD: An End-to-End Benchmark Suite for Univariate Time-Series Anomaly Detection. Proceedings of the VLDB Endowment, 15(8), 1697-1711.
+
 [2] Liu, P., Sun, X., Han, Y., He, Z., Zhang, W., & Wu, C. (2022). Arrhythmia Classification of LSTM Autoencoder Based on Time Series Anomaly Detection. Biomedical Signal Processing and Control, 71, 103228.
+
 [3] Acharya, U. R., Fujita, H., Lih, O. S., Hagiwara, Y., Tan, J. H., & Adam, M. (2017). Automated Detection of Arrhythmias Using Different Intervals of Tachycardia ECG Segments with Convolutional Neural Network. Information Sciences, 405, 81-90.
+
 [4] Zabihi, M., Rad, A. B., & Kiranyaz, S. (2019). BeatClass: A Sustainable ECG Classification System in IoT-Based eHealth. IEEE Access, 7, 150673-150684.
+
 [5] Elgendi, M., Jonkman, M., & De Boer, F. (2013). Fast QRS Detection with an Optimized Knowledge-Based Method: Evaluation on 11 Standard ECG Databases. PLOS ONE, 8(9), e73557.
+
 [6] Kachuee, M., Fazeli, S., & Sarrafzadeh, M. (2018). Beat-by-Beat: Classifying Cardiac Arrhythmias with Recurrent Neural Networks. IEEE Journal of Biomedical and Health Informatics, 22(6), 1667-1677.
+
 [7] Greenwald SD. Improved detection and classification of arrhythmias in noise-corrupted electrocardiograms using contextual information. Ph.D. thesis, Harvard-MIT Division of Health Sciences and Technology, 1990.

@@ -36,68 +36,73 @@ For only CPSC 2018,
 | Total |  | 6877 |
 
 PhysioNet Challenge 2020 데이터셋의 라벨은 각 심전도 기록에 대한 심장 질환 진단 정보를 나타내며, 해당 정보는 메타데이터 파일인 .hea 파일에 포함되어 있습니다.
+
 .hea 파일의 Dx 항목에는 SNOMED CT(Systematized Nomenclature of Medicine – Clinical Terms) 기준의 진단 코드가 기재되어 있으며, 한 환자에게 여러 개의 진단이 부여될 수 있습니다.
+
 이러한 라벨 구조는 다중 클래스이자 다중 레이블 형태로 구성되어 있으며, 모델 학습을 위해 이를 multi-hot encoding 형식으로 변환하는 전처리 과정을 거쳤습니다.
 
 ## 2.3 Raw Dataset
 
 !!! note ""
-     challenge-2020/1.0.2/training/
-    ├── cpsc_2018/ 
-    │ ├── g1 
+    ```
+    challenge-2020/1.0.2/training/
+    ├── cpsc_2018/
+    │ ├── g1
     │ │ ├── RECORDS
-    │ │ ├── A00001.hea 
-    │ │ ├── A00001.mat 
-    │ │ ├── A00002.hea 
-    │ │ ├── A00002.mat 
-    │ │ └── ... (2001 파일: 각각 .mat + .hea 세트) 
-    │ └── ...  (7 폴더) 
-    ├── cpsc_2018_extra/ 
-    │ ├── g1 
+    │ │ ├── A00001.hea
+    │ │ ├── A00001.mat
+    │ │ ├── A00002.hea
+    │ │ ├── A00002.mat
+    │ │ └── ... (2001 파일: 각각 .mat + .hea 세트)
+    │ └── ...  (7 폴더)
+    ├── cpsc_2018_extra/
+    │ ├── g1
     │ │ ├── RECORDS
-    │ │ ├── Q0001.hea 
-    │ │ ├── Q0001.mat 
-    │ │ ├── Q0002.hea 
-    │ │ ├── Q0002.mat 
-    │ │ └── ... (2065 파일: 각각 .mat + .hea 세트) 
-    │ └── ...  (4 폴더) 
-    ├── georgia/ 
-    │ ├── g1 
+    │ │ ├── Q0001.hea
+    │ │ ├── Q0001.mat
+    │ │ ├── Q0002.hea
+    │ │ ├── Q0002.mat
+    │ │ └── ... (2065 파일: 각각 .mat + .hea 세트)
+    │ └── ...  (4 폴더)
+    ├── georgia/
+    │ ├── g1
     │ │ ├── RECORDS
-    │ │ ├── E00001.hea 
-    │ │ ├── E00001.mat 
-    │ │ ├── E00002.hea 
-    │ │ ├── E00002.mat 
-    │ │ └── ... (2001 파일: 각각 .mat + .hea 세트) 
-    │ └── ...  (11 폴더) 
-    ├── ptb/ 
+    │ │ ├── E00001.hea
+    │ │ ├── E00001.mat
+    │ │ ├── E00002.hea
+    │ │ ├── E00002.mat
+    │ │ └── ... (2001 파일: 각각 .mat + .hea 세트)
+    │ └── ...  (11 폴더)
+    ├── ptb/
     │ └── g1
     │ │ ├── RECORDS
-    │ │ ├── S0001.hea 
-    │ │ ├── S0001.mat 
-    │ │ ├── S0002.hea 
-    │ │ ├── S0002.mat 
-    │ │ └── ... (1099 파일: 각각 .mat + .hea 세트) 
+    │ │ ├── S0001.hea
+    │ │ ├── S0001.mat
+    │ │ ├── S0002.hea
+    │ │ ├── S0002.mat
+    │ │ └── ... (1099 파일: 각각 .mat + .hea 세트)
     ├── ptb-xl
-    │ ├── g1 
+    │ ├── g1
     │ │ ├── RECORDS
-    │ │ ├── HR00001.hea 
-    │ │ ├── HR00001.mat 
-    │ │ ├── HR00002.hea 
-    │ │ ├── HR00002.mat 
-    │ │ └── ... (2001 파일: 각각 .mat + .hea 세트) 
-    │ └── ...  (22 폴더) 
+    │ │ ├── HR00001.hea
+    │ │ ├── HR00001.mat
+    │ │ ├── HR00002.hea
+    │ │ ├── HR00002.mat
+    │ │ └── ... (2001 파일: 각각 .mat + .hea 세트)
+    │ └── ...  (22 폴더)
     └── st_petersburg_incart
     │ └── g1
     │ │ ├── RECORDS
-    │ │ ├── I0001.hea 
-    │ │ ├── I0001.mat 
-    │ │ ├── I0002.hea 
-    │ │ ├── I0002.mat 
-    │ │ └── ... (149 파일: 각각 .mat + .hea 세트) 
+    │ │ ├── I0001.hea
+    │ │ ├── I0001.mat
+    │ │ ├── I0002.hea
+    │ │ ├── I0002.mat
+    │ │ └── ... (149 파일: 각각 .mat + .hea 세트)
     6 directories, 약 90,000 files
+    ```
 
 각 레코드는 각 Sub dataset에 따른3 샘플링 주파수 기준으로 기록된 12 리드 ECG 신호를 포함하며, 다음 두 파일로 구성되어 있습니다: 
+
 - .mat 파일: ECG 신호 자체를 저장 
 - .hea 파일: 레코드의 메타데이터 (샘플 수, 레이블, 채널 정보 등)를 저장
 
@@ -114,71 +119,75 @@ mat 파일과 hea 파일을 이용해 csv 파일로 변환, 저장했습니다. 
 ## 2.5 Preprocessed Dataset
 
 !!! note ""
-     cpsc_2018/
-     ├── csv_files/
-     │   ├── A00001_data.csv
-     │   ├── A00002_data.csv
-     │   └── ...  (total 6877 files)
-     ├── channels_info.csv
-     ├── cpsc_2018_finetune.npz
-     ├── label_info.csv
-     └── label.csv
-    1 directories, 6881 files
-    cpsc_2018_extra/ 
+    ```
+    cpsc_2018/
     ├── csv_files/
-    │   ├── Q0001_data.csv
-    │   ├── Q0002_data.csv
-    │   └── ...  (total 3453 files) 
+    │   ├── A00001_data.csv
+    │   ├── A00002_data.csv
+    │   └── ...  (total 6877 files)
     ├── channels_info.csv
-    ├── cpsc_2018_extra_pretrain_record_ids.csv
-    └── cpsc_2018_extra_pretrain.npz
-    1 directories, 3456 files
-    georgia/ 
-    ├── csv_files/
-    │   ├── E00001_data.csv
-    │   ├── E00002_data.csv
-    │   └── ...  (total 10344 files) 
-    ├── channels_info.csv
-    ├── georgia_pretrain.h5
-    └── georgia_pretrain.csv
-    1 directories, 10347 files
-    ptb/ 
-    ├── csv_files/
-    │   ├── S0001_data.csv
-    │   ├── S0002_data.csv
-    │   └── ...  (total 516 files) 
-    ├── channels_info.csv
-    ├── ptb_pretrain.h5
-    └── ptb_pretrain.npz
-    1 directories, 519 files
-    ptb-xl/
-    ├── csv_files/
-    │   ├── HR00001_data.csv
-    │   ├── HR00002_data.csv
-    │   └── ...  (total 21837 files) 
-    ├── channels_info.csv
-    ├── ptb-xl_finetune.npz
+    ├── cpsc_2018_finetune.npz
     ├── label_info.csv
     └── label.csv
+    1 directories, 6881 files
+    cpsc_2018_extra/ 
+├── csv_files/
+│   ├── Q0001_data.csv
+│   ├── Q0002_data.csv
+│   └── ...  (total 3453 files) 
+├── channels_info.csv
+├── cpsc_2018_extra_pretrain_record_ids.csv
+└── cpsc_2018_extra_pretrain.npz
+    1 directories, 3456 files
+    georgia/ 
+├── csv_files/
+│   ├── E00001_data.csv
+│   ├── E00002_data.csv
+│   └── ...  (total 10344 files) 
+├── channels_info.csv
+├── georgia_pretrain.h5
+└── georgia_pretrain.csv
+    1 directories, 10347 files
+    ptb/ 
+├── csv_files/
+│   ├── S0001_data.csv
+│   ├── S0002_data.csv
+│   └── ...  (total 516 files) 
+├── channels_info.csv
+├── ptb_pretrain.h5
+└── ptb_pretrain.npz
+    1 directories, 519 files
+    ptb-xl/
+├── csv_files/
+│   ├── HR00001_data.csv
+│   ├── HR00002_data.csv
+│   └── ...  (total 21837 files) 
+├── channels_info.csv
+├── ptb-xl_finetune.npz
+├── label_info.csv
+└── label.csv
     1 directories, 21840 files
     INCART/ 
-    ├── csv_files/
-    │   ├── I0001_data.csv
-    │   ├── I0002_data.csv
-    │   └── ...  (total 74 files) 
-    ├── channels_info.csv
-    ├── INCART_pretrain_record_ids.csv
-    └── INCART_pretrain.npz
+├── csv_files/
+│   ├── I0001_data.csv
+│   ├── I0002_data.csv
+│   └── ...  (total 74 files) 
+├── channels_info.csv
+├── INCART_pretrain_record_ids.csv
+└── INCART_pretrain.npz
     1 directories, 77 files
+    ```
 
 - CPSC 2018, PTB-XL 의 경우
   csv_files 폴더에는 개별 신호 데이터를 담고 있는 ()_data.csv 파일이 포함되어 있으며, 라벨 정보를 담고 있는 label.csv 및 label_info.csv 파일이 포함되어 있습니다. 해당 데이터는 파인튜닝(finetune)을 위한 용도로 사용되며, 위의 모든 데이터를 통합하여 라벨 정보와 함께 cpsc_2018_finetune.npz 파일 등으로 정리하였습니다.
+
 - CPSC 2018 Extra, Georgia, PTB, INCART의 경우
   csv_files 폴더에는 개별 신호 데이터를 담고 있는 ()_data.csv 파일이 포함되어 있습니다. 해당 데이터는 pretrain을 위한 용도로 사용되며, 위의 모든 데이터를 통합하여 cpsc_2018_extra_pretrain.npz 파일 등으로 정리하였습니다.
 
 # 3. Applications and Use Cases
 
 PhysioNet Challenge 2020 데이터셋은 부정맥 탐지, 심박 분류, 심장 이상 분류 연구에서 널리 활용되고 있습니다. 데이터셋의 다양성 덕분에, 서로 다른 환자 집단에 걸친 강력한 알고리즘 개발이 가능합니다. 심부전, 심박 부정맥, 심근경색과 같은 심장질환 예측 모델 개발뿐만 아니라, 웨어러블 기기에서 수집된 PPG 신호와 결합하여 ECG 없이도 심장질환을 감지하는 연구로 발전시킬 수 있습니다. 또한 혈압, 산소포화도(SpO2), 심박수(HR) 등의 데이터와 융합하여 다중모달 분석을 수행하거나, 전자의무기록(EMR)과 결합하여 환자 맞춤형 심혈관 건강 관리를 위한 정밀 분석이 가능해집니다. 나아가, 원격 모니터링 시스템 개발 및 스마트워치와 같은 의료기기 AI 기능 강화에도 활용될 수 있으며, 실시간 ECG 모니터링을 위한 강화학습 모델과 결합하면 보다 정교한 이상 감지 시스템을 구축할 수 있습니다. 따라서 PhysioNet Challenge 2020 데이터셋은 심전도를 활용한 의료 AI 연구에서 중요한 역할을 하며, 다양한 생체신호 및 임상 데이터와의 융합을 통해 심혈관 질환 관리 및 예방을 위한 혁신적인 솔루션 개발에 기여할 수 있을 것입니다.
+
 아래는 본 데이터셋을 활용한 주요 연구 사례입니다.
 
 | 인용 논문 | 연구 과제 | 모델 구조 | 방법론 |
@@ -190,6 +199,9 @@ PhysioNet Challenge 2020 데이터셋은 부정맥 탐지, 심박 분류, 심장
 # 4. References
 
 [1] PhysioNet. (n.d.). PhysioNet Challenge 2020 dataset. *PhysioNet*. Retrieved from [https://physionet.org/content/challenge-2020/1.0.2/](https://physionet.org/content/challenge-2020/1.0.2/)
+
 [2] Liu, H., Zhang, X., & Wang, J. (2021). Hybrid CNN-Transformer networks for multi-label ECG classification. *IEEE Transactions on Biomedical Engineering*. [https://doi.org/10.1109/TBME.2021.1234567](https://doi.org/10.1109/TBME.2021.1234567)
+
 [3] Zhang, P., Zhao, L., & Sun, F. (2022). Attention-enhanced LSTM networks for arrhythmia detection from ECG signals. *Journal of Machine Learning Research*.
+
 [4] Wang, T., He, Y., & Li, G. (2023). Contrastive learning for zero-shot ECG diagnosis. *arXiv Preprint*, arXiv:2304.11245. [https://arxiv.org/abs/2304.11245](https://arxiv.org/abs/2304.11245)

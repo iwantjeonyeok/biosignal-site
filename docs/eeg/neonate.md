@@ -23,18 +23,20 @@ Neonate[1] 데이터셋은 신생아 발작 탐지를 목적으로 설계된 데
 ## 2.3 Raw Dataset
 
 !!! note ""
-     Neonate/
-     ├── eeg1.edf
+    ```
+    Neonate/
+    ├── eeg1.edf
     ├── eeg2.edf
     │   ... (77 more files)
     ├── clicinal_information.csv
     ├── Ethics_approval.pdf
     ├── annotations_2017_A.csv
-    ├── annotations_2017_B.csv
-    ├── annotations_2017_C.csv
-    └── annotations_2017.mat
-    ... (82 more files)
+├── annotations_2017_B.csv
+├── annotations_2017_C.csv
+└── annotations_2017.mat
+... (82 more files)
     1 directories, 85 files
+    ```
 
 eeg#.edf는 신생아 한 명에 대해 진행한 단일 세션에 관한 파일이며 총 79개가 존재합니다. annotations_2017_A,  annotations_2017_B, annotations_2017_C는 전문가 한 명이 1초 단위로 발작 발생 여부를 주석한 정보가 담긴 파일이며 annotations_2017은 주석 정보가 모두 담겨있는 파일입니다. 
 
@@ -45,17 +47,19 @@ eeg#.edf는 신생아 한 명에 대해 진행한 단일 세션에 관한 파일
 ## 2.5 Preprocessed Dataset
 
 !!! note ""
-     Neonate/
-     ├── npy_files/
-     │   ├── sub11_trial1.npy
-     │   ├── sub11_trial2.npy
-     │   └── sub11_trial3.npy
-     │   ... (870 more files)
+    ```
+    Neonate/
+    ├── npy_files/
+    │   ├── sub11_trial1.npy
+    │   ├── sub11_trial2.npy
+    │   └── sub11_trial3.npy
+    │   ... (870 more files)
     ├── channels.csv
-    ├── labels.csv
-    ├── Neonate.h5
+├── labels.csv
+├── Neonate.h5
     └── Neonate.npz
     1 directories, 877 files
+    ```
 
 # 3. Applications and Use Cases
 
@@ -67,5 +71,7 @@ eeg#.edf는 신생아 한 명에 대해 진행한 단일 세션에 관한 파일
 # 4. References
 
 [1] Stevenson, N. J., Tapani, K., Lauronen, L., & Vanhatalo, S. (2019).*A dataset of neonatal EEG recordings with seizure annotations*. Scientific Data, 6, 190039.
+
 [2] Chen, Y., Ren, K., Song, K., Wang, Y., Wang, Y., Li, D., Qiu, L. (2024).*EEGFormer: Towards Transferable and Interpretable Large-Scale EEG Foundation Model*. arXiv preprint arXiv:2401.10278.
+
 [3] Gramacki, A., & Gramacki, J. (2022). A deep learning framework for epileptic seizure detection based on neonatal EEG signals. *Scientific Reports*, *12*, Article 13010.

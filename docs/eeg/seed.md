@@ -24,99 +24,101 @@ SEED 데이터셋[1] 은 12명의 피험자에 대한 EEG(뇌파) 및 안구 운
 ## 2.3 Raw Dataset
 
 !!! note ""
-     SEED/
-     ├── SEED/
-     │   ├── SEED_EEG/
-     │   │   ├── ExtractedFeatures_1s/
-     │   │   │   ├── 10_20131130.mat
-     │   │   │   ├── 10_20131204.mat
-     │   │   │   └── 10_20131211.mat
-     │   │   │   ... (44 more files)
-     │   │   ├── ExtractedFeatures_4s/
-     │   │   │   ├── 10_20131130.mat
-     │   │   │   ├── 10_20131204.mat
-     │   │   │   └── 10_20131211.mat
-     │   │   │   ... (44 more files)
-     │   │   ├── Preprocessed_EEG/
-     │   │   │   ├── 10_20131130.mat
-     │   │   │   ├── 10_20131204.mat
-     │   │   │   └── 10_20131211.mat
-     │   │   │   ... (44 more files)
-     │   │   ├── SEED_RAW_EEG/
-     │   │   │   ├── 10_1.cnt
-     │   │   │   ├── 10_2.cnt
-     │   │   │   └── 10_3.cnt
-     │   │   │   ... (43 more files)
-     │   │   ├── SEED_stimulation.xlsx
-     │   │   ├── channel-order.xlsx
-     │   │   └── subject-id-gender-seed.txt
-     │   ├── SEED_Multimodal/
-     │   │   ├── Chinese/
-     │   │   │   ├── 01-EEG-raw/
-     │   │   │   │   ├── 10_1.cnt
-     │   │   │   │   ├── 10_2.cnt
-     │   │   │   │   └── 10_3.cnt
-     │   │   │   │   ... (34 more files)
-     │   │   │   ├── 02-EEG-DE-feature/
-     │   │   │   │   ├── eeg_used_1s/
-     │   │   │   │   │   ├── 10_1.npz
-     │   │   │   │   │   ├── 10_2.npz
-     │   │   │   │   │   └── 10_3.npz
-     │   │   │   │   │   ... (33 more files)
-     │   │   │   │   ├── eeg_used_4s/
-     │   │   │   │   │   ├── 10_1.npz
-     │   │   │   │   │   ├── 10_2.npz
-     │   │   │   │   │   └── 10_3.npz
-     │   │   │   │   │   ... (33 more files)
-     │   │   │   │   └── reading_eeg_feature.py
-     │   │   │   ├── 03-Eye-tracking-excel/
-     │   │   │   │   ├── 10_1.xls
-     │   │   │   │   ├── 10_2.xls
-     │   │   │   │   └── 10_3.xls
-     │   │   │   │   ... (33 more files)
-     │   │   │   └── 04-Eye-tracking-feature/
-     │   │   │       ├── eye_tracking_feature/
-     │   │   │       │   ├── 10_1
-     │   │   │       │   ├── 10_2
-     │   │   │       │   └── 10_3
-     │   │   │       │   ... (33 more files)
-     │   │   │       └── reading_eye_feature.py
-     │   │   ├── code/
-     │   │   │   ├── CrossCultureCode-main/
-     │   │   │   │   ├── BDAE/
-     │   │   │   │   │   ├── bdae_chinese.py
-     │   │   │   │   │   └── [utils.py](http://utils.py/)
-     │   │   │   │   ├── DCCA-AM/
-     │   │   │   │   │   ├── chinese_dcca_attention.py
-     │   │   │   │   │   ├── dcca_utils.py
-     │   │   │   │   │   └── [utils.py](http://utils.py/)
-     │   │   │   │   ├── TraditionalFusion/
-     │   │   │   │   │   ├── 01_svm_concat.py
-     │   │   │   │   │   ├── MCalFuzzyMeasure.m
-     │   │   │   │   │   └── max_sum_fusion.py
-     │   │   │   │   │   ... (2 more files)
-     │   │   │   │   ├── dnn_eeg_chinese_baseline.py
-     │   │   │   │   └── svm_knn_lr_classifiers.py
-     │   │   │   └── CrossCultureCode-main.zip
-     │   │   ├── paper/
-     │   │   │   ├── Chinese_and_French.pdf
-     │   │   │   ├── Chinese_and_German.pdf
-     │   │   │   └── jne_19_2_026012.pdf
-     │   │   ├── China_information.xlsx
-     │   │   └── README.pdf
-     │   └── channel_62_pos.locs
-     ├── SEED_EEG/
-     │   ├── ExtractedFeatures_1s/
-     │   │   ├── 10_20131130.mat
-     │   │   ├── 10_20131204.mat
-     │   │   └── 10_20131211.mat
-     │   │   ... (15 more files)
-     │   ├── SEED_stimulation.xlsx
-     │   ├── channel-order.xlsx
-     │   └── subject-id-gender-seed.txt
-     └── channel_62_pos.locs
+    ```
+    SEED/
+    ├── SEED/
+    │   ├── SEED_EEG/
+    │   │   ├── ExtractedFeatures_1s/
+    │   │   │   ├── 10_20131130.mat
+    │   │   │   ├── 10_20131204.mat
+    │   │   │   └── 10_20131211.mat
+    │   │   │   ... (44 more files)
+    │   │   ├── ExtractedFeatures_4s/
+    │   │   │   ├── 10_20131130.mat
+    │   │   │   ├── 10_20131204.mat
+    │   │   │   └── 10_20131211.mat
+    │   │   │   ... (44 more files)
+    │   │   ├── Preprocessed_EEG/
+    │   │   │   ├── 10_20131130.mat
+    │   │   │   ├── 10_20131204.mat
+    │   │   │   └── 10_20131211.mat
+    │   │   │   ... (44 more files)
+    │   │   ├── SEED_RAW_EEG/
+    │   │   │   ├── 10_1.cnt
+    │   │   │   ├── 10_2.cnt
+    │   │   │   └── 10_3.cnt
+    │   │   │   ... (43 more files)
+    │   │   ├── SEED_stimulation.xlsx
+    │   │   ├── channel-order.xlsx
+    │   │   └── subject-id-gender-seed.txt
+    │   ├── SEED_Multimodal/
+    │   │   ├── Chinese/
+    │   │   │   ├── 01-EEG-raw/
+    │   │   │   │   ├── 10_1.cnt
+    │   │   │   │   ├── 10_2.cnt
+    │   │   │   │   └── 10_3.cnt
+    │   │   │   │   ... (34 more files)
+    │   │   │   ├── 02-EEG-DE-feature/
+    │   │   │   │   ├── eeg_used_1s/
+    │   │   │   │   │   ├── 10_1.npz
+    │   │   │   │   │   ├── 10_2.npz
+    │   │   │   │   │   └── 10_3.npz
+    │   │   │   │   │   ... (33 more files)
+    │   │   │   │   ├── eeg_used_4s/
+    │   │   │   │   │   ├── 10_1.npz
+    │   │   │   │   │   ├── 10_2.npz
+    │   │   │   │   │   └── 10_3.npz
+    │   │   │   │   │   ... (33 more files)
+    │   │   │   │   └── reading_eeg_feature.py
+    │   │   │   ├── 03-Eye-tracking-excel/
+    │   │   │   │   ├── 10_1.xls
+    │   │   │   │   ├── 10_2.xls
+    │   │   │   │   └── 10_3.xls
+    │   │   │   │   ... (33 more files)
+    │   │   │   └── 04-Eye-tracking-feature/
+    │   │   │       ├── eye_tracking_feature/
+    │   │   │       │   ├── 10_1
+    │   │   │       │   ├── 10_2
+    │   │   │       │   └── 10_3
+    │   │   │       │   ... (33 more files)
+    │   │   │       └── reading_eye_feature.py
+    │   │   ├── code/
+    │   │   │   ├── CrossCultureCode-main/
+    │   │   │   │   ├── BDAE/
+    │   │   │   │   │   ├── bdae_chinese.py
+    │   │   │   │   │   └── [utils.py](http://utils.py/)
+    │   │   │   │   ├── DCCA-AM/
+    │   │   │   │   │   ├── chinese_dcca_attention.py
+    │   │   │   │   │   ├── dcca_utils.py
+    │   │   │   │   │   └── [utils.py](http://utils.py/)
+    │   │   │   │   ├── TraditionalFusion/
+    │   │   │   │   │   ├── 01_svm_concat.py
+    │   │   │   │   │   ├── MCalFuzzyMeasure.m
+    │   │   │   │   │   └── max_sum_fusion.py
+    │   │   │   │   │   ... (2 more files)
+    │   │   │   │   ├── dnn_eeg_chinese_baseline.py
+    │   │   │   │   └── svm_knn_lr_classifiers.py
+    │   │   │   └── CrossCultureCode-main.zip
+    │   │   ├── paper/
+    │   │   │   ├── Chinese_and_French.pdf
+    │   │   │   ├── Chinese_and_German.pdf
+    │   │   │   └── jne_19_2_026012.pdf
+    │   │   ├── China_information.xlsx
+    │   │   └── README.pdf
+    │   └── channel_62_pos.locs
+    ├── SEED_EEG/
+    │   ├── ExtractedFeatures_1s/
+    │   │   ├── 10_20131130.mat
+    │   │   ├── 10_20131204.mat
+    │   │   └── 10_20131211.mat
+    │   │   ... (15 more files)
+    │   ├── SEED_stimulation.xlsx
+    │   ├── channel-order.xlsx
+    │   └── subject-id-gender-seed.txt
+    └── channel_62_pos.locs
     23 directories, 414 files
     9 directories, 165 files
+    ```
 
 Raw EEG data는 .cnt 형식으로 제공되며, preprocessed data는 .mat 형식으로 제공됩니다. SEED_stimulation.xlsx에서 자극 순서 및 시간, 라벨링 정보를 알 수 있습니다.  SEED_RAW_EEG 폴더 내의 time.txt를 통해 한 cnt파일 별 자극단위 timepoint를 알 수 있습니다.
 
@@ -127,15 +129,17 @@ Raw EEG data는 .cnt 형식으로 제공되며, preprocessed data는 .mat 형식
 ## 2.5 Preprocessed Dataset
 
 !!! note ""
-     SEED/
-     ├── npy_files/
-     │   ├── sess01_sub01_trial01.npy
-     │   ├── sess01_sub01_trial02.npy
-     │   └── sess01_sub01_trial03.npy
-     │   ... (672 more files)
-     ├── SEED.h5
-     ├── channels.csv
-     └── labels.csv
+    ```
+    SEED/
+    ├── npy_files/
+    │   ├── sess01_sub01_trial01.npy
+    │   ├── sess01_sub01_trial02.npy
+    │   └── sess01_sub01_trial03.npy
+    │   ... (672 more files)
+    ├── SEED.h5
+    ├── channels.csv
+    └── labels.csv
+    ```
 
 한 trial(자극)별로 split하고 .npy로 변환하였으며 이 파일명은 labels.csv의 1열과 대응되고, 2열엔 정수형 레이블이 있습니다.
 
@@ -149,5 +153,7 @@ Raw EEG data는 .cnt 형식으로 제공되며, preprocessed data는 .mat 형식
 # 4. References
 
 [1] Wei-Long Zheng, and Bao-Liang Lu, Investigating Critical Frequency Bands and Channels for EEG-based Emotion Recognition with Deep Neural Networks, accepted by IEEE Transactions on Autonomous Mental Development (IEEE TAMD) 7(3): 162-175, 2015
+
 [2] Song, Y., Zheng, Q., Liu, B., & Gao, X. (2023). EEG Conformer: Convolutional Transformer for EEG Decoding and Visualization. *IEEE Transactions on Neural Systems and Rehabilitation Engineering, 31*, 710–719.
+
 [3] Yi, K., Wang, Y., Ren, K., & Li, D. (2023). Learning topology-agnostic EEG representations with geometry-aware modeling. In *Advances in Neural Information Processing Systems*, 36. NeurIPS.

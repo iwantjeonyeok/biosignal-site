@@ -25,34 +25,35 @@
 ## 2.3 Raw Dataset
 
 !!! note ""
-     High-Gamma/
+    ```
+    High-Gamma/
     ├── data/
-    │   ├── test/
-    │   │   ├── 1.edf
-    │   │   ├── 1.mat
-    │   │   └── 10.edf
-    │   │   ... (25 more files)
-    │   ├── train/
-    │   │   ├── 1.edf
-    │   │   ├── 1.mat
-    │   │   └── 10.edf
-    │   │   ... (25 more files)
-    │   └── trained-parameters/
-    │       ├── deep/
-    │       │   ├── 1.pkl
-    │       │   ├── 10.pkl
-    │       │   └── 11.pkl
-    │       │   ... (11 more files)
-    │       └── shallow/
-    │           ├── 1.pkl
-    │           ├── 10.pkl
-    │           └── 11.pkl
-    │           ... (11 more files)
-    ├── LICENSE.txt
-    ├── [README.md](http://readme.md/)
-    └── [example.py](http://example.py/)
+│   ├── test/
+│   │   ├── 1.edf
+│   │   ├── 1.mat
+│   │   └── 10.edf
+│   │   ... (25 more files)
+│   ├── train/
+│   │   ├── 1.edf
+│   │   ├── 1.mat
+│   │   └── 10.edf
+│   │   ... (25 more files)
+│   └── trained-parameters/
+│       ├── deep/
+│       │   ├── 1.pkl
+│       │   ├── 10.pkl
+│       │   └── 11.pkl
+│       │   ... (11 more files)
+│       └── shallow/
+│           ├── 1.pkl
+│           ├── 10.pkl
+│           └── 11.pkl
+│           ... (11 more files)
+├── LICENSE.txt
+├── [README.md](http://readme.md/)
+└── [example.py](http://example.py/)
     6 directories, 77 files
-    
+    ```
 
 각 피험자별로 .edf 형식의 원시 EEG 신호와 .mat 형식의 라벨 및 메타데이터가 쌍으로 존재하며, 데이터는 train과 test 폴더로 구분되어 있습니다. 신호는 128채널로 500Hz로 기록되었으며, 각 trial은 4초 길이로 총 4개 클래스(좌손, 우손, 양발, 휴식)를 포함합니다.
 
@@ -63,15 +64,17 @@
 ## 2.5 Preprocessed Dataset
 
 !!! note ""
-     High_Gamma/
-     ├── npy_files/
-     │   ├── sess1_sub10_trial1.npy
-     │   ├── sess1_sub10_trial10.npy
-     │   └── sess1_sub10_trial100.npy
-     │   ... (11241 more files)
-     ├── channels.csv
-     └── labels.csv
+    ```
+    High_Gamma/
+    ├── npy_files/
+    │   ├── sess1_sub10_trial1.npy
+    │   ├── sess1_sub10_trial10.npy
+    │   └── sess1_sub10_trial100.npy
+    │   ... (11241 more files)
+    ├── channels.csv
+    └── labels.csv
     1 directories, 11246 files
+    ```
 
 # 3. Applications and Use Cases
 
@@ -83,5 +86,7 @@
 # 4. References
 
 [1] Schirrmeister, Robin Tibor, et al. "Deep learning with convolutional neural networks for EEG decoding and visualization." *Human brain mapping* 38.11 (2017): 5391-5420.
+
 [2] Song, Yonghao, et al. "EEG conformer: Convolutional transformer for EEG decoding and visualization." *IEEE Transactions on Neural Systems and Rehabilitation Engineering* 31 (2022): 710-719.
+
 [3] Altaheri, Hamdi, Ghulam Muhammad, and Mansour Alsulaiman. "Physics-informed attention temporal convolutional network for EEG-based motor imagery classification." *IEEE transactions on industrial informatics* 19.2 (2022): 2249-2258.

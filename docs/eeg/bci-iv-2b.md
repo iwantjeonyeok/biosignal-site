@@ -23,12 +23,14 @@
 ## 2.3 Raw Dataset
 
 !!! note ""
-     BCI IV-2b/
-     ├── B0101T.gdf
-     ├── B0102T.gdf
-     └── B0103T.gdf
-     ... (42 more files)
+    ```
+    BCI IV-2b/
+    ├── B0101T.gdf
+    ├── B0102T.gdf
+    └── B0103T.gdf
+    ... (42 more files)
     0 directories, 45 files
+    ```
 
 BCI IV-2b 데이터셋은 하나의 폴더 안에 총 45개의 GDF 파일로 구성되어 있으며, 9명의 피실험자마다 5개 세션(3개 training, 2개 evaluation) 파일이 존재합니다. 각 GDF 파일에는 EEG 및 EOG 신호와 함께 이벤트 기반 라벨링이 포함되어 있으며, 클래스는 왼손(이벤트 코드 769)과 오른손(이벤트 코드 770) 두 가지입니다. 이벤트 정보는 이벤트 발생 시점(h.EVENT.POS), 유형(h.EVENT.TYP), 그리고 duration(h.EVENT.DUR)으로 기록되어 있어 각 trial 구간을 정확하게 식별할 수 있습니다.
 
@@ -39,15 +41,17 @@ BCI IV-2b 데이터셋은 하나의 폴더 안에 총 45개의 GDF 파일로 구
 ## 2.5 Preprocessed Dataset
 
 !!! note ""
-     BCI_IV_2b/
-     ├── npy_files/
-     │   ├── sess1_sub1_trial1.npy
-     │   ├── sess1_sub1_trial10.npy
-     │   └── sess1_sub1_trial11.npy
-     │   ... (2450 more files)
-     ├── channels.csv
-     └── labels.csv
+    ```
+    BCI_IV_2b/
+    ├── npy_files/
+    │   ├── sess1_sub1_trial1.npy
+    │   ├── sess1_sub1_trial10.npy
+    │   └── sess1_sub1_trial11.npy
+    │   ... (2450 more files)
+    ├── channels.csv
+    └── labels.csv
     1 directories, 2455 files
+    ```
 
 # 3. Applications and Use Cases
 
@@ -59,5 +63,7 @@ BCI IV-2b 데이터셋은 하나의 폴더 안에 총 45개의 GDF 파일로 구
 # 4. References
 
 [1] Leeb, R., Brunner, C., Müller-Putz, G. R., Schlögl, A., & Pfurtscheller, G. (2008). BCI Competition 2008 – Graz data set B. Graz University of Technology, Austria. 
+
 [2] Kim, Sung-Jin, Dae-Hyeok Lee, and Yeon-Woo Choi. "Cropcat: Data augmentation for smoothing the feature distribution of eeg signals." 2023 11th International Winter Conference on Brain-Computer Interface (BCI). IEEE, 2023.
+
 [3] Wang, Han, et al. "A novel algorithmic structure of EEG channel attention combined with swin transformer for motor patterns classification." IEEE transactions on neural systems and rehabilitation engineering 31 (2023): 3132-3141.

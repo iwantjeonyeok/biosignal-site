@@ -31,73 +31,75 @@ Siena Scalp EEG Database[1]는 발작 탐지를 위해 설계된 EEG(뇌파) 데
 ## 2.3 Raw Dataset
 
 !!! note ""
-     Siena/
-     ├── PN00/
-     │   ├── PN00-1.edf
-     │   ├── PN00-2.edf
-     │   └── PN00-3.edf
-     │   ... (3 more files)
-     ├── PN01/
-     │   ├── PN01-1.edf
-     │   └── Seizures-list-PN01.txt
-     ├── PN03/
-     │   ├── PN03-1.edf
-     │   ├── PN03-2.edf
-     │   └── Seizures-list-PN03.txt
-     ├── PN05/
-     │   ├── PN05-2.edf
-     │   ├── PN05-3.edf
-     │   └── PN05-4.edf
-     │   ... (1 more files)
-     ├── PN06/
-     │   ├── PN06-1.edf
-     │   ├── PN06-2.edf
-     │   └── PN06-3.edf
-     │   ... (3 more files)
-     ├── PN07/
-     │   ├── PN07-1.edf
-     │   └── Seizures-list-PN07.txt
-     ├── PN09/
-     │   ├── PN09-1.edf
-     │   ├── PN09-2.edf
-     │   └── PN09-3.edf
-     │   ... (1 more files)
-     ├── PN10/
-     │   ├── PN10-1.edf
-     │   ├── PN10-10.edf
-     │   └── PN10-2.edf
-     │   ... (4 more files)
-     ├── PN11/
-     │   ├── PN11-1.edf
-     │   └── Seizures-list-PN11.txt
-     ├── PN12/
-     │   ├── PN12-1.2.edf
-     │   ├── PN12-3.edf
-     │   └── PN12-4.edf
-     │   ... (1 more files)
-     ├── PN13/
-     │   ├── PN13-1.edf
-     │   ├── PN13-2.edf
-     │   └── PN13-3.edf
-     │   ... (1 more files)
-     ├── PN14/
-     │   ├── PN14-1.edf
-     │   ├── PN14-2.edf
-     │   └── PN14-3.edf
-     │   ... (2 more files)
-     ├── PN16/
-     │   ├── PN16-1.edf
-     │   ├── PN16-2.edf
-     │   └── Seizures-list-PN16.txt
-     ├── PN17/
-     │   ├── PN17-1.edf
-     │   ├── PN17-2.edf
-     │   └── Seizures-list-PN17.txt
+    ```
+    Siena/
+    ├── PN00/
+    │   ├── PN00-1.edf
+    │   ├── PN00-2.edf
+    │   └── PN00-3.edf
+    │   ... (3 more files)
+    ├── PN01/
+    │   ├── PN01-1.edf
+    │   └── Seizures-list-PN01.txt
+    ├── PN03/
+    │   ├── PN03-1.edf
+    │   ├── PN03-2.edf
+    │   └── Seizures-list-PN03.txt
+    ├── PN05/
+    │   ├── PN05-2.edf
+    │   ├── PN05-3.edf
+    │   └── PN05-4.edf
+    │   ... (1 more files)
+    ├── PN06/
+    │   ├── PN06-1.edf
+    │   ├── PN06-2.edf
+    │   └── PN06-3.edf
+    │   ... (3 more files)
+    ├── PN07/
+    │   ├── PN07-1.edf
+    │   └── Seizures-list-PN07.txt
+    ├── PN09/
+    │   ├── PN09-1.edf
+    │   ├── PN09-2.edf
+    │   └── PN09-3.edf
+    │   ... (1 more files)
+    ├── PN10/
+    │   ├── PN10-1.edf
+    │   ├── PN10-10.edf
+    │   └── PN10-2.edf
+    │   ... (4 more files)
+    ├── PN11/
+    │   ├── PN11-1.edf
+    │   └── Seizures-list-PN11.txt
+    ├── PN12/
+    │   ├── PN12-1.2.edf
+    │   ├── PN12-3.edf
+    │   └── PN12-4.edf
+    │   ... (1 more files)
+    ├── PN13/
+    │   ├── PN13-1.edf
+    │   ├── PN13-2.edf
+    │   └── PN13-3.edf
+    │   ... (1 more files)
+    ├── PN14/
+    │   ├── PN14-1.edf
+    │   ├── PN14-2.edf
+    │   └── PN14-3.edf
+    │   ... (2 more files)
+    ├── PN16/
+    │   ├── PN16-1.edf
+    │   ├── PN16-2.edf
+    │   └── Seizures-list-PN16.txt
+    ├── PN17/
+    │   ├── PN17-1.edf
+    │   ├── PN17-2.edf
+    │   └── Seizures-list-PN17.txt
     ├── subjec_info.csv
-    ├── LICENSE.txt
-    ├── RECORDS
-    └── SHA256SUMS.txt
+├── LICENSE.txt
+├── RECORDS
+└── SHA256SUMS.txt
     14 directories, 59 files
+    ```
 
 Siena raw EEG 데이터셋은 총 14명의 간질 환자의 뇌파 데이터를 개별 폴더로 구분하여 구성하고 있으며, 각 폴더는 피험자 식별자(ID)에 따라 PN00, PN01과 같은 이름으로 정리되어 있습니다. 전체 데이터셋에는 LICENSE.txt, RECORDS, subject_info.csv 등의 공통 정보 파일이 존재하며, 각 환자 폴더에는 여러 세션별 EEG 기록 파일과 발작 발생 여부 주석 정보가 담긴 txt파일이 포함됩니다.
 
@@ -108,18 +110,20 @@ Siena raw EEG 데이터셋은 총 14명의 간질 환자의 뇌파 데이터를 
 ## 2.5 Preprocessed Dataset
 
 !!! note ""
-     Siena/
-     ├── npy_files/
-     │   ├── sess1.2_sub12_trial1.npy
-     │   ├── sess1.2_sub12_trial2.npy
-     │   └── sess1.2_sub12_trial3.npy
-     │   ... (123 more files)
-     ├── seizure_labels.csv
-     ├── seizuretype_labels.csv
-     ├── Siena.h5
-     ├── Siena.npz
-     └── channels.csv
+    ```
+    Siena/
+    ├── npy_files/
+    │   ├── sess1.2_sub12_trial1.npy
+    │   ├── sess1.2_sub12_trial2.npy
+    │   └── sess1.2_sub12_trial3.npy
+    │   ... (123 more files)
+    ├── seizure_labels.csv
+    ├── seizuretype_labels.csv
+    ├── Siena.h5
+    ├── Siena.npz
+    └── channels.csv
     1 directiories, 131 files.
+    ```
 
 # 3. Applications and Use Cases
 
@@ -131,5 +135,7 @@ Siena raw EEG 데이터셋은 총 14명의 간질 환자의 뇌파 데이터를 
 # 4. References
 
 [1] Detti, P., Vatti, G., & Zabalo Manrique de Lara, G. (2020).*EEG Synchronization Analysis for Seizure Prediction: A Study on Data of Noninvasive Recordings*. Processes, 8(7), 846.
+
 [2] Wang, Y., Zhang, Y., et al., 2023. Epileptic seizures detection and the analysis of optimal seizure prediction horizon based on phase–amplitude coupling. Frontiers in Neuroscience, 17, 1191683.
+
 [3] Li, Y., Yang, Y., Du, Y., Wu, P., Wang, Y., 2024. LaBraM: A Large Brain Model for Universal Representation of EEG Signals. arXiv preprint, arXiv:2405.18765.

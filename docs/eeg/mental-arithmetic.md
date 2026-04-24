@@ -23,16 +23,18 @@ Mental Arithmetic 데이터셋 [1]은 피험자들이 정신 산술(Mental Arith
 ## 2.3 Raw Dataset
 
 !!! note ""
-     Mental Arithmetic/
-     ├── files/
-     │   └── eegmat/
-     │       └── 1.0.0/
-     │           ├── README.txt
-     │           ├── RECORDS
-     │           └── SHA256SUMS.txt
-     │           ... (74 more files)
-     └── robots.txt
+    ```
+    Mental Arithmetic/
+    ├── files/
+    │   └── eegmat/
+    │       └── 1.0.0/
+    │           ├── README.txt
+    │           ├── RECORDS
+    │           └── SHA256SUMS.txt
+    │           ... (74 more files)
+    └── robots.txt
     3 directories, 78 files
+    ```
 
 subject-info.csv에 라벨링 정보가 저장되어 있으며, *_1.edf는 task 수행 전, *2.edf는 task 수행 중 기록입니다.
 
@@ -43,16 +45,18 @@ subject-info.csv에 라벨링 정보가 저장되어 있으며, *_1.edf는 task 
 ## 2.5 Preprocessed Dataset
 
 !!! note ""
-     Mental Arithmetic/
-     ├── npy_files/
-     │   ├── sess01_sub00_trial01.npy
-     │   ├── sess01_sub01_trial01.npy
-     │   └── sess01_sub02_trial01.npy
-     │   ... (69 more files)
-     ├── Mental Arithmetic.h5
-     └── Mental Arithmetic.npz
-     ... (2 more files)
+    ```
+    Mental Arithmetic/
+    ├── npy_files/
+    │   ├── sess01_sub00_trial01.npy
+    │   ├── sess01_sub01_trial01.npy
+    │   └── sess01_sub02_trial01.npy
+    │   ... (69 more files)
+    ├── Mental Arithmetic.h5
+    └── Mental Arithmetic.npz
+    ... (2 more files)
     1 directories, 76 files
+    ```
 
 한 trial(자극)별로 split하고 .npy로 변환하였으며 이 파일명은 labels.csv의 1열과 대응되고, 2열엔 정수형 레이블이 있습니다.
 
@@ -65,4 +69,5 @@ subject-info.csv에 라벨링 정보가 저장되어 있으며, *_1.edf는 task 
 # 4. References
 
 [1] Zyma, I., Tukaev, S., Seleznov, I., Kiyono, K., Popov, A., Chernykh, M., & Shpenkov, O. (2019). Electroencephalograms during mental arithmetic task performance. *Data*, 4(1), 14. [https://doi.org/10.3390/data4010014](https://doi.org/10.3390/data4010014)
+
 [2] Varshney, A., Ghosh, S. K., Padhy, S., Tripathy, R. K., & Acharya, U. R. (2021). Automated classification of mental arithmetic tasks using recurrent neural network and entropy features obtained from multi-channel EEG signals. *Electronics*, 10(9), 1079. [https://doi.org/10.3390/electronics10091079](https://doi.org/10.3390/electronics10091079)

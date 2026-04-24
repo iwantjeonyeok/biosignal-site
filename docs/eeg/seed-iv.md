@@ -25,66 +25,68 @@ SEED-IV 데이터셋[1] 은 15명의 피험자에 대한 EEG 및 안구 운동 �
 ## 2.3 Raw Dataset
 
 !!! note ""
-     SEED-IV/
-     └── SEED_IV/
-     ├── eeg_feature_smooth/
-     │   ├── 1/
-     │   │   ├── 10_20151014.mat
-     │   │   ├── 11_20150916.mat
-     │   │   └── 12_20150725.mat
-     │   │   ... (12 more files)
-     │   ├── 2/
-     │   │   ├── 10_20151021.mat
-     │   │   ├── 11_20150921.mat
-     │   │   └── 12_20150804.mat
-     │   │   ... (12 more files)
-     │   └── 3/
-     │       ├── 10_20151023.mat
-     │       ├── 11_20151011.mat
-     │       └── 12_20150807.mat
-     │       ... (12 more files)
-     ├── eeg_raw_data/
-     │   ├── 1/
-     │   │   ├── 10_20151014.mat
-     │   │   ├── 11_20150916.mat
-     │   │   └── 12_20150725.mat
-     │   │   ... (12 more files)
-     │   ├── 2/
-     │   │   ├── 10_20151021.mat
-     │   │   ├── 11_20150921.mat
-     │   │   └── 12_20150804.mat
-     │   │   ... (12 more files)
-     │   └── 3/
-     │       ├── 10_20151023.mat
-     │       ├── 11_20151011.mat
-     │       └── 12_20150807.mat
-     │       ... (12 more files)
-     ├── eye_feature_smooth/
-     │   ├── 1/
-     │   │   ├── 10_20151014.mat
-     │   │   ├── 11_20150916.mat
-     │   │   └── 12_20150725.mat
-     │   │   ... (12 more files)
-     │   ├── 2/
-     │   │   ├── 10_20151021.mat
-     │   │   ├── 11_20150921.mat
-     │   │   └── 12_20150804.mat
-     │   │   ... (12 more files)
-     │   └── 3/
-     │       ├── 10_20151023.mat
-     │       ├── 11_20151011.mat
-     │       └── 12_20150807.mat
-     │       ... (12 more files)
-     ├── eye_raw_data/
-     │   ├── 10_20151014_PD.mat
-     │   ├── 10_20151014_blink.mat
-     │   └── 10_20151014_event.mat
-     │   ... (267 more files)
-     ├── Channel Order.xlsx
-     ├── ReadMe.txt
-     └── SEED-IV_stimulation.xlsx
-     ... (2 more files)
+    ```
+    SEED-IV/
+    └── SEED_IV/
+    ├── eeg_feature_smooth/
+    │   ├── 1/
+    │   │   ├── 10_20151014.mat
+    │   │   ├── 11_20150916.mat
+    │   │   └── 12_20150725.mat
+    │   │   ... (12 more files)
+    │   ├── 2/
+    │   │   ├── 10_20151021.mat
+    │   │   ├── 11_20150921.mat
+    │   │   └── 12_20150804.mat
+    │   │   ... (12 more files)
+    │   └── 3/
+    │       ├── 10_20151023.mat
+    │       ├── 11_20151011.mat
+    │       └── 12_20150807.mat
+    │       ... (12 more files)
+    ├── eeg_raw_data/
+    │   ├── 1/
+    │   │   ├── 10_20151014.mat
+    │   │   ├── 11_20150916.mat
+    │   │   └── 12_20150725.mat
+    │   │   ... (12 more files)
+    │   ├── 2/
+    │   │   ├── 10_20151021.mat
+    │   │   ├── 11_20150921.mat
+    │   │   └── 12_20150804.mat
+    │   │   ... (12 more files)
+    │   └── 3/
+    │       ├── 10_20151023.mat
+    │       ├── 11_20151011.mat
+    │       └── 12_20150807.mat
+    │       ... (12 more files)
+    ├── eye_feature_smooth/
+    │   ├── 1/
+    │   │   ├── 10_20151014.mat
+    │   │   ├── 11_20150916.mat
+    │   │   └── 12_20150725.mat
+    │   │   ... (12 more files)
+    │   ├── 2/
+    │   │   ├── 10_20151021.mat
+    │   │   ├── 11_20150921.mat
+    │   │   └── 12_20150804.mat
+    │   │   ... (12 more files)
+    │   └── 3/
+    │       ├── 10_20151023.mat
+    │       ├── 11_20151011.mat
+    │       └── 12_20150807.mat
+    │       ... (12 more files)
+    ├── eye_raw_data/
+    │   ├── 10_20151014_PD.mat
+    │   ├── 10_20151014_blink.mat
+    │   └── 10_20151014_event.mat
+    │   ... (267 more files)
+    ├── Channel Order.xlsx
+    ├── ReadMe.txt
+    └── SEED-IV_stimulation.xlsx
+    ... (2 more files)
     14 directories, 410 files
+    ```
 
 Raw EEG data는 .mat형식으로 제공되며,  SEED-IV_stimulation.xlsx와 ReadMe.txt에서 자극 순서 및 시간, 라벨링 정보를 알 수 있습니다. 
 
@@ -95,17 +97,19 @@ Raw EEG data는 .mat형식으로 제공되며,  SEED-IV_stimulation.xlsx와 Read
 ## 2.5 Preprocessed Dataset
 
 !!! note ""
-     SEED-IV/
-     ├── npy_files/
-     │   ├── sess01_sub01_trial01.npy
-     │   ├── sess01_sub01_trial02.npy
-     │   └── sess01_sub01_trial03.npy
-     │   ... (1077 more files)
-     ├── SEED-IV.h5
-     ├── SEED-IV.npz
-     └── channels.csv
-     ... (1 more files)
+    ```
+    SEED-IV/
+    ├── npy_files/
+    │   ├── sess01_sub01_trial01.npy
+    │   ├── sess01_sub01_trial02.npy
+    │   └── sess01_sub01_trial03.npy
+    │   ... (1077 more files)
+    ├── SEED-IV.h5
+    ├── SEED-IV.npz
+    └── channels.csv
+    ... (1 more files)
     1 directories, 1084 files
+    ```
 
 한 trial(자극)별로 split하고 .npy로 변환하였으며 이 파일명은 labels.csv의 1열과 대응되고, 2열엔 정수형 레이블이 있습니다.
 
@@ -119,5 +123,7 @@ Raw EEG data는 .mat형식으로 제공되며,  SEED-IV_stimulation.xlsx와 Read
 # 4. References
 
 [1] Wei-Long Zheng, Wei Liu, Yifei Lu, Bao-Liang Lu, and Andrzej Cichocki, EmotionMeter: A Multimodal Framework for Recognizing Human Emotions. IEEE Transactions on Cybernetics, Volume: 49, Issue: 3, March 2019, Pages: 1110-1122, DOI: 10.1109/TCYB.2018.2797176. [[link](https://ieeexplore.ieee.org/abstract/document/8283814/)] [[BibTex](https://bcmi.sjtu.edu.cn/home/seed/resource/bib/seed-iv-1.htm)]
+
 [2] *Hybrid transfer learning strategy for cross-subject EEG emotion ...* (2023). https://pmc.ncbi.nlm.nih.gov/articles/PMC10687359/
+
 [3] *Multi-source domain adaptation for EEG emotion recognition based ...* (2024). https://pmc.ncbi.nlm.nih.gov/articles/PMC11560783/

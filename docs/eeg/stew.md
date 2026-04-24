@@ -24,15 +24,17 @@ STEW 데이터셋[1]은 총 48명의 건강한 성인 남성 피험자를 대상
 ## 2.3 Raw Dataset
 
 !!! note ""
-     Stew/
-     ├── STEW_data_summary.csv
-     ├── ratings.txt
-     ├── sub01_hi.txt
-     ├── sub01_lo.txt
-     ├── sub02_hi.txt
-     └── sub02_lo.txt
-     ... (92 more files)
+    ```
+    Stew/
+    ├── STEW_data_summary.csv
+    ├── ratings.txt
+    ├── sub01_hi.txt
+    ├── sub01_lo.txt
+    ├── sub02_hi.txt
+    └── sub02_lo.txt
+    ... (92 more files)
     0 directories, 98 files
+    ```
 
 각 참가자별로 휴식 상태(_lo.txt)와 높은 정신부하 상태(_hi.txt)의 EEG 데이터를 텍스트 형식으로 제공합니다. ratings.txt에는 참가자들이 1~9점 척도로 평가한 주관적 정신부하 점수가 포함되어 있으며, STEW_data_summary.csv는 각 파일 당 데이터 포인트 수의 정보를 담고 있습니다. 
 
@@ -43,17 +45,19 @@ STEW 데이터셋[1]은 총 48명의 건강한 성인 남성 피험자를 대상
 ## 2.5 Preprocessed Dataset
 
 !!! note ""
-     Stew/
-     ├── npy_files/
-     │   ├── sess1_sub01.npy
-     │   ├── sess1_sub02.npy
-     │   └── sess1_sub03.npy
-     │   ... (93 more files)
-     ├── Stew.h5
-     ├── Stew.npz
+    ```
+    Stew/
+    ├── npy_files/
+    │   ├── sess1_sub01.npy
+    │   ├── sess1_sub02.npy
+    │   └── sess1_sub03.npy
+    │   ... (93 more files)
+    ├── Stew.h5
+    ├── Stew.npz
     ├── labels.csv
-    └── channels.csv
+└── channels.csv
     1 directories, 100 files
+    ```
 
 # 3. Applications and Use Cases
 
@@ -65,5 +69,6 @@ STEW 데이터셋[1]은 총 48명의 건강한 성인 남성 피험자를 대상
 # 4. References
 
 [1] Lim, W. L., Sourina, O., & Wang, L. P. (2018). STEW: Simultaneous Task EEG Workload Data Set. *IEEE Transactions on Neural Systems and Rehabilitation Engineering, 26*(11), 2106–2114.
+
 [2] Foumani, N. M., Mackellar, G., Ghane, S., Irtza, S., Nguyen, N., and Salehi, M. (2024). EEG2Rep: Enhancing Self-supervised EEG Representation Through Informative Masked Inputs. *Proceedings of the 30th ACM SIGKDD Conference on Knowledge Discovery and Data Mining (KDD '24)*.
 [3] Jammisetty, Y., Sunkara, K., Vankayalapati, R., Kondaveeti, S., Anumothu, M., & Krishna, Y. M. (2025). Cognitive load detection through EEG lead wise feature optimization and ensemble classification. *Scientific Reports*, **15**, Article 842.

@@ -23,21 +23,23 @@ BCI-NER Challenge 데이터셋 [1] 은 P300-Speller 기반 BCI(Brain-Computer In
 ## 2.3 Raw Dataset
 
 !!! note ""
-     BCI-NER Challenge/
-     ├── test/
-     │   ├── Data_S01_Sess01.csv
-     │   ├── Data_S01_Sess02.csv
-     │   └── Data_S01_Sess03.csv
-     │   ... (47 more files)
-     ├── train/
-     │   ├── Data_S02_Sess01.csv
-     │   ├── Data_S02_Sess02.csv
-     │   └── Data_S02_Sess03.csv
-     │   ... (77 more files)
-     └── TrainLabels.csv
+    ```
+    BCI-NER Challenge/
+    ├── test/
+    │   ├── Data_S01_Sess01.csv
+    │   ├── Data_S01_Sess02.csv
+    │   └── Data_S01_Sess03.csv
+    │   ... (47 more files)
+    ├── train/
+    │   ├── Data_S02_Sess01.csv
+    │   ├── Data_S02_Sess02.csv
+    │   └── Data_S02_Sess03.csv
+    │   ... (77 more files)
+    └── TrainLabels.csv
     │
     └── true_labels.csv
     2 directories, 132 files
+    ```
 
 Trainlabels.csv와 true_labels.csv에 라벨 정보가 담겨있습니다.
 
@@ -48,22 +50,24 @@ Trainlabels.csv와 true_labels.csv에 라벨 정보가 담겨있습니다.
 ## 2.5 Preprocessed Dataset
 
 !!! note ""
-     BCI-NER Challenge/
-     ├── test_npy_files/
-     │   ├── sess01_sub01_trial001.npy
-     │   ├── sess01_sub01_trial002.npy
-     │   └── sess01_sub01_trial003.npy
-     │   ... (3397 more files)
-     ├── train_npy_files/
-     │   ├── sess01_sub02_trial001.npy
-     │   ├── sess01_sub02_trial002.npy
-     │   └── sess01_sub02_trial003.npy
-     │   ... (5437 more files)
-     ├── BCI-NER Challenge_test.h5
-     ├── BCI-NER Challenge_train.h5
-     └── BCI-NER Challenge_train.npz
-     ... (3 more files)
+    ```
+    BCI-NER Challenge/
+    ├── test_npy_files/
+    │   ├── sess01_sub01_trial001.npy
+    │   ├── sess01_sub01_trial002.npy
+    │   └── sess01_sub01_trial003.npy
+    │   ... (3397 more files)
+    ├── train_npy_files/
+    │   ├── sess01_sub02_trial001.npy
+    │   ├── sess01_sub02_trial002.npy
+    │   └── sess01_sub02_trial003.npy
+    │   ... (5437 more files)
+    ├── BCI-NER Challenge_test.h5
+    ├── BCI-NER Challenge_train.h5
+    └── BCI-NER Challenge_train.npz
+    ... (3 more files)
     2 directories, 8846 files
+    ```
 
 한 trial(자극)별로 split하고 .npy로 변환하였으며 이 파일명은 labels.csv의 1열과 대응되고, 2열엔 정수형 레이블이 있습니다.
 
@@ -77,5 +81,7 @@ Trainlabels.csv와 true_labels.csv에 라벨 정보가 담겨있습니다.
 # 4. References
 
 [1]  Perrin Margaux, Maby Emmanuel, Daligault Sebastien, Bertrand Olivier, and Mattout J ´ er´ emie. (2012). Objective and Subjective Evaluation of Online Error Correction during P300-Based Spelling. Advances in Human-Computer Interaction, 2012:1–13
+
 [2] Gjølbye, A., Skerath, L., Lehn-Schiøler, W., Langer, N., & Hansen, L. K. (2024). *SPEED: Scalable preprocessing of EEG data for self-supervised learning*. Proceedings of the 2024 IEEE International Workshop on Machine Learning for Signal Processing (MLSP).
+
 [3] Barachant, A., & Cycon, R. (2016). *Pushing the limits of BCI accuracy: Winning solution of the Grasp & Lift EEG Challenge*. Proceedings of the Sixth International Brain-Computer Interface Meeting

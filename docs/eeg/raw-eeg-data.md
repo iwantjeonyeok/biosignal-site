@@ -23,12 +23,14 @@ Raw EEG Data 데이터셋[1]은 피험자들이 Information-Integration categori
 ## 2.3 Raw Dataset
 
 !!! note ""
-     Raw_EEG_Data/
-     ├── EEG_Cat_Study4_II_II_S1.bdf
-     ├── EEG_Cat_Study4_II_II_S10.bdf
-     └── EEG_Cat_Study4_II_II_S11.bdf
-     ... (93 more files)
-     0 directories, 96 files
+    ```
+    Raw_EEG_Data/
+    ├── EEG_Cat_Study4_II_II_S1.bdf
+    ├── EEG_Cat_Study4_II_II_S10.bdf
+    └── EEG_Cat_Study4_II_II_S11.bdf
+    ... (93 more files)
+    0 directories, 96 files
+    ```
 
 각 EEG 신호는 BDF 포맷의 파일로 저장되어 있습니다. ‘.bdf’ 포맷은 BioSemi 장비에서 생성된 고해상도 EEG 데이터를 담고 있으며, 채널 수와 샘플링 주파수 등의 정보가 포함됩니다. ‘EEG_Cat_Study4_II_II_S1.bdf’의 예로 S1은 세션 번호를 의미합니다.
 
@@ -39,22 +41,24 @@ Raw EEG Data 데이터셋[1]은 피험자들이 Information-Integration categori
 ## 2.5 Preprocessed Dataset
 
 !!! note ""
-     Raw_EEG_Data/
-     ├── Raw_EEG_Data_npy/
-     │   ├── II_S1.npy
-     │   ├── II_S10.npy
-     │   └── II_S11.npy
-     │   ... (93 more files)
-     ├── npy_files/
-     │   ├── sess1_sub10_trial1.npy
-     │   ├── sess1_sub11_trial1.npy
-     │   └── sess1_sub12_trial1.npy
-     │   ... (93 more files)
-     ├── channels.csv
-     ├── encoded_labels.csv
+    ```
+    Raw_EEG_Data/
+    ├── Raw_EEG_Data_npy/
+    │   ├── II_S1.npy
+    │   ├── II_S10.npy
+    │   └── II_S11.npy
+    │   ... (93 more files)
+    ├── npy_files/
+    │   ├── sess1_sub10_trial1.npy
+    │   ├── sess1_sub11_trial1.npy
+    │   └── sess1_sub12_trial1.npy
+    │   ... (93 more files)
+    ├── channels.csv
+    ├── encoded_labels.csv
     ├── labels_original.csv
-    └── labels.csv
+└── labels.csv
     4 directories, 244 files
+    ```
 
 # 3. Applications and Use Cases
 
@@ -65,4 +69,5 @@ Raw EEG Data 데이터셋[1]은 피험자들이 Information-Integration categori
 # 4. References
 
 [1] Logan Trujillo. Raw EEG Data. 2020. doi: 10.18738/T8/SS2NHB. URL [ https://doi.org/10.18738/T8/SS2NHB](https://doi.org/10.18738/T8/SS2NHB). 
+
 [2] Jiang, W., Zhao, L.-M., & Lu, B.-L. (2024). LaBraM: Large Brain Model for Learning Generic Representations with Tremendous EEG Data in BCI. *International Conference on Learning Representations (ICLR)*.

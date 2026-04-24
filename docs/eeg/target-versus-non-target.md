@@ -23,24 +23,26 @@
 ## 2.3 Raw Dataset
 
 !!! note ""
-     Target_Versus_NonTarget/
+    ```
+    Target_Versus_NonTarget/
     ├── s_01/
-    │   ├── subject_01_eyesclosed_after.csv
-    │   ├── subject_01_eyesclosed_before.csv
-    │   └── subject_01_fixing_after.csv
-    │   ... (4 more files)
-    ├── s_02/
-    │   ├── subject_02_eyesclosed_after.csv
-    │   ├── subject_02_eyesclosed_before.csv
-    │   └── subject_02_fixing_after.csv
-    │   ... (4 more files)
+│   ├── subject_01_eyesclosed_after.csv
+│   ├── subject_01_eyesclosed_before.csv
+│   └── subject_01_fixing_after.csv
+│   ... (4 more files)
+├── s_02/
+│   ├── subject_02_eyesclosed_after.csv
+│   ├── subject_02_eyesclosed_before.csv
+│   └── subject_02_fixing_after.csv
+│   ... (4 more files)
     …
     └── s_43/
-    ├── subject_43_eyesclosed_after.csv
-    ├── subject_43_eyesclosed_before.csv
-    └── subject_43_fixing_after.csv
-    ... (4 more files)
+├── subject_43_eyesclosed_after.csv
+├── subject_43_eyesclosed_before.csv
+└── subject_43_fixing_after.csv
+... (4 more files)
     43 directories, 301 files
+    ```
 
 이 데이터셋은 50명의 피험자로부터 수집된 EEG 기록을 담고 있으며, 세션은 세 가지 조건(기본 상태, 안구 감은 상태 등)으로 구성되어 있고 .mat 및 .csv 형식으로 제공된다. 각 파일은 시간 샘플 기준으로 행(row)을 구성하며, 첫 번째 열은 타임스탬프, 2~33열은 32개의 EEG 채널 데이터, 34열은 자극 발생 시점에 1로 설정되는 Trigger, 35열은 타겟 자극 시점에 1로 설정되는 Target 정보를 담고 있다. 채널 이름은 Header.mat 또는 Header.csv 파일에 저장되어 있다.
 
@@ -51,15 +53,17 @@
 ## 2.5 Preprocessed Dataset
 
 !!! note ""
-     Target_Versus_Non_Target/
-     ├── npy_files/
-     │   ├── sess1_sub10_trial1.npy
-     │   ├── sess1_sub10_trial10.npy
-     │   └── sess1_sub10_trial100.npy
-     │   ... (71481 more files)
-     ├── channels.csv
-     └── labels.csv
+    ```
+    Target_Versus_Non_Target/
+    ├── npy_files/
+    │   ├── sess1_sub10_trial1.npy
+    │   ├── sess1_sub10_trial10.npy
+    │   └── sess1_sub10_trial100.npy
+    │   ... (71481 more files)
+    ├── channels.csv
+    └── labels.csv
     1 directories, 71486 files
+    ```
 
 # 3. Applications and Use Cases
 
@@ -71,5 +75,7 @@
 # 4. References
 
 [1] Korczowski, Louis, et al. *Brain Invaders calibration-less P300-based BCI with modulation of flash duration Dataset (bi2015a)*. Diss. GIPSA-lab, 2019.
+
 [2] Ahmadi, Hossein, Ali Kuhestani, and Luca Mesin. "Adversarial neural network training for secure and robust brain-to-brain communication." *IEEE Access* (2024).
+
 [3] Fallahi, Matin, Thorsten Strufe, and Patricia Arias-Cabarcos. "Brainnet: Improving brainwave-based biometric recognition with siamese networks." *2023 IEEE International Conference on Pervasive Computing and Communications (PerCom)*. IEEE, 2023.

@@ -27,47 +27,50 @@ MIT-BIH 심방세동(Atrial Fibrillation) 데이터베이스는 심방세동(AF)
 ## 2.3 Raw Dataset
 
 !!! note ""
-     ├── mit-bih-atrial-fibrillation-database-1.0.0/
-     │   ├── 00735.atr
-     │   ├── 00735.hea
-     │   ├── 00735.qrs
-     │   ├── 03665.atr
-     │   ├── 03665.hea
-     │   ├── 03665.qrs
-     │   ├── 04015.atr
-     │   ├── 04015.dat
-     │   ├── 04015.hea
-     │   ├── 04015.hea-
-     │   └── ... (131 파일, 각각 .atr + .hea + .qrs 세트)
-     │       ├── mit-bih-st-change-database-1.0.0/
-     │       │   ├── 300.atr
-     │       │   ├── 300.dat
-     │       │   ├── 300.hea
-     │       │   ├── 300.hea-
-     │       │   ├── 300.xws
-     │       │   ├── 301.atr
-     │       │   ├── 301.dat
-     │       │   ├── 301.hea
-     │       │   ├── 301.hea-
-     │       │   ├── 301.xws
-     │       │   └── ... (143 파일, 각각 .atr + .hea + .dat + .hea- 세트)
-     │       ├── old/
-     │       │   ├── 00735.atr
-     │       │   ├── 03665.atr
-     │       │   ├── 04015.atr
-     │       │   ├── 04043.atr
-     │       │   ├── 04048.atr
-     │       │   ├── 04126.atr
-     │       │   ├── 04746.atr
-     │       │   ├── 04908.atr
-     │       │   ├── 04936.atr
-     │       │   ├── 05091.atr
-     │       │   └── ... (25 파일)
+    ```
+    ├── mit-bih-atrial-fibrillation-database-1.0.0/
+    │   ├── 00735.atr
+    │   ├── 00735.hea
+    │   ├── 00735.qrs
+    │   ├── 03665.atr
+    │   ├── 03665.hea
+    │   ├── 03665.qrs
+    │   ├── 04015.atr
+    │   ├── 04015.dat
+    │   ├── 04015.hea
+    │   ├── 04015.hea-
+    │   └── ... (131 파일, 각각 .atr + .hea + .qrs 세트)
+    │       ├── mit-bih-st-change-database-1.0.0/
+    │       │   ├── 300.atr
+    │       │   ├── 300.dat
+    │       │   ├── 300.hea
+    │       │   ├── 300.hea-
+    │       │   ├── 300.xws
+    │       │   ├── 301.atr
+    │       │   ├── 301.dat
+    │       │   ├── 301.hea
+    │       │   ├── 301.hea-
+    │       │   ├── 301.xws
+    │       │   └── ... (143 파일, 각각 .atr + .hea + .dat + .hea- 세트)
+    │       ├── old/
+    │       │   ├── 00735.atr
+    │       │   ├── 03665.atr
+    │       │   ├── 04015.atr
+    │       │   ├── 04043.atr
+    │       │   ├── 04048.atr
+    │       │   ├── 04126.atr
+    │       │   ├── 04746.atr
+    │       │   ├── 04908.atr
+    │       │   ├── 04936.atr
+    │       │   ├── 05091.atr
+    │       │   └── ... (25 파일)
     3 directories, 약 329 files
+    ```
 
 ![](mit-bih-atrial-fibrillation/image.png)
 
 헤더 파일은 ECG 기록에 대한 메타데이터를 제공합니다.
+
 - 첫 번째 줄: 기록 번호(04043), 두 개의 ECG 채널, 샘플링 주파수 250Hz, 총 9,205,760개의 샘플, 그리고 기록 시작 시간(15:00:00)이 포함됩니다. ECG 신호는 약 10시간 14분 동안 250Hz로 샘플링되었습니다.
 - 두 번째 및 세 번째 줄: 각 ECG 리드(ECG1, ECG2)는 04043.dat 파일에 16비트 형식(코드 212), 12비트 해상도, ±10mV ADC 범위로 저장됩니다. 또한, ADC 기준값 및 최소/최대 신호 진폭이 제공됩니다.
 
@@ -80,23 +83,25 @@ MIT-BIH 심방세동(Atrial Fibrillation) 데이터베이스는 심방세동(AF)
 ## 2.5 Preprocessed Dataset
 
 !!! note ""
-     ├── mit-bih-atrial-fibrillation-database-1.0.0/
-     │   ├── channel_info.csv
-     │   ├── mit-bih-atrial-fibrillation-database-1.0.0_pretrain.npz
-     │   ├── mit-bih-atrial-fibrillation-database-1.0.0_pretrain_record_ids.csv
-     │       ├── csv_files/
-     │       │   ├── 04015_data.csv
-     │       │   ├── 04015_label.csv
-     │       │   ├── 04043_data.csv
-     │       │   ├── 04043_label.csv
-     │       │   ├── 04048_data.csv
-     │       │   ├── 04048_label.csv
-     │       │   ├── 04126_data.csv
-     │       │   ├── 04126_label.csv
-     │       │   ├── 04746_data.csv
-     │       │   ├── 04746_label.csv
-     │       │   └── ... (46 파일)
+    ```
+    ├── mit-bih-atrial-fibrillation-database-1.0.0/
+    │   ├── channel_info.csv
+    │   ├── mit-bih-atrial-fibrillation-database-1.0.0_pretrain.npz
+    │   ├── mit-bih-atrial-fibrillation-database-1.0.0_pretrain_record_ids.csv
+    │       ├── csv_files/
+    │       │   ├── 04015_data.csv
+    │       │   ├── 04015_label.csv
+    │       │   ├── 04043_data.csv
+    │       │   ├── 04043_label.csv
+    │       │   ├── 04048_data.csv
+    │       │   ├── 04048_label.csv
+    │       │   ├── 04126_data.csv
+    │       │   ├── 04126_label.csv
+    │       │   ├── 04746_data.csv
+    │       │   ├── 04746_label.csv
+    │       │   └── ... (46 파일)
     2 directories, 약 59 files
+    ```
 
 MIT-BIH Atrial Fibrillation database의 .hea 및 .dat 파일을 이용하여 data.csv, pid.csv 파일로 변환합니다. 다음은 00735_data.csv 파일을 변환 후 시각화한 결과입니다.
 이 시각화 자료는 MIT-BIH 심방세동(Atrial Fibrillation) 데이터베이스의 환자 00735에 대한 10초간의 ECG 데이터를 나타냅니다. ECG 기록은 두 개의 리드(ECG1 및 ECG2)로 구성되며, 250Hz로 샘플링되었습니다.

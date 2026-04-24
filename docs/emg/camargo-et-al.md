@@ -24,6 +24,7 @@
 ## 2.3 Raw Dataset
 
 AB06/10_21_2018/treadmill/conditions/treadmill_01_01.mat를 예시로 살펴보면
+
 <subject/date/mode/sensor/file>의 구조로 저장되어 있다. 또한 파일내부를 보면 emg데이터만 시간순으로 기록된 파일이 새로 존재한다.
 
 ## 2.4 Raw dataset Example

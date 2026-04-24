@@ -13,24 +13,30 @@ SaMi-Trop ECG 데이터셋은 만성 샤가스 심근병증을 대상으로 한 
 ## 2.2 Raw Dataset
 
 !!! note ""
-     SaMi_trop_dataset/
+    ```
+    SaMi_trop_dataset/
     ├── •	Exams.csv
     └── •**    **Exams.hdf5
     1directories,  2files
+    ```
 
 SaMi-Trop 데이터셋은 시간에 따른 12-리드 ECG 신호와 각 기록의 메타데이터를 포함하고 있습니다.
+
 - Exams.csv: 환자의 메타데이터 포함 (나이, 성별, 사망 여부, ECG 판독 결과 등)
 - Exams.hdf5: ECG 신호 저장
 
 ## 2.3 Preprocessed Dataset
 
 !!! note ""
-     SaMi_trop_dataset/
-    ├── •	Exams.csv			
+    ```
+    SaMi_trop_dataset/
+    ├── •	Exams.csv
     └── •**    **record_id.csv
     1directories,  525 files
+    ```
 
  
+
 해당 hdf5파일을 열어 record별로 csv형식으로 저장하였습니다.
 
 ![](sami-trop-ecg-dataset/image.png)
@@ -40,7 +46,9 @@ SaMi-Trop 데이터셋은 시간에 따른 12-리드 ECG 신호와 각 기록의
 # 3. Applications and Use Cases
 
 SaMi-Trop ECG Dataset은 심장 질환 분류(Cardiac Disease Classification), 위험 예측(Risk Prediction), 장기 건강 모니터링(Long-term Health Monitoring) 등의 연구에 활용될 수 있습니다.
+
 이 데이터셋은 다음과 같은 연구 분야에서 중요한 역할을 합니다:
+
 - 심장 질환 분류 (Multi-class ECG Disease Classification)
 - 심장 나이 예측 (Heart Age Estimation from ECG)
 - 사망 위험 예측 및 장기 건강 모니터링

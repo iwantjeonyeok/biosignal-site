@@ -28,14 +28,16 @@ Grasp and Lift Challenge 물체를 들어올리는 과제를 수행하는 동안
 ## 2.3 Raw Dataset
 
 !!! note ""
-     Grasp_and_Lift_EEG_Challenge/
-     ├── test/
-     │   ├── subj10_series10_data.csv
-     │   ├── subj10_series9_data.csv
+    ```
+    Grasp_and_Lift_EEG_Challenge/
+    ├── test/
+    │   ├── subj10_series10_data.csv
+    │   ├── subj10_series9_data.csv
     │   └── subj11_series10_data.csv
     │   ... (21 more files)
     └── train/
     2 directories, 216 files
+    ```
 
 Grasp-and-Lift EEG Challenge 데이터셋은 train과 test 두 개의 하위 폴더로 구성되어 있으며, 각 폴더에는 실험 참가자별 시리즈 단위의 데이터 파일이 포함되어 있다. 각 파일은 subj번호_series번호 형식의 이름을 가지며, *_data.csv 파일에는 EEG, EMG, 위치, 힘/토크 등의 생체신호가 시간 순서대로 기록되어 있고, *_events.csv 파일에는 각 trial에서의 주요 동작 이벤트(예: 손가락 접촉, 물체 들어올림 등)의 발생 시점이 주석으로 포함되어 있다.
 
@@ -46,15 +48,17 @@ Grasp-and-Lift EEG Challenge 데이터셋은 train과 test 두 개의 하위 폴
 ## 2.5 Preprocessed Dataset
 
 !!! note ""
-     Grasp_and_Lift_EEG_Challenge/
-     ├── npy_files/
-     │   ├── sess1_sub10_trial1.npy
-     │   ├── sess1_sub10_trial10.npy
-     │   └── sess1_sub10_trial100.npy
-     │   ... (30874 more files)
-     ├── channels.csv
-     └── labels.csv
+    ```
+    Grasp_and_Lift_EEG_Challenge/
+    ├── npy_files/
+    │   ├── sess1_sub10_trial1.npy
+    │   ├── sess1_sub10_trial10.npy
+    │   └── sess1_sub10_trial100.npy
+    │   ... (30874 more files)
+    ├── channels.csv
+    └── labels.csv
     1 directories, 30879 files
+    ```
 
 # 3. Applications and Use Cases
 
@@ -66,5 +70,7 @@ Grasp-and-Lift EEG Challenge 데이터셋은 train과 test 두 개의 하위 폴
 # 4. References
 
 [1] Luciw, Matthew D., Ewa Jarocka, and Benoni B. Edin. "Multi-channel EEG recordings during 3,936 grasp and lift trials with varying weight and friction." *Scientific data* 1.1 (2014): 1-11.
+
 [2] Pancholi, Sidharth, et al. "Source aware deep learning framework for hand kinematic reconstruction using EEG signal." *IEEE Transactions on Cybernetics* 53.7 (2022): 4094-4106.
+
 [3] Ma, Weifeng, et al. "MBGA-Net: A multi-branch graph adaptive network for individualized motor imagery EEG classification." *Computer Methods and Programs in Biomedicine* 240 (2023): 107641.

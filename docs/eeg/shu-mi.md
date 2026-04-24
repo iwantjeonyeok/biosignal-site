@@ -23,12 +23,14 @@
 ## 2.3 Raw Dataset
 
 !!! note ""
-     19228725/
-     ├── 36729000_README.txt
-     ├── 36729006_README.txt
-     └── code_files.zip
-     ... (136 more files)
+    ```
+    19228725/
+    ├── 36729000_README.txt
+    ├── 36729006_README.txt
+    └── code_files.zip
+    ... (136 more files)
     0 directories, 139 files
+    ```
 
 이 데이터셋은 EEG-BIDS 포맷을 따르며, 전처리된 EEG 신호는 edf_files/ 폴더에 .edf 형식으로 저장되어 있고, 각 세션별 이벤트 정보는 events/ 폴더의 .tsv 파일로 제공됩니다. 또한 mat_files/ 폴더에는 각 세션별로 trial 단위 EEG 데이터와 라벨이 포함된 .mat 파일이 있어 바로 분류 실험에 활용할 수 있습니다. 데이터는 피험자 ID와 세션 번호에 따라 체계적으로 구성되어 있습니다.
 
@@ -39,15 +41,17 @@
 ## 2.5 Preprocessed Dataset
 
 !!! note ""
-     SHU-MI/
-     ├── npy_files/
-     │   ├── sess01_sub01_trial001.npy
-     │   ├── sess01_sub01_trial002.npy
-     │   └── sess01_sub01_trial003.npy
-     │   ... (11985 more files)
-     ├── channels.csv
-     └── labels.csv
+    ```
+    SHU-MI/
+    ├── npy_files/
+    │   ├── sess01_sub01_trial001.npy
+    │   ├── sess01_sub01_trial002.npy
+    │   └── sess01_sub01_trial003.npy
+    │   ... (11985 more files)
+    ├── channels.csv
+    └── labels.csv
     1 directories, 12129 files
+    ```
 
 # 3. Applications and Use Cases
 
@@ -59,5 +63,7 @@
 # 4. References
 
 [1] Ma, Jun; Yang, Banghua; Qiu, Wenzheng; Li, Yunzhe; Gao, Shouwei; Xia, XinXing (2022). SHU Multi-session Dataset. figshare. Software. [https://doi.org/10.6084/m9.figshare.19228725.v3](https://doi.org/10.6084/m9.figshare.19228725.v3)
+
 [2] Guerrero-Mendez, Cristian D., et al. "EEG motor imagery classification using deep learning approaches in naïve BCI users." *Biomedical Physics & Engineering Express* 9.4 (2023): 045029.
+
 [3] Pham, Tuan D. "Classification of motor-imagery tasks using a large EEG dataset by fusing classifiers learning on wavelet-scattering features." *IEEE Transactions on Neural Systems and Rehabilitation Engineering* 31 (2023): 1097-1107.

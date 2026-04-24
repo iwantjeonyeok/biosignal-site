@@ -27,51 +27,52 @@
 ## 2.3 Raw Dataset
 
 !!! note ""
-     2018_PhysioNet_Challenge/
-     ├── test/
-     │   ├── te03-0024/
-     │   │   ├── te03-0024.hea
-     │   │   └── te03-0024.mat
-     │   ├── te03-0031/
-     │   │   ├── te03-0031.hea
-     │   │   └── te03-0031.mat
-     │   ├── te03-0032/
-     │   │   ├── te03-0032.hea
-     │   │   └── te03-0032.mat
-     │   ├── te03-0037/
-     │   │   ├── te03-0037.hea
-     │   │   └── te03-0037.mat
+    ```
+    2018_PhysioNet_Challenge/
+    ├── test/
+    │   ├── te03-0024/
+    │   │   ├── te03-0024.hea
+    │   │   └── te03-0024.mat
+    │   ├── te03-0031/
+    │   │   ├── te03-0031.hea
+    │   │   └── te03-0031.mat
+    │   ├── te03-0032/
+    │   │   ├── te03-0032.hea
+    │   │   └── te03-0032.mat
+    │   ├── te03-0037/
+    │   │   ├── te03-0037.hea
+    │   │   └── te03-0037.mat
     …
     │   ├── te14-0286/
-    │   │   ├── te14-0286.hea
-    │   │   └── te14-0286.mat
-    │   └── RECORDS
-    └── training/
-    ├── tr03-0005/
-    │   ├── tr03-0005-arousal.mat
-    │   ├── tr03-0005.arousal
-    │   └── tr03-0005.hea
-    │   ... (1 more files)
-    ├── tr03-0029/
-    │   ├── tr03-0029-arousal.mat
-    │   ├── tr03-0029.arousal
-    │   └── tr03-0029.hea
-    │   ... (1 more files)
-    ├── tr03-0052/
-    │   ├── tr03-0052-arousal.mat
-    │   ├── tr03-0052.arousal
-    │   └── tr03-0052.hea
-    │   ... (1 more files)
+│   │   ├── te14-0286.hea
+│   │   └── te14-0286.mat
+│   └── RECORDS
+└── training/
+├── tr03-0005/
+│   ├── tr03-0005-arousal.mat
+│   ├── tr03-0005.arousal
+│   └── tr03-0005.hea
+│   ... (1 more files)
+├── tr03-0029/
+│   ├── tr03-0029-arousal.mat
+│   ├── tr03-0029.arousal
+│   └── tr03-0029.hea
+│   ... (1 more files)
+├── tr03-0052/
+│   ├── tr03-0052-arousal.mat
+│   ├── tr03-0052.arousal
+│   └── tr03-0052.hea
+│   ... (1 more files)
     …
     ├── tr14-0291/
-    │   ├── tr14-0291-arousal.mat
-    │   ├── tr14-0291.arousal
-    │   └── tr14-0291.hea
-    │   ... (1 more files)
-    ├── ANNOTATORS
-    └── RECORDS
-    
+│   ├── tr14-0291-arousal.mat
+│   ├── tr14-0291.arousal
+│   └── tr14-0291.hea
+│   ... (1 more files)
+├── ANNOTATORS
+└── RECORDS
     1984 directories, 5953 files
+    ```
 
 총 1985명의 피험자 데이터를 포함하며 training과 test 폴더로 구성되어 있습니다. 각 피험자 폴더는 tr** 또는 te**로 시작하며, .hea 파일은 신호 정보 헤더, .arousal.mat 및 .arousal 파일은 각성(arousal) 이벤트 주석 정보를 담고 있습니다. 일부 피험자의 폴더에는 수면 단계 주석 및 다양한 생리신호가 포함된 원시 신호 파일들이 함께 저장되어 있으며, EEG, EOG, EMG, EKG, SaO₂ 등의 생리신호가 수집되었습니다. 데이터는 폴더 구조상 개별 피험자 단위로 분리되어 있으며, 각 폴더에는 다수의 주석 및 메타데이터가 존재해 세밀한 수면 분석이 가능합니다.
 
@@ -82,15 +83,17 @@
 ## 2.5 Preprocessed Dataset
 
 !!! note ""
-     2018_PhysioNet_Challenge/
-     ├── npy_files/
-     │   ├── sess1004_sub3_trial1.npy
-     │   ├── sess1004_sub3_trial10.npy
-     │   └── sess1004_sub3_trial100.npy
-     │   ... (440578 more files)
-     ├── channels.csv
-     └── labels.csv
+    ```
+    2018_PhysioNet_Challenge/
+    ├── npy_files/
+    │   ├── sess1004_sub3_trial1.npy
+    │   ├── sess1004_sub3_trial10.npy
+    │   └── sess1004_sub3_trial100.npy
+    │   ... (440578 more files)
+    ├── channels.csv
+    └── labels.csv
     1 directories, 440583 files
+    ```
 
 # 3. Applications and Use Cases
 
@@ -102,5 +105,7 @@
 # 4. References
 
 [1] Ghassemi, Mohammad M., et al. "You snooze, you win: the physionet/computing in cardiology challenge 2018." *2018 Computing in Cardiology Conference (CinC)*. Vol. 45. IEEE, 2018.
+
 [2] Perslev, Mathias, et al. "U-Sleep: resilient high-frequency sleep staging." *NPJ digital medicine* 4.1 (2021): 72.
+
 [3] Phan, Huy, et al. "XSleepNet: Multi-view sequential model for automatic sleep staging." *IEEE Transactions on Pattern Analysis and Machine Intelligence* 44.9 (2021): 5903-5915.

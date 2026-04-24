@@ -1,7 +1,9 @@
 # 1. Dataset Information
 
 Leiden University Database (LUDB)는 자동화된 ECG 해석, 부정맥 분류 및 ST 분절 분석 연구를 지원하기 위해 수집된 200명의 표준 12-리드 ECG 기록으로 구성된 데이터베이스입니다. 이 데이터베이스는 Leiden University에서 개발되었으며, 임상 및 머신러닝 연구를 위한 고품질 ECG 데이터를 제공하는 것을 목표로 합니다. 
+
 Long-Term ST Databses는 80명의 인간 피험자에 대한 86개의 장기 ECG 기록이 포함되어 있으며, ischemic ST 에피소드, asix-related non-ischemic ST 에피소드, slow ST level drift 에피소드, 이러한 현상의 혼합을 포함하는 에피소드 등 다양한 ST segment 변화 이벤트를 보여주기 위해 선택되었습니다. 이 데이터베이스는 ischemic ST 이벤트와 non-ischemic ST 이벤트를 정확하게 구분할 수 있는 알고리즘의 개발 및 평가, myocardial ischemia의 메커니즘과 역학에 대한 기초 연구를 지원하기 위해 만들어졌습니다.
+
 세부 정보는 [the official PhysioNet Challenge page](https://physionet.org/content/ltstdb/1.0.0/)에서 확인 가능합니다.
 
 # 2. Dataset Basic Information
@@ -62,7 +64,8 @@ Long-Term ST Databses는 80명의 인간 피험자에 대한 86개의 장기 ECG
 ## 2.3 Raw Dataset
 
 !!! note ""
-     long-term-st-database-1.0.0/
+    ```
+    long-term-st-database-1.0.0/
     ├── 00README
     ├── ANNOTATORS
     ├── RECORDS
@@ -107,8 +110,10 @@ Long-Term ST Databses는 80명의 인간 피험자에 대한 86개의 장기 ECG
     ├── tables
     ├── thanks.shtml
     └── trends
+    ```
 
 각 레코드는 250Hz 샘플링 주파수 기준으로 기록된 2 or 3 리드 ECG 신호를 포함하며, 아래 파일들로 구성되어 있습니다.
+
 - .hea : 환자의 임상정보
 - .dat : ECG 신호
 - annotation files
@@ -137,52 +142,54 @@ Long-Term ST Databses는 80명의 인간 피험자에 대한 86개의 장기 ECG
 ## 2.5 Preprocessed Dataset
 
 !!! note ""
-     ├── long-term-st-database-1.0.0_['E-S', 'A-S', 'A-I']
-     │   ├── csv_files
-     │   ├── long-term-st-database-1.0.0_['E-S', 'A-S', 'A-I']pretrain.npz
-     │   └── long-term-st-database-1.0.0['E-S', 'A-S', 'A-I']pretrain_record_ids.csv
-     ├── long-term-st-database-1.0.0['ECG', 'ECG']
-     │   └── csv_files
+    ```
+    ├── long-term-st-database-1.0.0_['E-S', 'A-S', 'A-I']
+    │   ├── csv_files
+    │   ├── long-term-st-database-1.0.0_['E-S', 'A-S', 'A-I']pretrain.npz
+    │   └── long-term-st-database-1.0.0['E-S', 'A-S', 'A-I']pretrain_record_ids.csv
+    ├── long-term-st-database-1.0.0['ECG', 'ECG']
+    │   └── csv_files
     │   ├── long-term-st-database-1.0.0_['ECG', 'ECG']pretrain.npz
-    │   └── long-term-st-database-1.0.0['ECG', 'ECG']pretrain_record_ids.csv
-    ├── long-term-st-database-1.0.0_['ML2', 'MV2']
-    │   ├── csv_files
-    │   ├── long-term-st-database-1.0.0_['ML2', 'MV2']pretrain.npz
-    │   └── long-term-st-database-1.0.0['ML2', 'MV2']pretrain_record_ids.csv
-    ├── long-term-st-database-1.0.0['MLIII', 'V3']
-    │   ├── csv_files
-    │   ├── long-term-st-database-1.0.0_['MLIII', 'V3']pretrain.npz
-    │   └── long-term-st-database-1.0.0['MLIII', 'V3']pretrain_record_ids.csv
-    ├── long-term-st-database-1.0.0['MLIII', 'V4']
-    │   ├── csv_files
-    │   ├── long-term-st-database-1.0.0_['MLIII', 'V4']pretrain.npz
-    │   └── long-term-st-database-1.0.0['MLIII', 'V4']pretrain_record_ids.csv
-    ├── long-term-st-database-1.0.0['V2', 'MLIII']
-    │   ├── csv_files
-    │   ├── long-term-st-database-1.0.0_['V2', 'MLIII']pretrain.npz
-    │   └── long-term-st-database-1.0.0['V2', 'MLIII']pretrain_record_ids.csv
-    ├── long-term-st-database-1.0.0['V4', 'MLIII']
-    │   ├── csv_files
-    │   ├── long-term-st-database-1.0.0_['V4', 'MLIII']pretrain.npz
-    │   └── long-term-st-database-1.0.0['V4', 'MLIII']pretrain_record_ids.csv
-    ├── long-term-st-database-1.0.0['V4', 'V3', 'II']
-    │   ├── csv_files
-    │   ├── long-term-st-database-1.0.0_['V4', 'V3', 'II']pretrain.npz
-    │   └── long-term-st-database-1.0.0['V4', 'V3', 'II']pretrain_record_ids.csv
-    ├── long-term-st-database-1.0.0['V5', 'MLIII']
-    │   ├── csv_files
-    │   ├── long-term-st-database-1.0.0_['V5', 'MLIII']pretrain.npz
-    │   └── long-term-st-database-1.0.0['V5', 'MLIII']pretrain_record_ids.csv
-    ├── long-term-st-database-1.0.0['V5', 'V2']
-    │   ├── csv_files
-    │   ├── long-term-st-database-1.0.0_['V5', 'V2']pretrain.npz
-    │   └── long-term-st-database-1.0.0['V5', 'V2']pretrain_record_ids.csv
-    ├── long-term-st-database-1.0.0['V6', 'II', 'V5']
-    │   ├── csv_files
-    │   ├── long-term-st-database-1.0.0_['V6', 'II', 'V5']pretrain.npz
-    │   └── long-term-st-database-1.0.0['V6', 'II', 'V5']pretrain_record_ids.csv
-    └── long-term-st-database-1.0.0['V6', 'V5', 'aVF']
+│   └── long-term-st-database-1.0.0['ECG', 'ECG']pretrain_record_ids.csv
+├── long-term-st-database-1.0.0_['ML2', 'MV2']
+│   ├── csv_files
+│   ├── long-term-st-database-1.0.0_['ML2', 'MV2']pretrain.npz
+│   └── long-term-st-database-1.0.0['ML2', 'MV2']pretrain_record_ids.csv
+├── long-term-st-database-1.0.0['MLIII', 'V3']
+│   ├── csv_files
+│   ├── long-term-st-database-1.0.0_['MLIII', 'V3']pretrain.npz
+│   └── long-term-st-database-1.0.0['MLIII', 'V3']pretrain_record_ids.csv
+├── long-term-st-database-1.0.0['MLIII', 'V4']
+│   ├── csv_files
+│   ├── long-term-st-database-1.0.0_['MLIII', 'V4']pretrain.npz
+│   └── long-term-st-database-1.0.0['MLIII', 'V4']pretrain_record_ids.csv
+├── long-term-st-database-1.0.0['V2', 'MLIII']
+│   ├── csv_files
+│   ├── long-term-st-database-1.0.0_['V2', 'MLIII']pretrain.npz
+│   └── long-term-st-database-1.0.0['V2', 'MLIII']pretrain_record_ids.csv
+├── long-term-st-database-1.0.0['V4', 'MLIII']
+│   ├── csv_files
+│   ├── long-term-st-database-1.0.0_['V4', 'MLIII']pretrain.npz
+│   └── long-term-st-database-1.0.0['V4', 'MLIII']pretrain_record_ids.csv
+├── long-term-st-database-1.0.0['V4', 'V3', 'II']
+│   ├── csv_files
+│   ├── long-term-st-database-1.0.0_['V4', 'V3', 'II']pretrain.npz
+│   └── long-term-st-database-1.0.0['V4', 'V3', 'II']pretrain_record_ids.csv
+├── long-term-st-database-1.0.0['V5', 'MLIII']
+│   ├── csv_files
+│   ├── long-term-st-database-1.0.0_['V5', 'MLIII']pretrain.npz
+│   └── long-term-st-database-1.0.0['V5', 'MLIII']pretrain_record_ids.csv
+├── long-term-st-database-1.0.0['V5', 'V2']
+│   ├── csv_files
+│   ├── long-term-st-database-1.0.0_['V5', 'V2']pretrain.npz
+│   └── long-term-st-database-1.0.0['V5', 'V2']pretrain_record_ids.csv
+├── long-term-st-database-1.0.0['V6', 'II', 'V5']
+│   ├── csv_files
+│   ├── long-term-st-database-1.0.0_['V6', 'II', 'V5']pretrain.npz
+│   └── long-term-st-database-1.0.0['V6', 'II', 'V5']pretrain_record_ids.csv
+└── long-term-st-database-1.0.0['V6', 'V5', 'aVF']
     long-term-st-database-1.0.0[leads] 파일의 csv_files는 해당 lead의 channel_info와 해당 lead를 사용한 환자의 16a, ari, atr, hea, sta, stb, stc, stf, data(ECG signal)를 csv로 전환한 파일을 포함함.
+    ```
 
 LTSTDB의 .hea, .dat, .ari, .atr, .sta, .stb, .stc, .16a, .stf 파일을 csv로 변환하였습니다.
 
@@ -201,7 +208,9 @@ S20011.dat의 일부인 s20011의 ECG 신호입니다. 좌측은 표, 우측은 
 ![](long-term-st-database/image-6.png)
 
 Long Term ST dataset은 다양한 annotations를 포함하고 있습니다. 측정 중 발생한 다양한 arrhythmia에 대한 정보들 및 ST episodes에 대한 정보를 포함합니다.
+
 ari, .atr, .sta, .stb, .stc, .16a, .stf를 아래와 같이 csv 형태로 변환하였습니다.
+
 fs, label_store, description, custom_labels, contatined_labels, ann_len은 환자별로 한 개의 값만 가지고 있어 모든 row에 대해 같은 값을 기입하였습니다.
 
 ![](long-term-st-database/image-7.png)
@@ -227,8 +236,13 @@ The Long Term ST Database는 arrhythims classification 문제를 해결하는데
 # 4. References
 
 [1] F. Jager1,2 A. Taddei3 R. Dorn1 G. B. Moody2,4 A. Smrdel1 M. Emdin3 C. Marchesi3,6 G. Anto (2003), Long-term ST database : a reference for the development and evaluation of automated ischaemia detectors and for the study of the dynamics of myocardial ischaemia.
+
 [2] Zekai Wang, Stavros Stavrakis, Bing Yao (2023), Hierarchical deep learning with Generative Adversarial Network for automatic cardiac diagnosis from ECG signals.
+
 [3] Guijin Wang, Chenshuang Zhang, Yongpan Liu, Huazhong Yang, Dapeng Fu, aiqing Wang, Ping Zhang (2019), A global and updatable ECG beat classification system based on recurrent neural networks and active learning.
+
 [4] Ran Xiao, PhD, Yuan Xu, PhD, Michele M. Pelter, RN, PhD, David W. Mortara, PhD, Xiao Hu, PhD (2018), A Deep Learning Approach to Examine Ischemic ST Changes in Ambulatory ECG Recordings.
+
 [5] Saman Parvaneh, Jonathan Rubin, Asif Rahman, Bryan Conroy and Saeed Babaeizadeh (2018), Analyzing single-lead short ECG recordings using dense convolutional neural networks and feature-based post-processing to detect atrial fibrillation.
+
 [6] Goldberger, A., Amaral, L., Glass, L., Hausdorff, J., Ivanov, P. C., Mark, R., ... & Stanley, H. E. (2000). PhysioBank, PhysioToolkit, and PhysioNet: Components of a new research resource for complex physiologic signals. Circulation [Online]. 101 (23), pp. e215–e220.

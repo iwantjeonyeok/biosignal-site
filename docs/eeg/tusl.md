@@ -24,74 +24,76 @@ TUSL 데이터셋[1]은 발작 탐지 시스템에서 슬로잉으로 인한 오
 ## 2.3 Raw Dataset
 
 !!! note ""
-     TUSL/
-     └── v2.0.1/
-     ├── edf/
-     │   ├── aaaaaaju/
-     │   │   ├── s005_2010/
-     │   │   │   └── 01_tcp_ar/
-     │   │   │       ├── aaaaaaju_s005_t000.csv
-     │   │   │       ├── aaaaaaju_s005_t000.edf
-     │   │   │       └── aaaaaaju_s005_t000.lbl_agg
-     │   │   │       ... (17 more files)
-     │   │   ├── s005_2010_11_15/
-     │   │   │   └── 01_tcp_ar/
-     │   │   └── s007_2013/
-     │   │       └── 01_tcp_ar/
-     │   │           ├── aaaaaaju_s007_t000.csv
-     │   │           ├── aaaaaaju_s007_t000.edf
-     │   │           └── aaaaaaju_s007_t000.lbl_agg
-     │   │           ... (13 more files)
-     │   ├── aaaaaalq/
-     │   │   └── s001_2003/
-     │   │       └── 02_tcp_le/
-     │   │           ├── aaaaaalq_s001_t000.csv
-     │   │           ├── aaaaaalq_s001_t000.edf
-     │   │           └── aaaaaalq_s001_t000.lbl_agg
-     │   │           ... (9 more files)
-     │   ├── aaaaaasy/
-     │   │   ├── s002_2003/
-     │   │   │   └── 02_tcp_le/
-     │   │   │       ├── aaaaaasy_s002_t000.csv
-     │   │   │       ├── aaaaaasy_s002_t000.edf
-     │   │   │       └── aaaaaasy_s002_t000.lbl_agg
-     │   │   │       ... (9 more files)
-     │   │   └── s003_2003/
-     │   │       └── 01_tcp_ar/
-     │   │           ├── aaaaaasy_s003_t000.csv
-     │   │           ├── aaaaaasy_s003_t000.edf
-     │   │           └── aaaaaasy_s003_t000.lbl_agg
-     │   │           ... (13 more files)
-     │   ├── aaaaabiw/
-     │   │   ├── s005_2003/
-     │   │   │   └── 01_tcp_ar/
-     │   │   │       ├── aaaaabiw_s005_t000.csv
-     │   │   │       ├── aaaaabiw_s005_t000.edf
-     │   │   │       └── aaaaabiw_s005_t000.lbl_agg
-     │   │   │       ... (9 more files)
-     │   │   ├── s016_2012/
-     │   │   │   └── 01_tcp_ar/
-     │   │   │       ├── aaaaabiw_s016_t000.csv
-     │   │   │       ├── aaaaabiw_s016_t000.edf
-     │   │   │       └── aaaaabiw_s016_t000.lbl_agg
-     │   │   │       ... (17 more files)
-     │   │   ├── s017_2012/
-     │   │   │   └── 01_tcp_ar/
-     │   │   │       ├── aaaaabiw_s017_t000.csv
-     │   │   │       ├── aaaaabiw_s017_t000.edf
-     │   │   │       └── aaaaabiw_s017_t000.lbl_agg
-     │   │   │       ... (21 more files)
-     │   │   └── s018_2013/
-     │   │       └── 01_tcp_ar/
-     │   │           ├── aaaaabiw_s018_t000.csv
-     │   │           ├── aaaaabiw_s018_t000.edf
-     │   │           └── aaaaabiw_s018_t000.lbl_agg
-     │   │           ... (33 more files)
-     │   ├── …(168 more directories)
-     │   │   │      ... (1482 more files)
-     ├── AAREADME.txt
-     └── AAREADME.txt,v
+    ```
+    TUSL/
+    └── v2.0.1/
+    ├── edf/
+    │   ├── aaaaaaju/
+    │   │   ├── s005_2010/
+    │   │   │   └── 01_tcp_ar/
+    │   │   │       ├── aaaaaaju_s005_t000.csv
+    │   │   │       ├── aaaaaaju_s005_t000.edf
+    │   │   │       └── aaaaaaju_s005_t000.lbl_agg
+    │   │   │       ... (17 more files)
+    │   │   ├── s005_2010_11_15/
+    │   │   │   └── 01_tcp_ar/
+    │   │   └── s007_2013/
+    │   │       └── 01_tcp_ar/
+    │   │           ├── aaaaaaju_s007_t000.csv
+    │   │           ├── aaaaaaju_s007_t000.edf
+    │   │           └── aaaaaaju_s007_t000.lbl_agg
+    │   │           ... (13 more files)
+    │   ├── aaaaaalq/
+    │   │   └── s001_2003/
+    │   │       └── 02_tcp_le/
+    │   │           ├── aaaaaalq_s001_t000.csv
+    │   │           ├── aaaaaalq_s001_t000.edf
+    │   │           └── aaaaaalq_s001_t000.lbl_agg
+    │   │           ... (9 more files)
+    │   ├── aaaaaasy/
+    │   │   ├── s002_2003/
+    │   │   │   └── 02_tcp_le/
+    │   │   │       ├── aaaaaasy_s002_t000.csv
+    │   │   │       ├── aaaaaasy_s002_t000.edf
+    │   │   │       └── aaaaaasy_s002_t000.lbl_agg
+    │   │   │       ... (9 more files)
+    │   │   └── s003_2003/
+    │   │       └── 01_tcp_ar/
+    │   │           ├── aaaaaasy_s003_t000.csv
+    │   │           ├── aaaaaasy_s003_t000.edf
+    │   │           └── aaaaaasy_s003_t000.lbl_agg
+    │   │           ... (13 more files)
+    │   ├── aaaaabiw/
+    │   │   ├── s005_2003/
+    │   │   │   └── 01_tcp_ar/
+    │   │   │       ├── aaaaabiw_s005_t000.csv
+    │   │   │       ├── aaaaabiw_s005_t000.edf
+    │   │   │       └── aaaaabiw_s005_t000.lbl_agg
+    │   │   │       ... (9 more files)
+    │   │   ├── s016_2012/
+    │   │   │   └── 01_tcp_ar/
+    │   │   │       ├── aaaaabiw_s016_t000.csv
+    │   │   │       ├── aaaaabiw_s016_t000.edf
+    │   │   │       └── aaaaabiw_s016_t000.lbl_agg
+    │   │   │       ... (17 more files)
+    │   │   ├── s017_2012/
+    │   │   │   └── 01_tcp_ar/
+    │   │   │       ├── aaaaabiw_s017_t000.csv
+    │   │   │       ├── aaaaabiw_s017_t000.edf
+    │   │   │       └── aaaaabiw_s017_t000.lbl_agg
+    │   │   │       ... (21 more files)
+    │   │   └── s018_2013/
+    │   │       └── 01_tcp_ar/
+    │   │           ├── aaaaabiw_s018_t000.csv
+    │   │           ├── aaaaabiw_s018_t000.edf
+    │   │           └── aaaaabiw_s018_t000.lbl_agg
+    │   │           ... (33 more files)
+    │   ├── …(168 more directories)
+    │   │   │      ... (1482 more files)
+    ├── AAREADME.txt
+    └── AAREADME.txt,v
     194 directories, 1650 files
+    ```
 
 각 세트는 EDF 형식의 EEG 데이터(.edf)와 함께, 이벤트 주석이 포함된 term-based 파일(.tse, .tse_agg) 및 event-based 구조의 .lbl, .lbl_agg 파일로 구성되어 있습니다. .tse 파일은 각 세그먼트의 시작 시점, 종료 시점, 이벤트 라벨, 그리고 확률값(기본 1.0)을 포함하며, 모든 주석은 10초 단위로 설정되어 있습니다. .lbl 파일은 채널 번호와 계층 인덱스를 포함한 보다 복잡한 그래프 기반 구조로 되어 있지만, 해당 버전에서는 term-based 라벨만 사용됩니다.
 
@@ -102,17 +104,19 @@ TUSL 데이터셋[1]은 발작 탐지 시스템에서 슬로잉으로 인한 오
 ## 2.5 Preprocessed Dataset
 
 !!! note ""
-     TUSL/
-     ├── npy_files/
-     │   ├── sess01_sub02_trial001_LE.npy
-     │   ├── sess01_sub02_trial002_LE.npy
-     │   └── sess01_sub05_trial003_LE.npy
-     │   ... (297 more files)
+    ```
+    TUSL/
+    ├── npy_files/
+    │   ├── sess01_sub02_trial001_LE.npy
+    │   ├── sess01_sub02_trial002_LE.npy
+    │   └── sess01_sub05_trial003_LE.npy
+    │   ... (297 more files)
     ├── labels.csv
-    ├── TUSL.h5
-    ├── TUSL.npz
-    └── channels.csv
-    1 directories, 304 files
+├── TUSL.h5
+├── TUSL.npz
+└── channels.csv
+1 directories, 304 files
+    ```
 
 # 3. Applications and Use Cases
 
@@ -124,5 +128,7 @@ TUSL 데이터셋[1]은 발작 탐지 시스템에서 슬로잉으로 인한 오
 # 4. References
 
 [1] von Weltin, E., Ahsan, T., Shah, V., Jamshed, D., Golmohammadi, M., Obeid, I., & Picone, J. (2017). Electroencephalographic Slowing: A Source of Error in Automatic Seizure Detection. In J. Picone &I. Obeid (Eds.), Proceedings of the IEEE Signal Processing in Medicine and Biology Symposium (pp. 1–5). Philadelphia, Pennsylvania, USA: IEEE.
+
 [2] Jiang, W., Zhao, L.-M., & Lu, B.-L. (2024). LaBraM: Large Brain Model for Learning Generic Representations with Tremendous EEG Data in BCI. *International Conference on Learning Representations (ICLR)*
+
 [3] Chen, Y., Ren, K., Song, K., Wang, Y., Wang, Y., Li, D., & Qiu, L. (2024). EEG-Former: Towards Transferable and Interpretable Large-Scale EEG Foundation Model. *arXiv:2401.10278*.

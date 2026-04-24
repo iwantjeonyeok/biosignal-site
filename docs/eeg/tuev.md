@@ -27,68 +27,70 @@ TUEV 데이터셋[1]은 TUH EEG Corpus의 하위 집합으로, 발작 관련 뇌
 ## 2.3 Raw Dataset
 
 !!! note ""
-     TUEV/
-     └── v2.0.1/
-     ├── edf/
-     │   ├── test/
-     │   │   ├── 000/
-     │   │   │   ├── bckg_000_a_.edf
-     │   │   │   ├── bckg_000_a_.rec
-     │   │   │   └── bckg_000_a__ch000.htk
-     │   │   │   ... (43 more files)
-     │   │   ├── 001/
-     │   │   │   ├── bckg_001_a_.edf
-     │   │   │   ├── bckg_001_a_.rec
-     │   │   │   └── bckg_001_a__ch000.htk
-     │   │   │   ... (227 more files)
-     │   │   ├── 002/
-     │   │   │   ├── bckg_002_a_.edf
-     │   │   │   ├── bckg_002_a_.rec
-     │   │   │   └── bckg_002_a__ch000.htk
-     │   │   │   ... (89 more files)
-     │   │   ├── 003/
-     │   │   │   ├── bckg_003_a_.edf
-     │   │   │   ├── bckg_003_a_.rec
-     │   │   │   └── bckg_003_a__ch000.htk
-     │   │   │   ... (43 more files)
-     │   │   ├── 004/
-     │   │   │   ├── bckg_004_a_.edf
-     │   │   │   ├── bckg_004_a_.rec
-     │   │   │   └── bckg_004_a__ch000.htk
-     │   │   │   ... (135 more files)
-     │   │
-     │   └── train/
-     │       ├── aaaaaaar/
-     │       │   ├── aaaaaaar_00000001.edf
-     │       │   ├── aaaaaaar_00000001.rec
-     │       │   └── aaaaaaar_00000001_ch000.htk
-     │       │   ... (43 more files)
-     │       ├── aaaaaabs/
-     │       │   ├── aaaaaabs_00000001.edf
-     │       │   ├── aaaaaabs_00000001.rec
-     │       │   └── aaaaaabs_00000001_ch000.htk
-     │       │   ... (43 more files)
-     │       ├── aaaaaaci/
-     │       │   ├── aaaaaaci_00000001.edf
-     │       │   ├── aaaaaaci_00000001.rec
-     │       │   └── aaaaaaci_00000001_ch000.htk
-     │       │   ... (43 more files)
-     │       ├── aaaaaadd/
-     │       │   ├── aaaaaadd_00000005.edf
-     │       │   ├── aaaaaadd_00000005.rec
-     │       │   └── aaaaaadd_00000005_ch000.htk
-     │       │   ... (43 more files)
-     │       ├── aaaaaadg/
-     │       │   ├── aaaaaadg_00000002.edf
-     │       │   ├── aaaaaadg_00000002.rec
-     │       │   └── aaaaaadg_00000002_ch000.htk
-     │       │   ... (89 more files)
+    ```
+    TUEV/
+    └── v2.0.1/
+    ├── edf/
+    │   ├── test/
+    │   │   ├── 000/
+    │   │   │   ├── bckg_000_a_.edf
+    │   │   │   ├── bckg_000_a_.rec
+    │   │   │   └── bckg_000_a__ch000.htk
+    │   │   │   ... (43 more files)
+    │   │   ├── 001/
+    │   │   │   ├── bckg_001_a_.edf
+    │   │   │   ├── bckg_001_a_.rec
+    │   │   │   └── bckg_001_a__ch000.htk
+    │   │   │   ... (227 more files)
+    │   │   ├── 002/
+    │   │   │   ├── bckg_002_a_.edf
+    │   │   │   ├── bckg_002_a_.rec
+    │   │   │   └── bckg_002_a__ch000.htk
+    │   │   │   ... (89 more files)
+    │   │   ├── 003/
+    │   │   │   ├── bckg_003_a_.edf
+    │   │   │   ├── bckg_003_a_.rec
+    │   │   │   └── bckg_003_a__ch000.htk
+    │   │   │   ... (43 more files)
+    │   │   ├── 004/
+    │   │   │   ├── bckg_004_a_.edf
+    │   │   │   ├── bckg_004_a_.rec
+    │   │   │   └── bckg_004_a__ch000.htk
+    │   │   │   ... (135 more files)
+    │   │
+    │   └── train/
+    │       ├── aaaaaaar/
+    │       │   ├── aaaaaaar_00000001.edf
+    │       │   ├── aaaaaaar_00000001.rec
+    │       │   └── aaaaaaar_00000001_ch000.htk
+    │       │   ... (43 more files)
+    │       ├── aaaaaabs/
+    │       │   ├── aaaaaabs_00000001.edf
+    │       │   ├── aaaaaabs_00000001.rec
+    │       │   └── aaaaaabs_00000001_ch000.htk
+    │       │   ... (43 more files)
+    │       ├── aaaaaaci/
+    │       │   ├── aaaaaaci_00000001.edf
+    │       │   ├── aaaaaaci_00000001.rec
+    │       │   └── aaaaaaci_00000001_ch000.htk
+    │       │   ... (43 more files)
+    │       ├── aaaaaadd/
+    │       │   ├── aaaaaadd_00000005.edf
+    │       │   ├── aaaaaadd_00000005.rec
+    │       │   └── aaaaaadd_00000005_ch000.htk
+    │       │   ... (43 more files)
+    │       ├── aaaaaadg/
+    │       │   ├── aaaaaadg_00000002.edf
+    │       │   ├── aaaaaadg_00000002.rec
+    │       │   └── aaaaaadg_00000002_ch000.htk
+    │       │   ... (89 more files)
     │       │
-    ├── AAREADME.txt
-    ├── AAREADME.txt,v
-    └── needs_fixin.list
-    ... (2 more files)
+├── AAREADME.txt
+├── AAREADME.txt,v
+└── needs_fixin.list
+... (2 more files)
     374 directories, 23833 files
+    ```
 
 각 세트는 EEG 신호가 저장된 EDF 파일(.edf)과 함께, 이벤트 주석이 포함된 .lab 및 .rec 파일, 그리고 전처리된 특징(feature) 추출용 .htk 파일로 구성되어 있습니다. .lab 파일은 10μs 단위로 시작 시간과 종료 시간, 이벤트 라벨(spsw, gped, pled, eyem, artf, bckg)을 포함하고, .rec 파일은 채널 번호, 시간(초), 그리고 수치형 라벨을 담고 있어 보다 간단한 형식으로 제공됩니다.
 
@@ -99,24 +101,26 @@ TUEV 데이터셋[1]은 TUH EEG Corpus의 하위 집합으로, 발작 관련 뇌
 ## 2.5 Preprocessed Dataset
 
 !!! note ""
-     TUEV/
-     ├── test_npy_files/
-     │   ├── sess360_trialf1.npy
-     │   ├── sess360_trialf10.npy
-     │   └── sess360_trialf100.npy
-     │   ... (29418 more files)
-     ├── train_npy_files/
-     │   ├── subaaaaaaar_trial1.npy
-     │   ├── subaaaaaaar_trial10.npy
-     │   └── subaaaaaaar_trial100.npy
-     │   ... (76422 more files)
+    ```
+    TUEV/
+    ├── test_npy_files/
+    │   ├── sess360_trialf1.npy
+    │   ├── sess360_trialf10.npy
+    │   └── sess360_trialf100.npy
+    │   ... (29418 more files)
+    ├── train_npy_files/
+    │   ├── subaaaaaaar_trial1.npy
+    │   ├── subaaaaaaar_trial10.npy
+    │   └── subaaaaaaar_trial100.npy
+    │   ... (76422 more files)
     ├── channels.csv
-    ├── test_labels.csv
-    ├── train_labels.csv
-    ├── TUEV_test.h5
-    ├── TUEV_train.h5
-    └── TUEV_train.npz
+├── test_labels.csv
+├── train_labels.csv
+├── TUEV_test.h5
+├── TUEV_train.h5
+└── TUEV_train.npz
     1 directories, 105846 files
+    ```
 
 # 3. Applications and Use Cases
 
@@ -128,5 +132,7 @@ TUEV 데이터셋[1]은 TUH EEG Corpus의 하위 집합으로, 발작 관련 뇌
 # 4. References
 
 [1] Harati, A., Golmohammadi, M., Lopez, S., Obeid, I., & Picone, J. (2015). *Improved EEG Event Classification Using Differential Energy*. Proceedings of the IEEE Signal Processing in Medicine and Biology Symposium, 1–4. Philadelphia, Pennsylvania, USA.
+
 [2] Jiang, W., Zhao, L.-M., & Lu, B.-L. (2024). LaBraM: Large Brain Model for Learning Generic Representations with Tremendous EEG Data in BCI. *International Conference on Learning Representations (ICLR)*.
+
 [3] Jiquan Wang, Sha Zhao, Zhiling Luo, Yangxuan Zhou, Haiteng Jiang, Shijian Li, Tao Li, and Gang Pan. CBraMod: A Criss-Cross Brain Foundation Model for EEG Decoding. *Proceedings of the International Conference on Learning Representations (ICLR)*, 2025.

@@ -23,64 +23,66 @@ TUSZ 데이터셋[1]은 총 675명의 환자로부터 수집된 1,643개의 EEG 
 ## 2.3 Raw Dataset
 
 !!! note ""
-     TUSZ/
-     └── v2.0.3/
-     ├── DOCS/
-     │   ├── 01_tcp_ar_montage.txt
-     │   ├── 02_tcp_le_montage.txt
-     │   └── 03_tcp_ar_a_montage.txt
-     │   ... (3 more files)
-     ├── edf/
-     │   ├── dev/
-     │   │   ├── aaaaaajy/
-     │   │   │   ├── s001_2003/
-     │   │   │   │   └── 02_tcp_le/
-     │   │   │   │       ├── aaaaaajy_s001_t000.csv
-     │   │   │   │       ├── aaaaaajy_s001_t000.csv_bi
-     │   │   │   │       └── aaaaaajy_s001_t000.edf
-     │   │   │   ├── s002_2003/
-     │   │   │   │   └── 01_tcp_ar/
-     │   │   │   │       ├── aaaaaajy_s002_t000.csv
-     │   │   │   │       ├── aaaaaajy_s002_t000.csv_bi
-     │   │   │   │       └── aaaaaajy_s002_t000.edf
-     │   │   │   │       ... (6 more files)
-     │   │   │   ├── s003_2003/
-     │   │   │   │   └── 01_tcp_ar/
-     │   │   │   │       ├── aaaaaajy_s003_t000.csv
-     │   │   │   │       ├── aaaaaajy_s003_t000.csv_bi
-     │   │   │   │       └── aaaaaajy_s003_t000.edf
-     │   │   │   │       ... (15 more files)
-     │   │   │   └── s004_2003/
-     │   │   │       └── 02_tcp_le/
-     │   │   │           ├── aaaaaajy_s004_t000.csv
-     │   │   │           ├── aaaaaajy_s004_t000.csv_bi
-     │   │   │           └── aaaaaajy_s004_t000.edf
-     │   │   ├── aaaaaayf/
-     │   │   │   ├── s001_2003/
-     │   │   │   │   └── 02_tcp_le/
-     │   │   │   │       ├── aaaaaayf_s001_t000.csv
-     │   │   │   │       ├── aaaaaayf_s001_t000.csv_bi
-     │   │   │   │       └── aaaaaayf_s001_t000.edf
-     │   │   │   │       ... (3 more files)
-     │   │   │   ├── s002_2003/
-     │   │   │   │   └── 02_tcp_le/
-     │   │   │   │       ├── aaaaaayf_s002_t000.csv
-     │   │   │   │       ├── aaaaaayf_s002_t000.csv_bi
-     │   │   │   │       └── aaaaaayf_s002_t000.edf
-     │   │   │   │       ... (3 more files)
-     │   │   │   ├── s003_2003/
-     │   │   │   │   └── 01_tcp_ar/
-     │   │   │   │       ├── aaaaaayf_s003_t000.csv
-     │   │   │   │       ├── aaaaaayf_s003_t000.csv_bi
-     │   │   │   │       └── aaaaaayf_s003_t000.edf
-     │   │   │   └── s004_2003/
-     │   │   │       └── 01_tcp_ar/
-     │   │   │           ├── aaaaaayf_s004_t000.csv
-     │   │   │           ├── aaaaaayf_s004_t000.csv_bi
-     │   │   │           └── aaaaaayf_s004_t000.edf
-     │   │   │           ... (9 more files)
-     │   │
+    ```
+    TUSZ/
+    └── v2.0.3/
+    ├── DOCS/
+    │   ├── 01_tcp_ar_montage.txt
+    │   ├── 02_tcp_le_montage.txt
+    │   └── 03_tcp_ar_a_montage.txt
+    │   ... (3 more files)
+    ├── edf/
+    │   ├── dev/
+    │   │   ├── aaaaaajy/
+    │   │   │   ├── s001_2003/
+    │   │   │   │   └── 02_tcp_le/
+    │   │   │   │       ├── aaaaaajy_s001_t000.csv
+    │   │   │   │       ├── aaaaaajy_s001_t000.csv_bi
+    │   │   │   │       └── aaaaaajy_s001_t000.edf
+    │   │   │   ├── s002_2003/
+    │   │   │   │   └── 01_tcp_ar/
+    │   │   │   │       ├── aaaaaajy_s002_t000.csv
+    │   │   │   │       ├── aaaaaajy_s002_t000.csv_bi
+    │   │   │   │       └── aaaaaajy_s002_t000.edf
+    │   │   │   │       ... (6 more files)
+    │   │   │   ├── s003_2003/
+    │   │   │   │   └── 01_tcp_ar/
+    │   │   │   │       ├── aaaaaajy_s003_t000.csv
+    │   │   │   │       ├── aaaaaajy_s003_t000.csv_bi
+    │   │   │   │       └── aaaaaajy_s003_t000.edf
+    │   │   │   │       ... (15 more files)
+    │   │   │   └── s004_2003/
+    │   │   │       └── 02_tcp_le/
+    │   │   │           ├── aaaaaajy_s004_t000.csv
+    │   │   │           ├── aaaaaajy_s004_t000.csv_bi
+    │   │   │           └── aaaaaajy_s004_t000.edf
+    │   │   ├── aaaaaayf/
+    │   │   │   ├── s001_2003/
+    │   │   │   │   └── 02_tcp_le/
+    │   │   │   │       ├── aaaaaayf_s001_t000.csv
+    │   │   │   │       ├── aaaaaayf_s001_t000.csv_bi
+    │   │   │   │       └── aaaaaayf_s001_t000.edf
+    │   │   │   │       ... (3 more files)
+    │   │   │   ├── s002_2003/
+    │   │   │   │   └── 02_tcp_le/
+    │   │   │   │       ├── aaaaaayf_s002_t000.csv
+    │   │   │   │       ├── aaaaaayf_s002_t000.csv_bi
+    │   │   │   │       └── aaaaaayf_s002_t000.edf
+    │   │   │   │       ... (3 more files)
+    │   │   │   ├── s003_2003/
+    │   │   │   │   └── 01_tcp_ar/
+    │   │   │   │       ├── aaaaaayf_s003_t000.csv
+    │   │   │   │       ├── aaaaaayf_s003_t000.csv_bi
+    │   │   │   │       └── aaaaaayf_s003_t000.edf
+    │   │   │   └── s004_2003/
+    │   │   │       └── 01_tcp_ar/
+    │   │   │           ├── aaaaaayf_s004_t000.csv
+    │   │   │           ├── aaaaaayf_s004_t000.csv_bi
+    │   │   │           └── aaaaaayf_s004_t000.edf
+    │   │   │           ... (9 more files)
+    │   │
     3967 directories, 22091 files
+    ```
 
 각 세트는 EDF 형식의 EEG 신호 파일(.edf)과 함께, 발작 주석 정보를 담은 다채널 이벤트 기반 파일(.csv) 및 이진(term-based) 주석 파일(.csv_bi)로 구성되어 있습니다. .csv 파일은 채널별로 발작 시작 시점과 종료 시점, 해당 채널 번호, 그리고 발작 유형을 포함하며, .csv_bi 파일은 각 세그먼트에 대해 발작(seiz) 또는 배경(bckg) 여부를 일괄적으로 표시합니다.
 
@@ -91,31 +93,33 @@ TUSZ 데이터셋[1]은 총 675명의 환자로부터 수집된 1,643개의 EEG 
 ## 2.5 Preprocessed Dataset
 
 !!! note ""
-     TUSZ/
-     ├── test_npy_files/
-     │   ├── sess10_sub638_trial10_REF.npy
-     │   ├── sess10_sub638_trial11_REF.npy
-     │   └── sess10_sub638_trial12_REF.npy
-     │   ... (1136 more files)
-     ├── train_npy_files/
-     │   ├── sess10_sub219_trial1_REF.npy
-     │   ├── sess10_sub255_trial1_REF.npy
-     │   └── sess10_sub255_trial2_REF.npy
-     │   ... (6210 more files)
-     ├── validation_npy_files/
-     │   ├── sess10_sub588_trial1_REF.npy
-     │   ├── sess10_sub588_trial2_REF.npy
-     │   └── sess10_sub593_trial1_REF.npy
-     │   ... (2579 more files)
+    ```
+    TUSZ/
+    ├── test_npy_files/
+    │   ├── sess10_sub638_trial10_REF.npy
+    │   ├── sess10_sub638_trial11_REF.npy
+    │   └── sess10_sub638_trial12_REF.npy
+    │   ... (1136 more files)
+    ├── train_npy_files/
+    │   ├── sess10_sub219_trial1_REF.npy
+    │   ├── sess10_sub255_trial1_REF.npy
+    │   └── sess10_sub255_trial2_REF.npy
+    │   ... (6210 more files)
+    ├── validation_npy_files/
+    │   ├── sess10_sub588_trial1_REF.npy
+    │   ├── sess10_sub588_trial2_REF.npy
+    │   └── sess10_sub593_trial1_REF.npy
+    │   ... (2579 more files)
     ├── channels.csv
     ├── test_labels.csv
     ├── train_labels.csv
     ├── validation_labels.csv 
-    ├── TUSZ_test.h5
-    ├── TUSZ_train.h5
+├── TUSZ_test.h5
+├── TUSZ_train.h5
     ├── TUSZ_validation.h5
-    └── TUSZ_train.npz
+└── TUSZ_train.npz
     1 directories, 9942 files
+    ```
 
 # 3. Applications and Use Cases
 
@@ -127,5 +131,7 @@ TUSZ 데이터셋[1]은 총 675명의 환자로부터 수집된 1,643개의 EEG 
 # 4. References
 
 [1] Shah, V., von Weltin, E., Lopez. S., McHugh, J., Veloso, L., Golmohammadi, M., Obeid, I., and Picone, J. (2018). The Temple University Hospital Seizure Detection Corpus. Frontiers in Neuroinformatics. 12:83. doi: 10.3389/fninf.2018.00083
+
 [2] Afzal, A., Chrysos, G., Cevher, V., & Shoaran, M. (2024). REST: Efficient and Accelerated EEG Seizure Analysis through Residual State Updates. *Proceedings of the 41st International Conference on Machine Learning (ICML 2024)*. PMLR 235.
+
 [3] Ho, T. K. K., & Armanfard, N. (2023). Self-Supervised Learning for Anomalous Channel Detection in EEG Graphs: Application to Seizure Analysis. *Proceedings of the AAAI Conference on Artificial Intelligence*, AAAI-23.

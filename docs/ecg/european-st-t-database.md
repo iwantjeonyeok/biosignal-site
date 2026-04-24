@@ -46,13 +46,16 @@ ST/T
 ## 2.3 Raw Dataset
 
 !!! note ""
-     europrean_st_t_database/
+    ```
+    europrean_st_t_database/
     ├── •	.atr
     ├── •	.dat
     └──  •	.hea
     1directories,  270files
+    ```
 
 이 데이터셋의 ECG 신호는 두 개의 리드를 사용하여 기록되었으며, 시간에 따른 신호 변화를 포함합니다. 다음과 같은 파일이 포함되어 있습니다:
+
 - .atr: 주석이 포함된 파일
 - .dat: 신호 데이터 제공
 - .hea: 메타데이터 파일 제공
@@ -60,14 +63,16 @@ ST/T
 ## 2.4 Preprocessed Dataset
 
 !!! note ""
-     europrean_st_t_databas/
-     ├── •	record number_annotations.csv
+    ```
+    europrean_st_t_databas/
+    ├── •	record number_annotations.csv
     ├── •	record number_rhythm_changes.csv
     └──  •	record number_st_t_changes.csv
-      
     1 directories, 270files
+    ```
 
 위의 원본 파일을 로드 해서 다음과 같은 포맷으로 다시 저장했습니다.
+
 - annotations.csv: 비트(beat) 주석이 포함된 파일
 - rhythm_changes.csv: 리듬 변화 정보 제공
 - st_t_changes.csv: ST-T 변화 기록 포함
@@ -83,7 +88,9 @@ ST/T
 # 3. Applications and Use Cases
 
 데이터셋의 활용
+
 European ST-T Database는 ST-T 세그먼트 변화 감지 및 분석을 위한 연구에 널리 사용되고 있으며, 심근 허혈 및 기타 심장 이상을 탐지하는 머신러닝 모델 개발에 중요한 역할을 합니다.
+
 - 데이터셋의 활용 및 응용 분야
 
 | Citation | Prediction task | Architectures | Unique Methodology |

@@ -1,10 +1,8 @@
-# EMG-EPN-12
-
 # 1. Dataset Information
 
 이 연구는 표면 근전도 신호를 활용한 인터랙티브 시스템을 개발하여 인지 능력 향상을 목표로 한다. Myo Armband 센서를 사용하여 손동작을 인식하고 이를 Unity 3D 기반의 게임과 연동하여 사용자가 미로를 탐색하는 방식으로 설계되었다. 또한 주의력, 집중력, 문제 해결 능력, 공간 인지 능력 등의 인지 능력을 향상시키는 것을 목적으로 하며 사용자의 손 제스처를 분류모델을 이용하여 인식하는 것을 목표로 한다.
 
-![image.png](emg-epn-12/image.png)
+![](emg-epn-12/image.png)
 
 # 2. Dataset Basic Information
 
@@ -30,8 +28,8 @@
 
 ## 2.4 Raw dataset Example
 
-![image.png](emg-epn-12/image-1.png)
+![](emg-epn-12/image-1.png)
 
-![image.png](emg-epn-12/image-2.png)
+![](emg-epn-12/image-2.png)
 
-![image.png](emg-epn-12/image-3.png)
+![](emg-epn-12/image-3.png)

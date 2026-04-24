@@ -1,5 +1,3 @@
-# UCI-sEMG for basic hand movements
-
 # 1. Datset Information
 
 이 데이터셋은 기본 손움직임을 위한 sEMG 데이터로 Delsys의 EMG 시스템을 사용하여 수집된 표면 근전도 신호 데이터베이스 2개로 구성되어 있다. 건강한 피험자들이 일상에서 사용하는 6가지 손 동작을 수행하면서 데이터를 기록하였다
@@ -27,8 +25,8 @@
 
 ## 2.4 Raw dataset Example
 
-![image.png](uci-semg-for-basic-hand-movements/image.png)
+![](uci-semg-for-basic-hand-movements/image.png)
 
-![image.png](uci-semg-for-basic-hand-movements/image-1.png)
+![](uci-semg-for-basic-hand-movements/image-1.png)
 
 # 3. References

@@ -1,5 +1,3 @@
-# Human kinematic-kinetic EMG
-
 # 1. Dataset Information
 
 이 데이터셋은 다양한 보행 및 계단 오르기내리기 동작에서 인간의 운동학, 운동역학, 근전도 데이터를 포함하는 공개 데이터셋이다. IRCCS Fondazione Don Carlo Gnocchi (이탈리아)에서 수집되었으며 건강한 성인의 보행 및 계단 동작을 정량적으로 분석하고 신경근육 질환 평가, 보행 보조기기 개발, 이족 보행 로봇 제어 연구 등에 활용하기 위해 연구되었다. 데이터는 공개 데이터이다.
@@ -27,19 +25,18 @@
 ## 2.3 Raw Dataset
 
 데이터셋의 파일들은 각 subject 별로 나뉘어져 있다. 각 파일별로 실험 대상자의 나이,성별,신장,체중이 기록되어 있으며 EMG에 관련된 여러가지 key가 포함되어있다.
-
 - EMGfreq : EMG 데이터의 샘플링 주파수 라벨
 - EmgVarName : EMG 신호 변수명(센서가 부착된 근육명)
 - Data : 운동 실험의 데이터
 - StandingData : 서 있는 상태의 데이터
 
-![image.png](human-kinematic-kinetic-emg/image.png)
+![](human-kinematic-kinetic-emg/image.png)
 
 ## 2.4 Raw dataset Example
 
-![image.png](human-kinematic-kinetic-emg/image-1.png)
+![](human-kinematic-kinetic-emg/image-1.png)
 
-![image.png](human-kinematic-kinetic-emg/image-2.png)
+![](human-kinematic-kinetic-emg/image-2.png)
 
 # 3. References
 

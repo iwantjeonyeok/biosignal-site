@@ -1,5 +1,3 @@
-# BioPatRec
-
 # 1. Dataset Information
 
 BioPatRec 데이터셋은 의수(보철 손) 제어 연구를 위해 Chalmers University of Technology (스웨덴)에서 수집되었다. 본 데이터셋은 근전도(EMG) 신호의 패턴 인식을 활용한 보철 제어 알고리즘 개발 및 평가를 목적으로 하며, 다양한 신호 처리 및 머신러닝 모델을 검증하는 플랫폼으로 활용된다. 또한 해당 데이터를 사용하기 위한 코드를 제공한다.
@@ -35,8 +33,8 @@ BioPatRec 데이터셋은 의수(보철 손) 제어 연구를 위해 Chalmers Un
 
 ## 2.4 Raw dataset Example
 
-![image.png](biopatrec/image.png)
+![](biopatrec/image.png)
 
-![image.png](biopatrec/image-1.png)
+![](biopatrec/image-1.png)
 
 # 3. References

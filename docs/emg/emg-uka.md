@@ -1,5 +1,3 @@
-# EMG-UKA
-
 # 1. Dataset Information
 
 EMG-UKA 데이터셋은 표면 근전도를 활용한 무음 음성 인식(Silent Speech Interface, SSI) 연구를 위해 구축된 데이터셋이다. 영어 문장을 읽으며 수집된 EMG신호와 동기화된 음성 데이터를 포함하고 있다. 본 데이터셋은 EMG 기반 음성 인식 및 합성 기발을 개발하고, 발성 장애가 있는 사람들을 위한 대체 의사소통 시스템을 구축하는 것을 목표로 한다. 총 7시간 32분의 데이터 크기를 갖고 있으나, 현재 공개된 데이터는 1시간 52분이다.
@@ -30,8 +28,8 @@ EMG-UKA의 라벨 (10.62%의 경우, 라벨이 되지 않은 Nan 영역임)
 
 ## 2.4 Raw dataset Example
 
-![image.png](emg-uka/image.png)
+![](emg-uka/image.png)
 
-![image.png](emg-uka/image-1.png)
+![](emg-uka/image-1.png)
 
 # 3. References

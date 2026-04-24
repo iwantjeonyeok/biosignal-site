@@ -1,5 +1,3 @@
-# Silent speech
-
 # 1. Dataset Information
 
 본 데이터셋은 무성 발화(Silent Speech)의 전기 근전도(EMG) 신호를 활용하여 디지털 음성 합성을 연구하기 위해 University of California, Berkeley에서 수집되었다. 연구 목적은 EMG 센서를 활용하여 무성 발화를 감지하고 이를 가청 음성으로 변환하는 것으로, 특히 무성 발화에서의 근전도 신호를 분석하여 보다 높은 정확도의 음성 합성 모델을 개발하는 데 초점을 맞추고 있다
@@ -28,8 +26,8 @@
 
 ## 2.4 Raw dataset Example
 
-![image.png](silent-speech/image.png)
+![](silent-speech/image.png)
 
-![image.png](silent-speech/image-1.png)
+![](silent-speech/image-1.png)
 
 # 3. References

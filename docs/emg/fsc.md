@@ -1,10 +1,8 @@
-# FSC
-
 # 1. Dataset Information
 
 본 데이터셋은 음식 이미지 및 초콜릿 샘플에 대한 얼굴 근전도(EMG) 및 주관적 선호도 데이터를 연구하기 위해 Massey University (뉴질랜드)에서 수집되었다. 연구 목적은 사회적 맥락이 음식 자극에 대한 얼굴 근전도 반응 및 주관적 선호도에 미치는 영향을 분석하는 것이다.
 
-![image.png](fsc/image.png)
+![](fsc/image.png)
 
 # 2. Dataset Basic Information
 
@@ -24,8 +22,8 @@
 
 ## 2.4 Raw dataset Example
 
-![image.png](fsc/image-1.png)
+![](fsc/image-1.png)
 
-![image.png](fsc/image-2.png)
+![](fsc/image-2.png)
 
 # 3. References

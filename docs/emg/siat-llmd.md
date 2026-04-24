@@ -1,5 +1,3 @@
-# SIAT-LLMD
-
 # 1. Dataset Information
 
 이 데이터셋은 Shenzhen Institute of Advanced Technology Lower Limb Motion Dataset으로 하지 운동 데이터를 제공하는 공개 데이터셋이다. 본 연구의 목적은 보행 및 하지 움직임을 정량적으로 분석하고, 보행 보조기기, 재활 로봇, 운동 의수/의족, 신경기계 인터페이스 연구를 지원하며 또한 데이터를 통해 운동 의도 예측 및 보행 패턴 분석을 위한 새로운 알고리즘 개발 가능성 분석이다.
@@ -14,7 +12,7 @@
 | --- | --- | --- | --- |
 | 9 | 1926 Hz | 90 ~ 140 minutes | csvt |
 
-![image.png](siat-llmd/image.png)
+![](siat-llmd/image.png)
 
 SIAT-LLMD의 데이터 획득 실험 과정 순서도
 
@@ -28,9 +26,7 @@ SIAT-LLMD의 데이터 획득 실험 과정 순서도
 | 기타 하지 운동 | 5~10 trials |
 
 기타 하지운동에는 13가지의 활동이 포함된다
-
 Standing : 정지
-
 Sitting, Standing up, Knee Lift, Tip Toe, Leg Lift Forward, Leg Lift Backward, Leg Lift Sideward, Heel Strike, Toe-Off, Lunge Forward, Lunge Backward, Maximum Swing Flexion
 
 ## 2.3 Raw Dataset
@@ -39,9 +35,9 @@ Sitting, Standing up, Knee Lift, Tip Toe, Leg Lift Forward, Leg Lift Backward, L
 
 ## 2.4 Raw dataset Example
 
-![image.png](siat-llmd/image-1.png)
+![](siat-llmd/image-1.png)
 
-![image.png](siat-llmd/image-2.png)
+![](siat-llmd/image-2.png)
 
 이 그래프는 Sub01_DNS_DATA.csv에서 sEMG : tensor fascia lata열만 시각화한 그래프이다. Sub01은 1번째 subject, DNS는 Downstair 행동을 나타낸다.
 

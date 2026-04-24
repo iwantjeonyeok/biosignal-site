@@ -1,5 +1,3 @@
-# PME4
-
 # 1. Dataset Information
 
 ME4 데이터셋은 오디오(Audio), 비디오(Video), 뇌파(EEG), 근전도(EMG) 신호를 포함한 다중 모달 감정 인식 연구를 위해 City College of New York (CUNY)에서 수집되었다. 연구 목적은 다양한 생리학적 및 비생리학적 신호를 활용한 감정 인식 성능 비교 및 최적화이다.
@@ -30,8 +28,8 @@ ME4 데이터셋은 오디오(Audio), 비디오(Video), 뇌파(EEG), 근전도(E
 
 ## 2.4 Raw dataset Example
 
-![image.png](pme4/image.png)
+![](pme4/image.png)
 
-![image.png](pme4/image-1.png)
+![](pme4/image-1.png)
 
 # 3. References

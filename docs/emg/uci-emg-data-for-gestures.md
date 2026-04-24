@@ -1,5 +1,3 @@
-# UCI EMG Data for Gestures
-
 # 1. Dataset Information
 
 이 데이터셋은 Myo Thalmic 손목 밴드를 사용하여 36명의 피험자로부터 측정한 EMG 신호 데이터를 포함하고 있다. Myo Thalmic 손목 밴드는 사용자의 팔뚝에 착용되며 8개의 센서가 고르게 배치되어 동시에 근전도 신호가 측정되었다. 피험자들은 정적 손동작을 수행하는 동안 신호가 기록되었다. 실험은 두 개의 세트로 구성되며, 각 세트는 6개, 7개의 기본 손동작으로 이루어졌다. 각 손동작은 3초 동안 유지되었으며 다음 동작 전 3초간의 휴식이 포함되었다.
@@ -32,8 +30,8 @@
 
 ## 2.4 Raw dataset Example
 
-![image.png](uci-emg-data-for-gestures/image.png)
+![](uci-emg-data-for-gestures/image.png)
 
-![image.png](uci-emg-data-for-gestures/image-1.png)
+![](uci-emg-data-for-gestures/image-1.png)
 
 # 3. References

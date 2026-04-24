@@ -113,11 +113,11 @@ TUSZ 데이터셋[1]은 총 675명의 환자로부터 수집된 1,643개의 EEG 
     ├── channels.csv
     ├── test_labels.csv
     ├── train_labels.csv
-    ├── validation_labels.csv 
-├── TUSZ_test.h5
-├── TUSZ_train.h5
+    ├── validation_labels.csv
+    ├── TUSZ_test.h5
+    ├── TUSZ_train.h5
     ├── TUSZ_validation.h5
-└── TUSZ_train.npz
+    └── TUSZ_train.npz
     1 directories, 9942 files
     ```
 

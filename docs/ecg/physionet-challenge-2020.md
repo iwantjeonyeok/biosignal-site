@@ -130,51 +130,51 @@ mat 파일과 hea 파일을 이용해 csv 파일로 변환, 저장했습니다. 
     ├── label_info.csv
     └── label.csv
     1 directories, 6881 files
-    cpsc_2018_extra/ 
-├── csv_files/
-│   ├── Q0001_data.csv
-│   ├── Q0002_data.csv
-│   └── ...  (total 3453 files) 
-├── channels_info.csv
-├── cpsc_2018_extra_pretrain_record_ids.csv
-└── cpsc_2018_extra_pretrain.npz
+    cpsc_2018_extra/
+    ├── csv_files/
+    │   ├── Q0001_data.csv
+    │   ├── Q0002_data.csv
+    │   └── ...  (total 3453 files)
+    ├── channels_info.csv
+    ├── cpsc_2018_extra_pretrain_record_ids.csv
+    └── cpsc_2018_extra_pretrain.npz
     1 directories, 3456 files
-    georgia/ 
-├── csv_files/
-│   ├── E00001_data.csv
-│   ├── E00002_data.csv
-│   └── ...  (total 10344 files) 
-├── channels_info.csv
-├── georgia_pretrain.h5
-└── georgia_pretrain.csv
+    georgia/
+    ├── csv_files/
+    │   ├── E00001_data.csv
+    │   ├── E00002_data.csv
+    │   └── ...  (total 10344 files)
+    ├── channels_info.csv
+    ├── georgia_pretrain.h5
+    └── georgia_pretrain.csv
     1 directories, 10347 files
-    ptb/ 
-├── csv_files/
-│   ├── S0001_data.csv
-│   ├── S0002_data.csv
-│   └── ...  (total 516 files) 
-├── channels_info.csv
-├── ptb_pretrain.h5
-└── ptb_pretrain.npz
+    ptb/
+    ├── csv_files/
+    │   ├── S0001_data.csv
+    │   ├── S0002_data.csv
+    │   └── ...  (total 516 files)
+    ├── channels_info.csv
+    ├── ptb_pretrain.h5
+    └── ptb_pretrain.npz
     1 directories, 519 files
     ptb-xl/
-├── csv_files/
-│   ├── HR00001_data.csv
-│   ├── HR00002_data.csv
-│   └── ...  (total 21837 files) 
-├── channels_info.csv
-├── ptb-xl_finetune.npz
-├── label_info.csv
-└── label.csv
+    ├── csv_files/
+    │   ├── HR00001_data.csv
+    │   ├── HR00002_data.csv
+    │   └── ...  (total 21837 files)
+    ├── channels_info.csv
+    ├── ptb-xl_finetune.npz
+    ├── label_info.csv
+    └── label.csv
     1 directories, 21840 files
-    INCART/ 
-├── csv_files/
-│   ├── I0001_data.csv
-│   ├── I0002_data.csv
-│   └── ...  (total 74 files) 
-├── channels_info.csv
-├── INCART_pretrain_record_ids.csv
-└── INCART_pretrain.npz
+    INCART/
+    ├── csv_files/
+    │   ├── I0001_data.csv
+    │   ├── I0002_data.csv
+    │   └── ...  (total 74 files)
+    ├── channels_info.csv
+    ├── INCART_pretrain_record_ids.csv
+    └── INCART_pretrain.npz
     1 directories, 77 files
     ```
 

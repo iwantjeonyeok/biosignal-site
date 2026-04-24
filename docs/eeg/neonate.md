@@ -31,10 +31,10 @@ Neonate[1] 데이터셋은 신생아 발작 탐지를 목적으로 설계된 데
     ├── clicinal_information.csv
     ├── Ethics_approval.pdf
     ├── annotations_2017_A.csv
-├── annotations_2017_B.csv
-├── annotations_2017_C.csv
-└── annotations_2017.mat
-... (82 more files)
+    ├── annotations_2017_B.csv
+    ├── annotations_2017_C.csv
+    └── annotations_2017.mat
+    ... (82 more files)
     1 directories, 85 files
     ```
 
@@ -55,8 +55,8 @@ eeg#.edf는 신생아 한 명에 대해 진행한 단일 세션에 관한 파일
     │   └── sub11_trial3.npy
     │   ... (870 more files)
     ├── channels.csv
-├── labels.csv
-├── Neonate.h5
+    ├── labels.csv
+    ├── Neonate.h5
     └── Neonate.npz
     1 directories, 877 files
     ```

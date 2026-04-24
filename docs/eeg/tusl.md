@@ -112,10 +112,10 @@ TUSL 데이터셋[1]은 발작 탐지 시스템에서 슬로잉으로 인한 오
     │   └── sess01_sub05_trial003_LE.npy
     │   ... (297 more files)
     ├── labels.csv
-├── TUSL.h5
-├── TUSL.npz
-└── channels.csv
-1 directories, 304 files
+    ├── TUSL.h5
+    ├── TUSL.npz
+    └── channels.csv
+    1 directories, 304 files
     ```
 
 # 3. Applications and Use Cases

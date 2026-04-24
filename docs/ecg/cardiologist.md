@@ -51,13 +51,13 @@
     ```
     Cardiologist/
     ├── 011e3d518c1ed1b4b8555b145e42e435_0010.ecg
-├── 011e3d518c1ed1b4b8555b145e42e435_0010_grp0.episodes.json
-├── 011e3d518c1ed1b4b8555b145e42e435_0010_rev0.episodes.json
-├── 011e3d518c1ed1b4b8555b145e42e435_0010_rev1.episodes.json
-├── 011e3d518c1ed1b4b8555b145e42e435_0010_rev2.episodes.json
-├── 011e3d518c1ed1b4b8555b145e42e435_0010_rev3.episodes.json
-├── 011e3d518c1ed1b4b8555b145e42e435_0010_rev4.episodes.json
-├── 011e3d518c1ed1b4b8555b145e42e435_0010_rev5.episodes.json
+    ├── 011e3d518c1ed1b4b8555b145e42e435_0010_grp0.episodes.json
+    ├── 011e3d518c1ed1b4b8555b145e42e435_0010_rev0.episodes.json
+    ├── 011e3d518c1ed1b4b8555b145e42e435_0010_rev1.episodes.json
+    ├── 011e3d518c1ed1b4b8555b145e42e435_0010_rev2.episodes.json
+    ├── 011e3d518c1ed1b4b8555b145e42e435_0010_rev3.episodes.json
+    ├── 011e3d518c1ed1b4b8555b145e42e435_0010_rev4.episodes.json
+    ├── 011e3d518c1ed1b4b8555b145e42e435_0010_rev5.episodes.json
     └── ... (327*8개의 ecg, grp, rev0, rev1, rev2, rev3, rev4, rev5)
     ```
 
@@ -89,8 +89,8 @@ rev 파일의 경우 grp 파일과 똑같이 환자의 정보(ECG_id)와 기록�
     ```
     Cardiologist/
     ├── Cardiologist_pretrain.npz
-├── Cardiologist_pretrain_record_ids.csv
-└── csv_files
+    ├── Cardiologist_pretrain_record_ids.csv
+    └── csv_files
     ```
 
 ![](cardiologist/image-4.png)

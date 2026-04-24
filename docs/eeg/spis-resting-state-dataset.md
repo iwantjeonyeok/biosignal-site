@@ -58,9 +58,9 @@ SPIS 데이터셋[1]은 총 10명의 건강한 성인을 대상으로 수집된 
     ├── SPIS_Resting_State_Dataset.h5
     ├── SPIS_Resting_State_Dataset.npz
     ├── SPIS_Resting_State_Dataset.npz
-├── labels.csv
-├── labels(raw_encoded).csv
-└── channels.csv
+    ├── labels.csv
+    ├── labels(raw_encoded).csv
+    └── channels.csv
     3 directories, 46 files
     ```
 

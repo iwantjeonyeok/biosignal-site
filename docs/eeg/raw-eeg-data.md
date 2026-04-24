@@ -56,7 +56,7 @@ Raw EEG Data 데이터셋[1]은 피험자들이 Information-Integration categori
     ├── channels.csv
     ├── encoded_labels.csv
     ├── labels_original.csv
-└── labels.csv
+    └── labels.csv
     4 directories, 244 files
     ```
 

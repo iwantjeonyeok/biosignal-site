@@ -93,10 +93,10 @@ NMT Scalp EEG Dataset은[1] 정상 및 신경 질환 환자의 EEG 데이터를 
     ├── channels.csv
     ├── test_labels.csv
     ├── train_labels.csv
-├── NMT(Scalp-EEG)_test.h5
-├── NMT(Scalp-EEG)_train.h5
-└── NMT(Scalp-EEG)_train.npz
-1 directories, 2426 files
+    ├── NMT(Scalp-EEG)_test.h5
+    ├── NMT(Scalp-EEG)_train.h5
+    └── NMT(Scalp-EEG)_train.npz
+    1 directories, 2426 files
     ```
 
 # 3. Applications and Use Cases

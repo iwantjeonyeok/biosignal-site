@@ -106,7 +106,7 @@ JS10647 데이터셋을 시각화하였습니다. JS10647.mat를 lead 별로 신
     ├── NINGBO_finetune.npz
     ├── NINGBO_finetune_record_ids.csv
     ├── channel_info.csv
-└── label_1.csv
+    └── label_1.csv
     1 directories,  files
     ```
 

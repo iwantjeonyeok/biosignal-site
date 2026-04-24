@@ -85,10 +85,10 @@ TUEV 데이터셋[1]은 TUH EEG Corpus의 하위 집합으로, 발작 관련 뇌
     │       │   └── aaaaaadg_00000002_ch000.htk
     │       │   ... (89 more files)
     │       │
-├── AAREADME.txt
-├── AAREADME.txt,v
-└── needs_fixin.list
-... (2 more files)
+    ├── AAREADME.txt
+    ├── AAREADME.txt,v
+    └── needs_fixin.list
+    ... (2 more files)
     374 directories, 23833 files
     ```
 
@@ -114,11 +114,11 @@ TUEV 데이터셋[1]은 TUH EEG Corpus의 하위 집합으로, 발작 관련 뇌
     │   └── subaaaaaaar_trial100.npy
     │   ... (76422 more files)
     ├── channels.csv
-├── test_labels.csv
-├── train_labels.csv
-├── TUEV_test.h5
-├── TUEV_train.h5
-└── TUEV_train.npz
+    ├── test_labels.csv
+    ├── train_labels.csv
+    ├── TUEV_test.h5
+    ├── TUEV_train.h5
+    └── TUEV_train.npz
     1 directories, 105846 files
     ```
 

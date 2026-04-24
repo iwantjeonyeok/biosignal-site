@@ -55,7 +55,7 @@ STEW 데이터셋[1]은 총 48명의 건강한 성인 남성 피험자를 대상
     ├── Stew.h5
     ├── Stew.npz
     ├── labels.csv
-└── channels.csv
+    └── channels.csv
     1 directories, 100 files
     ```
 

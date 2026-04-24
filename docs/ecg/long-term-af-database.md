@@ -92,11 +92,11 @@ qrs annotation
     │   ├── 00_data.csv
     │   ├── 00_pid.csv
     │   ├── 00_label.csv
-│   └── 00_qrs.csv
-│   ... (332 more files)
-├── Long_Term_AF_database_finetune.npz
-├── channels_info.csv
-└── labels.csv
+    │   └── 00_qrs.csv
+    │   ... (332 more files)
+    ├── Long_Term_AF_database_finetune.npz
+    ├── channels_info.csv
+    └── labels.csv
     1 directories, 17060 files
     ```
 

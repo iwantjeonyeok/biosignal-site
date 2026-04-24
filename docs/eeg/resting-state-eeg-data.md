@@ -46,9 +46,9 @@ Resting_State_EEG_Data 폴더는 휴식 상태에서 측정된 EEG 신호를 포
     ├── Resting_State_EEG_data.h5
     ├── Resting_State_EEG_data.npz
     ├── encoded_labels.csv
-├── labels_original.csv
-├── labels.csv
-└── channels.csv
+    ├── labels_original.csv
+    ├── labels.csv
+    └── channels.csv
     1 directories, 69669 files
     ```
 

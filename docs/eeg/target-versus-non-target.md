@@ -26,21 +26,21 @@
     ```
     Target_Versus_NonTarget/
     ├── s_01/
-│   ├── subject_01_eyesclosed_after.csv
-│   ├── subject_01_eyesclosed_before.csv
-│   └── subject_01_fixing_after.csv
-│   ... (4 more files)
-├── s_02/
-│   ├── subject_02_eyesclosed_after.csv
-│   ├── subject_02_eyesclosed_before.csv
-│   └── subject_02_fixing_after.csv
-│   ... (4 more files)
+    │   ├── subject_01_eyesclosed_after.csv
+    │   ├── subject_01_eyesclosed_before.csv
+    │   └── subject_01_fixing_after.csv
+    │   ... (4 more files)
+    ├── s_02/
+    │   ├── subject_02_eyesclosed_after.csv
+    │   ├── subject_02_eyesclosed_before.csv
+    │   └── subject_02_fixing_after.csv
+    │   ... (4 more files)
     …
     └── s_43/
-├── subject_43_eyesclosed_after.csv
-├── subject_43_eyesclosed_before.csv
-└── subject_43_fixing_after.csv
-... (4 more files)
+    ├── subject_43_eyesclosed_after.csv
+    ├── subject_43_eyesclosed_before.csv
+    └── subject_43_fixing_after.csv
+    ... (4 more files)
     43 directories, 301 files
     ```
 

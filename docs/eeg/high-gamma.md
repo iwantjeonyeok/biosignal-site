@@ -28,30 +28,30 @@
     ```
     High-Gamma/
     ├── data/
-│   ├── test/
-│   │   ├── 1.edf
-│   │   ├── 1.mat
-│   │   └── 10.edf
-│   │   ... (25 more files)
-│   ├── train/
-│   │   ├── 1.edf
-│   │   ├── 1.mat
-│   │   └── 10.edf
-│   │   ... (25 more files)
-│   └── trained-parameters/
-│       ├── deep/
-│       │   ├── 1.pkl
-│       │   ├── 10.pkl
-│       │   └── 11.pkl
-│       │   ... (11 more files)
-│       └── shallow/
-│           ├── 1.pkl
-│           ├── 10.pkl
-│           └── 11.pkl
-│           ... (11 more files)
-├── LICENSE.txt
-├── [README.md](http://readme.md/)
-└── [example.py](http://example.py/)
+    │   ├── test/
+    │   │   ├── 1.edf
+    │   │   ├── 1.mat
+    │   │   └── 10.edf
+    │   │   ... (25 more files)
+    │   ├── train/
+    │   │   ├── 1.edf
+    │   │   ├── 1.mat
+    │   │   └── 10.edf
+    │   │   ... (25 more files)
+    │   └── trained-parameters/
+    │       ├── deep/
+    │       │   ├── 1.pkl
+    │       │   ├── 10.pkl
+    │       │   └── 11.pkl
+    │       │   ... (11 more files)
+    │       └── shallow/
+    │           ├── 1.pkl
+    │           ├── 10.pkl
+    │           └── 11.pkl
+    │           ... (11 more files)
+    ├── LICENSE.txt
+    ├── [README.md](http://readme.md/)
+    └── [example.py](http://example.py/)
     6 directories, 77 files
     ```
 

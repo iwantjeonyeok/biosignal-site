@@ -44,33 +44,33 @@
     │   │   └── te03-0037.mat
     …
     │   ├── te14-0286/
-│   │   ├── te14-0286.hea
-│   │   └── te14-0286.mat
-│   └── RECORDS
-└── training/
-├── tr03-0005/
-│   ├── tr03-0005-arousal.mat
-│   ├── tr03-0005.arousal
-│   └── tr03-0005.hea
-│   ... (1 more files)
-├── tr03-0029/
-│   ├── tr03-0029-arousal.mat
-│   ├── tr03-0029.arousal
-│   └── tr03-0029.hea
-│   ... (1 more files)
-├── tr03-0052/
-│   ├── tr03-0052-arousal.mat
-│   ├── tr03-0052.arousal
-│   └── tr03-0052.hea
-│   ... (1 more files)
+    │   │   ├── te14-0286.hea
+    │   │   └── te14-0286.mat
+    │   └── RECORDS
+    └── training/
+    ├── tr03-0005/
+    │   ├── tr03-0005-arousal.mat
+    │   ├── tr03-0005.arousal
+    │   └── tr03-0005.hea
+    │   ... (1 more files)
+    ├── tr03-0029/
+    │   ├── tr03-0029-arousal.mat
+    │   ├── tr03-0029.arousal
+    │   └── tr03-0029.hea
+    │   ... (1 more files)
+    ├── tr03-0052/
+    │   ├── tr03-0052-arousal.mat
+    │   ├── tr03-0052.arousal
+    │   └── tr03-0052.hea
+    │   ... (1 more files)
     …
     ├── tr14-0291/
-│   ├── tr14-0291-arousal.mat
-│   ├── tr14-0291.arousal
-│   └── tr14-0291.hea
-│   ... (1 more files)
-├── ANNOTATORS
-└── RECORDS
+    │   ├── tr14-0291-arousal.mat
+    │   ├── tr14-0291.arousal
+    │   └── tr14-0291.hea
+    │   ... (1 more files)
+    ├── ANNOTATORS
+    └── RECORDS
     1984 directories, 5953 files
     ```
 

@@ -87,8 +87,8 @@ TUAB 데이터셋은 train/test 셋으로 구분되어 있으며 각각 abnormal
     ├── TUAB_test.h5
     ├── TUAB_train.h5
     ├── TUAB_train.npz
-└── TUAB.h5
-... (4 more files)
+    └── TUAB.h5
+    ... (4 more files)
     1 directories,  3000 files
     ```
 

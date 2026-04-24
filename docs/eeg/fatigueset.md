@@ -253,8 +253,8 @@ Fatigueset 데이터셋[1]은 정신적 피로와 피로화의 상호작용 및 
     ├── Fatigueset.h5
     ├── Fatigueset.npz
     ├── fatigue_objective_labels.csv
-├── fatigue_subjective_labels.csv
-└── channels.csv
+    ├── fatigue_subjective_labels.csv
+    └── channels.csv
     1 directories, 41 files
     ```
 

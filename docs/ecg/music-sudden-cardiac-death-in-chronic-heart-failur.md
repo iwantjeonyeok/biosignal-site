@@ -57,19 +57,19 @@ Column E : Cause of death
     ```
     music-sudden-cardiac-death-in-chronic-heart-failure-1.0.1/
     ├── High-resolution_ECG
-│   ├── P0001_H.dat
-│   ├── P0001_H.hea
-│   └── ... (686*2개의 dat, hea 파일 : 환자별로 dat, hea 한개씩)
-├── Holter_ECG
-│   ├── P0001.dat
-│   ├── P0001.hea
-│   └── ... (935*2개의 dat, hea 파일 : 환자별로 dat, hea 한개씩)
-├── LICENSE.txt
-├── RECORDS
-├── SHA256SUMS.txt
-├── subject-info.csv
-├── subject-info_codes.csv
-└── subject-info_definitions.csv
+    │   ├── P0001_H.dat
+    │   ├── P0001_H.hea
+    │   └── ... (686*2개의 dat, hea 파일 : 환자별로 dat, hea 한개씩)
+    ├── Holter_ECG
+    │   ├── P0001.dat
+    │   ├── P0001.hea
+    │   └── ... (935*2개의 dat, hea 파일 : 환자별로 dat, hea 한개씩)
+    ├── LICENSE.txt
+    ├── RECORDS
+    ├── SHA256SUMS.txt
+    ├── subject-info.csv
+    ├── subject-info_codes.csv
+    └── subject-info_definitions.csv
     ```
 
 ![](music-sudden-cardiac-death-in-chronic-heart-failur/image.png)
@@ -94,34 +94,34 @@ subject-info.csv에 환자들의 임상정보들을 아래와 같이 포함하�
     ```
     music-sudden-cardiac-death-in-chronic-heart-failure-1.0.1/
     ├── High-resolution_ECG
-│   └── music-sudden-cardiac-death-in-chronic-heart-failure-1.0.1_['X', 'Y', 'Z']
-│       ├── csv_files
-│       │   ├── P0001_H_data.csv
+    │   └── music-sudden-cardiac-death-in-chronic-heart-failure-1.0.1_['X', 'Y', 'Z']
+    │       ├── csv_files
+    │       │   ├── P0001_H_data.csv
     │       │   ├── P0001_H_hea.csv
     │       │   ├── P0001_H_dat.csv
-│       │   ├── ... (897개의 ECG data,hea, dat csv 파일)
-│       │   └── channel_info.csv
-│       ├── music-sudden-cardiac-death-in-chronic-heart-failure-1.0.1_['X', 'Y', 'Z']*pretrain.npz
-*│       └──* music-sudden-cardiac-death-in-chronic-heart-failure-1.0.1*['X', 'Y', 'Z']pretrain_record_ids.csv
-└── Holter_ECG
-├── music-sudden-cardiac-death-in-chronic-heart-failure-1.0.1['X', 'Y', 'Z']
-│   ├── csv_files
-│   │   ├── P0001_data.csv
+    │       │   ├── ... (897개의 ECG data,hea, dat csv 파일)
+    │       │   └── channel_info.csv
+    │       ├── music-sudden-cardiac-death-in-chronic-heart-failure-1.0.1_['X', 'Y', 'Z']*pretrain.npz
+    *│       └──* music-sudden-cardiac-death-in-chronic-heart-failure-1.0.1*['X', 'Y', 'Z']pretrain_record_ids.csv
+    └── Holter_ECG
+    ├── music-sudden-cardiac-death-in-chronic-heart-failure-1.0.1['X', 'Y', 'Z']
+    │   ├── csv_files
+    │   │   ├── P0001_data.csv
     │   │   ├── P0001_hea.csv
     │   │   ├── P0001_dat.csv
-│   │   ├── ... (1028개의 ECG data, hea, dat csv 파일)
-│   │   └── channel_info.csv
-│   ├── music-sudden-cardiac-death-in-chronic-heart-failure-1.0.1_['X', 'Y', 'Z']*pretrain.npz
-*│   └── music-sudden-cardiac-death-in-chronic-heart-failure-1.0.1['X', 'Y', 'Z']pretrain_record_ids.csv*
-*└── music-sudden-cardiac-death-in-chronic-heart-failure-1.0.1['X', 'Y']
-├── csv_files
-│   ├── P0070_data.csv
+    │   │   ├── ... (1028개의 ECG data, hea, dat csv 파일)
+    │   │   └── channel_info.csv
+    │   ├── music-sudden-cardiac-death-in-chronic-heart-failure-1.0.1_['X', 'Y', 'Z']*pretrain.npz
+    *│   └── music-sudden-cardiac-death-in-chronic-heart-failure-1.0.1['X', 'Y', 'Z']pretrain_record_ids.csv*
+    *└── music-sudden-cardiac-death-in-chronic-heart-failure-1.0.1['X', 'Y']
+    ├── csv_files
+    │   ├── P0070_data.csv
     │   ├── P0070_hea.csv
     │   ├── P0070_dat.csv
-│   │   ├── ... (37개의 ECG data, hea, dat csv 파일)
-│   └── channel_info.csv
-├── music-sudden-cardiac-death-in-chronic-heart-failure-1.0.1_['X', 'Y']*pretrain.npz
-*└── music-sudden-cardiac-death-in-chronic-heart-failure-1.0.1['X', 'Y']_pretrain_record_ids.csv
+    │   │   ├── ... (37개의 ECG data, hea, dat csv 파일)
+    │   └── channel_info.csv
+    ├── music-sudden-cardiac-death-in-chronic-heart-failure-1.0.1_['X', 'Y']*pretrain.npz
+    *└── music-sudden-cardiac-death-in-chronic-heart-failure-1.0.1['X', 'Y']_pretrain_record_ids.csv
     └── subject-info_codes.csv
     └── subject-info_definitions.csv
     └── subject-info.csv

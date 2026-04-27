@@ -3,4 +3,4 @@
 
 Electromyogram (EMG)는 인간의 몸에서 발생하는 전기신호 중 하나로, 근육이 수축시에 발생하는 전기신호이다. EMG는 보통 0~10mV 진폭과, 0~500Hz 에너지로 제한되어 계측된다 [^16][^17]. EMG는 크게 그 계측 방법에 따라 iEMG (Intramuscular Electromyogram; nEMG, Niddle Electromyogram)와 sEMG (Surface Electromyogram)으로 나누어진다. iEMG의 경우 계측하고자 하는 근육에 직접적으로 바늘형 전극을 삽입해, 데이터를 수집한다. 근육에 직접적으로 계측하기 때문에, 노이즈에 노출이 덜 되지만, 고통을 동반한 침습형 방법이라는 데에 그 한계점이 있다. sEMG의 경우 피부 표면에서 계측하는 방식을 가지기 때문에, 다양한 노이즈들에 노출되지만, 침습적이지 않는 방법을 사용하기 때문에 대부분의 연구에서 이 방법을 채택해 사용한다. 하지만, 연구에 따르면 두 계측방법으로 수집한 데이터를 통해 EMG를 분석할 때 큰 차이를 보이지 않아 [^18], 계측상의 위험성이 없고, 계측하기 쉬운 sEMG를 주로 계측해 분석 및 연구를 수행하고 있다.
 
-![**그림1.** EMG의 계측 방법 (출처: Cleveland clinic)](../images/image.png)
+![**그림1.** EMG의 계측 방법 (출처: Cleveland clinic)](image.png)

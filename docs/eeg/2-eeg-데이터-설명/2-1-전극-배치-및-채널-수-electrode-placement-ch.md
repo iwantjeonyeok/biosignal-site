@@ -5,7 +5,7 @@ EEG 측정은 전극을 두피 위 여러 지점에 부착하여 수행됩니다
 
 이 시스템은 두개골의 크기와 형태에 따라 전극을 일정한 간격으로 배치하여 신뢰할 수 있는 측정을 가능하게 합니다.
 
-![Jiao Yin, Jinli Cao, Siuly Siuly and Hua Wang. An Integrated MCI Detection Framework Based on Spectral-temporal Analysis. International Journal of Automation and Computing, vol. 16, no. 6, pp. 786-799, 2019.](../images/image.png)
+![Jiao Yin, Jinli Cao, Siuly Siuly and Hua Wang. An Integrated MCI Detection Framework Based on Spectral-temporal Analysis. International Journal of Automation and Computing, vol. 16, no. 6, pp. 786-799, 2019.](image.png)
 
 전극 이름은 위치에 따라 결정되며, 일반적으로 다음과 같은 패턴을 따릅니다:
 

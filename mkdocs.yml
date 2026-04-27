@@ -131,7 +131,14 @@ nav:
       - ECGFM-KED Clinical Dataset: ecg/ecgfm-ked-clinical-dataset.md
       - Long-Term AF Database: ecg/long-term-af-database.md
       - NINGBO: ecg/ningbo.md
-    - 6. ECG 기반 모델: ecg/7-ecg-기반모델-연구-동향.md
+    - 6. ECG 기반 모델:
+      - ecg/6-ecg-기반-모델/index.md
+      - CLOCS (ICML 2021): ecg/6-ecg-기반-모델/clocs.md
+      - HeartBEiT (npj Digital Medicine 2023): ecg/6-ecg-기반-모델/heartbeit.md
+      - MERL (ICML 2024): ecg/6-ecg-기반-모델/merl.md
+      - ST-MEM (ICLR 2024): ecg/6-ecg-기반-모델/st-mem.md
+      - ECG-FM (JAMIA Open 2025): ecg/6-ecg-기반-모델/ecg-fm.md
+      - ECGFounder (NEJM AI 2025): ecg/6-ecg-기반-모델/ecgfounder.md
     - 7. 결론: ecg/6-결론.md
   - EEG:
     - EEG Overview: eeg/index.md

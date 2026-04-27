@@ -3,7 +3,7 @@
 
 EEG 신호는 여러 주파수 대역으로 분해되어 분석됩니다. 각각의 밴드는 뇌의 상태나 기능과 밀접하게 연관되어 있습니다.
 
-![MIDNN- a classification approach for the EEG based motor imagery tasks using deep neural network - Scientific Figure on ResearchGate.](../images/image-1.png)
+![MIDNN- a classification approach for the EEG based motor imagery tasks using deep neural network - Scientific Figure on ResearchGate.](image-1.png)
 
 ### **Delta (1–4 Hz)**
 

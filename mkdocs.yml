@@ -157,8 +157,17 @@ nav:
       - "3.3. 미래 전망: 실시간, 맞춤형, 설명 가능한 EEG AI의 진화": eeg/3-eeg-연구-동향/3-3-미래-전망-실시간-맞춤형-설명-가능한-eeg-ai의-진화.md
     - 4. EEG 데이터셋의 정제 및 활용 방안:
       - eeg/4-eeg-데이터셋의-정제-및-활용-방안/index.md
-      - 4.1. 전처리(Preprocessing) 방법: eeg/4-eeg-데이터셋의-정제-및-활용-방안/4-1-전처리preprocessing-방법.md
-      - 4.2. 통합 활용 방안: eeg/4-eeg-데이터셋의-정제-및-활용-방안/4-2-통합-활용-방안.md
+      - 4.1. 전처리(Preprocessing) 방법:
+        - eeg/4-eeg-데이터셋의-정제-및-활용-방안/4-1-전처리preprocessing-방법/index.md
+        - 4.1.1. Sampling Frequency 및 Duration 통일: eeg/4-eeg-데이터셋의-정제-및-활용-방안/4-1-전처리preprocessing-방법/4-1-1-sampling-frequency-및-duration-통일.md
+        - 4.1.2. 채널 수(Lead) 차이에 따른 처리: eeg/4-eeg-데이터셋의-정제-및-활용-방안/4-1-전처리preprocessing-방법/4-1-2-채널-수lead-차이에-따른-처리.md
+        - 4.1.3. Noise Filtering: eeg/4-eeg-데이터셋의-정제-및-활용-방안/4-1-전처리preprocessing-방법/4-1-3-noise-filtering.md
+        - 4.1.4. Normalization & Imputation: eeg/4-eeg-데이터셋의-정제-및-활용-방안/4-1-전처리preprocessing-방법/4-1-4-normalization-imputation.md
+      - 4.2. 통합 활용 방안:
+        - eeg/4-eeg-데이터셋의-정제-및-활용-방안/4-2-통합-활용-방안/index.md
+        - 4.2.1. 단일 모델 학습: eeg/4-eeg-데이터셋의-정제-및-활용-방안/4-2-통합-활용-방안/4-2-1-단일-모델-학습.md
+        - 4.2.2. Transfer Learning: eeg/4-eeg-데이터셋의-정제-및-활용-방안/4-2-통합-활용-방안/4-2-2-transfer-learning.md
+        - 4.2.3. Foundation Model: eeg/4-eeg-데이터셋의-정제-및-활용-방안/4-2-통합-활용-방안/4-2-3-foundation-model.md
     - 5. 데이터셋별 상세 소개:
       - eeg/5-데이터셋별-상세-소개/index.md
       - TUEG: eeg/tueg.md

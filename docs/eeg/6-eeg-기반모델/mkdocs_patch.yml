@@ -1,0 +1,15 @@
+# mkdocs.yml 수정 내용
+#
+# 아래 한 줄을:
+#   - 6. EEG 기반 모델: eeg/7-eeg-기반모델.md
+#
+# 다음으로 교체하세요:
+
+  - 6. EEG 기반 모델:
+    - eeg/6-eeg-기반모델/index.md
+    - LaBraM (ICLR 2024): eeg/6-eeg-기반모델/labram.md
+    - CBraMod (ICLR 2025): eeg/6-eeg-기반모델/cbramod.md
+    - NeuroLM (ICLR 2025): eeg/6-eeg-기반모델/neurolm.md
+    - CSBrain (NeurIPS 2025): eeg/6-eeg-기반모델/csbrain.md
+    - REVE (NeurIPS 2025): eeg/6-eeg-기반모델/reve.md
+    - NERVE (ICML 2026): eeg/6-eeg-기반모델/nerve.md

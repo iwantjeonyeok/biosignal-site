@@ -132,7 +132,7 @@ nav:
       - Long-Term AF Database: ecg/long-term-af-database.md
       - NINGBO: ecg/ningbo.md
     - 6. ECG 기반 모델:
-      - ecg/6-ecg-기반-모델/index.md
+      - EEG 기반 모델 Overview: eeg/6-eeg-기반모델/index.md
       - CLOCS (ICML 2021): ecg/6-ecg-기반-모델/clocs.md
       - HeartBEiT (npj Digital Medicine 2023): ecg/6-ecg-기반-모델/heartbeit.md
       - MERL (ICML 2024): ecg/6-ecg-기반-모델/merl.md

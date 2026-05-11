@@ -138,6 +138,7 @@ nav:
       - MERL (ICML 2024): ecg/6-ecg-기반-모델/merl.md
       - ST-MEM (ICLR 2024): ecg/6-ecg-기반-모델/st-mem.md
       - ECG-FM (JAMIA Open 2025): ecg/6-ecg-기반-모델/ecg-fm.md
+      - HeartLang (ICLR 2025): ecg/6-ecg-기반-모델/heartlang.md
       - ECGFounder (NEJM AI 2025): ecg/6-ecg-기반-모델/ecgfounder.md
     - 7. 결론: ecg/6-결론.md
   - EEG:

@@ -6,28 +6,25 @@
 - 논문 (arXiv): https://arxiv.org/abs/2408.05178
 - 공식 코드: https://github.com/bowang-lab/ECG-FM
 
----
+## Pre-training Data Summary
 
-## 사전학습 데이터 요약
-
-ECG-FM은 두 개의 공개 데이터셋을 합쳐 **약 87만 개의 ECG(약 175만 개 샘플)**로 사전학습합니다.
+ECG-FM은 두 개의 공개 데이터셋을 결합한 **약 87만 개의 ECG**로 사전학습합니다. 모든 ECG는 10초 길이이며, 전처리 후 5초 단위로 분할되어 **총 약 175만 개의 샘플**이 사전학습에 사용됩니다.
 
 - **PhysioNet 2021**: 625,139개 ECG, 178,140명 환자
 - **MIMIC-IV-ECG**: 800,035개 ECG, 161,352명 환자
 - **최종 사전학습 규모**: 873,706개 ECG → **1,757,054개 샘플** (5초 분할 후)
   - 학습 세트: 699,001개 ECG → **1,405,625개 샘플**
 
-### 전처리 파이프라인
+## Preprocessing pipeline
 
 1. 원시 파형(raw waveform) 및 메타데이터(샘플 레이트, 환자 정보 등) 추출
 2. 선형 보간(linear interpolation)으로 **500 Hz 리샘플링**
 3. **Z-score 정규화** 수행
-4. 비중첩 **5초 단위** 세그먼트로 분할 (CMSC 대조학습을 위한 양성 쌍 생성 목적)
-5. null 값 또는 상수 리드(constant lead)가 있는 샘플 제거
+4. 비중첩 **5초 단위** 세그먼트로 분할 (CMSC 대조학습의 양성 쌍 생성 목적)
+5. null 값 또는 상수 리드(constant lead)가 포함된 샘플 제거
+6. 환자-시간 계층화(patient-temporal stratification)로 학습/검증/테스트 분리
 
----
-
-## 사전학습 데이터셋
+## Pre-training Dataset
 
 | 데이터셋 | 환자 수 | ECG 수 | 샘플 수 (전처리 후) | 접근 방법 |
 |---------|--------|--------|-------------------|----------|
@@ -35,79 +32,41 @@ ECG-FM은 두 개의 공개 데이터셋을 합쳐 **약 87만 개의 ECG(약 17
 | MIMIC-IV-ECG | 161,352명 | 800,035개 | — | PhysioNet 계정 필요 (무료) |
 | **합계 (사전학습)** | — | **873,706개** | **1,757,054개** | — |
 
----
+**모델 구조 및 사전학습 방법 (WCR)**
 
-## 모델 구조
+ECG-FM은 **CNN 피처 인코더 + Transformer 인코더** 구조이며, BERT-Base 설정(레이어 12개, 임베딩 차원 768, 어텐션 헤드 12개, FFN 3,072)을 사용합니다. 사전학습은 세 가지 SSL 목적함수를 결합한 **하이브리드 방식 WCR**을 적용합니다.
 
-ECG-FM은 **CNN 피처 인코더 + Transformer 인코더** 구조를 채택합니다.
+- **wav2vec 2.0**: 잠재 표현의 스팬을 마스킹하고 로컬 대조손실로 복원 학습 (전체 약 49% 마스킹)
+- **CMSC**: 시간적으로 인접한 ECG 세그먼트를 양성 쌍으로 처리하는 글로벌 대조학습 (데이터 증강 없음, faulty alignment 회피)
+- **RLM**: 학습 시 ECG 리드를 무작위로 마스킹하는 증강 기법
 
-- **CNN 피처 인코더**: 원시 파형에서 잠재 표현(latent representation) 추출
-- **Transformer 인코더**: BERT-Base 하이퍼파라미터 적용
-  - 레이어 수: 12
-  - 임베딩 차원: 768
-  - Self-attention 헤드: 12
-  - FFN 차원: 3,072
+## Downstream datasets (informational — not used for pre-training)
 
----
+ECG-FM은 아래 세 가지 다운스트림 태스크로 평가하며, 이 데이터셋들은 사전학습에는 사용되지 않습니다.
 
-## 사전학습 방법 (WCR)
+| 태스크 | 데이터셋 | ECG 수 | 비고 |
+|-------|---------|--------|------|
+| ECG 해석 레이블 예측 | UHN-ECG | 573,670개 | 심장전문의 over-read 레이블 |
+| ECG 해석 레이블 예측 (벤치마크) | MIMIC-IV-ECG | 787,677개 | 공개 벤치마크로 릴리즈 |
+| 좌심실 박출률 감소(LVEF) 예측 | UHN-ECG | 129,121개 | 심초음파 보고서 연계 (±7일) |
 
-ECG-FM은 **세 가지 SSL 목적함수를 결합한 하이브리드 방식 WCR**을 사용합니다.
+**주요 결과**: 심방세동(AF) AUROC 0.996, LVEF ≤40% AUROC 0.929. 소~중규모 데이터 환경에서 태스크 특화 모델 대비 현저한 성능 우위.
 
-### 1. wav2vec 2.0 (로컬 대조학습)
-- CNN 잠재 표현의 스팬(span)을 마스킹 (시작 토큰 확률 6.5%, 이후 10토큰 마스킹 → 전체 약 49% 마스킹)
-- 학습 가능한 코드북(2개 × 320코드)으로 양자화(quantization)
-- 마스킹된 토큰에 대해 로컬 컨텍스트로 정답 표현을 예측
-
-### 2. CMSC — Contrastive Multi-Segment Coding (글로벌 대조학습)
-- 시간적으로 인접한 ECG 세그먼트를 양성 쌍(positive pair)으로 처리
-- 데이터 증강(augmentation) 없이도 파생되므로 **faulty alignment 문제 회피**
-- 전역 표현(global representation) 간 시간 불변성(temporal invariance) 학습
-
-### 3. RLM — Random Lead Masking
-- 학습 시 ECG 리드를 무작위로 마스킹하는 증강 기법
-- 다양한 리드 구성에 대한 강건성 확보
-
----
-
-## 다운스트림 태스크
-
-| 태스크 | 데이터셋 | 규모 |
-|-------|---------|------|
-| ECG 해석 레이블 예측 | UHN-ECG | 573,670개 ECG |
-| ECG 해석 레이블 예측 | MIMIC-IV-ECG | 787,677개 ECG |
-| 좌심실 박출률 감소(LVEF) 예측 | UHN-ECG | 129,121개 ECG |
-
----
-
-## 실험 결과
-
-| 레이블 | 지표 | 값 |
-|-------|-----|---|
-| 심방세동(Atrial Fibrillation) | AUROC | 0.996 |
-| LVEF ≤ 40% | AUROC | 0.929 |
-
-- 소규모~중규모 데이터 환경에서 태스크 특화 모델 대비 **현저한 성능 우위**
-- 데이터셋 간 일반화(cross-dataset generalizability) 검증
-- 3× NVIDIA A100 80GB GPU로 200 epoch 사전학습
-
----
-
-## 재현 방법
+## How to reproduce the pre-training preprocessing
 
 ```bash
-# 1) MIMIC-IV-ECG 접근 (PhysioNet 계정 필요)
+# 1) MIMIC-IV-ECG 접근 (PhysioNet 계정 필요, 무료)
 #    https://physionet.org/content/mimic-iv-ecg/
 # 2) PhysioNet 2021 데이터 다운로드
 #    https://physionet.org/content/challenge-2021/
 # 3) 코드 클론
 git clone https://github.com/bowang-lab/ECG-FM
 cd ECG-FM && pip install -r requirements.txt
-# 4) 사전학습 실행
+# 4) 전처리 실행 (500 Hz 리샘플링, Z-score 정규화, 5초 분할)
+python preprocess.py
+# 5) 사전학습 실행 (A100 80GB GPU 3개, 200 epoch)
 python pretrain.py
 ```
-
----
 
 ## Citation
 

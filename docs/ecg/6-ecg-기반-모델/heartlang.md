@@ -1,50 +1,94 @@
-# HeartLang (ICLR 2025)
+# HeartLang — ECG Language Model
 
-**Reading Your Heart: Learning ECG Words and Sentences via Pre-training ECG Language Model**
+> **Reading Your Heart: Learning ECG Words and Sentences via Pre-training ECG Language Model**
+> Jiarui Jin, Haoyu Wang, Hongyan Li, Jun Li, Jiahui Pan, Shenda Hong. **ICLR 2025.**
 
----
+- Paper (OpenReview): https://openreview.net/forum?id=6Hz1Ko087B
+- Paper (arXiv): https://arxiv.org/abs/2502.10707
+- Official code: https://github.com/PKUDigitalHealth/HeartLang
+- Pre-trained checkpoints: https://huggingface.co/PKUDigitalHealth/HeartLang/tree/main
+- QRS-Tokenizer script: https://github.com/PKUDigitalHealth/HeartLang/blob/main/QRSTokenizer.py
+- Downstream preprocessing scripts folder: https://github.com/PKUDigitalHealth/HeartLang/tree/main/datasets/dataset_preprocess
 
-## 1. 논문 정보
+## Pre-training Data Summary
 
-| 항목 | 내용 |
-| --- | --- |
-| 제목 | Reading Your Heart: Learning ECG Words and Sentences via Pre-training ECG Language Model |
-| 학회 | ICLR 2025 |
-| 저자 | Jiarui Jin, Haoyu Wang, Hongyan Li, Jun Li, Jiahui Pan, Shenda Hong |
-| 링크 | https://github.com/PKUDigitalHealth/HeartLang |
+Unlike conventional ECG self-supervised learning methods that slice ECG signals with **fixed-size and fixed-step time windows**, HeartLang treats **heartbeats as words** and **rhythms as sentences**. It is pre-trained on a **single large-scale ECG corpus** and learns ECG representations through two stages: **vector-quantized heartbeat reconstruction (VQ-HBR)** and **masked ECG sentence pre-training**.
 
----
+- **Dataset:** MIMIC-IV-ECG Diagnostic Electrocardiogram Matched Subset
+- **Raw scale:** 800,035 12-lead ECG recordings • 161,352 subjects • 10-second ECG segments • sampled at 500 Hz
+- **After preprocessing:** all records are downsampled to **100 Hz** and converted into QRS-based **ECG sentences**. The pre-training split is **720,031 training ECGs** and **80,004 validation ECGs**.
+- **ECG sentence format:** each heartbeat patch is treated as an **individual ECG word**; 12-lead heartbeat words are concatenated into an ECG sentence with maximum sequence length **l = 256** and heartbeat window size **t = 96**.
+- **ECG vocabulary:** VQ-HBR uses an **8,192-entry codebook** with **128-dimensional collective ECG words**. In validation, the effectively used ECG vocabulary contains **5,394 discrete ECG words**.
 
-## 2. 모델 개요
+### Preprocessing pipeline (paper §3.1, §4.1 + official README + `QRSTokenizer.py`)
 
-HeartLang은 ECG 신호를 자연어처럼 처리하는 새로운 관점의 자기지도 학습(SSL) 프레임워크입니다. 하트비트(heartbeat)를 단어(word), 리듬(rhythm)을 문장(sentence)으로 간주하여 ECG 신호의 형태적·리듬적 표현을 동시에 학습합니다.
+1. Start from MIMIC-IV-ECG, which contains 10-second 12-lead ECG recordings sampled at 500 Hz.
+2. Replace `NaN` and `Inf` values in ECG recordings with the average of six neighboring points.
+3. Downsample all ECG records to **100 Hz** before QRS-tokenization.
+4. Apply the QRS-Tokenizer: use lead I, apply a **5–20 Hz band-pass filter**, perform moving wave integration with a Ricker wavelet, square the integration signal, and detect QRS complexes from local maxima that pass the refractory-period and threshold criteria.
+5. For each detected QRS index, segment heartbeat patches independently for each lead. The midpoint between adjacent QRS indices is used as the interval boundary.
+6. If a segmented heartbeat interval is shorter than **t = 96**, zero-pad it to the required length.
+7. Concatenate heartbeat patches from the 12 leads to form an ECG sentence. If the sequence is shorter than **l = 256**, zero-filled patches are added; if it is longer than **l = 256**, it is truncated.
+8. Train the ECG vocabulary through **VQ-HBR**: map individual ECG words to collective ECG words using vector quantization and reconstruct the original heartbeat patches.
+9. Perform **masked ECG sentence pre-training**: randomly mask 50% of individual ECG words and train HeartLang to predict the corresponding collective ECG word indices.
 
-기존 ECG SSL 방법들이 고정 크기의 시간 창(time window)으로 신호를 분할하여 ECG 고유의 형태와 리듬 특성을 무시한 것과 달리, HeartLang은 QRS 복합체를 의미 단위로 분할합니다.
+The official README gives the MIMIC-IV preprocessing command with `mimic_preprocess.py`; ECG sentence generation is performed with [`QRSTokenizer.py`](https://github.com/PKUDigitalHealth/HeartLang/blob/main/QRSTokenizer.py), VQ-HBR training with [`scripts/vqhbr/MIMIC-IV.sh`](https://github.com/PKUDigitalHealth/HeartLang/tree/main/scripts/vqhbr), and masked ECG sentence pre-training with [`scripts/pretrain/MIMIC-IV.sh`](https://github.com/PKUDigitalHealth/HeartLang/tree/main/scripts/pretrain).
 
----
+## Pre-training Dataset
 
-## 3. 방법론
+| Dataset | Subjects | Sessions | Raw hours | #Samples after preprocessing | Rate (Hz) | Access |
+|---------|----------|----------|-----------|------------------------------|-----------|--------|
+| MIMIC-IV-ECG Diagnostic ECG Matched Subset | 161,352 | Not specified in paper | ~2,222 h, derived from 800,035 × 10 s ECGs | 800,035 ECG sentences; 720,031 train + 80,004 valid | 500 → 100 | PhysioNet credentialed access → https://physionet.org/content/mimic-iv-ecg/ |
 
-### QRS-Tokenizer
+## Downstream datasets (informational — not used for pre-training)
 
-- 원시 ECG 신호에서 QRS 복합체를 검출해 의미 있는 ECG "문장"을 생성
-- 역대 최대 규모의 하트비트 기반 ECG 어휘(vocabulary)를 구축
+HeartLang evaluates on six benchmark settings from three public ECG datasets: **PTB-XL Superclass**, **PTB-XL Subclass**, **PTB-XL Form**, **PTB-XL Rhythm**, **CPSC2018**, and **Chapman-Shaoxing-Ningbo (CSN)**. These downstream datasets are used for linear probing and evaluation, not for HeartLang pre-training.
 
-### 학습 목표
+- **PTB-XL:** 21,837 12-lead ECG recordings from 18,885 patients, sampled at 500 Hz for 10 seconds. It is evaluated through four subsets: Superclass (5 classes), Subclass (23 classes), Form (19 classes), and Rhythm (12 classes).
+- **CPSC2018:** 6,877 12-lead ECG recordings, sampled at 500 Hz, with durations from 6 to 60 seconds and 9 labels.
+- **CSN / Chapman-Shaoxing-Ningbo:** originally 45,152 12-lead ECG recordings; after removing records with “unknown” annotations, the refined benchmark contains 23,026 ECG recordings with 38 labels.
 
-- **Form-level**: 개별 하트비트(단어) 표현 학습
-- **Rhythm-level**: 하트비트 시퀀스(문장) 패턴 학습
+Individual preprocessing scripts for downstream datasets are in the [`datasets/dataset_preprocess`](https://github.com/PKUDigitalHealth/HeartLang/tree/main/datasets/dataset_preprocess) folder, and fine-tuning scripts are in the [`scripts/finetune`](https://github.com/PKUDigitalHealth/HeartLang/tree/main/scripts/finetune) folder.
 
----
+## How to reproduce the pre-training preprocessing
 
-## 4. 실험 결과
+```bash
+# 1) Request credentialed access and download MIMIC-IV-ECG from PhysioNet
+#    https://physionet.org/content/mimic-iv-ecg/
 
-6개 공개 ECG 데이터셋에서 평가하였으며, 기존 ECG SSL 방법 대비 경쟁력 있는 성능을 달성했습니다.
+# 2) Clone HeartLang
+git clone https://github.com/PKUDigitalHealth/HeartLang.git
+cd HeartLang
 
----
+# 3) Set up the environment
+conda create -n heartlang python=3.9
+conda activate heartlang
+pip install -r requirements.txt
 
-## 5. 의의
+# 4) Preprocess MIMIC-IV-ECG
+python mimic_preprocess.py \
+  --dataset_path <path_to_MIMIC_data> \
+  --output_path datasets/ecg_datasets/MIMIC-IV
 
-- ECG를 언어처럼 처리하는 새로운 패러다임 제시
-- QRS 기반 토크나이저로 ECG 도메인 지식을 학습에 반영
-- 코드 및 어휘 데이터 공개
+# 5) Generate ECG sentences with QRS-Tokenizer
+python QRSTokenizer.py --dataset_name MIMIC-IV
+
+# 6) Train the ECG vocabulary through VQ-HBR
+bash scripts/vqhbr/MIMIC-IV.sh
+
+# 7) Launch masked ECG sentence pre-training
+bash scripts/pretrain/MIMIC-IV.sh
+```
+
+## Citation
+
+```bibtex
+@inproceedings{
+  jin2025reading,
+  title={Reading Your Heart: Learning {ECG} Words and Sentences via Pre-training {ECG} Language Model},
+  author={Jiarui Jin and Haoyu Wang and Hongyan Li and Jun Li and Jiahui Pan and Shenda Hong},
+  booktitle={The Thirteenth International Conference on Learning Representations},
+  year={2025},
+  url={https://openreview.net/forum?id=6Hz1Ko087B}
+}
+```

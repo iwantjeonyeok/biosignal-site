@@ -9,8 +9,8 @@
     
     본 페이지에서 다루는 생체신호 데이터셋은 다음 세 가지를 포함합니다:
     
-    - **심전도 (ECG):** [🫀 ECG DATASET](ecg/)
     - **뇌파 (EEG):** [🧠 EEG DATASET](eeg/)
+    - **심전도 (ECG):** [🫀 ECG DATASET](ecg/)
     - **근전도 (EMG):** [💪🏻 EMG DATASET](emg/)
 
 

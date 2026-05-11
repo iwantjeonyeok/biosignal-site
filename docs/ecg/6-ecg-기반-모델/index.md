@@ -6,4 +6,5 @@ ECG 신호를 활용한 주요 딥러닝 기반 모델들을 소개합니다.
 | --- | --- | --- |
 
 | [ECG-FM](ecg-fm.md) | JAMIA Open | 2025 |
+
 | [ECGFounder](ecgfounder.md) | NEJM AI | 2025 |

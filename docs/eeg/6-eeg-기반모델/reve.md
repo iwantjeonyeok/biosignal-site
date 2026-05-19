@@ -40,7 +40,7 @@ REVE는 현재까지 공개된 EEG 사전학습 코퍼스 중 **규모와 다양
 | Channels | [80, 129] | 2,622 | 9,027 | 13 |
 | **Total** | | **24,274** | **61,415** | **92** |
 
-### Preprocessing pipeline (paper §3.1.1)
+### Preprocessing Pipeline (paper §3.1.1)
 1. 10초 미만 레코딩 및 다운스트림 태스크에 사용된 레코딩 제외.
 2. **200 Hz**로 리샘플링, band-pass filter **0.5–99.5 Hz**, float32로 변환.
 3. 각 레코딩 세션 전체 통계를 기반으로 Z-score 정규화.
@@ -49,7 +49,7 @@ REVE는 현재까지 공개된 EEG 사전학습 코퍼스 중 **규모와 다양
 
 > REVE 저장소에는 데이터셋별 변환 스크립트가 [`preprocessing/`](https://github.com/elouayas/reve_eeg/tree/main/preprocessing) 폴더에 포함되어 있으며 (예: `preprocessing_bciciv2a.py`, `preprocessing_physio.py`, `preprocessing_hmc.py`, `preprocessing_faced.py`, `preprocessing_mumtaz.py`, `preprocessing_speech.py`, `preprocessing_stress.py`, `ISRUC/prepare_ISRUC.py`), 전용 [`preprocessing/README.md`](https://github.com/elouayas/reve_eeg/blob/main/preprocessing/README.md)도 제공된다.
 
-## Platform-level download entry points
+## Platform-level Download Entry Points
 
 92개 데이터셋을 개별적으로 나열하는 대신, REVE는 4개의 주요 허브와 일부 "기타" 출처에서 데이터를 수집한다:
 
@@ -62,7 +62,7 @@ REVE는 현재까지 공개된 EEG 사전학습 코퍼스 중 **규모와 다양
 | **Other** | 6 | 3,802 | 1,250 | 다양 | NMT (Khan et al., 2022; CC-BY), HMS (Ram et al., 2024; CC-BY-NC 4.0), SparrKULee (Accou et al., 2023; CC-BY-NC 4.0), Inria Large (Dreyer et al., 2023; CC-BY 4.0), THINGS2 (Gifford et al., 2022; CC-BY 4.0), TDBRAIN (Van Dijk et al., 2022; GPL-3.0) |
 | **합계** | **92** | **24,274** | **61,415** | | |
 
-### OpenNeuro dataset IDs used by REVE (56 datasets)
+### OpenNeuro Dataset IDs Used by REVE (56 datasets)
 
 논문 Appendix B 기재 ID 및 인용 (일부):
 
@@ -96,7 +96,7 @@ REVE는 현재까지 공개된 EEG 사전학습 코퍼스 중 **규모와 다양
 
 각 OpenNeuro ID는 `https://openneuro.org/datasets/<id>` 형태로 접근할 수 있다 (예: <https://openneuro.org/datasets/ds004706>).
 
-### MOABB datasets used by REVE (27 datasets)
+### MOABB Datasets Used by REVE (27 datasets)
 
 | # | Dataset | Citation | Task |
 |---|---------|----------|------|
@@ -135,7 +135,7 @@ from moabb.datasets import BNCI2014_001
 data = BNCI2014_001().get_data()
 ```
 
-## How to reproduce the pre-training preprocessing
+## How to Reproduce the Pre-training Preprocessing
 
 ```bash
 # 1) REVE를 설치한다

@@ -23,7 +23,7 @@ LaBraM(약 20개 데이터셋 통합)과 달리, CBraMod는 **단일하지만 �
 - **원시 규모:** 69,652개 임상 EEG 레코딩 • 14,987명 피험자 • 26,846개 세션 • ~27,062시간 (전극 구성 40종 이상, 주로 256 Hz 샘플링)
 - **전처리 후:** **EEG 샘플 1,109,545개 (>9,000시간)**, LaBraM 사전학습 풀보다 현저히 큰 규모.
 
-### Preprocessing pipeline (paper §3.1 + `preprocessing_tueg_for_pretraining.py`)
+### Preprocessing Pipeline (paper §3.1)
 
 1. 5분 미만 레코딩 제외; 각 레코딩의 첫 1분·마지막 1분 제거.
 2. 10–20 계 공통 19채널만 유지: `Fp1, Fp2, F7, F3, Fz, F4, F8, T3, C3, Cz, C4, T4, T5, P3, Pz, P4, T6, O1, O2`.
@@ -39,11 +39,11 @@ LaBraM(약 20개 데이터셋 통합)과 달리, CBraMod는 **단일하지만 �
 |---------|----------|----------|-----------|-------------------------|-----------|--------|
 | TUEG (Temple Univ. Hospital EEG Corpus) | 14,987 | 26,846 | ~27,062 | 1,109,545 (>9,000 h) | 256 (mixed) | Free registration → <https://isip.piconepress.com/projects/nedc/html/tuh_eeg/> |
 
-## Downstream datasets (informational — not used for pre-training)
+## Downstream Datasets
 
 CBraMod는 10개 BCI 태스크에 걸친 12개 공개 데이터셋(FACED, SEED-V, PhysioNet-MI, SHU-MI, ISRUC, CHB-MIT, BCIC2020-3, Mumtaz2016, SEED-VIG, MentalArithmetic, TUEV, TUAB)에서 평가된다. 각 데이터셋의 개별 전처리 스크립트는 같은 [`preprocessing/`](https://github.com/wjq-learning/CBraMod/tree/main/preprocessing) 폴더에 있다.
 
-## How to reproduce the pre-training preprocessing
+## How to Reproduce the Pre-training Preprocessing
 
 ```bash
 # 1) TUEG 접근 권한을 신청하고 코퍼스를 다운로드한다(무료)

@@ -51,7 +51,7 @@ NeuroLM의 사전학습 데이터 변환 스크립트는 [`dataset_maker/prepare
 
 > **LaBraM과의 데이터 중복 관련 참고사항.** NeuroLM은 LaBraM의 TUH 하위 코퍼스 분할(TUAR/TUEP/TUSZ/TUSL) 대신 **TUEG 전체 코퍼스**를 사용하며, MoBI와 SEED-V는 다운스트림 평가 세트로 쓰이므로 사전학습 풀에서 제외한다.
 
-## How to reproduce the pre-training preprocessing
+## How to Reproduce the Pre-training Preprocessing
 
 ```bash
 # 1) 위 데이터셋을 다운로드한다. TUEG 접근 권한 신청 필요(무료).

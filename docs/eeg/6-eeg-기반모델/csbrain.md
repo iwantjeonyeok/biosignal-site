@@ -38,11 +38,11 @@ CSBrain 저장소의 [`preprocessing/`](https://github.com/yuchen2199/CSBrain/tr
 |---------|----------|-------|-----------|--------|
 | TUEG (Temple Univ. Hospital EEG Corpus) | 1,109,545 | >9,000 | 200 (after resampling) | Free registration → <https://isip.piconepress.com/projects/nedc/html/tuh_eeg/> |
 
-## Downstream datasets (16 datasets / 11 tasks — not used for pre-training)
+## Downstream Datasets
 
-BCIC-IV-2a, PhysioNet-MI, SHU-MI, FACED, SEED-V, CHB-MIT, Siena, ISRUC, HMC, BCIC2020-3, SEED-VIG, MentalArithmetic, Mumtaz2016, TUEV, TUAB, TUSL. HMC/Siena/TUSL는 CSBrain의 `preprocessing/` 폴더를, 나머지는 [CBraMod preprocessing folder](https://github.com/wjq-learning/CBraMod/tree/main/preprocessing)를 참고한다.
+CSBrain은 총 11개의 테스크의 16개의 데이터셋에 대해서 평가했다. BCIC-IV-2a, PhysioNet-MI, SHU-MI, FACED, SEED-V, CHB-MIT, Siena, ISRUC, HMC, BCIC2020-3, SEED-VIG, MentalArithmetic, Mumtaz2016, TUEV, TUAB, TUSL. HMC/Siena/TUSL는 CSBrain의 `preprocessing/` 폴더를, 나머지는 [CBraMod preprocessing folder](https://github.com/wjq-learning/CBraMod/tree/main/preprocessing)를 참고한다.
 
-## How to reproduce the pre-training preprocessing
+## How to Reproduce the Pre-training Preprocessing
 
 ```bash
 # 1) TUH에서 TUEG를 다운로드한다(무료, 등록 필요).

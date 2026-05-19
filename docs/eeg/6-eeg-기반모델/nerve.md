@@ -1,7 +1,7 @@
 # NERVE — Noise-Variability-Robust EEG Foundation Model
 
 > **NERVE: Noise-Variability-Robust EEG Foundation Model with Electrode-Brain Interactions**
-> Anonymous authors. **ICML 2026 (under review).**
+> Anonymous authors. **Neurips 2026 (under review).**
 
 - [Official code (anonymous repo referenced in paper)](https://github.com/NERVE-2026/NERVE)
 
@@ -27,7 +27,7 @@ NERVE는 모델이 10가지 세부 응용 분야(seizure detection, gait recogni
 - **전처리 후: EEG 샘플 213,784개 • 10,956시간** — LaBraM(2,534.78 h)·CBraMod(9,000 h)보다 현저히 크며, 9,000–25,000 h 구간의 다른 모델들과 비슷한 규모다.
 - 통합 **128채널** 구성 (데이터셋 간 사용 가능한 전극을 최대한 유지하며, 누락 채널은 0으로 채워 명시적인 "누락 채널 마스크"로 활용).
 
-### Preprocessing pipeline (paper §3.1, Appendix C.3)
+### Preprocessing Pipeline (paper §3.1, Appendix C.3)
 1. **Channel selection** — 최대 128개까지 가능한 한 많은 전극을 유지하고, 누락된 채널은 0으로 채워 누락 채널 마스크로 활용한다.
 2. **Band-pass filter** 0.3–75 Hz (저주파 드리프트 제거 + 고주파 근전도/장비 노이즈 억제).
 3. **Notch filter** 50 Hz (전력선 노이즈 제거).
@@ -35,7 +35,7 @@ NERVE는 모델이 10가지 세부 응용 분야(seizure detection, gait recogni
 5. **Z-score normalization** — 피험자 간·내 변동성 완화.
 6. Patch 길이 **P = 200 (1초)**; stride는 noise-robust neural tokenizer에 **1초**, NERVE foundation model에 **4초** 적용. 샘플당 최대 패치 수 256개.
 
-### Architecture (paper §3.2, Appendix B.1)
+### Pre-training Configuration (paper §3.2, Appendix B.1)
 - **Backbone:** 12층 **EPA (Electrode-Position-Aware) Transformer**, hidden dim 200, FFN 800, attention head 10개, **피질 영역 position-router 그룹 6개**.
 - **Noise-robust neural tokenizer:** 3층 1D-CNN patch encoder + 9층 EPA encoder / 3층 EPA decoder, 8192×64 codebook, **denoising temporal-spectral prediction** 방식으로 학습 (Gaussian noise augmentation σ=0.05, time-domain 신호와 DFT 기반 정규화 스펙트럼 동시 재구성).
 - **사전학습 손실:** masked EEG modeling (마스킹 비율 50%) + 변동성 강건 학습을 위한 **KoLeo 정규화**: `L = L_MEM + α · L_KoLeo`, α = 0.1.
@@ -79,7 +79,7 @@ NERVE는 모델이 10가지 세부 응용 분야(seizure detection, gait recogni
 
 > **다운스트림 데이터셋 (사전학습에 미사용).** NERVE는 분포 외 일반화 성능을 측정하기 위해 사전학습 풀에서 **의도적으로 제외**한 5개 태스크에 걸친 8개 데이터셋에서 평가된다: **TUSL**, **SEED-V**, **DEAP**, **HCI-Tagging Emotion**, **High-Gamma**, **TUEV**, **BCI-NER Challenge**, **SEED-VIG** (Table 2).
 
-## How to reproduce the pre-training preprocessing
+## How to Reproduce the Pre-training Preprocessing
 
 ```bash
 # 1) 위 27개 데이터셋을 다운로드한다 (TUSZ + Siena + Neonate는

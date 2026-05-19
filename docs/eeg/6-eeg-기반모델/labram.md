@@ -50,7 +50,7 @@ LaBraM은 **약 20개의 공개·자체 수집 데이터셋**에서 수집한 **
 
 **총계: ~2,534.78시간.** TUH 하위 코퍼스 전체(TUAR/TUEP/TUSZ/TUSL)에 접근하려면 [Temple University Hospital EEG Corpus](https://isip.piconepress.com/projects/nedc/html/tuh_eeg/)에 무료 등록이 필요하다.
 
-## How to reproduce the pre-training preprocessing
+## How to Reproduce the Pre-training Preprocessing
 
 1. 위 링크에서 각 데이터셋을 다운로드한다(TUAR/TUEP/TUSZ/TUSL는 TUH 접근 신청 필요).
 2. LaBraM을 clone하고 `requirements.txt`를 설치한다.

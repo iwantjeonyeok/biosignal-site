@@ -268,5 +268,8 @@ nav:
       - UCI EMG dataset in lower limb: emg/uci-emg-dataset-in-lower-limb.md
       - SIAT-LLMD: emg/siat-llmd.md
       - UCI EMG Data for Gestures: emg/uci-emg-data-for-gestures.md
-    - 6. EMG 기반 모델: emg/6-결론.md
+    - 6. EMG 기반 모델: 
+      - emg2pose (NeurIPS 2024 Datasets and Benchmarks): emg/6-emg-기반-모델/emg2pose.md
+      - PhysioWave (Neurips 2025): emg/6-emg-기반-모델/physiowave.md
+      - Tinymyo (Arxiv 2026): emg/6-emg-기반-모델/tinymyo.md
     - 7. 결론: emg/7-참고문헌.md

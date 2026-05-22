@@ -3,8 +3,8 @@
 > **ECG-FM: An Open Electrocardiogram Foundation Model**
 > Kaden McKeen, Sameer Masood, Augustin Toma, Barry Rubin, Bo Wang. **JAMIA Open 2025.**
 
-- Paper (arXiv): https://arxiv.org/abs/2408.05178
-- Official code: https://github.com/bowang-lab/ECG-FM
+- [Paper (arXiv)](https://arxiv.org/abs/2408.05178)
+- [Official code](https://github.com/bowang-lab/ECG-FM)
 
 ## Motivation
 

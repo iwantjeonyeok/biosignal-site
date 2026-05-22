@@ -32,7 +32,7 @@ HeartLang은 MIMIC-IV-ECG를 사용하여 VQ-HBR training과 masked ECG sentence
 - **사용 목적:** VQ-HBR training 및 masked ECG sentence pre-training
 - **특징:** ECG recording만 사용하며, clinical report text supervision은 사용하지 않음
 
-### Preprocessing Pipeline (paper §3)
+### Preprocessing Pipeline
 
 
 1. MIMIC-IV-ECG의 raw ECG recording에서 `NaN`과 `Inf` 값은 주변 6개 point의 평균값으로 대체한다.

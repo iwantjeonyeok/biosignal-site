@@ -12,16 +12,7 @@
 
 ## Architecture Summary
 
-ECG-FM은 **CNN feature encoder + Transformer encoder** 구조를 채택한다.
-
-- **CNN feature encoder**: 원시 ECG 파형에서 잠재 표현(latent representation)을 추출
-- **Transformer encoder**: BERT-Base 설정 적용
-  - 레이어 수: 12
-  - 임베딩 차원: 768
-  - Self-attention 헤드: 12
-  - FFN 차원: 3,072
-- **모델 입력**: 500 Hz로 resampling된 ECG를 5초 단위로 분할한 segment
-- **사전학습 방법 (WCR)**: wav2vec 2.0, CMSC, RLM 세 가지 SSL 목적함수를 결합한 하이브리드 방식
+ECG-FM은 **wav2vec 2.0** 구조를 기반으로 한 transformer-based ECG foundation model이다. 입력 ECG waveform은 CNN feature extractor를 거쳐 latent representation으로 변환되고, 이후 **BERT-like Transformer encoder**를 통해 문맥 정보가 반영된 ECG representation으로 인코딩된다. 모델은 총 **90.9M parameters** 규모이며, ECG 신호의 구간별 특징을 Transformer 기반 표현으로 학습하도록 설계된다.사전학습은 **WCR(W2V + CMSC + RLM)**이라는 hybrid self-supervised learning 방식으로 이루어진다. wav2vec 2.0 objective는 CNN latent representation의 일부 구간을 masking하고, 주변 문맥을 이용해 해당 위치의 quantized target을 구별하도록 학습하여 ECG의 local pattern을 포착한다. 반면 **CMSC**는 시간적으로 인접한 ECG segment를 positive pair로 두고 global representation 간 contrastive learning을 수행하여, 심장 기능과 관련된 전역적 의미 표현을 학습한다. 이 방식은 augmentation을 사용하지 않아 생리학적 의미가 왜곡되는 faulty alignment 문제를 줄이는 역할을 한다. 또한 **RLM**은 사전학습 중 각 ECG lead를 확률적으로 masking하는 ECG-specific augmentation 전략이다. 이를 통해 모델은 특정 lead 조합에만 의존하지 않고 다양한 lead 구성에서도 안정적인 표현을 학습할 수 있으며, 표준 12-lead ECG뿐 아니라 일부 lead만 존재하는 **reduced lead setting**에서도 fine-tuning될 수 있는 유연성을 갖는다. 
 
 ## Pre-training Data Summary
 
@@ -41,11 +32,6 @@ ECG-FM은 두 개의 공개 데이터셋을 결합한 **약 87만 개의 ECG**�
 5. null 값 또는 상수 리드(constant lead)가 포함된 샘플 제거
 6. 환자-시간 계층화(patient-temporal stratification)로 학습/검증/테스트 분리
 
-**사전학습 방법 세부 사항:**
-
-- **wav2vec 2.0 (local contrastive learning)**: CNN 잠재 표현의 span을 마스킹(시작 토큰 확률 6.5%, 이후 10토큰 → 전체 약 49% 마스킹). 두 개의 학습 가능한 코드북(2개 × 320 코드)으로 양자화(quantization)하고, 마스킹된 토큰을 로컬 컨텍스트로 예측하도록 학습.
-- **CMSC — Contrastive Multi-Segment Coding (global contrastive learning)**: 시간적으로 인접한 ECG segment를 positive pair로 처리. 데이터 증강(augmentation) 없이 작동하므로 **faulty alignment 문제를 원천 회피**하며, 시간 불변성(temporal invariance) 학습.
-- **RLM — Random Lead Masking**: 학습 시 ECG 리드를 무작위로 마스킹하는 증강 기법으로, 다양한 리드 구성에 대한 강건성 확보.
 
 ### Pre-training Datasets
 

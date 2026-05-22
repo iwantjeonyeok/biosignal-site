@@ -3,45 +3,51 @@
 > **An Electrocardiogram Foundation Model Built on over 10 Million Recordings with External Evaluation across Multiple Domains**
 > Jun Li, Aaron Aguirre, Junior Moura, Che Liu, Lanhai Zhong, Chenxi Sun, Gari Clifford, Brandon Westover, Shenda Hong. **NEJM AI 2025.**
 
-- Paper (arXiv): https://arxiv.org/abs/2410.04133
-- Official code: https://github.com/PKUDigitalHealth/ECGFounder
-- Model weights: https://huggingface.co/PKUDigitalHealth/ECGFounder
+- [Paper (arXiv)](https://openreview.net/forum?id=6Hz1Ko087B)
+- [Official code](https://github.com/PKUDigitalHealth/ECGFounderg)
+- [Preprocessing scripts folder]()
+
 
 ## Motivation
 
-기존 ECG AI 모델들은 대부분 특정 질환이나 특정 데이터셋 중심으로 설계되어, **범용적인 ECG 진단 능력**과 **다양한 임상 환경으로의 일반화**에 한계가 있다. 또한 학습 데이터의 규모가 충분하지 않아 소수 label 범주에서 성능이 저하되거나, multi-lead ECG에서만 잘 동작하여 single-lead 웨어러블 기기에는 적용하기 어렵다는 문제가 있다.
-
-ECGFounder는 이 문제를 해결하기 위해 두 가지 핵심 전략을 채택한다. 첫째, **1,000만 개 이상의 전문가 주석 ECG**로 구성된 Harvard-Emory ECG Database(HEEDB)를 활용하여 전례 없는 규모의 학습 데이터를 확보한다. 둘째, **150개 진단 label과 multi-label 학습**, **Positive-Unlabeled(PU) learning**, **lead augmentation** 기법을 결합하여 다양한 임상 환경과 웨어러블 기기까지 적용 가능한 범용 ECG foundation model을 구축하는 것을 목표로 한다.
+기존에도 ECG용 foundation model을 제안한 연구들이 있었지만, 학습 데이터의 샘플 수, 환자 수, 진단 라벨의 다양성, 인구통계학적 다양성이 충분하지 않아 실제 임상 환경의 다양한 ECG 분석 문제를 포괄하는 데 한계가 있었다. 또한 foundation model로 인정되기 위해서는 초기 학습 데이터에만 적합한 것이 아니라, 여러 외부 도메인과 다양한 임상 과제로 일반화될 수 있어야 하지만 기존 모델들은 이를 충분히 입증하지 못했다. 특히 웨어러블 기기와 원격 모니터링에서 중요한 single-lead ECG는 multi-lead ECG에 비해 성능 저하가 크다는 문제가 남아 있었다. ECGFounder는 이러한 한계를 해결하기 위해 1,000만 건 이상의 실제 임상 ECG와 전문가 주석을 활용하고, 150개 진단 라벨을 학습 대상으로 구성하여 더 넓은 진단 범위를 갖는 ECG foundation model을 제안한다.
 
 ## Architecture Summary
 
-ECGFounder는 **RegNet 기반의 convolution 아키텍처**를 backbone으로 사용한다. RegNet은 uniform scaling 대신 quantized linear model로 최적의 width와 depth를 예측하여, 다양한 모델 크기에서 효율적인 성능을 제공한다.
-
-- **Backbone**: RegNet (quantized linear model로 width/depth 최적화)
-- **Block 구조**: Bottleneck blocks + group convolutions + channel-wise attention → 시간적·공간적 표현 풍부화
-- **학습 방식**: Multi-label classification (150개 ECG 진단/리듬/형태 label)
-- **Positive-Unlabeled (PU) learning**: 불완전한 multi-label annotation 문제 해결. 미주석(unlabeled) 샘플을 단순 negative로 처리하지 않고, positive 미주석 가능성을 반영하여 학습
-- **Lead augmentation**: 12-lead ECG에서 lead I를 중심으로 각도 기반으로 6개 추가 리드를 합성하여, single-lead 웨어러블 기기용 모델 학습에 활용. 웨어러블 모델은 파라미터를 축소하여 경량화
+ECGFounder의 핵심 encoder는 기존 저자들이 제안한 **Net1D** 구조를 기반으로 하며, 그 위에 **RegNet** 계열의 stage-wise network 설계를 사용한다. RegNet은 네트워크 깊이에 따라 block 수와 channel 수를 단계적으로 조절하는 구조이기 때문에, 대규모 ECG 데이터에서 효율적으로 표현을 학습할 수 있다. 단순히 시간축의 파형 변화만 보는 것이 아니라, 서로 다른 lead 사이의 상호작용과 전체 심장 전기 활동의 공간적 패턴도 함께 학습한다. 이를 위해 **bottleneck block**, group convolution, channel-wise attention을 활용하여 ECG의 temporal feature와 spatial feature를 모두 반영하도록 설계된다. 실제 임상 주석의 특성을 반영하기 위해 단일 라벨 분류가 아니라 **multi-label classification** 방식으로 학습된다. 실제 ECG 진단은 하나의 기록에 여러 진단명이 동시에 붙을 수 있고, 실제 주석에는 누락된 양성 라벨도 존재할 수 있기 때문에, 이를 단순한 음성 라벨로 처리하지 않도록 **positive unlabeled learning** 기반의 학습 방식을 도입한다.
+마지막으로 wearable device와 원격 모니터링 환경에서 중요한 **single-lead ECG** 분석까지 지원하기 위해 **lead augmentation**을 사용한다. 12-lead ECG에서 lead I를 중심으로 여러 limb lead의 전기축 정보를 활용하여 단일 리드 모델을 학습함으로써, single-lead ECG에서도 리듬 정보와 전기축 관련 진단 정보를 더 잘 반영하도록 설계된다.
 
 ## Pre-training Data Summary
 
-ECGFounder는 **단일 대규모 임상 ECG 데이터베이스인 HEEDB**를 기반으로 학습된다. 기존 self-supervised learning 방식과 달리, 심장 전문의와 ECG technician의 실제 임상 주석을 직접 활용하는 **supervised foundation model** 방식을 채택한다.
+ECGFounder는 **단일 대규모 임상 ECG 데이터베이스인 HEEDB**를 기반으로 학습된다. 
+HEEDB는 1,818,247명의 고유 피험자에게서 수집된 10,771,552개의 전문가 주석 ECG로 구성되어 있다. ECG 기록은 대부분 10초 길이의 12-lead clinical ECG이며, 각 ECG에는 심장 전문의와 ECG technician이 제공한 주석이 함께 연결되어 있다. HEEDB의 annotation은 ECG와 연결된 discrete text report 형태로 제공되며, ECG의 morphology, rhythm, diagnostic information을 포함한다. 저자들은 이 주석을 regular expression으로 parsing하여 287개의 independent phrase를 추출한 뒤, 의사 검토를 통해 ECG 설명과 관련 없는 항목을 제거하고 최종 150개의 meaningful label로 정리했다.
 
-- **Dataset**: Harvard-Emory ECG Database (HEEDB)
-- **Raw scale**: 10,771,552개의 전문가 주석 ECG, 1,818,247명의 고유 환자, 대부분 10초 길이의 12-lead 임상 ECG
-- **Label scale**: 심장 전문의 및 ECG technician 주석에서 추출한 **150개의 의미 있는 ECG 진단/리듬/형태 label**
-- **Dataset split**: development set 7,519,035 ECGs, test set 834,926 ECGs
+- **데이터셋**: Harvard-Emory ECG Database (HEEDB)
+- **전처리 후**: ECGFounder 학습에 사용되는 development dataset과 내부 평가용 held-out test dataset으로 분할. Development dataset은 1,319,128명 환자의 7,519,035개 ECG로 구성, test dataset은 146,570명 환자의 834,926개 ECG로 구성. Test dataset은 downstream task용 데이터가 아니라, HEEDB 내부에서 모델의 진단 성능을 평가하기 위한 내부 평가 데이터.
+
 
 ### Preprocessing procedure
 
-1. 판독 불가능한 파일, 결측 데이터, 매칭되지 않은 데이터 제거
-2. Linear interpolation으로 ECG signal을 **500 Hz로 resampling**
-3. Baseline drift 제거를 위해 **0.5 Hz high-pass filter** 적용
-4. 고주파 잡음 제거를 위해 **second-order 50 Hz Butterworth low-pass filter** 적용
-5. 전기적 간섭 제거를 위해 **50/60 Hz notch filter** 적용
-6. 10초보다 긴 ECG record는 순차적으로 **10-second window**로 분할, 10초보다 짧으면 **zero padding** 적용
-7. 각 signal segment를 해당 segment의 mean과 standard deviation으로 정규화
-8. ECG annotation은 정규표현식으로 discrete label을 파싱한 뒤, 의학적으로 의미 있는 label만 선별하여 **150개 label**로 정리
+1. - unreadable files, missing data, unmatched data 제거
+
+2. - 전처리 후 development dataset과 test dataset 구성
+   - development dataset: 1,319,128명 환자의 7,519,035개 ECG
+   - test dataset: 146,570명 환자의 834,926개 ECG
+
+3. - linear interpolation을 통한 ECG sampling frequency 500 Hz resampling
+
+4. - residual baseline drift 제거를 위한 cutoff frequency 0.5 Hz high-pass filter 적용
+
+5. - high-frequency noise 감소를 위한 second-order 50 Hz Butterworth low-pass filter 적용
+
+6. - 전기적 간섭 제거를 위한 50/60 Hz notch filter 적용
+
+7. - 10초 초과 ECG record의 순차적 10-second window 분할
+
+8. - 10초 미만 ECG sequence에 대한 zero padding 적용
+
+9. - 각 individual signal segment의 mean과 standard deviation을 이용한 signal 정규화
+
 
 ### Pre-training Datasets
 
@@ -50,20 +56,7 @@ ECGFounder는 **단일 대규모 임상 ECG 데이터베이스인 HEEDB**를 기
 | HEEDB (Harvard-Emory ECG Database) | 1,818,247명 | 10,771,552개 전문가 주석 ECG | Development: 7,519,035 ECGs / Test: 834,926 ECGs | → 500 | https://bdsp.io/content/heedb/1.0/ |
 
 ## Downstream Datasets
-
-ECGFounder는 pre-training 이후 다양한 외부 데이터셋에서 검증 및 downstream task 평가를 수행한다. 이 데이터셋들은 사전학습에 사용되지 않는다.
-
-| Dataset | Task 유형 | 비고 |
-|---------|----------|------|
-| CODE-test | 12-lead ECG 진단 (외부 검증) | 평균 AUROC 0.981 달성 |
-| PTB-XL | 12-lead ECG 진단 (외부 검증) | 평균 AUROC 0.924 |
-| PhysioNet Challenge 2017 | 단일 리드 리듬 분류 | 외부 검증 |
-| MIMIC-IV-ECG | Fine-tuning | 다양한 downstream task |
-| DeepBeat PPG dataset | Cross-modality 검증 | PPG 기반 심방세동 검출 |
-
-**주요 downstream tasks**: age 회귀/분류, sex 감지, 만성 신장질환(CKD) 검출, 만성 심장질환(CHD) 검출, 좌심실 박출률(LVEF) 회귀/분류, NT-proBNP 회귀/분류, PPG 기반 심방세동 검출
-
-**주요 결과**: 내부 검증 세트에서 80개 진단에 대해 AUROC 0.95 이상 달성. 심방세동(AF) AUROC 0.996, 20개 분류 항목 평균 AUROC 0.968, 심장전문의 평균 F1 0.640 대비 모델 F1 0.677로 우위.
+ECGFounder의 평가 데이터셋은 크게 외부 검증용 데이터셋과 fine-tuning 기반 downstream task 데이터셋으로 나뉜다. 외부 검증용 데이터셋에는 CODE-test, PTB-XL, PhysioNet Challenge-2017이 포함된다. fine-tuning 기반 downstream task 데이터셋에는 MIMIC-IV-ECG와 DeepBeat이 포함된다. 즉 전자는 모델의 외부 일반화 성능을 평가하는 데 사용되고, 후자는 다양한 임상 과제와 cross-modality task로의 전이 성능을 평가하는 데 사용된다
 
 ## How to Reproduce the Pre-training Preprocessing
 

@@ -8,9 +8,7 @@
 
 ## Motivation
 
-기존 ECG 분석 모델들은 특정 task에 특화된 방식으로 설계되어, 대규모 annotated dataset을 필요로 한다. Self-supervised learning(SSL) 기반의 foundation model은 사전학습을 통해 이 annotation 부담을 완화할 수 있다. 그러나 당시 open-weight ECG foundation model이 매우 드물었고, 이로 인해 연구자들이 모델을 재현하거나 cross-study 비교를 수행하기가 어려웠다.
-
-ECG-FM은 이 문제를 해결하기 위해 **코드, 모델 가중치(weights), 벤치마크 task를 모두 공개**한 open ECG foundation model이다. 1.5M ECG 데이터로 사전학습하고, MIMIC-IV-ECG 기반의 공개 벤치마크를 함께 제공함으로써 ECG AI 연구의 재현성과 확장성을 높이는 것을 핵심 목표로 한다.
+기존 ECG 분석 모델들은 특정 task에 특화된 방식으로 설계되어, 새로운 임상 과제로 확장하려면 여전히 많은 라벨 데이터가 필요하다. ECG foundation model은 self-supervised learning을 통해 라벨 없는 ECG에서 구조와 의미를 먼저 학습하고, 이후 다양한 downstream task에 적은 라벨로 전이할 수 있다는 장점이 있다. 하지만 기존 generative SSL은 낮은 수준의 구조 복원에 치우치고, contrastive SSL은 augmentation으로 인해 생리학적 의미가 왜곡되는 faulty alignment 문제가 발생할 수 있다. 또한 ECG 분야는 공개된 code와 pretrained weights가 부족해 재현성과 비교 가능성이 낮다는 문제가 있다. ECG-FM은 이러한 한계를 해결하기 위해 hybrid self-supervised learning으로 사전학습한 open-weight ECG foundation model을 제안하고, ECG foundation model의 활용 장벽을 낮추는 것을 목표로 한다
 
 ## Architecture Summary
 

@@ -23,9 +23,8 @@ ECGFounder는 **단일 대규모 임상 ECG 데이터베이스인 HEEDB**를 기
 HEEDB는 1,818,247명의 고유 피험자에게서 수집된 10,771,552개의 전문가 주석 ECG로 구성되어 있다. ECG 기록은 대부분 10초 길이의 12-lead clinical ECG이며, 각 ECG에는 심장 전문의와 ECG technician이 제공한 주석이 함께 연결되어 있다. HEEDB의 annotation은 ECG와 연결된 discrete text report 형태로 제공되며, ECG의 morphology, rhythm, diagnostic information을 포함한다. 저자들은 이 주석을 regular expression으로 parsing하여 287개의 independent phrase를 추출한 뒤, 의사 검토를 통해 ECG 설명과 관련 없는 항목을 제거하고 최종 150개의 meaningful label로 정리했다.
 
 - **데이터셋**: Harvard-Emory ECG Database (HEEDB)
-- **전처리 후**: ECGFounder 학습에 사용되는 development dataset과 내부 평가용 held-out test dataset으로 분할. Development dataset은 1,319,128명 환자의 7,519,035개 ECG로 구성, test dataset은 146,570명 환자의 834,926개 ECG로 구성. Test dataset은 downstream task용 데이터가 아니라, HEEDB 내부에서 모델의 진단 성능을 평가하기 위한 내부 평가 데이터.
-
-
+- **전처리 후**: ECGFounder 학습에 사용되는 development dataset과 내부 평가용 held-out test dataset으로 분할. Development dataset은 1,319,128명 환자의 7,519,035개 ECG로 구성, test dataset은 146,570명 환자의 834,926개 ECG로 구성. Test dataset은 downstream task용 데이터가 아니라, HEEDB 내부에서 모델의 진단 성능을 평가하기 위한 내부 평가 데이터
+ 
 ### Preprocessing procedure
 
 - 1. unreadable files, missing data, unmatched data 제거

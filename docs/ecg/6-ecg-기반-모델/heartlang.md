@@ -4,11 +4,8 @@
 > Jiarui Jin, Haoyu Wang, Hongyan Li, Jun Li, Jiahui Pan, Shenda Hong. **ICLR 2025.**
 
 - [Paper (OpenReview)](https://openreview.net/forum?id=6Hz1Ko087B)
-- [Paper (arXiv)](https://arxiv.org/abs/2502.10707)
 - [Official code](https://github.com/PKUDigitalHealth/HeartLang)
-- [Pre-trained checkpoints](https://huggingface.co/PKUDigitalHealth/HeartLang)
-- [QRS-Tokenizer script](https://github.com/PKUDigitalHealth/HeartLang/blob/main/QRSTokenizer.py)
-- [Downstream preprocessing scripts folder](https://github.com/PKUDigitalHealth/HeartLang/tree/main/datasets/dataset_preprocess)
+- [Preprocessing scripts folder](https://github.com/PKUDigitalHealth/HeartLang/tree/main/datasets/dataset_preprocess)
 
 ## Motivation
 

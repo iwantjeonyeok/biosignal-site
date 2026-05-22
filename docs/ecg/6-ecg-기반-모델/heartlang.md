@@ -75,7 +75,7 @@ Fine-tuning scripts: [`scripts/finetune`](https://github.com/PKUDigitalHealth/He
 
 ```bash
 # 1) MIMIC-IV-ECG 접근 (PhysioNet credentialed access 필요, 무료)
-#    https://physionet.org/content/mimic-iv-ecg/
+# https://physionet.org/content/mimic-iv-ecg/
 
 # 2) HeartLang 클론
 git clone https://github.com/PKUDigitalHealth/HeartLang.git

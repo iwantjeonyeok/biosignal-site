@@ -3,12 +3,12 @@
 > **Reading Your Heart: Learning ECG Words and Sentences via Pre-training ECG Language Model**
 > Jiarui Jin, Haoyu Wang, Hongyan Li, Jun Li, Jiahui Pan, Shenda Hong. **ICLR 2025.**
 
-- Paper (OpenReview): https://openreview.net/forum?id=6Hz1Ko087B
-- Paper (arXiv): https://arxiv.org/abs/2502.10707
-- Official code: https://github.com/PKUDigitalHealth/HeartLang
-- Pre-trained checkpoints: https://huggingface.co/PKUDigitalHealth/HeartLang
-- QRS-Tokenizer script: https://github.com/PKUDigitalHealth/HeartLang/blob/main/QRSTokenizer.py
-- Downstream preprocessing scripts folder: https://github.com/PKUDigitalHealth/HeartLang/tree/main/datasets/dataset_preprocess
+- [Paper (OpenReview)](https://openreview.net/forum?id=6Hz1Ko087B)
+- [Paper (arXiv)](https://arxiv.org/abs/2502.10707)
+- [Official code](https://github.com/PKUDigitalHealth/HeartLang)
+- [Pre-trained checkpoints](https://huggingface.co/PKUDigitalHealth/HeartLang)
+- [QRS-Tokenizer script](https://github.com/PKUDigitalHealth/HeartLang/blob/main/QRSTokenizer.py)
+- [Downstream preprocessing scripts folder](https://github.com/PKUDigitalHealth/HeartLang/tree/main/datasets/dataset_preprocess)
 
 ## Motivation
 
@@ -35,7 +35,7 @@ HeartLang은 MIMIC-IV-ECG를 사용하여 VQ-HBR training과 masked ECG sentence
 - **사용 목적:** VQ-HBR training 및 masked ECG sentence pre-training
 - **특징:** ECG recording만 사용하며, clinical report text supervision은 사용하지 않음
 
-### Preprocessing procedure
+### Preprocessing Pipeline (paper §3)
 
 
 1. MIMIC-IV-ECG의 raw ECG recording에서 `NaN`과 `Inf` 값은 주변 6개 point의 평균값으로 대체한다.
@@ -49,7 +49,7 @@ HeartLang은 MIMIC-IV-ECG를 사용하여 VQ-HBR training과 masked ECG sentence
 
 공식 README 기준으로 MIMIC-IV preprocessing은 `mimic_preprocess.py`로 수행하고, ECG sentence generation은 [`QRSTokenizer.py`](https://github.com/PKUDigitalHealth/HeartLang/blob/main/QRSTokenizer.py)로 수행한다.
 
-### Pre-training Datasets
+## Pre-training Dataset
 
 | Dataset | Subjects | Raw hours | #Samples after preprocessing | Rate (Hz) | Access |
 |---------|----------|-----------|------------------------------|-----------|--------|

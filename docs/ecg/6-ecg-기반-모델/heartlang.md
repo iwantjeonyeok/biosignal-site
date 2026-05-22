@@ -29,11 +29,11 @@ HeartLang은 세 가지 핵심 설계를 통해 위의 문제를 해결한다.
 ## Pre-training Data Summary
 HeartLang은 MIMIC-IV-ECG를 사용하여 VQ-HBR training과 masked ECG sentence pre-training을 수행한다.
 
-**데이터셋**: MIMIC-IV-ECG
-**원시 규모:** 161,352명 피험자 · 800,035개 12-lead ECG recording
-**신호 형식:** 500 Hz · 10초 길이 · 12-lead ECG
-**사용 목적:** VQ-HBR training 및 masked ECG sentence pre-training
-**특징:** ECG recording만 사용하며, clinical report text supervision은 사용하지 않음
+-**데이터셋**: MIMIC-IV-ECG
+-**원시 규모:** 161,352명 피험자 · 800,035개 12-lead ECG recording
+-**신호 형식:** 500 Hz · 10초 길이 · 12-lead ECG
+-**사용 목적:** VQ-HBR training 및 masked ECG sentence pre-training
+-**특징:** ECG recording만 사용하며, clinical report text supervision은 사용하지 않음
 
 ### Preprocessing procedure
 

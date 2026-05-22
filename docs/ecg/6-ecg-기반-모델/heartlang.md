@@ -12,50 +12,40 @@
 
 ## Motivation
 
-기존 ECG self-supervised learning(eSSL) 방법들은 ECG signal을 일반적인 time-series data처럼 다루며, **fixed-size and fixed-step time windows**로 신호를 분할하여 학습하는 방식이 대부분이다. 이 접근법은 ECG 신호가 가진 고유한 **형태(form)와 리듬(rhythm)** 특성, 그리고 heartbeat 간의 내재적 의미 관계를 무시한다는 한계가 있다.
-
-HeartLang은 ECG signal을 하나의 언어처럼 해석한다는 새로운 관점을 제안한다. **heartbeats as words, rhythms as sentences**라는 비유를 바탕으로, 개별 heartbeat의 형태 정보와 heartbeat 시퀀스의 리듬 문맥을 함께 학습하는 framework를 구축하여, annotation 없이도 일반적이고 의미 있는 ECG 표현을 학습하는 것을 목표로 한다.
+기존 ECG 기반 딥러닝 모델은 대규모 고품질 라벨 데이터에 의존하며, 특정 데이터셋과 과제에 맞춰 설계되는 경우가 많아 새로운 임상 과제에 일반화하는 데 한계가 있다. 이를 해결하기 위해 ECG 자기지도학습이 발전해왔지만, 대부분의 기존 방법은 ECG를 일반적인 시계열 데이터처럼 취급하여 고정된 크기와 간격으로 신호를 분할한다. 이러한 방식은 ECG의 핵심적인 특성인 개별 심박의 형태 정보와 전체 심장 리듬의 흐름을 충분히 반영하지 못하며, 심박 사이에 존재할 수 있는 잠재적 의미 관계도 약화시킬 수 있다. 특히 ECG 진단에서는 단일 심박의 형태 변화와 여러 심박이 만드는 리듬 패턴이 모두 중요하기 때문에, ECG 신호의 고유한 구조를 반영한 표현학습 방식이 필요하다. HeartLang은 이러한 한계를 해결하기 위해 심박 단위와 리듬 단위를 중심으로 ECG를 재구성하고, 라벨 없이도 심박의 형태 수준 표현과 리듬 수준 표현을 함께 학습하는 새로운 ECG 자기지도학습 프레임워크를 제안한다.
 
 ## Architecture Summary
 
-HeartLang은 **두 단계의 self-supervised learning**으로 구성된다.
+HeartLang은 세 가지 핵심 설계를 통해 위의 문제를 해결한다.
 
-**Stage 1 — VQ-HBR (Vector-Quantized Heartbeat Reconstruction)**
+첫째, **QRS-Tokenizer**가 10초 길이의 multi-lead ECG segment에서 QRS complex를 검출하고, 이를 기준으로 각 lead의 심박 구간을 분할한다. 이렇게 얻은 개별 심박 조각은 individual ECG word로 간주되며, 12-lead에서 추출된 ECG word들을 순서대로 연결해 하나의 ECG sentence를 구성한다. 심박수 차이로 인해 문장 길이가 달라지는 문제는 padding과 truncation으로 처리한다.
 
-- QRS-Tokenizer로 분할된 heartbeat patches를 **vector quantization**으로 collective ECG words에 mapping
-- 8,192-entry codebook, 128-dimensional collective ECG words 사용
-- 학습 후 validation set에서 실제 사용된 vocabulary: **5,394개의 discrete ECG words**
-- 목적: 형태(form) 수준의 ECG vocabulary 구축
+둘째, **ST-ECGFormer**는 생성된 ECG sentence를 입력받아 ECG word의 표현을 학습하는 Transformer 기반 backbone이다. 각 ECG word는 token embedding으로 변환되고, 여기에 lead 정보를 반영하는 spatial embedding, 시간 구간 정보를 반영하는 temporal embedding, 문장 내 순서를 반영하는 position embedding이 더해진다. 이를 통해 모델은 개별 심박의 파형뿐 아니라, 해당 심박이 어느 lead와 시간 위치에서 나타났는지도 함께 고려한다.
 
-**Stage 2 — Masked ECG Sentence Pre-training**
+셋째, **ECG vocabulary**는 개별 ECG word를 더 일반화된 collective ECG word로 매핑하기 위해 사용된다. HeartLang은 한쪽 흐름에서는 ECG vocabulary를 통해 얻은 collective ECG word를 decoder로 복원하며 심박의 형태 정보를 학습하고, 다른 흐름에서는 일부 ECG word가 가려진 ECG sentence를 입력받아 해당 위치의 collective ECG word index를 예측한다. 이를 통해 심박의 형태적 의미와 ECG sentence 안에서의 리듬적 문맥 관계를 함께 학습하도록 설계된다.
 
-- ECG sentence 내 individual ECG words의 **50%를 random masking**
-- 마스킹된 위치의 collective ECG word index를 예측하도록 **Transformer 기반 모델** 학습
-- 목적: 리듬(rhythm) 수준의 문맥 표현 학습
-
-**QRS-Tokenizer**는 raw ECG signal에서 QRS complex를 검출하여 의미 단위로 segmentation을 수행하는 핵심 전처리 모듈이며, 이를 통해 역대 최대 규모의 **heartbeat 기반 ECG vocabulary**를 구축한다.
+전체적으로 HeartLang은 QRS-Tokenizer로 ECG sentence를 만들고, ST-ECGFormer로 시공간 정보를 반영하며, ECG vocabulary 기반 복원과 예측 구조를 통해 심박 형태와 리듬 문맥을 함께 학습하는 프레임워크이다.
 
 ## Pre-training Data Summary
+HeartLang은 MIMIC-IV-ECG를 사용하여 VQ-HBR training과 masked ECG sentence pre-training을 수행한다.
 
-HeartLang은 대규모 임상 ECG 데이터베이스인 **MIMIC-IV-ECG**를 기반으로 사전학습된다. 학습 방식은 VQ-HBR과 masked ECG sentence pre-training의 두 단계로 구성된다.
-
-- **Dataset**: MIMIC-IV-ECG Diagnostic Electrocardiogram Matched Subset
-- **Raw scale**: 800,035개의 12-lead ECG recordings, 161,352명의 subjects, 각 recording은 10초 길이, sampling rate 500 Hz
-- **After preprocessing**: 모든 ECG recording을 **100 Hz**로 downsample한 뒤, QRS-Tokenizer를 통해 ECG sentences로 변환
-- **Dataset split**: **720,031 train ECGs** / **80,004 valid ECGs**
-- **ECG sentence format**: 최대 sequence length **l = 256**, heartbeat window size **t = 96**, 12-lead에서 추출한 heartbeat words를 순서대로 연결
+**데이터셋**: MIMIC-IV-ECG
+**원시 규모:** 161,352명 피험자 · 800,035개 12-lead ECG recording
+**신호 형식:** 500 Hz · 10초 길이 · 12-lead ECG
+**사용 목적:** VQ-HBR training 및 masked ECG sentence pre-training
+**특징:** ECG recording만 사용하며, clinical report text supervision은 사용하지 않음
 
 ### Preprocessing procedure
 
-1. MIMIC-IV-ECG에서 10초 길이의 12-lead ECG recordings 사용
-2. `NaN`과 `Inf` 값을 주변 6개 포인트의 평균값으로 대체
-3. 모든 ECG record를 **100 Hz**로 downsample
-4. **QRS-Tokenizer** 적용: lead I signal에 **5–20 Hz band-pass filter** → Ricker wavelet 기반 moving wave integration → squared integration signal에서 local maxima 탐색 → QRS complexes 검출
-5. 검출된 QRS index를 중심으로 heartbeat patch 분할. 각 lead별로 독립 segmentation, 인접 QRS index 사이의 midpoint를 interval boundary로 사용
-6. Heartbeat interval이 **t = 96**보다 짧으면 zero-padding 적용
-7. 12-lead heartbeat patches를 순서대로 연결해 ECG sentence 구성. 길이가 **l = 256**보다 짧으면 zero-filled patches 추가, 길면 l = 256까지만 사용
-8. **VQ-HBR** 단계: individual ECG words를 vector quantization으로 collective ECG words에 mapping하고 heartbeat patches를 reconstruction하도록 학습
-9. **Masked ECG sentence pre-training** 단계: individual ECG words의 50%를 random masking 후, 마스킹된 위치의 collective ECG word index를 예측하도록 학습
+
+1. MIMIC-IV-ECG의 raw ECG recording에서 `NaN`과 `Inf` 값은 주변 6개 point의 평균값으로 대체한다.
+2. 모든 ECG recording을 500 Hz에서 **100 Hz**로 downsampling한다.
+3. **QRS-Tokenizer**를 사용하여 raw ECG recording을 통일된 ECG sentence 형태로 변환한다.
+4. QRS detection을 위해 lead I 신호에 **5–20 Hz band-pass filter**를 적용하고, Ricker wavelet 기반 moving wave integration을 수행한다.
+5. moving wave integration signal의 local maxima를 탐색하여, refractory period 이후에 QRS detection threshold를 넘는 지점을 QRS complex로 판정한다.
+6. 검출된 QRS complex index를 중심으로 각 lead의 심박 구간을 분할한다. 분할된 구간이 time window size인 **t = 96**보다 짧으면 zero padding을 적용한다.
+7. 12-lead에서 추출된 개별 심박 조각을 순서대로 연결해 ECG sentence를 구성한다. 논문에서는 ECG sentence의 최대 길이를 **l = 256**, 각 ECG word의 time window size를 **t = 96**으로 설정한다.
+8. 문장 길이가 **l**보다 짧으면 zero-filled patch로 padding하고, **l**보다 길면 truncation한다.
 
 공식 README 기준으로 MIMIC-IV preprocessing은 `mimic_preprocess.py`로 수행하고, ECG sentence generation은 [`QRSTokenizer.py`](https://github.com/PKUDigitalHealth/HeartLang/blob/main/QRSTokenizer.py)로 수행한다.
 

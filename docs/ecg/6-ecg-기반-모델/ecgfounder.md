@@ -28,25 +28,25 @@ HEEDB는 1,818,247명의 고유 피험자에게서 수집된 10,771,552개의 �
 
 ### Preprocessing procedure
 
-1. - unreadable files, missing data, unmatched data 제거
+- 1. unreadable files, missing data, unmatched data 제거
 
-2. - 전처리 후 development dataset과 test dataset 구성
-   - development dataset: 1,319,128명 환자의 7,519,035개 ECG
-   - test dataset: 146,570명 환자의 834,926개 ECG
+- 2. 전처리 후 development dataset과 test dataset 구성  
+  - development dataset: 1,319,128명 환자의 7,519,035개 ECG  
+  - test dataset: 146,570명 환자의 834,926개 ECG
 
-3. - linear interpolation을 통한 ECG sampling frequency 500 Hz resampling
+- 3. linear interpolation을 통한 ECG sampling frequency 500 Hz resampling
 
-4. - residual baseline drift 제거를 위한 cutoff frequency 0.5 Hz high-pass filter 적용
+- 4. residual baseline drift 제거를 위한 cutoff frequency 0.5 Hz high-pass filter 적용
 
-5. - high-frequency noise 감소를 위한 second-order 50 Hz Butterworth low-pass filter 적용
+- 5. high-frequency noise 감소를 위한 second-order 50 Hz Butterworth low-pass filter 적용
 
-6. - 전기적 간섭 제거를 위한 50/60 Hz notch filter 적용
+- 6. 전기적 간섭 제거를 위한 50/60 Hz notch filter 적용
 
-7. - 10초 초과 ECG record의 순차적 10-second window 분할
+- 7. 10초 초과 ECG record의 순차적 10-second window 분할
 
-8. - 10초 미만 ECG sequence에 대한 zero padding 적용
+- 8. 10초 미만 ECG sequence에 대한 zero padding 적용
 
-9. - 각 individual signal segment의 mean과 standard deviation을 이용한 signal 정규화
+- 9. 각 individual signal segment의 mean과 standard deviation을 이용한 signal 정규화
 
 
 ### Pre-training Datasets

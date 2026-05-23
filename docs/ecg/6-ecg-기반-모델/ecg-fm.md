@@ -21,7 +21,7 @@ ECG-FM은 두 개의 공개 데이터셋을 결합한 **약 87만 개의 ECG**�
 - **데이터셋**: PhysioNet 2021, MIMIC-IV-ECG
 - **원시 규모**: PhysioNet 2021(87,662개 · ECG피험자 수 NR), MIMIC-IV-ECG(800,035개 ECG · 161,352명 피험자)
 - **전처리 후**: 873,706개 ECG, 5초 단위로 분할된 1,757,054개 sample
-- 
+
 ### Preprocessing procedure
 
 1. 원시 파형(raw waveform) 및 메타데이터(sample rate, 환자 정보 등) 추출
@@ -33,23 +33,15 @@ ECG-FM은 두 개의 공개 데이터셋을 결합한 **약 87만 개의 ECG**�
 
 ### Pre-training Datasets
 
-| Dataset | Subjects | ECG 수 | 샘플 수 (전처리 후) | Rate (Hz) | Access |
+| Dataset | Subjects | RAW ECG 수 | RAW 샘플 수  | Rate (Hz) | Access |
 |---------|--------|--------|-------------------|-----------|--------|
 | PhysioNet 2021 | 178,140명 | 625,139개 | — | → 500 | 공개 → https://physionet.org/content/challenge-2021/ |
 | MIMIC-IV-ECG | 161,352명 | 800,035개 | — | → 500 | PhysioNet 계정 필요 (무료) → https://physionet.org/content/mimic-iv-ecg/ |
-| **합계 (사전학습)** | — | **873,706개** | **1,757,054개** | — | — |
+
 
 ## Downstream Datasets
 
-ECG-FM은 세 가지 downstream task로 평가하며, 이 데이터셋들은 사전학습에는 사용되지 않는다.
-
-| Task | Dataset | ECG 수 | 비고 |
-|-----|---------|--------|------|
-| ECG 해석 레이블 예측 | UHN-ECG | 573,670개 | 심장전문의 over-read 레이블 |
-| ECG 해석 레이블 예측 (공개 벤치마크) | MIMIC-IV-ECG | 787,677개 | 논문과 함께 공개된 벤치마크 task |
-| 좌심실 박출률 감소(LVEF) 예측 | UHN-ECG | 129,121개 | 심초음파 보고서 연계 (±7일 이내) |
-
-**주요 결과**: 심방세동(AF) AUROC 0.996, LVEF ≤40% AUROC 0.929. 소~중규모 데이터 환경에서 task-specific 모델 대비 현저한 성능 우위.
+ECG-FM은 UHN-ECG와 MIMIC-IV-ECG의 2개 데이터셋을 기반으로, UHN-ECG interpretation, MIMIC-IV-ECG machine reads, UHN-ECG reduced LVEF의 총 3개 downstream task에서 평가되었다.
 
 ## How to Reproduce the Pre-training Preprocessing
 

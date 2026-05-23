@@ -4,7 +4,8 @@
 > Kaden McKeen, Sameer Masood, Augustin Toma, Barry Rubin, Bo Wang. **JAMIA Open 2025.**
 
 - [Paper (arXiv)](https://arxiv.org/abs/2408.05178)
-- [Official code (fairseq-signals)](https://github.com/Jwoo5/fairseq-signals)
+- [Official code](https://github.com/bowang-lab/ECG-FM/.)
+- [Preprocessing scripts folder (fairseq-signals)](https://github.com/Jwoo5/fairseq-signals)
 
 ## Motivation
 

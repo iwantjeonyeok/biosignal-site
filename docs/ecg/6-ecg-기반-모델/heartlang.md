@@ -25,14 +25,14 @@ HeartLang은 MIMIC-IV-ECG를 사용하여 VQ-HBR training과 masked ECG sentence
 ### Preprocessing Pipeline
 
 
-1. MIMIC-IV-ECG의 raw ECG recording에서 `NaN`과 `Inf` 값은 주변 6개 point의 평균값으로 대체한다.
-2. 모든 ECG recording을 500 Hz에서 **100 Hz**로 downsampling한다.
-3. **QRS-Tokenizer**를 사용하여 raw ECG recording을 통일된 ECG sentence 형태로 변환한다.
-4. QRS detection을 위해 lead I 신호에 **5–20 Hz band-pass filter**를 적용하고, Ricker wavelet 기반 moving wave integration을 수행한다.
-5. moving wave integration signal의 local maxima를 탐색하여, refractory period 이후에 QRS detection threshold를 넘는 지점을 QRS complex로 판정한다.
-6. 검출된 QRS complex index를 중심으로 각 lead의 심박 구간을 분할한다. 분할된 구간이 time window size인 **t = 96**보다 짧으면 zero padding을 적용한다.
-7. 12-lead에서 추출된 개별 심박 조각을 순서대로 연결해 ECG sentence를 구성한다. 논문에서는 ECG sentence의 최대 길이를 **l = 256**, 각 ECG word의 time window size를 **t = 96**으로 설정한다.
-8. 문장 길이가 **l**보다 짧으면 zero-filled patch로 padding하고, **l**보다 길면 truncation한다.
+1. MIMIC-IV-ECG의 raw ECG recording에서 `NaN`과 `Inf` 값은 주변 6개 point의 평균값으로 대체.
+2. 모든 ECG recording을 500 Hz에서 **100 Hz**로 downsampling.
+3. **QRS-Tokenizer**를 사용하여 raw ECG recording을 통일된 ECG sentence 형태로 변환.
+4. QRS detection을 위해 lead I 신호에 **5–20 Hz band-pass filter**를 적용하고, Ricker wavelet 기반 moving wave integration을 수행.
+5. moving wave integration signal의 local maxima를 탐색하여, refractory period 이후에 QRS detection threshold를 넘는 지점을 QRS complex로 판정.
+6. 검출된 QRS complex index를 중심으로 각 lead의 심박 구간을 분할. 분할된 구간이 time window size인 **t = 96**보다 짧으면 zero padding을 적용
+7. 12-lead에서 추출된 개별 심박 조각을 순서대로 연결해 ECG sentence를 구성. 논문에서는 ECG sentence의 최대 길이를 **l = 256**, 각 ECG word의 time window size를 **t = 96**으로 설정.
+8. 문장 길이가 **l**보다 짧으면 zero-filled patch로 padding하고, **l**보다 길면 truncation을 적용해 길이를 통일
 
 공식 README 기준으로 MIMIC-IV preprocessing은 `mimic_preprocess.py`로 수행하고, ECG sentence generation은 [`QRSTokenizer.py`](https://github.com/PKUDigitalHealth/HeartLang/blob/main/QRSTokenizer.py)로 수행한다.
 
@@ -43,8 +43,8 @@ HeartLang은 MIMIC-IV-ECG를 사용하여 VQ-HBR training과 masked ECG sentence
 | MIMIC-IV-ECG Diagnostic ECG Matched Subset | 161,352명 | 약 2,222시간 (800,035 × 10초) | 800,035 ECG sentences (720,031 train / 80,004 valid) | 500 → 100 | PhysioNet credentialed access (무료) → https://physionet.org/content/mimic-iv-ecg/ |
 
 ## Downstream Datasets
-HeartLang은 아래 세 개의 공개 ECG 데이터셋에서 총 여섯 가지 benchmark setting으로 평가된다. PTB-XL은 Superclass, Subclass, Form, Rhythm 네 가지 task로 나누어 사용되며, CPSC2018과 Chapman-Shaoxing-Ningbo(CSN)는 각각 9개 label, 38개 label 분류 task로 평가된다.
-Downstream dataset preprocessing code는 datasets/dataset_preprocess, fine-tuning scripts는 scripts/finetune을 참고한다.
+HeartLang은 아래 3개의 공개 ECG 데이터셋에서 총 6가지 benchmark setting으로 평가된다. PTB-XL은 Superclass, Subclass, Form, Rhythm 네 가지 task로 나누어 사용되며, CPSC2018과 Chapman-Shaoxing-Ningbo(CSN)는 각각 9개 label, 38개 label 분류 task로 평가된다.
+Downstream dataset preprocessing code는 ['datasets/dataset_preprocess'], fine-tuning scripts는 ['scripts/finetune']을 참고한다.
 
 - Downstream dataset preprocessing code: [`datasets/dataset_preprocess`](https://github.com/PKUDigitalHealth/HeartLang/tree/main/datasets/dataset_preprocess)  
 - Fine-tuning scripts: [`scripts/finetune`](https://github.com/PKUDigitalHealth/HeartLang/tree/main/scripts/finetune)

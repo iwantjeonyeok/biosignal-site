@@ -4,7 +4,7 @@
 > Kaden McKeen, Sameer Masood, Augustin Toma, Barry Rubin, Bo Wang. **JAMIA Open 2025.**
 
 - [Paper (arXiv)](https://arxiv.org/abs/2408.05178)
-- [Official code](https://github.com/bowang-lab/ECG-FM)
+- [Official code (fairseq-signals)](https://github.com/Jwoo5/fairseq-signals)
 
 ## Motivation
 
@@ -45,18 +45,80 @@ ECG-FM은 UHN-ECG와 MIMIC-IV-ECG의 2개 데이터셋을 기반으로, UHN-ECG 
 
 ## How to Reproduce the Pre-training Preprocessing
 
+ECG-FM의 공식 구현체는 [fairseq-signals](https://github.com/Jwoo5/fairseq-signals)이다. 아래 단계별 명령어를 통해 환경 설정부터 사전학습까지 재현할 수 있다.
+
+---
+
+**Step 1. 환경 설정 — fairseq-signals 설치**
+
+fairseq-signals는 ECG-FM을 포함한 여러 생리신호 SSL 모델의 공식 학습 프레임워크다. `--editable` 모드로 설치하면 코드 수정 사항이 즉시 반영되어 실험 재현 및 커스터마이징에 편리하다.
+
 ```bash
-# 1) MIMIC-IV-ECG 접근 (PhysioNet 계정 필요, 무료)
-#    https://physionet.org/content/mimic-iv-ecg/
-# 2) PhysioNet 2021 데이터 다운로드
-#    https://physionet.org/content/challenge-2021/
-# 3) 코드 클론
-git clone https://github.com/bowang-lab/ECG-FM
-cd ECG-FM && pip install -r requirements.txt
-# 4) 전처리 실행 (500 Hz resampling, Z-score normalization, 5초 분할)
-python preprocess.py
-# 5) 사전학습 실행 (A100 80GB GPU 3개, 200 epoch)
-python pretrain.py
+git clone https://github.com/Jwoo5/fairseq-signals
+cd fairseq-signals
+pip install --editable ./
+
+# ECG 전처리에 필요한 추가 패키지 설치
+# pandas: 메타데이터 CSV 처리 / scipy: 리샘플링 / wfdb: PhysioNet waveform 파일 읽기
+# pyarrow: Parquet 포맷 입출력 (대용량 데이터셋 저장에 사용)
+pip install pandas scipy wfdb pyarrow
+```
+
+---
+
+**Step 2. PhysioNet 2021 데이터 다운로드 및 전처리**
+
+PhysioNet 2021 Challenge 데이터셋을 다운로드한 뒤, ECG-FM 학습에 맞게 500 Hz 리샘플링 → Z-score 정규화 → 5초 분할 순서로 전처리한다. 이후 `manifest.py`로 학습·검증 파일 목록(manifest)을 생성하며, `--valid-percent`로 검증셋 비율을 지정할 수 있다.
+
+```bash
+# 원시 ECG 파형 전처리 (500 Hz 리샘플링, Z-score 정규화, 5초 분할)
+# --workers: 병렬 처리 worker 수 (CPU 코어 수에 맞게 설정)
+python fairseq_signals/data/ecg/preprocess/preprocess_physionet2021.py \
+    /path/to/physionet2021/ \
+    --dest /path/to/output \
+    --workers $N
+
+# 전처리된 파일들의 경로 목록(manifest)을 생성
+# --valid-percent: 검증셋으로 분리할 비율 (예: 0.05 = 5%)
+python fairseq_signals/data/ecg/preprocess/manifest.py \
+    /path/to/output \
+    --dest /path/to/manifest \
+    --valid-percent $valid
+```
+
+---
+
+**Step 3. MIMIC-IV-ECG 데이터 다운로드 및 전처리**
+
+MIMIC-IV-ECG는 PhysioNet credentialed access(무료 계정 + 교육 이수)가 필요하다. 다운로드 후 동일한 전처리 파이프라인을 적용하되, 이 데이터셋에는 자유 텍스트 ECG 해석(report)이 포함되어 있으므로 `ecg_text` 전용 전처리 스크립트를 사용한다.
+
+```bash
+# MIMIC-IV-ECG 전처리 (500 Hz 리샘플링, Z-score 정규화, 5초 분할 + 텍스트 report 정합)
+# PhysioNet credentialed access 필요: https://physionet.org/content/mimic-iv-ecg/
+python fairseq_signals/data/ecg_text/preprocess/preprocess_mimic_iv_ecg.py \
+    /path/to/mimic-iv-ecg \
+    --dest /path/to/output
+
+# manifest 생성 (학습/검증 파일 목록)
+python fairseq_signals/data/ecg_text/preprocess/manifest.py \
+    /path/to/output \
+    --dest /path/to/manifest \
+    --valid-percent $valid
+```
+
+---
+
+**Step 4. WCR 사전학습 실행**
+
+WCR(W2V + CMSC + RLM) 사전학습은 `fairseq-hydra-train` 명령어로 실행한다. 설정 파일(`w2v_cmsc_rlm`)은 wav2vec 2.0 masking loss, CMSC contrastive loss, RLM(Random Lead Masking)을 동시에 적용하는 hybrid SSL 구성을 정의한다. 논문 기준 A100 80GB GPU 3개, 200 epoch 학습.
+
+```bash
+# WCR hybrid SSL 사전학습 실행
+# --config-dir: Hydra 설정 파일 디렉토리
+# --config-name: 사용할 설정 파일명 (w2v_cmsc_rlm = W2V + CMSC + RLM 조합)
+fairseq-hydra-train \
+    --config-dir examples/w2v_cmsc/config/pretraining \
+    --config-name w2v_cmsc_rlm
 ```
 
 ## Citation

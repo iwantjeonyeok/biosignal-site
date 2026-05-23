@@ -14,7 +14,7 @@
 
 ## Architecture Summary
 
-ECGFounder는 10초 길이의 12유도 ECG를 입력받아 일반화 가능한 ECG 표현을 학습하는 Net1D/RegNet 기반 1D ECG 인코더이다. 모델은 단순히 시간축의 파형 변화만 학습하는 것이 아니라, 서로 다른 유도 사이의 관계와 전체 심장 전기 활동의 공간적 패턴까지 함께 반영하도록 설계되었다. 구조적으로는 네트워크 깊이에 따라 블록 수와 채널 수를 단계적으로 조절하는 RegNet 구조를 사용하며, bottleneck block, group convolution, channel-wise attention을 통해 ECG의 시간적 특징과 유도 간 공간적 특징을 함께 추출한다. 라벨 없이 신호 자체를 복원하거나 예측하는 자기지도학습 모델이 아니라, HEEDB의 실제 임상 전문가 주석을 활용해 150개 ECG 진단 라벨을 학습하는 다중 라벨 진단 모델이다. 실제 ECG 진단은 하나의 기록에 여러 진단명이 동시에 붙을 수 있고, 실제 임상 주석에는 일부 양성 라벨이 누락될 수 있기 때문에, ECGFounder는 라벨이 없는 항목을 무조건 음성으로 처리하지 않도록 positive unlabeled learning 기반 손실 함수를 적용한다. 또한 웨어러블 기기와 원격 모니터링 환경에서 중요한 single-lead ECG 분석을 지원하기 위해, 12유도 ECG에서 lead I를 중심으로 limb lead의 전기축 정보를 활용하는 lead augmentation을 적용하여 single-lead ECG에서도 리듬 정보와 전기축 관련 진단 정보를 학습할 수 있도록 설계되었다.
+ECGFounder는 10초 길이의 12유도 ECG를 입력받아 일반화 가능한 ECG 표현을 학습하는 Net1D/RegNet 기반 1D ECG 인코더이다. 모델은 단순히 시간축의 파형 변화만 학습하는 것이 아니라, 서로 다른 유도 사이의 관계와 전체 심장 전기 활동의 공간적 패턴까지 함께 반영하도록 설계되었다. 구조적으로는 네트워크 깊이에 따라 블록 수와 채널 수를 단계적으로 조절하는 **RegNet** 구조를 사용하며, bottleneck block, group convolution, channel-wise attention을 통해 ECG의 시간적 특징과 유도 간 공간적 특징을 함께 추출한다. 라벨 없이 신호 자체를 복원하거나 예측하는 자기지도학습 모델이 아니라, HEEDB의 실제 임상 전문가 주석을 활용해 150개 ECG 진단 라벨을 학습하는 **다중 라벨 진단 모델**이다. 실제 ECG 진단은 하나의 기록에 여러 진단명이 동시에 붙을 수 있고, 실제 임상 주석에는 일부 양성 라벨이 누락될 수 있기 때문에, ECGFounder는 라벨이 없는 항목을 무조건 음성으로 처리하지 않도록 **positive unlabeled learning** 기반 손실 함수를 적용한다. 또한 웨어러블 기기와 원격 모니터링 환경에서 중요한 single-lead ECG 분석을 지원하기 위해, 12유도 ECG에서 lead I를 중심으로 limb lead의 전기축 정보를 활용하는 lead augmentation을 적용하여 single-lead ECG에서도 리듬 정보와 전기축 관련 진단 정보를 학습할 수 있도록 설계되었다.
 
 ## Pre-training Data Summary
 
@@ -22,9 +22,11 @@ ECGFounder는 **단일 대규모 임상 ECG 데이터베이스인 HEEDB**를 기
 HEEDB는 1,818,247명의 고유 피험자에게서 수집된 10,771,552개의 전문가 주석 ECG로 구성되어 있다. ECG 기록은 대부분 10초 길이의 12-lead clinical ECG이며, 각 ECG에는 심장 전문의와 ECG technician이 제공한 주석이 함께 연결되어 있다. HEEDB의 annotation은 ECG와 연결된 discrete text report 형태로 제공되며, ECG의 morphology, rhythm, diagnostic information을 포함한다. 저자들은 이 주석을 regular expression으로 parsing하여 287개의 independent phrase를 추출한 뒤, 의사 검토를 통해 ECG 설명과 관련 없는 항목을 제거하고 최종 150개의 meaningful label로 정리했다.
 
 - **데이터셋**: Harvard-Emory ECG Database (HEEDB)
+- **원시 규모**: 1,818,247명 고유 피험자 · 10,771,552개 ECG 기록 · 대부분 10초 길이의 12유도 임상 ECG · 각 ECG 기록별 discrete text report 형태의 전문가 주석 
 - **전처리 후**: ECGFounder 학습에 사용되는 development dataset과 내부 평가용 held-out test dataset으로 분할. Development dataset은 1,319,128명 환자의 7,519,035개 ECG로 구성, test dataset은 146,570명 환자의 834,926개 ECG로 구성. Test dataset은 downstream task용 데이터가 아니라, HEEDB 내부에서 모델의 진단 성능을 평가하기 위한 내부 평가 데이터
  
 ### Preprocessing procedure
+HEEDB 데이터셋을 전처리하는 코드 파일은 별도로 존재하지 않으며, 논문에 작성된 전처리 절차는 아래와 같다.
 
 1. 판독 불가능한 파일, 결측 데이터, 매칭되지 않은 데이터 제거
 2. 전처리 후 development dataset과 test dataset 구성

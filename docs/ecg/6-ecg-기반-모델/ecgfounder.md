@@ -47,8 +47,7 @@ HEEDB 데이터셋을 전처리하는 코드 파일은 별도로 존재하지 �
 | HEEDB (Harvard-Emory ECG Database) | 1,818,247명 | 10,771,552개 전문가 주석 ECG | Development: 7,519,035 ECGs / Test: 834,926 ECGs | → 500 | https://bdsp.io/content/heedb/1.0/ |
 
 ## Downstream Datasets
-ECGFounder의 평가 데이터셋은 크게 외부 검증용 데이터셋과 fine-tuning 기반 downstream task 데이터셋으로 나뉜다. 외부 검증용 데이터셋에는 CODE-test, PTB-XL, PhysioNet Challenge-2017이 포함된다. fine-tuning 기반 downstream task 데이터셋에는 MIMIC-IV-ECG와 DeepBeat이 포함된다. 즉 전자는 모델의 외부 일반화 성능을 평가하는 데 사용되고, 후자는 다양한 임상 과제와 cross-modality task로의 전이 성능을 평가하는 데 사용된다
-
+ECGFounder는 총 12개의 clinical downstream task에서 평가되었다. 이 중 ECG diagnosis 2개 task는 HEEDB 내부 평가와 CODE-test, PTB-XL, PhysioNet Challenge-2017 외부 검증을 기반으로 수행되었고, 나머지 fine-tuning 기반 task는 MIMIC-ECG와 DeepBeat-PPG를 바탕으로 구성되었다.
 ## How to Reproduce the Pre-training Preprocessing
 
 ```bash

@@ -34,8 +34,8 @@ ECG-FM은 두 개의 공개 데이터셋을 결합한 **약 87만 개의 ECG**�
 
 ### Pre-training Datasets
 
-| Dataset | Subjects | RAW ECG 수  | Rate (Hz) | Access |
-|---------|--------|--------|-------------------|-----------|--------|
+| Dataset | Subjects | RAW ECG 수 | Rate (Hz) | Access |
+|---|---:|---:|---:|---|
 | PhysioNet 2021 | 178,140명 | 625,139개 | → 500 | 공개 → https://physionet.org/content/challenge-2021/ |
 | MIMIC-IV-ECG | 161,352명 | 800,035개 | → 500 | PhysioNet 계정 필요 (무료) → https://physionet.org/content/mimic-iv-ecg/ |
 

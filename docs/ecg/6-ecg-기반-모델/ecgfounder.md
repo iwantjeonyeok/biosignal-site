@@ -14,8 +14,7 @@
 
 ## Architecture Summary
 
-ECGFounder의 핵심 encoder는 기존 저자들이 제안한 **Net1D** 구조를 기반으로 하며, 그 위에 **RegNet** 계열의 stage-wise network 설계를 사용한다. RegNet은 네트워크 깊이에 따라 block 수와 channel 수를 단계적으로 조절하는 구조이기 때문에, 대규모 ECG 데이터에서 효율적으로 표현을 학습할 수 있다. 단순히 시간축의 파형 변화만 보는 것이 아니라, 서로 다른 lead 사이의 상호작용과 전체 심장 전기 활동의 공간적 패턴도 함께 학습한다. 이를 위해 **bottleneck block**, group convolution, channel-wise attention을 활용하여 ECG의 temporal feature와 spatial feature를 모두 반영하도록 설계된다. 실제 임상 주석의 특성을 반영하기 위해 단일 라벨 분류가 아니라 **multi-label classification** 방식으로 학습된다. 실제 ECG 진단은 하나의 기록에 여러 진단명이 동시에 붙을 수 있고, 실제 주석에는 누락된 양성 라벨도 존재할 수 있기 때문에, 이를 단순한 음성 라벨로 처리하지 않도록 **positive unlabeled learning** 기반의 학습 방식을 도입한다.
-마지막으로 wearable device와 원격 모니터링 환경에서 중요한 **single-lead ECG** 분석까지 지원하기 위해 **lead augmentation**을 사용한다. 12-lead ECG에서 lead I를 중심으로 여러 limb lead의 전기축 정보를 활용하여 단일 리드 모델을 학습함으로써, single-lead ECG에서도 리듬 정보와 전기축 관련 진단 정보를 더 잘 반영하도록 설계된다.
+ECGFounder는 10초 길이의 12유도 ECG를 입력받아 일반화 가능한 ECG 표현을 학습하는 Net1D/RegNet 기반 1D ECG 인코더이다. 모델은 단순히 시간축의 파형 변화만 학습하는 것이 아니라, 서로 다른 유도 사이의 관계와 전체 심장 전기 활동의 공간적 패턴까지 함께 반영하도록 설계되었다. 구조적으로는 네트워크 깊이에 따라 블록 수와 채널 수를 단계적으로 조절하는 RegNet 구조를 사용하며, bottleneck block, group convolution, channel-wise attention을 통해 ECG의 시간적 특징과 유도 간 공간적 특징을 함께 추출한다. 라벨 없이 신호 자체를 복원하거나 예측하는 자기지도학습 모델이 아니라, HEEDB의 실제 임상 전문가 주석을 활용해 150개 ECG 진단 라벨을 학습하는 다중 라벨 진단 모델이다. 실제 ECG 진단은 하나의 기록에 여러 진단명이 동시에 붙을 수 있고, 실제 임상 주석에는 일부 양성 라벨이 누락될 수 있기 때문에, ECGFounder는 라벨이 없는 항목을 무조건 음성으로 처리하지 않도록 positive unlabeled learning 기반 손실 함수를 적용한다. 또한 웨어러블 기기와 원격 모니터링 환경에서 중요한 single-lead ECG 분석을 지원하기 위해, 12유도 ECG에서 lead I를 중심으로 limb lead의 전기축 정보를 활용하는 lead augmentation을 적용하여 single-lead ECG에서도 리듬 정보와 전기축 관련 진단 정보를 학습할 수 있도록 설계되었다.
 
 ## Pre-training Data Summary
 

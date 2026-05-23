@@ -13,15 +13,7 @@
 
 ## Architecture Summary
 
-HeartLang은 세 가지 핵심 설계를 통해 위의 문제를 해결한다.
-
-첫째, **QRS-Tokenizer**가 10초 길이의 multi-lead ECG segment에서 QRS complex를 검출하고, 이를 기준으로 각 lead의 심박 구간을 분할한다. 이렇게 얻은 개별 심박 조각은 individual ECG word로 간주되며, 12-lead에서 추출된 ECG word들을 순서대로 연결해 하나의 ECG sentence를 구성한다. 심박수 차이로 인해 문장 길이가 달라지는 문제는 padding과 truncation으로 처리한다.
-
-둘째, **ST-ECGFormer**는 생성된 ECG sentence를 입력받아 ECG word의 표현을 학습하는 Transformer 기반 backbone이다. 각 ECG word는 token embedding으로 변환되고, 여기에 lead 정보를 반영하는 spatial embedding, 시간 구간 정보를 반영하는 temporal embedding, 문장 내 순서를 반영하는 position embedding이 더해진다. 이를 통해 모델은 개별 심박의 파형뿐 아니라, 해당 심박이 어느 lead와 시간 위치에서 나타났는지도 함께 고려한다.
-
-셋째, **ECG vocabulary**는 개별 ECG word를 더 일반화된 collective ECG word로 매핑하기 위해 사용된다. HeartLang은 한쪽 흐름에서는 ECG vocabulary를 통해 얻은 collective ECG word를 decoder로 복원하며 심박의 형태 정보를 학습하고, 다른 흐름에서는 일부 ECG word가 가려진 ECG sentence를 입력받아 해당 위치의 collective ECG word index를 예측한다. 이를 통해 심박의 형태적 의미와 ECG sentence 안에서의 리듬적 문맥 관계를 함께 학습하도록 설계된다.
-
-전체적으로 HeartLang은 QRS-Tokenizer로 ECG sentence를 만들고, ST-ECGFormer로 시공간 정보를 반영하며, ECG vocabulary 기반 복원과 예측 구조를 통해 심박 형태와 리듬 문맥을 함께 학습하는 프레임워크이다.
+HeartLang의 핵심은 ECG를 “심박은 단어, 리듬은 문장”으로 바라보는 **ECG 언어 처리** 구조다. 이 관점에 따라 **QRS-Tokenizer**는 원시 12유도 ECG에서 QRS Complex를 찾아 실제 심박이 나타나는 위치를 기준으로 신호를 나눈다. 이렇게 나뉜 개별 심박 조각은 ECG 단어가 되고, 여러 ECG 단어를 시간 순서에 따라 연결한 것은 ECG 문장이 된다. 심박수에 따라 ECG 문장의 길이가 달라질 수 있으므로, 길이가 짧으면 빈 조각을 채우고 길이가 길면 일부를 잘라 입력 길이를 맞춘다. 생성된 ECG 문장은 **ST-ECGFormer**에 입력된다. ST-ECGFormer는 각 ECG 단어의 파형 정보뿐 아니라, 해당 심박이 어느 유도에서 나온 것인지, ECG 기록의 어느 시간 위치에 있는지, 그리고 문장 안에서 어떤 순서를 가지는지를 함께 반영하는 트랜스포머 기반 구조다. 이를 통해 HeartLang은 개별 심박의 형태와 여러 심박이 이어지며 만들어내는 리듬 흐름을 함께 학습한다. 사전학습은 ECG vocabulary를 이용해 심박 형태를 학습하는 **VQ-HBR** 단계와, 일부 ECG 단어를 가리고 예측하면서 리듬 문맥을 학습하는 **masked ECG sentence pre-training** 단계로 구성된다. 후속 평가에서는 총 3개 공개 ECG 데이터셋의 6개 벤치마크 설정에서 성능을 검증한다.
 
 ## Pre-training Data Summary
 HeartLang은 MIMIC-IV-ECG를 사용하여 VQ-HBR training과 masked ECG sentence pre-training을 수행한다.

@@ -34,7 +34,7 @@ HeartLang은 MIMIC-IV-ECG를 사용하여 VQ-HBR training과 masked ECG sentence
 7. 12-lead에서 추출된 개별 심박 조각을 순서대로 연결해 ECG sentence를 구성. 논문에서는 ECG sentence의 최대 길이를 **l = 256**, 각 ECG word의 time window size를 **t = 96**으로 설정.
 8. 문장 길이가 **l**보다 짧으면 zero-filled patch로 padding하고, **l**보다 길면 truncation을 적용해 길이를 통일
 
-공식 README 기준으로 MIMIC-IV preprocessing은 `mimic_preprocess.py`로 수행하고, ECG sentence generation은 [`QRSTokenizer.py`](https://github.com/PKUDigitalHealth/HeartLang/blob/main/QRSTokenizer.py)로 수행한다.
+공식 README 기준으로 MIMIC-IV preprocessing은 [`mimic_preprocess.py`](https://github.com/PKUDigitalHealth/HeartLang/blob/main/datasets/dataset_preprocess/MIMIC-IV/mimic_preprocess.py)로 수행하고, ECG sentence generation은 [`QRSTokenizer.py`](https://github.com/PKUDigitalHealth/HeartLang/blob/main/QRSTokenizer.py)로 수행한다.
 
 ## Pre-training Dataset
 
@@ -52,31 +52,19 @@ Downstream dataset preprocessing code와 fine-tuning scripts는 아래 링크를
 ## How to Reproduce the Pre-training Preprocessing
 
 ```bash
-# 1) MIMIC-IV-ECG 접근 (PhysioNet credentialed access 필요, 무료)
+# 1) MIMIC-IV-ECG 데이터셋을 다운로드한다. PhysioNet credentialed access 신청 필요(무료).
 # https://physionet.org/content/mimic-iv-ecg/
-
-# 2) HeartLang 클론
 git clone https://github.com/PKUDigitalHealth/HeartLang.git
-cd HeartLang
+cd HeartLang && pip install -r requirements.txt
 
-# 3) 환경 설정
-conda create -n heartlang python=3.9
-conda activate heartlang
-pip install -r requirements.txt
+# 2) MIMIC-IV-ECG 데이터를 전처리한다
+python mimic_preprocess.py --dataset_path <path_to_MIMIC_data> --output_path datasets/ecg_datasets/MIMIC-IV
 
-# 4) MIMIC-IV-ECG 전처리
-python mimic_preprocess.py \
-  --dataset_path <path_to_MIMIC_data> \
-  --output_path datasets/ecg_datasets/MIMIC-IV
-
-# 5) QRS-Tokenizer로 ECG sentences 생성
+# 3) QRS 기반 ECG Tokenization을 수행한다
 python QRSTokenizer.py --dataset_name MIMIC-IV
 
-# 6) VQ-HBR 학습 (ECG vocabulary 구축)
-bash scripts/vqhbr/MIMIC-IV.sh
-
-# 7) Masked ECG sentence pre-training 실행
-bash scripts/pretrain/MIMIC-IV.sh
+# 4) VQ-HBR 학습 → HeartLang 사전학습
+bash scripts/vqhbr/MIMIC-IV.sh && bash scripts/pretrain/MIMIC-IV.sh
 ```
 
 ## Citation

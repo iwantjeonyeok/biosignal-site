@@ -44,7 +44,7 @@ HeartLang은 MIMIC-IV-ECG를 사용하여 VQ-HBR training과 masked ECG sentence
 
 ## Downstream Datasets
 HeartLang은 아래 3개의 공개 ECG 데이터셋에서 총 6가지 benchmark setting으로 평가된다. PTB-XL은 Superclass, Subclass, Form, Rhythm 네 가지 task로 나누어 사용되며, CPSC2018과 Chapman-Shaoxing-Ningbo(CSN)는 각각 9개 label, 38개 label 분류 task로 평가된다.
-Downstream dataset preprocessing code는 ['datasets/dataset_preprocess'], fine-tuning scripts는 ['scripts/finetune']을 참고한다.
+Downstream dataset preprocessing code와 fine-tuning scripts는 아래 링크를 참고한다.
 
 - Downstream dataset preprocessing code: [`datasets/dataset_preprocess`](https://github.com/PKUDigitalHealth/HeartLang/tree/main/datasets/dataset_preprocess)  
 - Fine-tuning scripts: [`scripts/finetune`](https://github.com/PKUDigitalHealth/HeartLang/tree/main/scripts/finetune)

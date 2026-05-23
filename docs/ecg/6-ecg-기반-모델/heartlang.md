@@ -18,11 +18,9 @@ HeartLang의 핵심은 ECG를 “심박은 단어, 리듬은 문장”으로 바
 ## Pre-training Data Summary
 HeartLang은 MIMIC-IV-ECG를 사용하여 VQ-HBR training과 masked ECG sentence pre-training을 수행한다.
 
-- **데이터셋**: MIMIC-IV-ECG
-- **원시 규모:** 161,352명 피험자 · 800,035개 12-lead ECG recording
-- **신호 형식:** 500 Hz · 10초 길이 · 12-lead ECG
-- **사용 목적:** VQ-HBR training 및 masked ECG sentence pre-training
-- **특징:** ECG recording만 사용하며, clinical report text supervision은 사용하지 않음
+- ""• 데이터셋:"" MIMIC-IV-ECG Diagnostic ECG Matched Subset
+- ""• 원시 규모:"" 161,352명 피험자 · 800,035개 12유도 ECG 기록 · 각 기록 10초 길이 · 500 Hz 샘플링
+- ""• 전처리 후:"" 전체 ECG 기록을 100 Hz로 다운샘플링한 뒤, QRS-Tokenizer를 통해 800,035개의 ECG sentence로 변환. 학습/검증 데이터는 9:1로 분할되어 720,031개 train sample과 80,004개 validation sample로 사용됨
 
 ### Preprocessing Pipeline
 

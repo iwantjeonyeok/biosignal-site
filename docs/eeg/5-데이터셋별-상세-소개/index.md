@@ -115,7 +115,7 @@
     
     [MoBI](../mobi/)
     
-16. 파지-리프트 동작 인식 (Gal Recognintion)
+16. 파지-리프트 동작 인식 (Gal Recognition)
     
     [Grasp and Lift Challenge](../grasp-and-lift-challenge/)
     

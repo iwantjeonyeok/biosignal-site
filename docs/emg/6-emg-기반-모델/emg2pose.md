@@ -2,9 +2,8 @@
 
 > **emg2pose: A Large and Diverse Benchmark for Surface Electromyographic Hand Pose Estimation**
 > Sasha Salter, Richard Warren, Collin Schlager, Adrian Spurr, Shangchen Han, Rohin Bhasin, Yujun Cai, Peter Walkington, Anuoluwapo Bolarinwa, Robert Wang, Nathan Danielson, Josh Merel, Eftychios Pnevmatikakis, Jesse Marshall **NeurIPS 2024 Datasets and Benchmarks Track**
-
-- 논문 (arXiv): https://arxiv.org/pdf/2412.02725
-- 공식 코드: https://github.com/facebookresearch/emg2pose
+- [Paper (arXiv)](https://arxiv.org/pdf/2412.02725)
+- [Official code](https://github.com/facebookresearch/emg2pose)
 
 ## Pre-training Data Summary
 

@@ -215,7 +215,7 @@ nav:
       - emg/2-electromyogram-emg-개요/index.md
       - 2.1. EMG 정의: emg/2-electromyogram-emg-개요/2-1-emg-정의.md
       - 2.2. EMG 신호적 특징: emg/2-electromyogram-emg-개요/2-2-emg-신호적-특징.md
-    - 3. EMG 연구동향:
+    - 3. EMG 연구 동향:
       - emg/3-연구동향/index.md
       - 3.1. Hand gesture recognition: emg/3-연구동향/3-1-hand-gesture-recognition.md
       - 3.2. Human activity recognition: emg/3-연구동향/3-2-human-activity-recognition.md

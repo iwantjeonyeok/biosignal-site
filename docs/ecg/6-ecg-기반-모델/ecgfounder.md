@@ -3,7 +3,7 @@
 > **An Electrocardiogram Foundation Model Built on over 10 Million Recordings with External Evaluation across Multiple Domains**
 > Jun Li, Aaron Aguirre, Junior Moura, Che Liu, Lanhai Zhong, Chenxi Sun, Gari Clifford, Brandon Westover, Shenda Hong. **NEJM AI 2025.**
 
-- [Paper (arxiv)](https://arxiv.org/abs/2410.04133)
+- [Paper (arXiv)](https://arxiv.org/abs/2410.04133)
 - [Official code](https://github.com/PKUDigitalHealth/ECGFounderg)
 
 

@@ -1,7 +1,5 @@
 # 1. Dataset Information
 
-Leiden University Database (LUDB)는 자동화된 ECG 해석, 부정맥 분류 및 ST 분절 분석 연구를 지원하기 위해 수집된 200명의 표준 12-리드 ECG 기록으로 구성된 데이터베이스입니다. 이 데이터베이스는 Leiden University에서 개발되었으며, 임상 및 머신러닝 연구를 위한 고품질 ECG 데이터를 제공하는 것을 목표로 합니다. 
-
 Long-Term ST Databses는 80명의 인간 피험자에 대한 86개의 장기 ECG 기록이 포함되어 있으며, ischemic ST 에피소드, asix-related non-ischemic ST 에피소드, slow ST level drift 에피소드, 이러한 현상의 혼합을 포함하는 에피소드 등 다양한 ST segment 변화 이벤트를 보여주기 위해 선택되었습니다. 이 데이터베이스는 ischemic ST 이벤트와 non-ischemic ST 이벤트를 정확하게 구분할 수 있는 알고리즘의 개발 및 평가, myocardial ischemia의 메커니즘과 역학에 대한 기초 연구를 지원하기 위해 만들어졌습니다.
 
 세부 정보는 [the official PhysioNet Challenge page](https://physionet.org/content/ltstdb/1.0.0/)에서 확인 가능합니다.

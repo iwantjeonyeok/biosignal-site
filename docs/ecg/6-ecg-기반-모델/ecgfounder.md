@@ -41,27 +41,25 @@ HEEDB 데이터셋을 전처리하는 코드 파일은 별도로 존재하지 �
 
 | Dataset | Subjects | Raw scale | #Samples after preprocessing | Rate (Hz) | Access |
 |---------|----------|-----------|------------------------------|-----------|--------|
-| HEEDB (Harvard-Emory ECG Database) | 1,818,247명 | 10,771,552개 전문가 주석 ECG | Development: 7,519,035 ECGs / Test: 834,926 ECGs | → 500 | https://bdsp.io/content/heedb/1.0/ |
+| HEEDB (Harvard-Emory ECG Database) | 1,818,247명 | 10,771,552개 전문가 주석 ECG | Development: 7,519,035 ECGs / Test: 834,926 ECGs | → 500 | https://bdsp.io/content/heedb/5.0/ |
 
 ## Downstream Datasets
 ECGFounder는 총 12개의 clinical downstream task에서 평가되었다. 이 중 ECG diagnosis 2개 task는 HEEDB 내부 평가와 CODE-test, PTB-XL, PhysioNet Challenge-2017 외부 검증을 기반으로 수행되었고, 나머지 fine-tuning 기반 task는 MIMIC-ECG와 DeepBeat-PPG를 바탕으로 구성되었다.
 ## How to Reproduce the Pre-training Preprocessing
 
 ```bash
-# 1) HEEDB 접근 신청 및 데이터 다운로드
-#    https://bdsp.io/content/heedb/1.0/
+# 1) HEEDB 접근 신청 
+#    https://bdsp.io/content/heedb/5.0/
 
-# 2) ECGFounder 클론
-git clone https://github.com/PKUDigitalHealth/ECGFounder
-cd ECGFounder
+# 2) 데이터 다운로드
+#    - BDSP 계정을 생성한다: https://bdsp.io/register/
+#    - credentialing을 완료한다: https://bdsp.io/settings/credentialing/
+#    - CITI Data or Specimens Only Research 과정을 이수한다: https://bdsp.io/settings/training/
+#    - HEEDB Data Use Agreement에 서명한다: https://bdsp.io/sign-dua/heedb/5.0/
+#    - 위 절차 완료 후 https://bdsp.io/content/heedb/5.0/ 의 Files 섹션에서 WFDB/MAT 형식 파일 다운로드 가능
+#    - 데이터 구조: ECG/10001/WFDB/ (MGH, 약 1,060만 ECG) + ECG/10006/WFDB/ (Emory, 약 100만 ECG)
 
-# 3) 의존성 설치
-pip install -r requirements.txt
-
-# 4) 사전학습된 모델 가중치 다운로드 (선택)
-#    https://huggingface.co/PKUDigitalHealth/ECGFounder
-
-# 5) 전처리 수행
+# 3) 전처리 수행
 #    - 불량 파일 제거 (판독 불가, 결측, 매칭 오류)
 #    - 500 Hz resampling (linear interpolation)
 #    - 0.5 Hz high-pass filter 적용
@@ -69,10 +67,10 @@ pip install -r requirements.txt
 #    - 50/60 Hz notch filter 적용
 #    - 10초 window 분할 및 zero padding
 #    - segment 단위 mean/std normalization
-#    공식 repository의 README 및 data processing 스크립트 참고
 
-# 6) 학습 또는 fine-tuning 실행
-#    공식 repository의 scripts 및 configuration 파일 참고
+# 4) 사전학습 시작 
+
+
 ```
 
 ## Citation

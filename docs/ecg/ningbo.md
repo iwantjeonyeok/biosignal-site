@@ -65,7 +65,7 @@
     │ │ ├── ... (905 samples, 1812 files: 각각 .mat + .hea 세트)
     │ │ ├── index.html
     │ │ └── RECORDS
-    │ └── ... (35 dictionaries, 약 70,000 files)
+    │ └── ... (35 directories, 약 70,000 files)
     ├── index.html
     35 directories, 약 70,000 files
     ```

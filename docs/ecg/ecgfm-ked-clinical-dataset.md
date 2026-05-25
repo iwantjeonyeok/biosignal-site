@@ -45,7 +45,7 @@ KED 모델은 약 16만 명의 환자로부터 수집된 80만 개의 ECG 기�
 - AF: Atrial Fibrillation
 - PAC: Premature Atrial Contraction
 - SB: Sinus Bradycardia
-- ST: Sinus Trachycardia
+- ST: Sinus Tachycardia
 
 ## 2.3 Raw Dataset
 

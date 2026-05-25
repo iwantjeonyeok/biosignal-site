@@ -18,7 +18,7 @@
 | --- | --- |
 | Walking, W | 250 |
 | Toe Walking, T | 250 |
-| Heal Walking, H | 250 |
+| Heel Walking, H | 250 |
 | Stair Ascending, SA | 250 |
 | Stair Descending, SD | 250 |
 

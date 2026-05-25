@@ -21,7 +21,7 @@ atr annotation
 | Normal | 8710873 (96.10%) | 810.16 | 188.76 |
 | AF | 152332 (1.68%) | 12.34 | 24.27 |
 | Ventricular Contraction | 132679 (1.47%) | 22.45 | 34.80 |
-| Unclassifiable Bear | 89 (0.001%) | 0.12 | 0.21 |
+| Unclassifiable Beat | 89 (0.001%) | 0.12 | 0.21 |
 | Rhythm change | 53704 (0.59%) | 0.55 | 1.80 |
 | Comment annotation | 5959 (0.07%) | 0.55 | 1.80 |
 | Total | 9055636 | 836.45 | 188.45 |
@@ -29,7 +29,7 @@ atr annotation
 - Normal (N): Normal sinus rhythm
 - Atrial Fibrillation (AF or A): Presence of atrial fibrillation
 - Ventricular Contraction (V): Premature ventricular contraction
-- Unclassifiable Bear(Q): Unclassifiable beat
+- Unclassifiable Beat(Q): Unclassifiable beat
 - + : Rhythm change
 - “  : Comment annotation
 
@@ -61,7 +61,7 @@ qrs annotation
     ├── SHA256SUMS.txt
     ├── tables.html
     └── tables.shtml
-    1 dictionary, 341 files
+    1 directory, 341 files
     ```
 
 각 레코드는 128Hz 샘플링 주파수 기준으로 기록된  2 lead ECG 신호를 포함하며, 다음 네 파일로 구성되어 있습니다: 

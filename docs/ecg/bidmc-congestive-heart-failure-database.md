@@ -25,7 +25,7 @@ For only chf01:
 | N | Normal | 2919 (58.38%) |
 | r | R-on-T PVC | 1767 (35.34%) |
 | V | PVC | 96 (1.92%) |
-| S | Supraventicular Arrhythmia | 194 (3.88%) |
+| S | Supraventricular Arrhythmia | 194 (3.88%) |
 | U | Unclassifiable | 24 (0.48%) |
 | Total |  | 5000 |
 

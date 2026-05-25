@@ -12,7 +12,7 @@ MyPredict 1 = 10명 대상, 8채널의 Bipolar sEMG 전극 사용
 
 MyPredict 2 = 35명 대상, 2 채널의 다중 배열 sEMG 전극 사용(4x8, 간격 10mm)
 
-MyPredict3 = 10aud 대상, 8채널의 Bipolar sEMG전극, 다중 배열 전극 모두 사용(4x16, 간격 20mm)
+MyPredict3 = 10명 대상, 8채널의 Bipolar sEMG전극, 다중 배열 전극 모두 사용(4x16, 간격 20mm)
 
 | **Channel** | **Sampling Frequency** | **Recording Duration** | **File Format** |
 | --- | --- | --- | --- |

@@ -1,6 +1,6 @@
 # 1. Dataset Information
 
-Capgmyo-db 데이터셋은 고밀도 표면 근전도(HD-sEMG)기반 손 제스처 인식 데이터셋이다. 제스처 인식의 세션 간 문제를 해결하기 위해 딥러닝 기만 도메인 적응기법을 제안할 뿐만 아니라 본 데이터셋과 모델은 기존 방법 대비 높은 제스처 인식 성능을 제공하며 다양한 제스처 인식 연구 및 Muscle-Computer Interface개발에 활용 가능하다.
+Capgmyo-db 데이터셋은 고밀도 표면 근전도(HD-sEMG)기반 손 제스처 인식 데이터셋이다. 제스처 인식의 세션 간 문제를 해결하기 위해 딥러닝 기반 도메인 적응기법을 제안할 뿐만 아니라 본 데이터셋과 모델은 기존 방법 대비 높은 제스처 인식 성능을 제공하며 다양한 제스처 인식 연구 및 Muscle-Computer Interface개발에 활용 가능하다.
 
 # 2. Dataset Basic Information
 

@@ -1,6 +1,6 @@
 # 1. Dataset Information
 
-MIT-BIH noise stress database는 실제 환경에서 발생하는 다양한 노이즈 조건에서 ECG 분석 알고리즘의 강건성을 평가하기 위해 설계된 특수 데이터셋입니다. MIT-BIH arrthymia databse의 깨끗한 ECG 기록에 다양한 유형의 노이즈를 추가하여 실제 모니터링에서 발생할 수 있는 문제를 시뮬레이션하였습니다.
+MIT-BIH noise stress database는 실제 환경에서 발생하는 다양한 노이즈 조건에서 ECG 분석 알고리즘의 강건성을 평가하기 위해 설계된 특수 데이터셋입니다. MIT-BIH arrhythmia database의 깨끗한 ECG 기록에 다양한 유형의 노이즈를 추가하여 실제 모니터링에서 발생할 수 있는 문제를 시뮬레이션하였습니다.
 
 # 2. Dataset Basic Information
 

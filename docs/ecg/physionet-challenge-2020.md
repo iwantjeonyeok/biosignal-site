@@ -11,7 +11,7 @@ PhysioNet Challenge 2020 데이터셋은 12-lead ECG 데이터를 포함하는 �
 | Sub Dataset | # of Subjects | # of Leads | Sampling Frequency (Hz) | Recording Duration (min) | File Fomat |
 | --- | --- | --- | --- | --- | --- |
 | CPSC 2018 | 6877 | 12 | Fixed 500 Hz | Approximately 6 - 144 seconds | .hea (Metadata) .mat (ECG) |
-| CPSC 2018 Extrea | 3453 | 12 | Fixed 500 Hz | Approximately 8 - 98 seconds | .hea (Metadata) .mat (ECG) |
+| CPSC 2018 Extra | 3453 | 12 | Fixed 500 Hz | Approximately 8 - 98 seconds | .hea (Metadata) .mat (ECG) |
 | Georgia | 10344 | 12 | Fixed 500 Hz | 10 seconds (5 seconds for only 5 samples) | .hea (Metadata) .mat (ECG) |
 | PTB | 516 | 12 | Fixed 1000 Hz | 115.2 seconds (except some samples) | .hea (Metadata) .mat (ECG) |
 | PTB-XL | 21837 | 12 | Fixed 500 Hz | 10 seconds | .hea (Metadata) .mat (ECG) |
@@ -102,7 +102,7 @@ PhysioNet Challenge 2020 데이터셋의 라벨은 각 심전도 기록에 대�
     6 directories, 약 90,000 files
     ```
 
-각 레코드는 각 Sub dataset에 따른3 샘플링 주파수 기준으로 기록된 12 리드 ECG 신호를 포함하며, 다음 두 파일로 구성되어 있습니다: 
+각 레코드는 각 Sub dataset에 따른 샘플링 주파수 기준으로 기록된 12 리드 ECG 신호를 포함하며, 다음 두 파일로 구성되어 있습니다: 
 
 - .mat 파일: ECG 신호 자체를 저장 
 - .hea 파일: 레코드의 메타데이터 (샘플 수, 레이블, 채널 정보 등)를 저장

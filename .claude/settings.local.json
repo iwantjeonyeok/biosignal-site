@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(git push *)",
+      "Bash(gh pr *)",
+      "PowerShell(gh pr list --head claude/beautiful-kowalevski-7e1f0a --repo iwantjeonyeok/biosignal-site)",
+      "PowerShell(Get-Content \"$env:TEMP\\\\ecgfm.txt\" -Raw)",
+      "Bash(git checkout *)",
+      "Bash(git pull *)",
+      "Bash(git merge *)",
+      "Bash(git fetch *)",
+      "Bash(git rebase *)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "Bash(gh api *)"
+    ]
+  }
+}

@@ -7,4 +7,4 @@ EMG를 활용해, 사람의 움직임을 인식 하는 연구도 활발히 진�
 
 ![Computer vision 및 ANN 기반 EMG 동작 인식 예시](./image-4.png)
 
-**그림 3.** (a) Computer vision 지식기반 동작 인식 CNN 모델 [^33], (b) ANN을 활용한 EMG 기반 작업자의 움직임 인식 [^34].
+**그림 3.** (a) Computer vision 지식기반 동작 인식 CNN 모델 [33], (b) ANN을 활용한 EMG 기반 작업자의 움직임 인식 [34].

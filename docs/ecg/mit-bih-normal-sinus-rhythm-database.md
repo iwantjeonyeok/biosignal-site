@@ -56,7 +56,7 @@ MIT-BIH Normal Sinus Rhythm database는 정상 동리듬을 가진 18명의 장�
 - 첫 번째 줄: 기록 번호(16265), 두 개의 ECG 채널(ECG1 및 ECG2), 샘플링 주파수 128Hz, 총 11,730,944개의 샘플
 - 두 번째 및 세 번째 줄: 각 ECG 리드(ECG1, ECG2)는 16265.dat에 16비트 형식(코드 212), 12비트 해상도, ±10mV의 ADC 범위로 기록됨. 신호 기준값과 최소/최대 값도 제공.
 - 네 번째 줄: 환자 정보로 나이(32세), 성별(남성, M) 포함.
-위의 사진은 PhysioNet 2017의 A00001.hea의 내용입니다. 05:05:15는 Start time, 1/05/2000은 Start date를 의미합니다. REFERENCE-original.csv 파일에 annotation이 들어있습니다. 각 파일 내의 특정 시점마다 symbol이 적혀 있는 다른 데이터셋들과 달리 시점이 아닌 파일 자체에 symbol이 부여되어 있습니다.
+
 
 ## 2.4 Raw Dataset Example
 

@@ -30,4 +30,3 @@
 
 ![](uci-emg-dataset-in-lower-limb/image-1.png)
 
-# 3. References

@@ -37,4 +37,3 @@ BioPatRec 데이터셋은 의수(보철 손) 제어 연구를 위해 Chalmers Un
 
 ![](biopatrec/image-1.png)
 
-# 3. References

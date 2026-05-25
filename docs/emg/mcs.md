@@ -43,4 +43,3 @@ MCS(Multi-Channel Surface Electromyography) 데이터셋은 Izmir Katip Celebi U
 
 ![](mcs/image-3.png)
 
-# 3. References

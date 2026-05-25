@@ -34,4 +34,3 @@
 
 ![](uci-emg-data-for-gestures/image-1.png)
 
-# 3. References

@@ -30,4 +30,3 @@
 
 ![](emg-data-vr/image-1.png)
 
-# 3. References

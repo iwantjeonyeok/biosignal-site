@@ -32,4 +32,3 @@ EMG-UKA의 라벨 (10.62%의 경우, 라벨이 되지 않은 Nan 영역임)
 
 ![](emg-uka/image-1.png)
 
-# 3. References

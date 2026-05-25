@@ -32,4 +32,3 @@ ME4 데이터셋은 오디오(Audio), 비디오(Video), 뇌파(EEG), 근전도(E
 
 ![](pme4/image-1.png)
 
-# 3. References

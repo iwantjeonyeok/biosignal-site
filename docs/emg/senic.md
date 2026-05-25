@@ -39,4 +39,3 @@ SeNic 데이터셋은 sEMG(표면 근전도)를 기반으로 한 제스처 인�
 
 ![](senic/image-3.png)
 
-# 3. References

@@ -46,4 +46,3 @@ Label
 
 ![](hyser/image-3.png)
 
-# 3. References

@@ -8,7 +8,7 @@ STEW 데이터셋[1]은 총 48명의 건강한 성인 남성 피험자를 대상
 
 | # of Subjects | # of Leads | Sampling Frequency (Hz) | Recording Duration (min) | File Fomat |
 | --- | --- | --- | --- | --- |
-| 48 | 14 | 128 | 5 | EEG(.txt), ratings(.txt), summarty(.csv) |
+| 48 | 14 | 128 | 5 | EEG(.txt), ratings(.txt), summary(.csv) |
 
 ## 2.2 Data Statistics
 

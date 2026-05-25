@@ -45,7 +45,7 @@ MIT-BIH Long-Term ECG Database는 2개의 ECG 리드로 구성된 장시간 심�
     │   ├── 14134.hea-
     │   ├── 14134.xws
     │   └── ... (38 파일, 각각 .atr + .dat + .hea + .hea- + .xws 세트)
-    1 directories, 약 48 files
+    1 directory, 약 48 files
     ```
 
 ![](mit-bih-long-term-ecg-database/image.png)

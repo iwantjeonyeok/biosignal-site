@@ -112,7 +112,7 @@ Fantasia database는 두 개의 연령 그룹에서 선별된 건강한 
     2 directories, 약 53 files
     ```
 
-이 시각화 자료는 Fantasia database의 환자 f1o01에 대한 10초 동안의 심전도(ECG) 및 호흡(RESP) 데이터를 보여줍니다. 해당 기록은 두 개의 신호(ECG 및 RESP)로 구성되며, 250 Hz로 샘링플 되었습니다.
+이 시각화 자료는 Fantasia database의 환자 f1o01에 대한 10초 동안의 심전도(ECG) 및 호흡(RESP) 데이터를 보여줍니다. 해당 기록은 두 개의 신호(ECG 및 RESP)로 구성되며, 250 Hz로 샘플링 되었습니다.
 
 ![](fantasia/image-1.png)
 

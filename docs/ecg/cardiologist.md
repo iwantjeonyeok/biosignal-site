@@ -31,14 +31,14 @@
 | Total | 1 (13,776,000/13,776,000) |
 
 - NSR(Normal Sinus Rhythm) : 정상 동리듬, SA node에서 시작되는 정상적인 심박 리듬
-- JUNCTIONAL(Juncional Rhythm) : AV node에서 전기 신호가 시작되는 리듬, SA node 기능 이상으로 인해 AV node가 주도권을 잡는 경우
+- JUNCTIONAL(Junctional Rhythm) : AV node에서 전기 신호가 시작되는 리듬, SA node 기능 이상으로 인해 AV node가 주도권을 잡는 경우
 - AFIB(Atrial FIbrillation, 심방세동) : 심방이 무질서하게 떨리는 리듬
 - NOISE : 잡음
-- SVT(Superaventricular Tachycardia) : 심실 위쪽에서 발생하는 빠른 심박수
+- SVT(Supraventricular Tachycardia) : 심실 위쪽에서 발생하는 빠른 심박수
 - AFL(ATrial Flutter, 심방조동) : 심방이 매우 빠르게 규칙적으로 수축하는 상태
-- AVB_TYPE2(2nd Degree AV Block, Type 2, 모비츠 2형) : 방실결절이 간혈적으로 신호 전달을 실패하는 부정맥
+- AVB_TYPE2(2nd Degree AV Block, Type 2, 모비츠 2형) : 방실결절이 간헐적으로 신호 전달을 실패하는 부정맥
 - WENCKEBACH(AV Block Type 1, 모비츠 1형) : PR 간격이 점점 길어지다가 QRS가 탈락하는 비교적 덜 심각한 방실 차단 패
-- SUDDEN_BRADY(Sudden Bradycardia) : 감작스러운 심박수 감소 현상
+- SUDDEN_BRADY(Sudden Bradycardia) : 갑작스러운 심박수 감소 현상
 - VT(Ventricular Tachycardia) : 심실에서 빠르게 전기 신호가 발생하는 매우 **위험한 부정맥**
 - TRIGEMINY : 2개의 정상 박동 후 1번의 조기 심실수축(PVC)이 반복되는 패턴.
 - IVR(Idioventricular Rhythm) : 심실이 자체적으로 전기 신호를 발생시키는 느린 리듬

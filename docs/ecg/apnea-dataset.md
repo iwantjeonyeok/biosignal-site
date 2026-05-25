@@ -14,14 +14,14 @@ Apnea-ECG 데이터베이스는 수면 무호흡증 검출 연구를 지원하�
 
 Apnea
 
-| **Type** | **# recording** | **Propotion(%)** |
+| **Type** | **# recording** | **Proportion(%)** |
 | --- | --- | --- |
 | Normal (N) | 15223 | 61.00 |
 | Apnea (A) | 9732 | 39.00 |
 
 QRS annotation
 
-| **Type** | **# recording** | **Propotion(%)** |
+| **Type** | **# recording** | **Proportion(%)** |
 | --- | --- | --- |
 | Normal (N) | 2519761 | 99.78 |
 | Irregular ('\|') | 5674 | 0.22 |

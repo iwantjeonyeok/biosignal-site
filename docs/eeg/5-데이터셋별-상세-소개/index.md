@@ -101,7 +101,7 @@
     
 13. 수면 단계 탐지 (Sleep Stage Detection)
     
-    [2018 Physionnet Challenge](../2018-physionnet-challenge/)
+    [2018 PhysioNet Challenge](../2018-physionnet-challenge/)
     
     [ISRUC Sleep](../isruc-sleep/)
     

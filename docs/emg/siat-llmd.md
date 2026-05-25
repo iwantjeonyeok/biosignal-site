@@ -10,7 +10,7 @@
 
 | **Channels** | **Sampling Frequency** | **Recording Duration** | **File Format** |
 | --- | --- | --- | --- |
-| 9 | 1926 Hz | 90 ~ 140 minutes | csvt |
+| 9 | 1926 Hz | 90 ~ 140 minutes | csv |
 
 ![](siat-llmd/image.png)
 

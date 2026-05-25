@@ -14,7 +14,7 @@ European ST-T Database는 심근 허혈의 ECG 표현을 연구하고, ST 및 T 
 
 Rhythm
 
-| **Type** | **# recording** | **Propotion(%)** |
+| **Type** | **# recording** | **Proportion(%)** |
 | --- | --- | --- |
 | Normal (N) | 753,676 | 97.75 |
 | Noisy (~) | 8580 | 1.11 |
@@ -27,7 +27,7 @@ Rhythm
 
 ST/T
 
-| **Type** | **# recording** | **Propotion(%)** |
+| **Type** | **# recording** | **Proportion(%)** |
 | --- | --- | --- |
 | TO+ | 126 | 15.67 |
 | ST1- | 122 | 15.17 |
@@ -47,7 +47,7 @@ ST/T
 
 !!! note ""
     ```
-    europrean_st_t_database/
+    european_st_t_database/
     ├── •	.atr
     ├── •	.dat
     └──  •	.hea
@@ -64,7 +64,7 @@ ST/T
 
 !!! note ""
     ```
-    europrean_st_t_databas/
+    european_st_t_database/
     ├── •	record number_annotations.csv
     ├── •	record number_rhythm_changes.csv
     └──  •	record number_st_t_changes.csv

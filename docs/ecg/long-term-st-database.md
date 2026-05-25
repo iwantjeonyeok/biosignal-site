@@ -1,6 +1,6 @@
 # 1. Dataset Information
 
-Long-Term ST Databses는 80명의 인간 피험자에 대한 86개의 장기 ECG 기록이 포함되어 있으며, ischemic ST 에피소드, asix-related non-ischemic ST 에피소드, slow ST level drift 에피소드, 이러한 현상의 혼합을 포함하는 에피소드 등 다양한 ST segment 변화 이벤트를 보여주기 위해 선택되었습니다. 이 데이터베이스는 ischemic ST 이벤트와 non-ischemic ST 이벤트를 정확하게 구분할 수 있는 알고리즘의 개발 및 평가, myocardial ischemia의 메커니즘과 역학에 대한 기초 연구를 지원하기 위해 만들어졌습니다.
+Long-Term ST Database는 80명의 인간 피험자에 대한 86개의 장기 ECG 기록이 포함되어 있으며, ischemic ST 에피소드, axis-related non-ischemic ST 에피소드, slow ST level drift 에피소드, 이러한 현상의 혼합을 포함하는 에피소드 등 다양한 ST segment 변화 이벤트를 보여주기 위해 선택되었습니다. 이 데이터베이스는 ischemic ST 이벤트와 non-ischemic ST 이벤트를 정확하게 구분할 수 있는 알고리즘의 개발 및 평가, myocardial ischemia의 메커니즘과 역학에 대한 기초 연구를 지원하기 위해 만들어졌습니다.
 
 세부 정보는 [the official PhysioNet Challenge page](https://physionet.org/content/ltstdb/1.0.0/)에서 확인 가능합니다.
 
@@ -12,7 +12,7 @@ Long-Term ST Databses는 80명의 인간 피험자에 대한 86개의 장기 ECG
 | --- | --- | --- | --- |
 | 2 or 3 | Fixed 250 Hz | 21-24h | WFDB format |
 
-- Lead 정보 : laeds 종류별 환자를 기록함, leads 정보가 없는 경우 [‘ECG’, ‘ECG’]로 표기
+- Lead 정보 : leads 종류별 환자를 기록함, leads 정보가 없는 경우 [‘ECG’, ‘ECG’]로 표기
   - ['ML2', 'MV2'] : s20011, s20201 ~ s20241
   - ['MLIII', 'V4'] : s20021, s20161, s20181, s20191, s20291, s20551 
   - ['ECG', 'ECG'] : s20031 ~ s20141, s20251 ~ s20281, s20341 ~ s20461
@@ -209,7 +209,7 @@ Long Term ST dataset은 다양한 annotations를 포함하고 있습니다. 측�
 
 ari, .atr, .sta, .stb, .stc, .16a, .stf를 아래와 같이 csv 형태로 변환하였습니다.
 
-fs, label_store, description, custom_labels, contatined_labels, ann_len은 환자별로 한 개의 값만 가지고 있어 모든 row에 대해 같은 값을 기입하였습니다.
+fs, label_store, description, custom_labels, contained_labels, ann_len은 환자별로 한 개의 값만 가지고 있어 모든 row에 대해 같은 값을 기입하였습니다.
 
 ![](long-term-st-database/image-7.png)
 
@@ -225,7 +225,7 @@ The Long Term ST Database는 arrhythims classification 문제를 해결하는데
 | Ran Xiao et al. (2018) [4] | Ischemic ST Change Detection | Convolutional Neural Network (CNN) | Image-based ECG transformation with deep   learning to improve detection of ST depression changes, leveraging Google   Inception V3 via transfer learning. |
 
 - Arrhythmia Classification
-  [2], [3] Arrhythmia classification 는 다양한 종류의 arrhythimias를 ECG 신호를 이용해 식별하는 것을 목표로 합니다. 연구들은 ari와 atr 파일을 이용하여 ECG 기록에서 발생한 arrhythimias의 종류를 식별하고자 합니다.
+  [2], [3] Arrhythmia classification 는 다양한 종류의 arrhythmias를 ECG 신호를 이용해 식별하는 것을 목표로 합니다. 연구들은 ari와 atr 파일을 이용하여 ECG 기록에서 발생한 arrhythmias의 종류를 식별하고자 합니다.
 - Atrial Fibrillation Detection
   [4] Atrial fibrillation (AF) 은 비규칙적인 심장 박동입니다. 이는 뇌졸중과 같은 심각한 합병증을 증가시킬수 있습니다. ECG annotations은 AF episodes의 발생 시점을 기록하고 있어 AF 식별 모델을 제작하는데에 이용 가능합니다.
 - Ischemic ST Change Detection

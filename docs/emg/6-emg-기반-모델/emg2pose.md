@@ -116,7 +116,7 @@ tar -xvzf emg2pose_model_checkpoints.tar.gz
 @inproceedings{salteremg2pose,
   title={emg2pose: A Large and Diverse Benchmark for Surface Electromyographic Hand Pose Estimation},
   author={Salter, Sasha and Warren, Richard and Schlager, Collin and Spurr, Adrian and Han, Shangchen and Bhasin, Rohin and Cai, Yujun and Walkington, Peter and Bolarinwa, Anuoluwapo and Wang, Robert and others},
-  booktitle={The Thirty-eight Conference on Neural Information Processing Systems Datasets and Benchmarks Track}
+  booktitle={The Thirty-eighth Conference on Neural Information Processing Systems Datasets and Benchmarks Track}
 }
 }
 

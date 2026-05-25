@@ -12,11 +12,11 @@ QT Database는 QT 간격 검출 알고리즘 평가를 위해 설계된 데이�
 
 | # of Leads | Sampling Frequency | Recording Duration | File Format |
 | --- | --- | --- | --- |
-| 2 | Fixed 250 Hz | 15min | .hea (Metadata) .dat(singal file) .atr(reference beat annotations from original database (not available in all cases)) .man(reference beat annotations) .pu(automatically determined waveform boundary measurements for all beats (based on both signals)) .pu0( automatically determined waveform boundary measurements for all beats (based on signal 0 only)) .pu1(automatically determined waveform boundary measurements for all beats (based on signal 1 only)) .q1c(manually determined waveform boundary measurements for selected beats (annotator 1 only -- second pass)) .q2c(manually determined waveform boundary measurements for selected beats (annotator 2 only -- second pass; available for only 11 records)) .qt1(manually determined waveform boundary measurements for selected beats (annotator 1 only -- first pass)) .qt2(manually determined waveform boundary measurements for selected beats (annotator 2 only -- first pass; available for only 11 records)) |
+| 2 | Fixed 250 Hz | 15min | .hea (Metadata) .dat(signal file) .atr(reference beat annotations from original database (not available in all cases)) .man(reference beat annotations) .pu(automatically determined waveform boundary measurements for all beats (based on both signals)) .pu0( automatically determined waveform boundary measurements for all beats (based on signal 0 only)) .pu1(automatically determined waveform boundary measurements for all beats (based on signal 1 only)) .q1c(manually determined waveform boundary measurements for selected beats (annotator 1 only -- second pass)) .q2c(manually determined waveform boundary measurements for selected beats (annotator 2 only -- second pass; available for only 11 records)) .qt1(manually determined waveform boundary measurements for selected beats (annotator 1 only -- first pass)) .qt2(manually determined waveform boundary measurements for selected beats (annotator 2 only -- first pass; available for only 11 records)) |
 
 ## 2.2 Beat Annotation Distribution
 
-| -      Type | # recording | Propotion(%) |
+| -      Type | # recording | Proportion(%) |
 | --- | --- | --- |
 | Normal beat (N) | 536884 | 98.80 |
 | Premature ventricular contraction (V) | 1714 | 0.32 |

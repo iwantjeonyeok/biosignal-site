@@ -6,7 +6,7 @@
 
 ## 2.1 Data information
 
-이 데이터셋에서는38명의 비환자가 총 25개 감정유발 영상(긍정/중립/부정)을 시청하면서 얼굴 근전도 신호를 기록하고, 객관적인 영상 분류기준(긍정, 중립, 부정)과 비교 분석되었다. 5채널 sEMG emteqPro 웨어러블 EMG센서를 사용하여 측정하였지만 이 데이터셋에서는 Frontails를 제외한 4채널만 사용되었다. 또한, 긍정적인 영상에서는 Zygomaticus major(광대근) 및 Orbicularis oculi(눈둘레근)의 활성이 증가하였고 부정적인 영상에서는 Corrugator supercilia(미간주름근)의 활성도가 증가하였다. 각 감정 표현동안 영상 시청 후 10초간 주관적 감정평가가 진행되었다.
+이 데이터셋에서는38명의 비환자가 총 25개 감정유발 영상(긍정/중립/부정)을 시청하면서 얼굴 근전도 신호를 기록하고, 객관적인 영상 분류기준(긍정, 중립, 부정)과 비교 분석되었다. 5채널 sEMG emteqPro 웨어러블 EMG센서를 사용하여 측정하였지만 이 데이터셋에서는 Frontalis를 제외한 4채널만 사용되었다. 또한, 긍정적인 영상에서는 Zygomaticus major(광대근) 및 Orbicularis oculi(눈둘레근)의 활성이 증가하였고 부정적인 영상에서는 Corrugator supercilia(미간주름근)의 활성도가 증가하였다. 각 감정 표현동안 영상 시청 후 10초간 주관적 감정평가가 진행되었다.
 
 | **Channel** | **Sampling frequency** | **Recording duration** | **File format** |
 | --- | --- | --- | --- |

@@ -51,11 +51,11 @@ ECG5000 데이터셋은 전처리가 완료된 상태로 제공되어 바로 학
 
 ![](ecg5000-dataset/image.png)
 
-ECG5000_TRAIN.arff를 데이터프레임으로 불러온 내용입니다. TRAIN 파일에서 각 열(att1 ~ att140)은 타임스템프를 나타내며, 각 행(0~499)는 개별적인 데이터를 의미합니다. 마지막 열(target)은 개별 데이터에 대한 주석(레이블 값)을 나타냅니다. 환자의 정보가 담긴 헤더파일은 존재하지 않습니다.
+ECG5000_TRAIN.arff를 데이터프레임으로 불러온 내용입니다. TRAIN 파일에서 각 열(att1 ~ att140)은 타임스탬프를 나타내며, 각 행(0~499)는 개별적인 데이터를 의미합니다. 마지막 열(target)은 개별 데이터에 대한 주석(레이블 값)을 나타냅니다. 환자의 정보가 담긴 헤더파일은 존재하지 않습니다.
 
 ## 2.4 Raw Dataset Example
 
-ECG5000_TRAIN.arff와 ECG5000_TEST.arff 파일들을 data.csv, label.csv 파일로 변환하였습니다. 전처리 후에는 각 열이 개별적인 데이터를, 각 열이 타임스템프를 나타냅니다. 주석 값은 1, 2, 3, 4, 5로 변환 후 저장하였습니다. 다음은 ECG5000_TRAIN_data.csv와 ECG5000_TEST_data.csv 파일의 첫번째 Sample을 시각화 한 것입니다.
+ECG5000_TRAIN.arff와 ECG5000_TEST.arff 파일들을 data.csv, label.csv 파일로 변환하였습니다. 전처리 후에는 각 열이 개별적인 데이터를, 각 열이 타임스탬프를 나타냅니다. 주석 값은 1, 2, 3, 4, 5로 변환 후 저장하였습니다. 다음은 ECG5000_TRAIN_data.csv와 ECG5000_TEST_data.csv 파일의 첫번째 Sample을 시각화 한 것입니다.
 
 ![](ecg5000-dataset/image-1.png)
 

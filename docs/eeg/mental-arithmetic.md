@@ -36,7 +36,7 @@ Mental Arithmetic 데이터셋 [1]은 피험자들이 정신 산술(Mental Arith
     3 directories, 78 files
     ```
 
-subject-info.csv에 라벨링 정보가 저장되어 있으며, *_1.edf는 task 수행 전, *2.edf는 task 수행 중 기록입니다.
+subject-info.csv에 라벨링 정보가 저장되어 있으며, *_1.edf는 task 수행 전, *_2.edf는 task 수행 중 기록입니다.
 
 ## 2.4 Raw Dataset Example
 

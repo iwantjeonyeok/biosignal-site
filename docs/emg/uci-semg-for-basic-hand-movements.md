@@ -16,7 +16,7 @@
 
 ### Label
 
-| CyrindaricalGrasp | Tip | Hookorsnap | Palmar | Spherical | Lateral |
+| CylindricalGrasp | Tip | Hookorsnap | Palmar | Spherical | Lateral |
 | --- | --- | --- | --- | --- | --- |
 
 ## 2.3 Raw Dataset

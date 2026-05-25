@@ -8,7 +8,7 @@
 
 | # of Subjects | # of Leads | Sampling Frequency (Hz) | Recording Duration (min) | File Fomat |
 | --- | --- | --- | --- | --- |
-| 8 | 60 | 100 | 24 | (EEG).txt, (impedances-before, after).txt, (conductor).txt, (digitizier).bvct, (joints).txt |
+| 8 | 60 | 100 | 24 | (EEG).txt, (impedances-before, after).txt, (conductor).txt, (digitizer).bvct, (joints).txt |
 
 ## 2.2 Data Statistics
 

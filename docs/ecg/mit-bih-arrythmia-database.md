@@ -36,7 +36,7 @@ MIT-BIH Arrythmia database는 Boston’s Beth Israel Hospital에서 1975년부�
 | ] | 0.01% (6/114839) | 6 | 0 |
 | S | 0.0% (2/114839) | 2 | 0 |
 | “ | 0.38% (437/114839) | 87.4 | 169.8 |
-| e | 0.01%  16(16/114839) | 16 | 0 |
+| e | 0.01% (16/114839) | 16 | 0 |
 
 - \+ : Rhythm change annotation
 - A : Atrial premature beat

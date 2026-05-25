@@ -28,7 +28,7 @@ ISRUC-Sleep는 건강한 성인과 수면 장애 환자를 대상으로 수집�
 !!! note ""
     ```
     ISRUC-Sleep/
-    ├── Subgropup_1/
+    ├── Subgroup_1/
     │   ├── 1/
     │   │   ├── 1.rec
     │   │   ├── 1_1.txt
@@ -45,7 +45,7 @@ ISRUC-Sleep는 건강한 성인과 수면 장애 환자를 대상으로 수집�
     │       ├── 99_1.txt
     │       └── 99_1.xlsx
     │       ... (2 more files)
-    ├── Subgropup_2/
+    ├── Subgroup_2/
     │   ├── 1/
     │   │   ├── 1/
     │   │   │   ├── 1.rec

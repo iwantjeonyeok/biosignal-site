@@ -28,7 +28,7 @@ Neonate[1] 데이터셋은 신생아 발작 탐지를 목적으로 설계된 데
     ├── eeg1.edf
     ├── eeg2.edf
     │   ... (77 more files)
-    ├── clicinal_information.csv
+    ├── clinical_information.csv
     ├── Ethics_approval.pdf
     ├── annotations_2017_A.csv
     ├── annotations_2017_B.csv

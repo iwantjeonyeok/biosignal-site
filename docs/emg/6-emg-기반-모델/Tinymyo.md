@@ -4,7 +4,7 @@
 > Matteo Fasulo, Giusy Spacone, Thorir Mar Ingolfsson, Yawei Li, Luca Benini, and Andrea Cossettini **arXiv preprint**
 
 
-- [Paper (arXiv)](https://arxiv.org/pdf/2512.15729))
+- [Paper (arXiv)](https://arxiv.org/pdf/2512.15729)
 - [Official code](https://github.com/pulp-bio/BioFoundation)
 ## Pre-training Data Summary
 

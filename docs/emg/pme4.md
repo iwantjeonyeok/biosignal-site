@@ -21,7 +21,7 @@ ME4 데이터셋은 오디오(Audio), 비디오(Video), 뇌파(EEG), 근전도(E
 | Anger | 분노, (Depressor anguli oris) | 14.1% |
 | Fear | 공포, (Orbicularis oculi) | 14.3% |
 | Surprise | 놀람, (Frontalis) | 14.2% |
-| Disgust | 역겨움 (Leavator labii superioris) | 14.4% |
+| Disgust | 역겨움 (Levator labii superioris) | 14.4% |
 | Neutral | 중립 (Weak EMG) | 14.4% |
 
 ## 2.3 Raw Dataset

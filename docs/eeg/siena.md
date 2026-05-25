@@ -94,7 +94,7 @@ Siena Scalp EEG Database[1]는 발작 탐지를 위해 설계된 EEG(뇌파) 데
     │   ├── PN17-1.edf
     │   ├── PN17-2.edf
     │   └── Seizures-list-PN17.txt
-    ├── subjec_info.csv
+    ├── subject_info.csv
     ├── LICENSE.txt
     ├── RECORDS
     └── SHA256SUMS.txt
@@ -122,7 +122,7 @@ Siena raw EEG 데이터셋은 총 14명의 간질 환자의 뇌파 데이터를 
     ├── Siena.h5
     ├── Siena.npz
     └── channels.csv
-    1 directiories, 131 files.
+    1 directories, 131 files.
     ```
 
 # 3. Applications and Use Cases

@@ -74,7 +74,7 @@ Column E : Cause of death
 
 ![](music-sudden-cardiac-death-in-chronic-heart-failur/image.png)
 
-데이터셋은 두개의 파일(Hotler_ECG, High-resolution_ECG)로 이루어져 있습니다.
+데이터셋은 두개의 파일(Holter_ECG, High-resolution_ECG)로 이루어져 있습니다.
 
 좌측은 Holter_ECG 파일의 P0001.hea, P0001.dat 입니다.
 
@@ -147,7 +147,7 @@ S20011.dat의 일부인 s20011의 ECG 신호입니다. 좌측은 표, 우측은 
 
   데이터셋은 2025년 1월에 발표되었기 때문에 인용되지 않았습니다.
 
-  [1]에 따르면 해당 데이터셋은 만성 심부전(CHF) 환자에서 돌연 심장사(SCD)를 포함한 전체 심장 사망률을 예측하는 모델을 개발하기 위해 만들어졌습니다. 따라서 sujbect-info.csv의 label을 y값으로 심전도 데이터를 X로 하여 심전도 데이터에 따른 심장 사망률을 예측하는 모델 제작이 가능합니다.
+  [1]에 따르면 해당 데이터셋은 만성 심부전(CHF) 환자에서 돌연 심장사(SCD)를 포함한 전체 심장 사망률을 예측하는 모델을 개발하기 위해 만들어졌습니다. 따라서 subject-info.csv의 label을 y값으로 심전도 데이터를 X로 하여 심전도 데이터에 따른 심장 사망률을 예측하는 모델 제작이 가능합니다.
 
   또한 심전도 데이터만을 이용하여 unlabeled pretraining을 진행할 수 있습니다.
 

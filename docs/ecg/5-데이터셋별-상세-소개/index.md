@@ -3,7 +3,7 @@
 
 [PhysioNet 2017](../physionet-2017/)
 
-[MIT-BIH Arrythmia database](../mit-bih-arrythmia-database/)
+[MIT-BIH Arrhythmia database](../mit-bih-arrythmia-database/)
 
 [MIT-BIH Atrial Fibrillation](../mit-bih-atrial-fibrillation/)
 

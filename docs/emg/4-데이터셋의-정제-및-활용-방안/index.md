@@ -1,4 +1,4 @@
-# 4. 데이터셋의 정제 및 활용 방안
+# 4. EMG 데이터셋의 정제 및 활용 방안
 
 [4.1. Preprocessing 방법](4-1-preprocessing-방법/)
 

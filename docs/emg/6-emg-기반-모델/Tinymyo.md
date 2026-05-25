@@ -3,9 +3,9 @@
 > **TinyMyo: A Tiny Foundation Model for Flexible EMG Signal Processing at the Edge**
 > Matteo Fasulo, Giusy Spacone, Thorir Mar Ingolfsson, Yawei Li, Luca Benini, and Andrea Cossettini **arXiv preprint**
 
-- 논문 (arXiv): https://arxiv.org/pdf/2512.15729
-- 공식 코드: https://github.com/pulp-bio/BioFoundation
 
+- [Paper (arXiv)](https://arxiv.org/pdf/2512.15729))
+- [Official code](https://github.com/pulp-bio/BioFoundation)
 ## Pre-training Data Summary
 
 TinyMyo는 세 개의 공개 sEMG 데이터셋을 결합한 총 약 **482.2 GB** 규모의 EMG 데이터로 사전학습합니다. 모든 데이터는 2 kHz sampling rate 기준으로 수집되었으며, 전처리 후 1000-sample window, 즉 **0.5초** 길이의 segment로 분할됩니다.

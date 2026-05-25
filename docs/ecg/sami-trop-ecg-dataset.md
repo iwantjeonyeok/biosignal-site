@@ -62,4 +62,4 @@ SaMi-Trop ECG Dataset은 심장 질환 분류(Cardiac Disease Classification), �
 
 # 4. References
 
-1. Song, Junho, et al. "Foundation Models for ECG: Leveraging Hybrid Self-Supervised Learning for Advanced Cardiac Diagnostics." *arXiv preprint arXiv:2407.07110* (2024).
+[1] Song, Junho, et al. "Foundation Models for ECG: Leveraging Hybrid Self-Supervised Learning for Advanced Cardiac Diagnostics." *arXiv preprint arXiv:2407.07110* (2024).

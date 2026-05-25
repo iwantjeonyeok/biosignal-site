@@ -104,4 +104,4 @@ QT Database는 ECG 파형 경계 검출 및 QT 간격 측정 연구의 발전에
 
 # 4. References
 
-1. Jane, R., et al. "Evaluation of an automatic threshold-based detector of waveform limits in Holter ECG with the QT database." *Computers in Cardiology*, IEEE, 1997.
+[1] Jane, R., et al. "Evaluation of an automatic threshold-based detector of waveform limits in Holter ECG with the QT database." *Computers in Cardiology*, IEEE, 1997.

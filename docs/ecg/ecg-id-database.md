@@ -66,6 +66,6 @@ ECG-ID Database는 생체 인식 및 개인 인증 연구에서 널리 사용되
 
 # 4. References
 
-1. AlDuwaile, Dalal A., and Md Saiful Islam. "Using convolutional neural network and a single heartbeat for ECG biometric recognition." *Entropy* 23.6 (2021): 733.
-2. Chu, Yifan, Haibin Shen, and Kejie Huang. "ECG authentication method based on parallel multi-scale one-dimensional residual network with center and margin loss." *IEEE Access* 7 (2019): 51598-51607.
-3. Melzi, Pietro, Ruben Tolosana, and Ruben Vera-Rodriguez. "ECG biometric recognition: Review, system proposal, and benchmark evaluation." *IEEE Access* 11 (2023): 15555-15566.
+[1] AlDuwaile, Dalal A., and Md Saiful Islam. "Using convolutional neural network and a single heartbeat for ECG biometric recognition." *Entropy* 23.6 (2021): 733.
+[2] Chu, Yifan, Haibin Shen, and Kejie Huang. "ECG authentication method based on parallel multi-scale one-dimensional residual network with center and margin loss." *IEEE Access* 7 (2019): 51598-51607.
+[3] Melzi, Pietro, Ruben Tolosana, and Ruben Vera-Rodriguez. "ECG biometric recognition: Review, system proposal, and benchmark evaluation." *IEEE Access* 11 (2023): 15555-15566.

@@ -101,4 +101,4 @@ Yin et al. (2024) 연구에서는 CNN+LSTM 아키텍처를 사용하여 ST-T 세
 
 # 4. References
 
-1. Yin, Ziyi, Wenjie Cai, and Mingjie Wang. "Optimizing ST-Segment classification in ECG using multi-task learning." *Biomedical Signal Processing and Control* 96 (2024): 106591.
+[1] Yin, Ziyi, Wenjie Cai, and Mingjie Wang. "Optimizing ST-Segment classification in ECG using multi-task learning." *Biomedical Signal Processing and Control* 96 (2024): 106591.

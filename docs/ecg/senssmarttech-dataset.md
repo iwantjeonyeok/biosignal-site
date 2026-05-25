@@ -54,4 +54,4 @@ Petrović et al. (2024) 연구에서는 PPG 및 ACC 신호를 활용하여 운�
 
 # 4. References
 
-1. J. Petrović *et al*., "Validation of Heart Rate Estimation from Photoplethysmograph and Accelerometer Recordings During Post-Exercise Relaxation," *2024 11th International Conference on Electrical, Electronic and Computing Engineering (IcETRAN)*, Nis, Serbia, 2024, pp. 1-5, doi: 10.1109/IcETRAN62308.2024.10645151.
+[1] J. Petrović *et al*., "Validation of Heart Rate Estimation from Photoplethysmograph and Accelerometer Recordings During Post-Exercise Relaxation," *2024 11th International Conference on Electrical, Electronic and Computing Engineering (IcETRAN)*, Nis, Serbia, 2024, pp. 1-5, doi: 10.1109/IcETRAN62308.2024.10645151.

@@ -87,4 +87,4 @@ Sudden Cardiac Death (SCD) Holter Database는 장기 ECG 기록을 활용한 SCD
 
 # 4. References
 
-1. Gao, Weidong, and Jie Liao. "Sudden Cardiac Death Risk Prediction Based on Noise Interfered Single-Lead ECG Signals." *Electronics* 13.21 (2024): 4274.
+[1] Gao, Weidong, and Jie Liao. "Sudden Cardiac Death Risk Prediction Based on Noise Interfered Single-Lead ECG Signals." *Electronics* 13.21 (2024): 4274.

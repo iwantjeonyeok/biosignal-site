@@ -70,12 +70,6 @@ Abnormal EDF Files의 각 세트는 Abnormal EDF File 안에 존재하는 EDF �
     1 directories, 10820 files
     ```
 
-# 3. Applications and Use Cases
-
-| 인용 논문 | 연구 과제 | 모델 구조 | 방법론 |
-| --- | --- | --- | --- |
-|  |  |  |  |
-
-# 4. References
+# 3. References
 
 [1] Mohammad Ali Alqarni, Hira Masood, Adil Jowad Qureshi, Muiz Alvi, Haziq Arbab, Hassan Aqeel Khan, Awais Mehmood Kamboh, Saima Shafait, and Faisal Shafait. NeuroAssist: Open-Source Automatic Event Detection in Scalp EEG. *IEEE Access*, vol. 12, pp. 170321–170334, 2024.

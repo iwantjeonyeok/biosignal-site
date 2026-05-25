@@ -84,4 +84,4 @@ Zarei et al. (2021) 연구에서는 CNN+LSTM 기반 모델을 사용하여 단�
 
 # 4. References
 
-1. Zarei, Asghar, Hossein Beheshti, and Babak Mohammadzadeh Asl. "Detection of sleep apnea using deep neural networks and single-lead ECG signals." *Biomedical Signal Processing and Control* 71 (2022): 103125.
+[1] Zarei, Asghar, Hossein Beheshti, and Babak Mohammadzadeh Asl. "Detection of sleep apnea using deep neural networks and single-lead ECG signals." *Biomedical Signal Processing and Control* 71 (2022): 103125.

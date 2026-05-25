@@ -22,7 +22,7 @@ MIT-BIH noise stress database는 실제 환경에서 발생하는 다양한 노�
 | ~ | 0.36% (96/26370) | 8 | 4 |
 | N | 35.11% (9258/26370) | 1543 | 0 |
 
-- + : Rhythm change annotation
+- \+ : Rhythm change annotation
 - A : Atrial premature beat
 - R : Right bundle branch block beat
 - V : Premature ventricular contraction

@@ -1,5 +1,4 @@
 # CBraMod — Criss-Cross Brain Foundation Model
-
 > **CBraMod: A Criss-Cross Brain Foundation Model for EEG Decoding**
 > Jiquan Wang, Sha Zhao, Zhiling Luo, Yangxuan Zhou, Haiteng Jiang, Shijian Li, Tao Li, Gang Pan. **ICLR 2025.**
 

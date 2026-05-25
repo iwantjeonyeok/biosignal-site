@@ -60,5 +60,5 @@ CODE 15% ECG Dataset은 자동화된 심전도 진단(Automated ECG Diagnosis), 
 
 # 4. References
 
-1. Ribeiro, Antônio H., et al. "Automatic diagnosis of the 12-lead ECG using a deep neural network." *Nature Communications* 11.1 (2020): 1760.
-2. Song, Junho, et al. "Foundation Models for ECG: Leveraging Hybrid Self-Supervised Learning for Advanced Cardiac Diagnostics." *arXiv preprint arXiv:2407.07110* (2024).
+[1] Ribeiro, Antônio H., et al. "Automatic diagnosis of the 12-lead ECG using a deep neural network." *Nature Communications* 11.1 (2020): 1760.
+[2] Song, Junho, et al. "Foundation Models for ECG: Leveraging Hybrid Self-Supervised Learning for Advanced Cardiac Diagnostics." *arXiv preprint arXiv:2407.07110* (2024).

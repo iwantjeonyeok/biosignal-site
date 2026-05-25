@@ -1,4 +1,4 @@
-# 2.5. 다운스트림 태스크 설명 (Downsteam Task)
+# 2.5. 다운스트림 태스크 설명 (Downstream Task)
 
 
 ### **1) Seizure Detection**

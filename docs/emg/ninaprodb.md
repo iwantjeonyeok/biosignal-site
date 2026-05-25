@@ -56,7 +56,6 @@ Ninapro 데이터에서 참가자들은 정해진 움직임을 수행하며 각�
 [3] Godoy, R. V., Lahr, G. J., Dwivedi, A., Reis, T. J., Polegato, P. H., Becker, M., ... & Liarokapis, M. (2022). Electromyography-based, robust hand motion classification employing temporal multi-channel vision transformers. IEEE Robotics and Automation Letters, 7(4), 10200-10207.
 
 [4] Rahimian, E., Zabihi, S., Asif, A., Farina, D., Atashzar, S. F., & Mohammadi, A. (2021). Temgnet: Deep transformer-based decoding of upperlimb semg for hand gestures recognition. arXiv preprint arXiv:2109.12379.
-
 separation. IEEE Journal of Biomedical and Health Informatics, 28(1), 181-192.
 
 [5] Wang, K. C., Liu, K. C., Yeh, P. C., Peng, S. Y., & Tsao, Y. (2024). TrustEMG-Net: Using Representation-Masking Transformer with U-Net for Surface Electromyography Enhancement. IEEE Journal of Biomedical and Health Informatics.

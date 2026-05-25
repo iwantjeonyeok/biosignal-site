@@ -48,7 +48,7 @@
 
 [ECG Dataset](ecg/)
 
-# 💪🏻 EMG DATASET
+# [💪🏻 EMG DATASET](emg/)
 
 ---
 

@@ -76,8 +76,7 @@ Chapman_shaoxing dataset의 Rx, Hx, Sx는 모두 unknown입니다.
 
 ## 2.4 Raw Dataset Example
 
-Chapman_shaoxing의 mat, hea 파일들을 이용하여 data.csv, pid.csv 파일로 만듭니다. 다음 사진들은 JS00001_re_data.csv, JS00001_re_data.csv, 그리고 JS00001_re_data.csv에서 첫 번째 열인 Lead Ⅰ을 시각화한 사진입니다.
-
+Chapman_shaoxing의 mat, hea 파일들을 이용하여 data.csv, pid.csv 파일로 만듭니다. 다음 사진들은 JS00001_re_data.csv(신호 데이터), JS00001_re_pid.csv(환자 정보)를 시각화한 사진입니다.
 ![](chapman-shaoxing/image-1.png)
 
 ![](chapman-shaoxing/image-2.png)

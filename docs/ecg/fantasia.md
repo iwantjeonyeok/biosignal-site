@@ -26,7 +26,7 @@ Fantasia database는 두 개의 연령 그룹에서 선별된 건강한 
 - S : Supraventricular premature or ectopic beat (atrial or nodal)
 - r : R-on-T premature ventricular contraction
 - V : Premature ventricular contraction
-- + : Rhythm Change Annotation
+- \+ : Rhythm Change Annotation
 - N : Normal Beat
 - Q : Unclassifiable Beat
 - s : ST segment change

@@ -1,6 +1,6 @@
 # 1. Dataset Information
 
-BIDMC 울혈성 심부전(CHF) 데이터베이스에는 **심각한 울혈성 심부전(NYHA 클래스 34)**을 앓고 있는 15명의 환자(남성 11명, 2271세 / 여성 4명, 54~63세)의 장기 ECG(심전도) 기록이 포함되어 있습니다. 이 환자 그룹은 경구용 강심제인 **밀리논(milrinone)**을 투여받기 이전에 기존의 일반적인 의료 치료를 받고 있던 더 큰 연구 그룹의 일부였습니다. 이 데이터베이스는 공식 PhysioNet 페이지 [1]에서 다운받을 수 있으며, 이 데이터셋은 원래 "Survival of Patients with Severe Congestive Heart Failure Treated with Oral Milrinone" 논문의 연구 목적으로 수집되었습니다 [2].
+BIDMC 울혈성 심부전(CHF) 데이터베이스에는 **심각한 울혈성 심부전(NYHA 클래스 34)**을 앓고 있는 15명의 환자(남성 11명, 22~71세 / 여성 4명, 54~63세)의 장기 ECG(심전도) 기록이 포함되어 있습니다. 이 환자 그룹은 경구용 강심제인 **밀리논(milrinone)**을 투여받기 이전에 기존의 일반적인 의료 치료를 받고 있던 더 큰 연구 그룹의 일부였습니다. 이 데이터베이스는 공식 PhysioNet 페이지 [1]에서 다운받을 수 있으며, 이 데이터셋은 원래 "Survival of Patients with Severe Congestive Heart Failure Treated with Oral Milrinone" 논문의 연구 목적으로 수집되었습니다 [2].
 
 각 개인별 기록은 약 20시간 길이이며, 두 개의 ECG 신호가 포함되어 있습니다. 이 신호들은 250Hz 샘플링 레이트로 수집되었으며, 12비트 해상도로 ±10밀리볼트(mV) 범위에서 기록되었습니다. 원본 아날로그 기록은 미국 보스턴의 **Beth Israel 병원(현재 Beth Israel Deaconess Medical Center)**에서 수집되었으며, **휴대용 심전도 기록기(Ambulatory ECG Recorders**)를 사용하여 측정되었습니다. 이 기록의 대역폭은 약 0.1Hz ~ 40Hz였으며, 주석(annotation) 파일(.ecg 확장자)은 자동화된 검출기(automated detector)를 사용하여 생성되었으며, 수동으로 수정되지 않았습니다.
 

@@ -29,4 +29,3 @@
 
 ![](uci-semg-for-basic-hand-movements/image-1.png)
 
-# 3. References

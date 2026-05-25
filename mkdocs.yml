@@ -211,16 +211,16 @@ nav:
   - EMG:
     - EMG Overview: emg/index.md
     - 1. 서론: emg/1-서론.md
-    - 2. Electromyogram (EMG) 개요:
+    - 2. EMG 데이터 설명:
       - emg/2-electromyogram-emg-개요/index.md
       - 2.1. EMG 정의: emg/2-electromyogram-emg-개요/2-1-emg-정의.md
       - 2.2. EMG 신호적 특징: emg/2-electromyogram-emg-개요/2-2-emg-신호적-특징.md
-    - 3. 연구동향:
+    - 3. EMG 연구동향:
       - emg/3-연구동향/index.md
       - 3.1. Hand gesture recognition: emg/3-연구동향/3-1-hand-gesture-recognition.md
       - 3.2. Human activity recognition: emg/3-연구동향/3-2-human-activity-recognition.md
       - 3.3. Others: emg/3-연구동향/3-3-others.md
-    - 4. 데이터셋의 정제 및 활용 방안:
+    - 4. EMG 데이터셋의 정제 및 활용 방안:
       - emg/4-데이터셋의-정제-및-활용-방안/index.md
       - 4.1. Preprocessing 방법:
         - emg/4-데이터셋의-정제-및-활용-방안/4-1-preprocessing-방법/index.md
@@ -234,7 +234,7 @@ nav:
         - 4.2.2. Transfer Learning: emg/4-데이터셋의-정제-및-활용-방안/4-2-통합-활용-방안/4-2-2-transfer-learning.md
         - 4.2.3. Foundation Model: emg/4-데이터셋의-정제-및-활용-방안/4-2-통합-활용-방안/4-2-3-foundation-model.md
       - 4.3. Downstream Task: emg/4-데이터셋의-정제-및-활용-방안/4-3-downstream-task.md
-    - 5. 데이터셋별 상세소개:
+    - 5. 데이터셋별 상세 소개:
       - emg/5-데이터셋별-상세소개/index.md
       - NinaproDB: emg/ninaprodb.md
       - CapgMyo-db: emg/capgmyo-db.md

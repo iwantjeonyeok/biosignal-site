@@ -15,4 +15,4 @@ EEG는 특히 시간 해상도가 매우 뛰어나 수 ms 수준의 빠른 뇌 �
 
 [2.4. 주파수 밴드와 의미 (Frequency Bands)](2-4-주파수-밴드와-의미-frequency-bands.md)
 
-[2.5. 다운스트림 태스크 설명 (Downsteam Task)](2-5-다운스트림-태스크-설명-downstream-task.md)
+[2.5. 다운스트림 태스크 설명 (Downstream Task)](2-5-다운스트림-태스크-설명-downstream-task.md)

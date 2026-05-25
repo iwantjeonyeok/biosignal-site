@@ -4,7 +4,7 @@
 > Jun Li, Aaron Aguirre, Junior Moura, Che Liu, Lanhai Zhong, Chenxi Sun, Gari Clifford, Brandon Westover, Shenda Hong. **NEJM AI 2025.**
 
 - [Paper (arXiv)](https://arxiv.org/abs/2410.04133)
-- [Official code](https://github.com/PKUDigitalHealth/ECGFounderg)
+- [Official code](https://github.com/PKUDigitalHealth/ECGFounder)
 
 
 

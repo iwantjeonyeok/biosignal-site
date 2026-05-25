@@ -1,4 +1,4 @@
-# 2. Electromyogram (EMG) 개요
+# 2. EMG 데이터 설명
 
 [2.1. EMG 정의](2-1-emg-정의.md)
 

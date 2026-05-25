@@ -14,7 +14,7 @@ MIT-BIH Arrythmia database는 Boston’s Beth Israel Hospital에서 1975년부�
 
 | Label Type | # of recordings | Time length (s) - Mean | Time length (s) - Standard Deviation |
 | --- | --- | --- | --- |
-| +| 1.13% (1296/114839) | 26.4 | 42.1 |
+| ++| 1.13% (1296/114839) | 26.4 | 42.1 |
 | A | 2.22% (2546/114839) | 94.3 | 265.2 |
 | N | 65.44% (75151/114839) | 1833 | 744 |
 | V | 6.21% (7134/114839) | 187.7 | 255.5 |

@@ -2,7 +2,7 @@
 심전도(ECG, Electrocardiogram)는 심장의 전기적 활동을 기록하는 검사입니다. ECG 신호는 신체에 부착된 여러 개의 전극(electrode)을 통해 측정되며, 전극 간의 전위 차이(potential difference)를 계산한 것이 **lead(리드)**입니다. 
 리드는 심장의 전기적 활동을 다양한 각도에서 관찰할 수 있게 해주므로, **몇 개의 리드를 사용하느냐**에 따라 ECG 측정 방식이 달라지며, 이는 진단의 정확성과 임상적 용도에 직접적인 영향을 미칩니다. 사용하는 전극의 개수와 배치 위치에 따라 3-lead, 6-lead, 12-lead ECG 등 다양한 종류가 존재합니다.
 
-
+<img width="1063" height="420" alt="ECG 사진" src="https://github.com/user-attachments/assets/277a5e1b-9318-422c-93b3-ee52730c45cd" />
 ## 12-Lead ECG (표준 12유도 심전도)
 
 ### 정의 및 특징

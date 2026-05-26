@@ -1,5 +1,4 @@
 # 4.3.3 Demographic and Biometric Prediction
-
 Demographic and Biometric Prediction은 ECG 신호를 이용해 환자의 인구학적 특성이나 개인 고유의 생체적 특징을 예측하는 downstream task입니다.  
 이 항목은 ECG가 심장 질환이나 리듬 이상만을 반영하는 것이 아니라, 나이, 성별, 개인별 ECG 패턴과 같은 환자 특성도 일부 포함할 수 있음을 보여줍니다.
 

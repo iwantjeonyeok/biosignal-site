@@ -29,7 +29,7 @@
 | LL (Left Leg) | 왼쪽 다리 | 초록색 |
 | RL (Right Leg) | 오른쪽 다리 (접지) | 검정색 |
 
----
+
 
 #### **흉부 전극 (Chest/Precordial Electrodes) - 6개**
 
@@ -206,8 +206,6 @@ Single-lead ECG는 두 개의 전극으로 하나의 리드를 형성하며, 배
 
 ---
 
-
----
 
 ## 참고문헌
 

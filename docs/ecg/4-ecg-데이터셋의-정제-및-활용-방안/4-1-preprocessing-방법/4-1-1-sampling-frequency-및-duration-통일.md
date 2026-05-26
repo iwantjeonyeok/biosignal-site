@@ -41,7 +41,7 @@ $$f_{target} = f_{original} \times \frac{N_{target}}{N_{original}}$$
 여기서 $f$는 주파수, $N$은 샘플 개수입니다.
 
 
-## 2. Duration (길이) 표준화
+##  Duration (길이) 표준화
 
 ###  고정 길이 Segmentation
 

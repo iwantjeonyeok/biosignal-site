@@ -3,11 +3,6 @@
 Demographic and Biometric Prediction은 ECG 신호를 이용해 환자의 인구학적 특성이나 개인 고유의 생체적 특징을 예측하는 downstream task입니다.  
 이 항목은 ECG가 심장 질환이나 리듬 이상만을 반영하는 것이 아니라, 나이, 성별, 개인별 ECG 패턴과 같은 환자 특성도 일부 포함할 수 있음을 보여줍니다. 최근 ECG foundation model 연구에서는 ECG를 이용한 age prediction, sex detection, patient identification 등이 downstream task로 사용되었습니다.  특히 ECGFounder는 age classification, age regression, sex classification을 demographic downstream task로 평가했으며, D-BETA는 ECG recording이 어떤 환자에게 속하는지 예측하는 patient identification task를 수행했습니다.
 
-| 세부 항목 | 설명 | 대표 예시 |
-|---|---|---|
-| **Age Prediction** | ECG 신호를 이용해 환자의 나이를 예측하는 task입니다. | age classification, age regression |
-| **Sex Detection** | ECG 신호를 이용해 환자의 성별을 분류하는 task입니다. | sex classification |
-| **Patient Identification** | ECG recording의 개인별 패턴을 이용해 해당 ECG가 어떤 환자에게 속하는지 식별하는 task입니다. | patient ownership prediction |
 
 #### 1) Age Prediction
 

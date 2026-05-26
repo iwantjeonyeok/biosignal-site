@@ -198,13 +198,3 @@ Single-lead ECG는 두 개의 전극으로 하나의 리드를 형성하며, 배
 - 사전 훈련 및 주기적 재교육
 - 체계적인 검증 시스템 구축
 
-
-
-
-## 참고문헌
-
-- [12 Lead ECG Placement: The Complete Guide (2025)](https://med-linket-corp.com/blogs/news/12-lead-ecg-placement)
-- [12-Lead ECG Placement: The Ultimate Guide | Cables and Sensors](https://www.cablesandsensors.com/pages/12-lead-ecg-placement-guide-with-illustrations)
-- [Accuracy of ECG chest electrode placements by paramedics: an observational study - NCBI](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8312365/)
-- [Standard Placement of ECG Leads Diagram: A Comprehensive Guide - Anatomy Note](https://anatomynote.com/standard-placement-of-ecg-leads-diagram-a-comprehensive-guide/)
-

@@ -6,7 +6,7 @@ CHB-MIT[1] 데이터셋은 소아 간질 환자 23명을 대상으로 수집된 
 
 ## 2.1 Data Information
 
-| # of Subjects | # of Leads | Sampling Frequency (Hz) | Recording Duration (min) | File Fomat |
+| # of Subjects | # of Leads | Sampling Frequency (Hz) | Recording Duration (min) | File Format |
 | --- | --- | --- | --- | --- |
 | 22 | 23 | 256 | 1440 | (EEG).edf, (summary).txt |
 

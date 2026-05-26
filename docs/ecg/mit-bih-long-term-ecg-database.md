@@ -5,7 +5,7 @@ MIT-BIH Long-Term ECG Database는 2개의 ECG 리드로 구성된 장시간 심�
 
 ## 2.1 Data Information
 
-| # of Subjects | # of Leads | Sampling Frequency (Hz) | Recording Duration (min) | File Fomat |
+| # of Subjects | # of Leads | Sampling Frequency (Hz) | Recording Duration (min) | File Format |
 | --- | --- | --- | --- | --- |
 | 669852 records | 2 | Fixed 128 Hz | 14 hour ~ 22 hour | (ECG).dat/(ECG).hea/(ECG).atr/(ECG).xws (Metadata) |
 

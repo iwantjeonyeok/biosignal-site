@@ -6,7 +6,7 @@ BCI IV 1 데이터셋[1]은 총 7명의 건강한 피실험자를 대상으로 �
 
 ## 2.1 Data Information
 
-| # of Subjects | # of Leads | Sampling Frequency (Hz) | Recording Duration (min) | File Fomat |
+| # of Subjects | # of Leads | Sampling Frequency (Hz) | Recording Duration (min) | File Format |
 | --- | --- | --- | --- | --- |
 | 7 | 264 | 1000 | 30 | (EEG).txt |
 

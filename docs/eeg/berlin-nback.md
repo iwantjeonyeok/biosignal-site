@@ -6,7 +6,7 @@ Berlin(nback) 데이터셋[1]은 작업 기억 부하를 측정하기 위한 n-b
 
 ## 2.1 Data Information
 
-| # of Subjects | # of Leads | Sampling Frequency (Hz) | Recording Duration (min) | File Fomat |
+| # of Subjects | # of Leads | Sampling Frequency (Hz) | Recording Duration (min) | File Format |
 | --- | --- | --- | --- | --- |
 | 26 | 30 | 200 | 478 | (EEG).mat |
 
@@ -41,7 +41,7 @@ Berlin(nback) 데이터셋[1]은 작업 기억 부하를 측정하기 위한 n-b
     26 directories, 9 files
     ```
 
-mrk_dsr.mat를 통해 trial별 timepoint 정보와 라벨을 알 수 있습니다.
+mrk_nback.mat를 통해 trial별 timepoint 정보와 라벨을 알 수 있습니다.
 
 ## 2.4 Raw Dataset Example
 

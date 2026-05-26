@@ -6,7 +6,7 @@
 
 ## 2.1 Data Information
 
-| # of Leads | Sampling Frequency (Hz) | Recording Duration (min) | File Fomat |
+| # of Leads | Sampling Frequency (Hz) | Recording Duration (min) | File Format |
 | --- | --- | --- | --- |
 | 1 | 200Hz | 30s | ECG signal - Raw binary Episodes - JSON |
 

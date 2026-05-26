@@ -48,29 +48,46 @@ ECGFounder는 총 12개의 clinical downstream task에서 평가되었다. 이 �
 ## How to Reproduce the Pre-training Preprocessing
 
 ```bash
-# 1) HEEDB 접근 신청 
-#    https://bdsp.io/content/heedb/5.0/
+# 1) BDSP 계정 생성 (Credentialed User 등록)
+#     - 계정 생성: https://bdsp.io/register/
+#     - 이메일, 이름 입력하여 계정 생성
+#     - 자격증명 완료: https://bdsp.io/settings/credentialing/
+#
+# 2) CITI 훈련 이수
+#     - 훈련 페이지: https://bdsp.io/settings/training/
+#     - "CITI Data or Specimens Only Research" 과정 이수 (무료, CITI Program 사이트에서 완료)
+#     - 수료증을 BDSP에 제출
+#
+# 3) Data Use Agreement 서명
+#     - 서명 페이지: https://bdsp.io/sign-dua/heedb/5.0/
+#     - 재식별 금지 등의 조건이 담긴 데이터 사용 동의서 서명
+#
+# ※ 3단계 완료 후 파일 접근 경로
+#     - 로그인 후 https://bdsp.io/content/heedb/5.0/ 의 Files 섹션에서 WFDB/MAT 형식 파일 다운로드 가능
+#     - 데이터 구조: ECG/I0001/WFDB/ (MGH, 약 1,060만 ECG) + ECG/I0006/WFDB/ (Emory, 약 100만 ECG)
 
-# 2) 데이터 다운로드
-#    - BDSP 계정을 생성한다: https://bdsp.io/register/
-#    - credentialing을 완료한다: https://bdsp.io/settings/credentialing/
-#    - CITI Data or Specimens Only Research 과정을 이수한다: https://bdsp.io/settings/training/
-#    - HEEDB Data Use Agreement에 서명한다: https://bdsp.io/sign-dua/heedb/5.0/
-#    - 위 절차 완료 후 https://bdsp.io/content/heedb/5.0/ 의 Files 섹션에서 WFDB/MAT 형식 파일 다운로드 가능
-#    - 데이터 구조: ECG/10001/WFDB/ (MGH, 약 1,060만 ECG) + ECG/10006/WFDB/ (Emory, 약 100만 ECG)
+# 4) ECGFounder 클론
+git clone https://github.com/PKUDigitalHealth/ECGFounder
+cd ECGFounder
 
-# 3) 전처리 수행
-#    - 불량 파일 제거 (판독 불가, 결측, 매칭 오류)
-#    - 500 Hz resampling (linear interpolation)
-#    - 0.5 Hz high-pass filter 적용
-#    - second-order 50 Hz Butterworth low-pass filter 적용
-#    - 50/60 Hz notch filter 적용
-#    - 10초 window 분할 및 zero padding
-#    - segment 단위 mean/std normalization
+# 5) 의존성 설치
+pip install -r requirements.txt
 
-# 4) 사전학습 시작 
+# 6) 사전학습된 모델 가중치 다운로드 (선택)
+#     - https://huggingface.co/PKUDigitalHealth/ECGFounder
 
+# 7) 전처리 수행
+#     - 불량 파일 제거 (판독 불가, 결측, 매칭 오류)
+#     - 500 Hz resampling (linear interpolation)
+#     - 0.5 Hz high-pass filter 적용
+#     - second-order 50 Hz Butterworth low-pass filter 적용
+#     - 50/60 Hz notch filter 적용
+#     - 10초 window 분할 및 zero padding
+#     - segment 단위 mean/std normalization
+#     공식 repository의 README 및 data processing 스크립트 참고
 
+# 8) 학습 또는 fine-tuning 실행
+#     공식 repository의 scripts 및 configuration 파일 참고
 ```
 
 ## Citation

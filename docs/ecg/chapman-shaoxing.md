@@ -6,7 +6,7 @@ Chapman_shaoxing dataset은 12리드 ECG 데이터로 구성된 대규모 데이
 
 ## 2.1 Data Information
 
-| # of Subjects | # of Leads | Sampling Frequency (Hz) | Recording Duration (min) | File Fomat |
+| # of Subjects | # of Leads | Sampling Frequency (Hz) | Recording Duration (min) | File Format |
 | --- | --- | --- | --- | --- |
 | More than 10,000 (10,247 records) | 12 | Fixed 500 Hz | 10 seconds | MATLAB V4 files .mat (ECG) .hea (Metadata) |
 

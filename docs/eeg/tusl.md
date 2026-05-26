@@ -6,7 +6,7 @@ TUSL 데이터셋[1]은 발작 탐지 시스템에서 슬로잉으로 인한 오
 
 ## 2.1 Data Information
 
-| # of Subjects | # of Leads | Sampling Frequency (Hz) | Recording Duration (min) | File Fomat |
+| # of Subjects | # of Leads | Sampling Frequency (Hz) | Recording Duration (min) | File Format |
 | --- | --- | --- | --- | --- |
 | 38 | 22 bipolar channel pairs (TCP montage) | 250 (most common), 256, 512 | 16.7 | (EEG).edf / (event-based annotations).lbl / (term-based annotations).tse or .tse_agg / (aggregated event-based annotations).lbl_agg |
 

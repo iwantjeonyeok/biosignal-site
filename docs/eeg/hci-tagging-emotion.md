@@ -8,7 +8,7 @@ HCI-Tagging (Emotion)데이터셋[1] 은 감정 인식을 위한 멀티모달 �
 
 ## 2.1 Data Information
 
-| # of Subjects | # of Leads | Sampling Frequency (Hz) | Recording Duration (min) | File Fomat |
+| # of Subjects | # of Leads | Sampling Frequency (Hz) | Recording Duration (min) | File Format |
 | --- | --- | --- | --- | --- |
 | 27 | 32 | 256 | 715 | (EEG).bdf |
 

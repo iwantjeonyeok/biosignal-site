@@ -6,7 +6,7 @@ MIT-BIH 심방세동(Atrial Fibrillation) 데이터베이스는 심방세동(AF)
 
 ## 2.1 Data Information
 
-| # of Subjects | # of Leads | Sampling Frequency (Hz) | Recording Duration (min) | File Fomat |
+| # of Subjects | # of Leads | Sampling Frequency (Hz) | Recording Duration (min) | File Format |
 | --- | --- | --- | --- | --- |
 | 623 records | 2 | Fixed 250 Hz | 10 hour | (ECG).dat/(ECG).hea/(ECG).atr/(ECG).qrs (Metadata) |
 

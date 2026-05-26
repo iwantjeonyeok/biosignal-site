@@ -6,7 +6,7 @@
 
 ## 2.1 Data Information
 
-| # of Subjects | # of Leads | Sampling Frequency (Hz) | Recording Duration (min) | File Fomat |
+| # of Subjects | # of Leads | Sampling Frequency (Hz) | Recording Duration (min) | File Format |
 | --- | --- | --- | --- | --- |
 | More than 7,000 (8,528 records) | 12 | 500Hz | 10 | MATLAB V4 files .mat (ECG) .hea (Metadata) |
 
@@ -26,7 +26,7 @@
 | Atrioventricular Reentrant Tachycardia (AVRT) | 0.05156854% (18/34,905) |
 | Sinus Atrial to Atrial Wandering Rhythm (SAAWR) | % (/34,905) |
 
-- Sinus Bradycardia (SB): : 동성 서맥 – 정상 동성 리듬이지만 심박수가 60bpm 이하로 느려진 상태, P-QRS-T 파형이 규칙적
+- Sinus Bradycardia (SB): 동성 서맥 – 정상 동성 리듬이지만 심박수가 60bpm 이하로 느려진 상태, P-QRS-T 파형이 규칙적
 - Sinus Rhythm (SR): 정상 동성 리듬 – 정상적인 심박수(60~100bpm)를 유지하는 심장 리듬, P-QRS-T 파형 정상
 - Atrial Fibrillation (AF): 심방세동 – 비정상적인 심방의 빠른 전기 신호로 인해 심박수가 불규칙함, QRS 간격이 불규칙적
 - Sinus Tachycardia (ST): 동성 빈맥 – 정상 동성 리듬이지만 심박수가 100bpm 이상으로 빠른 상태, P-QRS-T 파형 규칙적

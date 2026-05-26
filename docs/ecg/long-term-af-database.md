@@ -1,12 +1,12 @@
 # 1. Dataset Information
 
-Long-term AF Database[1]는 심박 세동(AF)이 지속적인지, 자발적으로 종료되는지 예측하기 위한 알고리즘 개발을 위해 수집되었습니다. 2개의 리드를 통해 초당 128개의 데이터가 20-24h 동안 수집되었습니다. 
+Long-term AF Database[1]는 심방세동(AF)이 지속적인지, 자발적으로 종료되는지 예측하기 위한 알고리즘 개발을 위해 수집되었습니다. 2개의 리드를 통해 초당 128개의 데이터가 20-24h 동안 수집되었습니다. 
 
 # 2. Dataset Basic Information
 
 ## 2.1 Data Information
 
-| # of Subjects | # of Leads | Sampling Frequency (Hz) | Recording Duration (min) | File Fomat |
+| # of Subjects | # of Leads | Sampling Frequency (Hz) | Recording Duration (min) | File Format |
 | --- | --- | --- | --- | --- |
 | 84 patients | 2 | Fixed 128 Hz | Generally 24h | WFDB format .dat (signal data, binary file) .hea(signal data, meta data) .qrs(location of heartbeat) .atr(annotation) |
 

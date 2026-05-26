@@ -6,7 +6,7 @@ Berlin(dsr) 데이터셋[1]은 자극 판별 및 선택 반응(discrimination/se
 
 ## 2.1 Data Information
 
-| # of Subjects | # of Leads | Sampling Frequency (Hz) | Recording Duration (min) | File Fomat |
+| # of Subjects | # of Leads | Sampling Frequency (Hz) | Recording Duration (min) | File Format |
 | --- | --- | --- | --- | --- |
 | 26 | 30 | 200 | 320 | (EEG).mat |
 

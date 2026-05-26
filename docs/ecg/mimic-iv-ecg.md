@@ -6,7 +6,7 @@ MIMIC-IV-ECG dataset은 Beth Israel Deaconess Medical Center (BIDMC)에서 수�
 
 ## 2.1 Data Information
 
-| # of Subjects | # of Leads | Sampling Frequency (Hz) | Recording Duration (min) | File Fomat |
+| # of Subjects | # of Leads | Sampling Frequency (Hz) | Recording Duration (min) | File Format |
 | --- | --- | --- | --- | --- |
 | More than 80,000 (80,035 records) | 12 | Fixed 500 Hz | 10 seconds | .dat (ECG) .hea (Metadata) |
 

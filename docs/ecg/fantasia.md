@@ -6,7 +6,7 @@ Fantasia database는 두 개의 연령 그룹에서 선별된 건강한 
 
 ## 2.1 Data Information
 
-| # of Subjects | # of Leads | Sampling Frequency (Hz) | Recording Duration (min) | File Fomat |
+| # of Subjects | # of Leads | Sampling Frequency (Hz) | Recording Duration (min) | File Format |
 | --- | --- | --- | --- | --- |
 | 144399 records | 3 (ECG/RESP/BP) | Fixed 250 Hz | 2 hour | (ECG/RESP/BP).dat/(ECG).ecg/(ECG/RESP/BP).hea |
 

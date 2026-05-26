@@ -6,7 +6,7 @@ Raw EEG Data 데이터셋[1]은 피험자들이 Information-Integration categori
 
 ## 2.1 Data Information
 
-| # of Subjects | # of Leads | Sampling Frequency (Hz) | Recording Duration (min) | File Fomat |
+| # of Subjects | # of Leads | Sampling Frequency (Hz) | Recording Duration (min) | File Format |
 | --- | --- | --- | --- | --- |
 | unknown | 64 | 256 | unknown | (EEG).bdf |
 

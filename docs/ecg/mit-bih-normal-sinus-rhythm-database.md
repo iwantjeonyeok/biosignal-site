@@ -6,7 +6,7 @@ MIT-BIH Normal Sinus Rhythm database는 정상 동리듬을 가진 18명의 장�
 
 ## 2.1 Data Information
 
-| # of Subjects | # of Leads | Sampling Frequency (Hz) | Recording Duration (min) | File Fomat |
+| # of Subjects | # of Leads | Sampling Frequency (Hz) | Recording Duration (min) | File Format |
 | --- | --- | --- | --- | --- |
 | 1806792 records | 2 | Fixed 128 Hz | Max 24 hour | (ECG).dat/(ECG).hea/(ECG).atr/(ECG).xws (Metadata) |
 

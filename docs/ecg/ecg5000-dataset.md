@@ -16,7 +16,7 @@ ECG5000 데이터셋은 전처리가 완료된 상태로 제공되어 바로 학
 
 ## 2.1 Data Information
 
-| # of Subjects | # of Leads | Sampling Frequency (Hz) | Recording Duration (min) | File Fomat |
+| # of Subjects | # of Leads | Sampling Frequency (Hz) | Recording Duration (min) | File Format |
 | --- | --- | --- | --- | --- |
 | 5,000 records | 1 | Fixed 500 Hz | 20 hours | .arff (ECG + Rhythm annotation) .ts (ECG) .txt (ECG) |
 

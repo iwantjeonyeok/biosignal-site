@@ -6,7 +6,7 @@ Emobrain 데이터셋 [1] 은 eNTERFACE’06 워크숍에서 수집된 것으로
 
 ## 2.1 Data Information
 
-| # of Subjects | # of Leads | Sampling Frequency (Hz) | Recording Duration (min) | File Fomat |
+| # of Subjects | # of Leads | Sampling Frequency (Hz) | Recording Duration (min) | File Format |
 | --- | --- | --- | --- | --- |
 | 5 | 54 | 1024 | 16000 | (EEG).edf |
 

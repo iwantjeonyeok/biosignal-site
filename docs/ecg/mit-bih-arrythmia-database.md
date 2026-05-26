@@ -6,7 +6,7 @@ MIT-BIH Arrythmia database는 Boston’s Beth Israel Hospital에서 1975년부�
 
 ## 2.1 Data Information
 
-| # of Subjects | # of Leads | Sampling Frequency (Hz) | Recording Duration (min) | File Fomat |
+| # of Subjects | # of Leads | Sampling Frequency (Hz) | Recording Duration (min) | File Format |
 | --- | --- | --- | --- | --- |
 | 114839 records | 2 (MLII, V1/2/4/5) | Fixed 360 Hz | 30 minutes | (ECG).dat/(ECG).hea/(ECG).atr/(ECG).xws (Metadata) |
 

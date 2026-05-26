@@ -6,7 +6,7 @@ NMT Scalp EEG Dataset은[1] 정상 및 신경 질환 환자의 EEG 데이터를 
 
 ## 2.1 Data Information
 
-| # of Subjects | # of Leads | Sampling Frequency (Hz) | Recording Duration (min) | File Fomat |
+| # of Subjects | # of Leads | Sampling Frequency (Hz) | Recording Duration (min) | File Format |
 | --- | --- | --- | --- | --- |
 | 2417 | 21 | 200 | Ave 15 | (EEG).edf/(주석).csv/(Readme).txt |
 
@@ -24,49 +24,13 @@ NMT Scalp EEG Dataset은[1] 정상 및 신경 질환 환자의 EEG 데이터를 
 
 !!! note ""
     ```
-    SEED-VIG/
-    ├── SEED-VIG/
-    │   ├── EEG_Feature_2Hz/
-    │   │   ├── 10_20151125_noon.mat
-    │   │   ├── 11_20151024_night.mat
-    │   │   └── 12_20150928_noon.mat
-    │   │   ... (20 more files)
-    │   ├── EEG_Feature_5Bands/
-    │   │   ├── 10_20151125_noon.mat
-    │   │   ├── 11_20151024_night.mat
-    │   │   └── 12_20150928_noon.mat
-    │   │   ... (20 more files)
-    │   ├── EOG_Feature/
-    │   │   ├── 10_20151125_noon.mat
-    │   │   ├── 11_20151024_night.mat
-    │   │   └── 12_20150928_noon.mat
-    │   │   ... (20 more files)
-    │   ├── Forehead_EEG/
-    │   │   ├── EEG_Feature_2Hz/
-    │   │   │   ├── 10_20151125_noon.mat
-    │   │   │   ├── 11_20151024_night.mat
-    │   │   │   └── 12_20150928_noon.mat
-    │   │   │   ... (20 more files)
-    │   │   └── EEG_Feature_5Bands/
-    │   │       ├── 10_20151125_noon.mat
-    │   │       ├── 11_20151024_night.mat
-    │   │       └── 12_20150928_noon.mat
-    │   │       ... (20 more files)
-    │   ├── Raw_Data/
-    │   │   ├── 10_20151125_noon.mat
-    │   │   ├── 11_20151024_night.mat
-    │   │   └── 12_20150928_noon.mat
-    │   │   ... (20 more files)
-    │   ├── perclos_labels/
-    │   │   ├── 10_20151125_noon.mat
-    │   │   ├── 11_20151024_night.mat
-    │   │   └── 12_20150928_noon.mat
-    │   │   ... (20 more files)
-    │   ├── Readme_Chinese.txt
-    │   ├── Readme_English.txt
-    │   └── channel_62_pos.locs
-    └── SEED-VIG eeg_channels.csv
-    9 directories, 165 files
+    NMT_Scalp_EEG/
+    ├── aaaaaaae.edf
+    ├── aaaaaaaf.edf
+    ├── aaaaaaag.edf
+    │   ... (2414 more files)
+    └── Labels.csv
+    1 directory, 2418 files
     ```
 
 총 2417개의 edf파일이 존재하며 각 파일은 참가자 한 명이 단일 세션으로 기록된 eeg 신호 파일을 의미합니다. 파일별로 normal/abnormal여부가 Labels.csv에 기록되어 있으며 abnormal 445개, normal 1972 개의 파일이 존재합니다. Train 셋으로는 총 2,232개 evaluation 셋으로는 총 185개의 파일이 존재합니다. Labels.csv 파일에는 라벨에 관한 정보 외에도 참가자 나이, 성별, 폴더위치 정보까지 포함됩니다.

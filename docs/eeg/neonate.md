@@ -6,7 +6,7 @@ Neonate[1] 데이터셋은 신생아 발작 탐지를 목적으로 설계된 데
 
 ## 2.1 Data Information
 
-| # of Subjects | # of Leads | Sampling Frequency (Hz) | Recording Duration (min) | File Fomat |
+| # of Subjects | # of Leads | Sampling Frequency (Hz) | Recording Duration (min) | File Format |
 | --- | --- | --- | --- | --- |
 | 79 | 19 | 256 | Average 74 min | (EEG).edf/(주석).mat,.csv/(임상정보).csv |
 

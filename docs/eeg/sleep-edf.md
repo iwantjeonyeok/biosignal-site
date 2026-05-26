@@ -6,7 +6,7 @@ Sleep-EDF는 197명의 피험자에 대한 수면 다원검사(PSG) 기록을 �
 
 ## 2.1 Data Information
 
-| # of Subjects | # of Leads | Sampling Frequency (Hz) | Recording Duration (min) | File Fomat |
+| # of Subjects | # of Leads | Sampling Frequency (Hz) | Recording Duration (min) | File Format |
 | --- | --- | --- | --- | --- |
 | 82 | 7 | 100 | 1300 | (EEG).edf, (annotation).edf |
 
@@ -24,7 +24,7 @@ Sleep-EDF는 197명의 피험자에 대한 수면 다원검사(PSG) 기록을 �
 | Stage 4 | 35 | 0.191816 | 28.778672 | 416.956601 | 0.468132 | -329.426845 |
 | Monitoring | 1897 | -0.240358 | 52.548293 | 4526.460355 | 0.044689 | -4507.049991 |
 | Undefined | 4329 | -0.138913 | 33.291596 | 3468.046145 | -0.019780 | -3963.559788 |
-| Total | 27493 | -0.005638 | 31.651181 | 4526.460355 | 0.0791209 | 4507.049991 |
+| Total | 27493 | -0.005638 | 31.651181 | 4526.460355 | 0.0791209 | -4507.049991 |
 
 ## 2.3 Raw Dataset
 

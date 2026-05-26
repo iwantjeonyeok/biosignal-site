@@ -6,7 +6,7 @@ PhysioNet/Computing in Cardiology Challenge 2017[1]은 단일 리드 ECG 신호(
 
 ## 2.1 Data Information
 
-| # of Subjects | # of Leads | Sampling Frequency (Hz) | Recording Duration (min) | File Fomat |
+| # of Subjects | # of Leads | Sampling Frequency (Hz) | Recording Duration (min) | File Format |
 | --- | --- | --- | --- | --- |
 | More than 7,000 (8,528 records) | 1 | Fixed 300 Hz | Approximately 10 – 60 seconds | MATLAB V4 files .mat (ECG) .hea (Metadata) |
 

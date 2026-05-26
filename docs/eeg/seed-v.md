@@ -6,7 +6,7 @@ SEED-V 데이터셋[1] 은 16명의 피험자에 대한 EEG(뇌파) 및 안구 �
 
 ## 2.1 Data Information
 
-| # of Subjects | # of Leads | Sampling Frequency (Hz) | Recording Duration (min) | File Fomat |
+| # of Subjects | # of Leads | Sampling Frequency (Hz) | Recording Duration (min) | File Format |
 | --- | --- | --- | --- | --- |
 | 16 | 62 | 1000 | 50 | (EEG).cnt/(eye).csv |
 

@@ -10,7 +10,7 @@ KED 모델은 약 16만 명의 환자로부터 수집된 80만 개의 ECG 기�
 
 ## 2.1 Data Information
 
-| # of Subjects | # of Leads | Sampling Frequency (Hz) | Recording Duration (min) | File Fomat |
+| # of Subjects | # of Leads | Sampling Frequency (Hz) | Recording Duration (min) | File Format |
 | --- | --- | --- | --- | --- |
 | More than 1,500 (1,786 records) | 12 | Unknown | Unknown | .pkl, .npy (ECG, annotation) |
 

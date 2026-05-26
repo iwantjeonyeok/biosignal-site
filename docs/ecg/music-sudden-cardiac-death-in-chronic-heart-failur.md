@@ -10,7 +10,7 @@ MUSIC(MUerte Subita en Insuficiencia Cardiaca) 연구는 만성 심부전(CHF)�
 
 ## 2.1 Data Information
 
-| # of Leads | Sampling Frequency (Hz) | Recording Duration (min) | File Fomat |
+| # of Leads | Sampling Frequency (Hz) | Recording Duration (min) | File Format |
 | --- | --- | --- | --- |
 | 2-(4%) or 3-(96%) | Hotler - 200Hz   High-resolution - 1000Hz | 24h | WFDB format |
 

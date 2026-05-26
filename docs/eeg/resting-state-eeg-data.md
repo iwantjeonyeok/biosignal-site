@@ -6,7 +6,7 @@ Resting State EEG Data[1]에서 사용된 EEG 데이터는 22명의 건강한 �
 
 ## 2.1 Data Information
 
-| # of Subjects | # of Leads | Sampling Frequency (Hz) | Recording Duration (min) | File Fomat |
+| # of Subjects | # of Leads | Sampling Frequency (Hz) | Recording Duration (min) | File Format |
 | --- | --- | --- | --- | --- |
 | 22 | 64 | 256 | 8 | (EEG).bdf |
 

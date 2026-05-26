@@ -6,9 +6,9 @@ TUEV 데이터셋[1]은 TUH EEG Corpus의 하위 집합으로, 발작 관련 뇌
 
 ## 2.1 Data Information
 
-| # of Subjects | # of Leads | Sampling Frequency (Hz) | Recording Duration (min) | File Fomat |
+| # of Subjects | # of Leads | Sampling Frequency (Hz) | Recording Duration (min) | File Format |
 | --- | --- | --- | --- | --- |
-| unknown | 22 bipolar channel pairs (TCP montage) | 128 | 1440 | (ECG).dat/(ECG).hea/(ECG).atr/(ECG).xws (Metadata) |
+| unknown | 22 bipolar channel pairs (TCP montage) | 128 | 1440 | (EEG).dat/(EEG).hea/(EEG).atr/(EEG).xws (Metadata) |
 
 ## 2.2 Data Statistics
 

@@ -28,10 +28,10 @@ IKEM 데이터셋에는 익명화된 환자 ID와 환자별 메타데이터가 �
     ```
     ikem_dataset/
     └──  •	record number_data.csv
-    1 directories, 98130files
+    1 directories, 98,130 files
     ```
 
-해당 hdf5을 로드하여 8lead로 축소된 데이터를 12lead로 복원후  record별로 csv로 저장
+해당 hdf5을 로드하여 8 lead로 축소된 데이터를 12 lead로 복원 후  record별로 csv로 저장
 
 ![](ikem-ecg-dataset/image.png)
 

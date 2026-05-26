@@ -6,7 +6,7 @@ TUEG 데이터셋[1]은 실제 임상 환경에서 총 10,874명의 피실험자
 
 ## 2.1 Data Information
 
-| # of Subjects | # of Leads | Sampling Frequency (Hz) | Recording Duration (min) | File Fomat |
+| # of Subjects | # of Leads | Sampling Frequency (Hz) | Recording Duration (min) | File Format |
 | --- | --- | --- | --- | --- |
 | 10,874 | 31 | 250Hz(87%), 256Hz(3.8%), 512Hz(1%) | Ave 901 | (EEG).edf |
 

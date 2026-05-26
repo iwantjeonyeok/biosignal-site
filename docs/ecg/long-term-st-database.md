@@ -8,7 +8,7 @@ Long-Term ST Database는 80명의 인간 피험자에 대한 86개의 장기 ECG
 
 ## 2.1 Data Information
 
-| # of Leads | Sampling Frequency (Hz) | Recording Duration (min) | File Fomat |
+| # of Leads | Sampling Frequency (Hz) | Recording Duration (min) | File Format |
 | --- | --- | --- | --- |
 | 2 or 3 | Fixed 250 Hz | 21-24h | WFDB format |
 

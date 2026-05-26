@@ -6,7 +6,7 @@ Fatigueset 데이터셋[1]은 정신적 피로와 피로화의 상호작용 및 
 
 ## 2.1 Data Information
 
-| # of Subjects | # of Leads | Sampling Frequency (Hz) | Recording Duration (min) | File Fomat |
+| # of Subjects | # of Leads | Sampling Frequency (Hz) | Recording Duration (min) | File Format |
 | --- | --- | --- | --- | --- |
 | 12 | 4 | 256 | 21.2 | (EEG).csv, (metadata).csv |
 

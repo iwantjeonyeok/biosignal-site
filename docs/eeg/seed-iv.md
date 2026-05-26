@@ -6,7 +6,7 @@ SEED-IV 데이터셋[1] 은 15명의 피험자에 대한 EEG 및 안구 운동 �
 
 ## 2.1 Data Information
 
-| # of Subjects | # of Leads | Sampling Frequency (Hz) | Recording Duration (min) | File Fomat |
+| # of Subjects | # of Leads | Sampling Frequency (Hz) | Recording Duration (min) | File Format |
 | --- | --- | --- | --- | --- |
 | 15 | 62 | 200 | 216 | (EEG).mat |
 

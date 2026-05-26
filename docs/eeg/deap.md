@@ -6,7 +6,7 @@ DEAP 데이터셋[1] 은 인간의 감정 상태 분석을 위해 수집된 멀�
 
 ## 2.1 Data Information
 
-| # of Subjects | # of Leads | Sampling Frequency (Hz) | Recording Duration (min) | File Fomat |
+| # of Subjects | # of Leads | Sampling Frequency (Hz) | Recording Duration (min) | File Format |
 | --- | --- | --- | --- | --- |
 | 32 | 32 | 512 | 1280 | (EEG).bdf |
 

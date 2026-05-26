@@ -6,7 +6,7 @@ Siena Scalp EEG Database[1]는 발작 탐지를 위해 설계된 EEG(뇌파) 데
 
 ## 2.1 Data Information
 
-| # of Subjects | # of Leads | Sampling Frequency (Hz) | Recording Duration (min) | File Fomat |
+| # of Subjects | # of Leads | Sampling Frequency (Hz) | Recording Duration (min) | File Format |
 | --- | --- | --- | --- | --- |
 | 14 | 28 | 512 | Max   1408min | (EEG).edf/(피실험자 정보).csv |
 

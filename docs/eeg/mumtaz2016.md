@@ -6,7 +6,7 @@ Mumtaz2016 데이터셋[1] 은 우울장애(MDD) 환자의 치료 반응을 EEG 
 
 ## 2.1 Data Information
 
-| # of Subjects | # of Leads | Sampling Frequency (Hz) | Recording Duration (min) | File Fomat |
+| # of Subjects | # of Leads | Sampling Frequency (Hz) | Recording Duration (min) | File Format |
 | --- | --- | --- | --- | --- |
 | 64 | 19 | 256 | 595 | (EEG).edf |
 

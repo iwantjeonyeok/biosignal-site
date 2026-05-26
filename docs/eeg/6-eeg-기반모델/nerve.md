@@ -1,7 +1,7 @@
 # NERVE — Noise-Variability-Robust EEG Foundation Model
 
 > **NERVE: Noise-Variability-Robust EEG Foundation Model with Electrode-Brain Interactions**
-> Anonymous authors. **Neurips 2026 (under review).**
+> Anonymous authors. **NeurIPS 2026 (under review).**
 
 - [Official code (anonymous repo referenced in paper)](https://github.com/NERVE-2026/NERVE)
 

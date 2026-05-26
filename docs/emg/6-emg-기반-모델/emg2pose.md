@@ -118,6 +118,5 @@ tar -xvzf emg2pose_model_checkpoints.tar.gz
   author={Salter, Sasha and Warren, Richard and Schlager, Collin and Spurr, Adrian and Han, Shangchen and Bhasin, Rohin and Cai, Yujun and Walkington, Peter and Bolarinwa, Anuoluwapo and Wang, Robert and others},
   booktitle={The Thirty-eighth Conference on Neural Information Processing Systems Datasets and Benchmarks Track}
 }
-}
 
 ```

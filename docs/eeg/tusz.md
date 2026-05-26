@@ -6,9 +6,9 @@ TUSZ 데이터셋[1]은 총 675명의 환자로부터 수집된 1,643개의 EEG 
 
 ## 2.1 Data Information
 
-| # of Subjects | # of Leads | Sampling Frequency (Hz) | Recording Duration (min) | File Fomat |
+| # of Subjects | # of Leads | Sampling Frequency (Hz) | Recording Duration (min) | File Format |
 | --- | --- | --- | --- | --- |
-| 675 | 22 bipolar channel pairs (TCP montage) | 250 (most common), 256, 512 | Typically 30–60 per session | (EEG).edf/(event-based annotations).csv/(ECG).atr/(term-based annotations).csv_bi |
+| 675 | 22 bipolar channel pairs (TCP montage) | 250 (most common), 256, 512 | Typically 30–60 per session | (EEG).edf/(event-based annotations).csv/(EEG).atr/(term-based annotations).csv_bi |
 
 ## 2.2 Data Statistics
 

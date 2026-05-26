@@ -35,7 +35,7 @@ CODE 15% 데이터셋에는 Exams_id 및 tracing data가 포함되어 있으며,
     │  ── **exam_id**_signal.csv
     │  ── exams.csv
     
-    1 directories, 345780files
+    1 directories, 345,780 files
     ```
 
 hdf5파일을 로드한 데이터셋을 id별로 분할하여 csv로 저장하였습니다.

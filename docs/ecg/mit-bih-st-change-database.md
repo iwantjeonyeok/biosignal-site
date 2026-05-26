@@ -1,12 +1,12 @@
 # 1. Dataset Information
 
-MIT-BIH ST Change Database는 28개의 1.09시간~10.7분 길이의 두개 채널(2-channel) 심전도(ECG) 기록으로 구성되어 있으며, 허혈, 전도 이상 및 기타 심장 질환과 관련된 ST 분절 변화를 연구하기 위해 선정되었습니다. 이 데이터셋은 ST 분절의 상승 및 하강과 같은 중요한 심근 허혈 및 심근 경색의 지표를 연구하는 데 사용됩니다. 
+MIT-BIH ST Change Database는 28개의 1.09시간~10.7분 길이의 두 개 채널(2-channel) 심전도(ECG) 기록으로 구성되어 있으며, 허혈, 전도 이상 및 기타 심장 질환과 관련된 ST 분절 변화를 연구하기 위해 선정되었습니다. 이 데이터셋은 ST 분절의 상승 및 하강과 같은 중요한 심근 허혈 및 심근 경색의 지표를 연구하는 데 사용됩니다. 
 
 # 2. Dataset Basic Information
 
 ## 2.1 Data Information
 
-| # of Subjects | # of Leads | Sampling Frequency (Hz) | Recording Duration (min) | File Fomat |
+| # of Subjects | # of Leads | Sampling Frequency (Hz) | Recording Duration (min) | File Format |
 | --- | --- | --- | --- | --- |
 | 76181 records | 2 | Fixed 360 Hz | 1.09 hour~10.7 minutes | (ECG).dat/(ECG).hea/(ECG).atr/(ECG).xws (Metadata) |
 

@@ -6,7 +6,7 @@ Leiden University Database (LUDB)는 자동화된 ECG 해석, 부정맥 분류 �
 
 ## 2.1 Data Information
 
-| # of Subjects | # of Leads | Sampling Frequency (Hz) | Recording Duration (min) | File Fomat |
+| # of Subjects | # of Leads | Sampling Frequency (Hz) | Recording Duration (min) | File Format |
 | --- | --- | --- | --- | --- |
 | 200 records | 12 | Fixed 500 Hz | 10 second | dat, hea, i , ii ,iii, v1, v2, v3, v4, v5, v6, avf, avl, avr |
 

@@ -6,7 +6,7 @@ Mental Arithmetic 데이터셋 [1]은 피험자들이 정신 산술(Mental Arith
 
 ## 2.1 Data Information
 
-| # of Subjects | # of Leads | Sampling Frequency (Hz) | Recording Duration (min) | File Fomat |
+| # of Subjects | # of Leads | Sampling Frequency (Hz) | Recording Duration (min) | File Format |
 | --- | --- | --- | --- | --- |
 | 23 | 19 | 500 | 144 | (EEG).edf |
 

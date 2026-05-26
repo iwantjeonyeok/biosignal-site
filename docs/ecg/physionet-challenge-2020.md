@@ -8,7 +8,7 @@ PhysioNet Challenge 2020 데이터셋은 12-lead ECG 데이터를 포함하는 �
 
 ## 2.1 Data Information
 
-| Sub Dataset | # of Subjects | # of Leads | Sampling Frequency (Hz) | Recording Duration (min) | File Fomat |
+| Sub Dataset | # of Subjects | # of Leads | Sampling Frequency (Hz) | Recording Duration (min) | File Format |
 | --- | --- | --- | --- | --- | --- |
 | CPSC 2018 | 6877 | 12 | Fixed 500 Hz | Approximately 6 - 144 seconds | .hea (Metadata) .mat (ECG) |
 | CPSC 2018 Extra | 3453 | 12 | Fixed 500 Hz | Approximately 8 - 98 seconds | .hea (Metadata) .mat (ECG) |

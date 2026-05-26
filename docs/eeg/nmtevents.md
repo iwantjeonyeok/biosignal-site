@@ -6,7 +6,7 @@ NMT-Events 데이터셋[1]은 총 21명의 피험자를 대상으로 병원 환�
 
 ## 2.1 Data Information
 
-| # of Subjects | # of Leads | Sampling Frequency (Hz) | Recording Duration (min) | File Fomat |
+| # of Subjects | # of Leads | Sampling Frequency (Hz) | Recording Duration (min) | File Format |
 | --- | --- | --- | --- | --- |
 | 21 | 21 | 200 | Average 20 min | (EEG).edf, (label).csv |
 

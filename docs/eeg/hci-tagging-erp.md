@@ -6,7 +6,7 @@ HCI-Tagging (ERP) 데이터셋[1] 은 감정 인식과 암묵적 태깅을 위�
 
 ## 2.1 Data Information
 
-| # of Subjects | # of Leads | Sampling Frequency (Hz) | Recording Duration (min) | File Fomat |
+| # of Subjects | # of Leads | Sampling Frequency (Hz) | Recording Duration (min) | File Format |
 | --- | --- | --- | --- | --- |
 | 27 | 32 | 256 | 715 | (EEG).bdf |
 

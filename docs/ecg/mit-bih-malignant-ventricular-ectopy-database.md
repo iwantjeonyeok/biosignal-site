@@ -6,7 +6,7 @@ MIT-BIH Malignant Ventricular Ectopy Database는 생명을 위협하는 심실�
 
 ## 2.1 Data Information
 
-| # of Subjects | # of Leads | Sampling Frequency (Hz) | Recording Duration (min) | File Fomat |
+| # of Subjects | # of Leads | Sampling Frequency (Hz) | Recording Duration (min) | File Format |
 | --- | --- | --- | --- | --- |
 | 592 records | 2 | Fixed 250 Hz | 35 minutes | (ECG).dat/(ECG).hea/(ECG).atr/(ECG).xws (Metadata) |
 

@@ -6,7 +6,7 @@ DREAMER 데이터셋[1] 은 23명의 피험자를 대상으로 EEG 및 ECG 신�
 
 ## 2.1 Data Information
 
-| # of Subjects | # of Leads | Sampling Frequency (Hz) | Recording Duration (min) | File Fomat |
+| # of Subjects | # of Leads | Sampling Frequency (Hz) | Recording Duration (min) | File Format |
 | --- | --- | --- | --- | --- |
 | 23 | 14 | 128 | 1373 | (EEG).mat |
 

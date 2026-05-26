@@ -6,7 +6,7 @@ Grasp and Lift Challenge 물체를 들어올리는 과제를 수행하는 동안
 
 ## 2.1 Data Information
 
-| # of Subjects | # of Leads | Sampling Frequency (Hz) | Recording Duration (min) | File Fomat |
+| # of Subjects | # of Leads | Sampling Frequency (Hz) | Recording Duration (min) | File Format |
 | --- | --- | --- | --- | --- |
 | 12 | 32 | 500 | 0.083 | (EEG).csv, (annotation).csv |
 

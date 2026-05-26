@@ -6,7 +6,7 @@ MIT-BIH noise stress database는 실제 환경에서 발생하는 다양한 노�
 
 ## 2.1 Data Information
 
-| # of Subjects | # of Leads | Sampling Frequency (Hz) | Recording Duration (min) | File Fomat |
+| # of Subjects | # of Leads | Sampling Frequency (Hz) | Recording Duration (min) | File Format |
 | --- | --- | --- | --- | --- |
 | 26370 records | 2 | Fixed 360 Hz | 30 minutes | (ECG).dat/(ECG).hea/(ECG).atr/(ECG).xws (Metadata)                               bw.dat/bw.hea/bw.xws em.dat/em.hea/em.xws ma.dat/ma.hea/ma.xws (noise) |
 
@@ -67,7 +67,7 @@ MIT-BIH noise stress database는 실제 환경에서 발생하는 다양한 노�
 
 - 첫 번째 줄: 기록 번호(118e00), 두 개의 ECG 채널(MLII 및 V1), 샘플링 주파수 360Hz, 총 650,000개의 샘플이 포함됨.
 - 두 번째 및 세 번째 줄: 각 ECG 리드(MLII, V1)는 118e00.dat 파일에 16비트 형식(코드 16), 200 µV/LSB ADC gain, 11비트 해상도, ±10mV ADC 범위로 기록됨. 또한, 신호 기준선 및 최소/최대 값이 제공됨.
-- 네 번째 줄: 이 기록은 MIT-BIH noise stress database에서 생성된 것으로, MIT-BIH Arrythmia database의 118번 기록에 0dB SNR의 전극 움직임(EM) 잡음을 추가하여 제작되었음을 나타냄.
+- 네 번째 줄: 이 기록은 MIT-BIH noise stress database에서 생성된 것으로, MIT-BIH Arrhythmia database의 118번 기록에 0dB SNR의 전극 움직임(EM) 잡음을 추가하여 제작되었음을 나타냄.
 
 ## 2.4 Raw Dataset Example
 

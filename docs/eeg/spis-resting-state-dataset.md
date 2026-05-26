@@ -6,7 +6,7 @@ SPIS 데이터셋[1]은 총 10명의 건강한 성인을 대상으로 수집된 
 
 ## 2.1 Data Information
 
-| # of Subjects | # of Leads | Sampling Frequency (Hz) | Recording Duration (min) | File Fomat |
+| # of Subjects | # of Leads | Sampling Frequency (Hz) | Recording Duration (min) | File Format |
 | --- | --- | --- | --- | --- |
 | 10 | 64 | 256 | 100 | EEG(.set), CVS/HRT(.csv) |
 

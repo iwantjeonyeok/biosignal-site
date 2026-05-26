@@ -6,7 +6,7 @@ BCI IV-2a 데이터셋[1]은 Graz University of Technology에서 수집된 것�
 
 ## 2.1 Data Information
 
-| # of Subjects | # of Leads | Sampling Frequency (Hz) | Recording Duration (min) | File Fomat |
+| # of Subjects | # of Leads | Sampling Frequency (Hz) | Recording Duration (min) | File Format |
 | --- | --- | --- | --- | --- |
 | 9 | 22 | 250 | 30 | (EEG).gdf |
 

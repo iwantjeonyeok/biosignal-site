@@ -6,7 +6,7 @@ ISRUC-Sleep는 건강한 성인과 수면 장애 환자를 대상으로 수집�
 
 ## 2.1 Data Information
 
-| # of Subjects | # of Leads | Sampling Frequency (Hz) | Recording Duration (min) | File Fomat |
+| # of Subjects | # of Leads | Sampling Frequency (Hz) | Recording Duration (min) | File Format |
 | --- | --- | --- | --- | --- |
 | 118 | 19 | 200 | 0.5 | (EEG).txt, (EEG).xlsx |
 

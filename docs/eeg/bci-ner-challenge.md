@@ -6,7 +6,7 @@ BCI-NER Challenge 데이터셋 [1] 은 P300-Speller 기반 BCI(Brain-Computer In
 
 ## 2.1 Data Information
 
-| # of Subjects | # of Leads | Sampling Frequency (Hz) | Recording Duration (min) | File Fomat |
+| # of Subjects | # of Leads | Sampling Frequency (Hz) | Recording Duration (min) | File Format |
 | --- | --- | --- | --- | --- |
 | 26 | 56 | 200 | 1714 | (EEG).csv |
 

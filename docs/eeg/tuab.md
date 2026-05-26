@@ -6,7 +6,7 @@ TUAB 데이터셋[1]은 총 2383명의 성인 환자들을 대상으로 수집�
 
 ## 2.1 Data Information
 
-| # of Subjects | # of Leads | Sampling Frequency (Hz) | Recording Duration (min) | File Fomat |
+| # of Subjects | # of Leads | Sampling Frequency (Hz) | Recording Duration (min) | File Format |
 | --- | --- | --- | --- | --- |
 | 2383 | 23 | 256 | more than 15 min | (EEG).edf, (AAREADME).txt |
 

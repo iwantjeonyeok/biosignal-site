@@ -1,7 +1,3 @@
----
-hide:
-  - toc
----
 
 # 4.3.1. ECG-Diagnostic-Classification
 ECG Diagnostic Classification은 ECG 신호를 바탕으로 심장 질환, 리듬 이상, 전도장애, 파형 이상 등 다양한 진단 label을 분류하는 downstream task입니다.  

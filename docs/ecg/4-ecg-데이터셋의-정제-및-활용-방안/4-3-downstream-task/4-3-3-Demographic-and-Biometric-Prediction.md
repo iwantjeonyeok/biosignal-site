@@ -4,7 +4,7 @@ Demographic and Biometric Prediction은 ECG 신호를 이용해 환자의 인구
 이 항목은 ECG가 심장 질환이나 리듬 이상만을 반영하는 것이 아니라, 나이, 성별, 개인별 ECG 패턴과 같은 환자 특성도 일부 포함할 수 있음을 보여줍니다. 최근 ECG foundation model 연구에서는 ECG를 이용한 age prediction, sex detection, patient identification 등이 downstream task로 사용되었습니다.  특히 ECGFounder는 age classification, age regression, sex classification을 demographic downstream task로 평가했으며, D-BETA는 ECG recording이 어떤 환자에게 속하는지 예측하는 patient identification task를 수행했습니다.
 
 
-#### 1) Age Prediction
+**1) Age Prediction**
 
 Age Prediction은 ECG 신호를 바탕으로 환자의 나이를 예측하는 task입니다.  
 이 task는 크게 두 가지 방식으로 수행될 수 있습니다. 하나는 특정 나이 기준을 두고 환자를 분류하는 age classification이고, 다른 하나는 실제 나이 값을 직접 예측하는 age regression입니다.
@@ -12,7 +12,7 @@ Age Prediction은 ECG 신호를 바탕으로 환자의 나이를 예측하는 ta
 예를 들어 ECGFounder는 MIMIC-ECG-Age dataset을 이용해 age classification과 age regression을 수행했습니다.  
 이는 ECG waveform 안에 환자의 생리적 노화나 심장 전기 활동의 변화가 반영될 수 있으며, ECG foundation model이 이러한 정보를 표현으로 학습할 수 있는지 평가하는 데 사용됩니다.
 
-#### 2) Sex Detection
+**2) Sex Detection**
 
 Sex Detection은 ECG 신호를 이용해 환자의 성별을 분류하는 task입니다.  
 ECGFounder는 MIMIC-ECG-Sex dataset을 이용해 sex classification을 수행했으며, 이를 demographic downstream task 중 하나로 평가했습니다.
@@ -20,7 +20,7 @@ ECGFounder는 MIMIC-ECG-Sex dataset을 이용해 sex classification을 수행했
 이 task는 ECG 신호에 성별에 따른 심장 전기 생리학적 차이나 신체적 특성이 어느 정도 반영될 수 있음을 보여줍니다.  
 다만 sex detection은 질병 진단 자체보다는 모델이 ECG에 포함된 환자 특성을 얼마나 잘 포착하는지 확인하는 보조적 downstream task에 가깝습니다.
 
-#### 3) Patient Identification
+**3) Patient Identification**
 
 Patient Identification은 ECG recording이 어떤 환자에게 속하는지 예측하는 task입니다.  
 즉, ECG 신호에 나타나는 개인별 고유 패턴을 이용해 환자 단위의 식별 가능성을 평가합니다.

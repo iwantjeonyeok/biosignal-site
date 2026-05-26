@@ -1,4 +1,4 @@
-
+# 4.3.1. ECG-Diagnostic-Classification
 ECG Diagnostic Classification은 ECG 신호를 바탕으로 심장 질환, 리듬 이상, 전도장애, 파형 이상 등 다양한 진단 label을 분류하는 downstream task입니다.  
 최근 ECG foundation model 연구에서는 단순히 정상/비정상을 구분하는 수준을 넘어, PTB-XL의 Superclass, Subclass, Diagnostic label, Rhythm, Form처럼 여러 진단 범주를 세분화하여 모델의 표현 학습 성능을 평가합니다.
 

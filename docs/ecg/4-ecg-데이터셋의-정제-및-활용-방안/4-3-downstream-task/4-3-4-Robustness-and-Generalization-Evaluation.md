@@ -68,10 +68,4 @@ Low-resource Evaluation은 downstream task에서 사용할 수 있는 labeled da
 여러 ECG foundation model 연구에서는 downstream task에서 1%, 10%, 100% training data를 각각 사용해 성능을 비교합니다.  
 이 평가는 사전학습된 ECG representation이 적은 labeled data만으로도 효과적으로 활용될 수 있는지 확인하는 데 중요합니다.
 
-#### 정리
 
-Robustness and Generalization Evaluation은 특정 질환을 예측하는 downstream task라기보다, ECG foundation model이 실제 환경에서 얼마나 실용적으로 사용될 수 있는지를 평가하는 항목입니다.  
-특히 single-lead 또는 fewer-lead ECG, lead-missing ECG, noisy ECG, 외부 dataset, zero-shot/few-shot setting, low-resource setting은 최근 ECG foundation model 연구에서 반복적으로 사용되는 중요한 평가 조건입니다.
-
-따라서 이 섹션은 ECG downstream task 페이지에서 별도로 정리하는 것이 적절합니다.  
-이 항목을 추가하면 ECG foundation model의 성능을 단순한 classification score가 아니라, 실제 임상 적용 가능성과 일반화 능력의 관점에서 설명할 수 있습니다.

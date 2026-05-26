@@ -1,7 +1,3 @@
----
-hide:
-  - toc
----
 
 # 4.3.2 Cardiac Function and Clinical State Prediction
 Cardiac Function and Clinical State Prediction은 ECG 신호를 이용해 단순한 ECG 판독 label을 넘어, 환자의 심장 기능이나 임상 상태를 예측하는 downstream task입니다.  

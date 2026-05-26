@@ -1,7 +1,3 @@
----
-hide:
-  - toc
----
 
 # 4.3.4 Robustness and Generalization Evaluation
 

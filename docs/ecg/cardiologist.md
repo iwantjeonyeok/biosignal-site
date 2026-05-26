@@ -37,7 +37,7 @@
 - SVT(Supraventricular Tachycardia) : 심실 위쪽에서 발생하는 빠른 심박수
 - AFL(ATrial Flutter, 심방조동) : 심방이 매우 빠르게 규칙적으로 수축하는 상태
 - AVB_TYPE2(2nd Degree AV Block, Type 2, 모비츠 2형) : 방실결절이 간헐적으로 신호 전달을 실패하는 부정맥
-- WENCKEBACH(AV Block Type 1, 모비츠 1형) : PR 간격이 점점 길어지다가 QRS가 탈락하는 비교적 덜 심각한 방실 차단 패
+- WENCKEBACH(AV Block Type 1, 모비츠 1형) : PR 간격이 점점 길어지다가 QRS가 탈락
 - SUDDEN_BRADY(Sudden Bradycardia) : 갑작스러운 심박수 감소 현상
 - VT(Ventricular Tachycardia) : 심실에서 빠르게 전기 신호가 발생하는 매우 **위험한 부정맥**
 - TRIGEMINY : 2개의 정상 박동 후 1번의 조기 심실수축(PVC)이 반복되는 패턴.

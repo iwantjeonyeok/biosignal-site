@@ -37,10 +37,3 @@ ECG는 아날로그 신호로 측정되며, 디지털 데이터로 변환하기 
 
 머신러닝 모델 개발 시, 입력 신호의 샘플링 주파수가 다르면 **리샘플링(Resampling)** 전처리가 필수입니다.
 
-
-## 참고 문헌
-
-- [Electrocardiogram Sampling Frequency Range Acceptable for Heart Rate Variability Analysis - NCBI](https://pmc.ncbi.nlm.nih.gov/articles/PMC6085204/)
-- [How High Should ECG Sampling Frequency Be for Accurate Results? - Fibion](https://web.fibion.com/articles/ecg-sampling-frequency-hrv-arrhythmia/)
-- [Review High-frequency ECG - NASA Technical Reports](https://ntrs.nasa.gov/api/citations/20060056493/downloads/20060056493.pdf)
-- [Nyquist Theorem - Advanced Neuroscience](https://uen.pressbooks.pub/advneuro/chapter/nyquist-theorem/)

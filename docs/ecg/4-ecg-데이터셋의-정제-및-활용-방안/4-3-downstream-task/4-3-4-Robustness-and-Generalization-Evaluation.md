@@ -1,4 +1,4 @@
-### 4.3.4 Robustness and Generalization Evaluation
+# 4.3.4 Robustness and Generalization Evaluation
 
 Robustness and Generalization Evaluation은 ECG foundation model이 실제 환경에서 얼마나 안정적으로 작동하는지 평가하는 항목입니다.  
 앞선 항목들이 “무엇을 예측하는가”에 초점을 둔다면, 이 항목은 “어떤 환경에서도 잘 예측할 수 있는가”를 확인하는 평가 설정에 가깝습니다.

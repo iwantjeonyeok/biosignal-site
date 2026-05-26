@@ -4,7 +4,7 @@ AI 모델을 학습하기 위해 ECG 데이터셋에는 다양한 주석(annotat
 
 
 
-## 1. 박동(Beat) 수준 주석
+##  박동(Beat) 수준 주석
 
 ### MIT-BIH 데이터베이스 Beat Annotation Codes
 
@@ -88,7 +88,7 @@ MIT-BIH 부정맥 데이터베이스는 가장 광범위하게 사용되는 ECG 
 - 신호 품질 문제 등으로 인해 분류 불가능한 박동
 
 
-## 2. 리듬(Rhythm) 수준 주석
+##  리듬(Rhythm) 수준 주석
 
 ### Rhythm Annotation Codes
 
@@ -108,7 +108,7 @@ MIT-BIH 부정맥 데이터베이스는 가장 광범위하게 사용되는 ECG 
 | **(+)** | Rhythm Change | 리듬 변화 발생 |
 
 
-## 3. ST 분절 및 QT 변화 주석
+##  ST 분절 및 QT 변화 주석
 
 ### PhysioNet European ST-T Database 표준
 

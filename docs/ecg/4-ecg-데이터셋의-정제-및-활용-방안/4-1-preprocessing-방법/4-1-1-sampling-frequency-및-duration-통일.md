@@ -1,14 +1,12 @@
 # 4.1.1. Sampling Frequency 및 Duration 통일
 
-## 개요
-
 ECG 신호는 다양한 의료 기기와 임상 환경에서 수집되기 때문에 sampling frequency(샘플링 주파수)와 recording duration(기록 길이)이 불균일합니다. AI 모델 학습을 위해서는 모든 ECG 신호를 동일한 샘플링 주파수와 길이로 표준화하는 것이 필수적입니다. 이 과정을 거쳐야 모델의 일관성 있는 성능과 일반화 능력이 보장됩니다.
 
----
 
-## 1. Sampling Frequency 표준화
 
-### 1.1 표준 Sampling Frequency 선택
+##  Sampling Frequency 표준화
+
+###  표준 Sampling Frequency 선택
 
 ECG 신호의 샘플링 주파수는 250Hz, 300Hz, 500Hz 등으로 다양하게 기록됩니다. 최근 연구에 따르면, **딥러닝 기반 ECG 분석에서는 100Hz에서 500Hz 범위의 샘플링 주파수로도 효과적인 결과를 얻을 수 있습니다**.
 
@@ -22,7 +20,7 @@ ECG 신호의 샘플링 주파수는 250Hz, 300Hz, 500Hz 등으로 다양하게 
 
 최근 arXiv 논문 "Sampling Matters: The Effect of ECG Frequency on Deep Learning-Based Atrial Fibrillation Detection"의 연구 결과에 따르면, **CNN 기반 딥러닝 모델은 100Hz 또는 250Hz에서도 높은 탐지 정확도를 유지하면서 모델의 복잡도를 크게 감소시킬 수 있습니다**. 따라서 250Hz를 표준 샘플링 주파수로 선택하는 것이 임상적 정확성과 계산 효율성 간의 최적 균형을 제공합니다.
 
-### 1.2 Resampling 기법
+###  Resampling 기법
 
 원본 샘플링 주파수가 목표 주파수와 다를 경우, resampling을 통해 신호를 변환합니다.
 
@@ -42,11 +40,10 @@ $$f_{target} = f_{original} \times \frac{N_{target}}{N_{original}}$$
 
 여기서 $f$는 주파수, $N$은 샘플 개수입니다.
 
----
 
 ## 2. Duration (길이) 표준화
 
-### 2.1 고정 길이 Segmentation
+###  고정 길이 Segmentation
 
 ECG 신호의 기록 길이가 다양하므로 (예: 10초~24시간), 고정된 길이로 분할하여 일관된 입력 차원을 갖도록 합니다.
 
@@ -58,7 +55,7 @@ ECG 신호의 기록 길이가 다양하므로 (예: 10초~24시간), 고정된 
 
 250Hz 표준화를 기준으로, 30초 고정 길이는 **7,500개의 샘플 포인트(250 × 30 = 7,500)**를 생성합니다. 이는 계산 비용과 정보 보존 간의 최적 균형으로 널리 권장됩니다.
 
-### 2.2 Uniform Segmenting (균등 분할)
+###  Uniform Segmenting (균등 분할)
 
 30초 이상의 장시간 기록에서는 균등 분할(uniform segmentation)을 적용합니다:
 
@@ -69,11 +66,11 @@ $$\frac{60\text{s}}{30\text{s}} = 2 \text{ segments}$$
 
 각 세그먼트는 독립적인 학습 샘플로 취급되어 데이터셋 증강 효과를 제공합니다. **Scientific Reports에 발표된 "Beat-wise segmentation of electrocardiogram using adaptive windowing and deep neural network" 연구에서는 적응형 윈도우 기법을 통해 QRS 복합파를 중심으로 한 동적 분할이 가능함을 보였습니다**.
 
----
 
-## 3. Zero Padding (패딩)
 
-### 3.1 Zero Padding의 필요성
+##  Zero Padding (패딩)
+
+###  Zero Padding의 필요성
 
 고정 길이보다 짧은 신호는 0을 추가하여 길이를 맞춥니다. 이를 **zero padding**이라 합니다.
 
@@ -82,7 +79,7 @@ $$\frac{60\text{s}}{30\text{s}} = 2 \text{ segments}$$
 - 실제 신호 길이: 6,200 샘플
 - 필요한 padding: 7,500 - 6,200 = **1,300개 0 추가**
 
-### 3.2 Zero Padding의 영향
+###  Zero Padding의 영향
 
 **장점:**
 - 모든 신호를 균일한 차원으로 표준화

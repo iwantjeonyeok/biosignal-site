@@ -5,13 +5,6 @@ ECG가 부정맥이나 전도장애를 분류하는 도구에 그치지 않고, 
 
 최근 ECG foundation model 연구에서는 ECG로부터 LVEF 감소, LVSD, heart failure와 같은 심장 기능 관련 상태를 예측하거나, CKD, CHD, ACS와 같은 임상 질환 및 사건을 예측하는 실험이 수행되었습니다. 또한 NT-proBNP와 같은 검사 수치 기반 바이오마커 예측, future cardiovascular event 또는 mortality prediction처럼 향후 임상 사건을 예측하는 task도 downstream evaluation에 포함되고 있습니다.
 
-| 세부 항목 | 설명 | 대표 예시 |
-|---|---|---|
-| **Cardiac Function Prediction** | ECG 신호를 이용해 심장의 기능 저하 또는 구조적·기능적 이상과 관련된 상태를 예측하는 task입니다. | LVEF 감소, LVSD, heart failure |
-| **Clinical Disease / Event Detection** | ECG 자체의 판독 label이 아니라, ECG와 관련된 환자의 임상 질환 또는 급성 임상 사건을 예측하는 task입니다. | CKD, CHD, ACS |
-| **Biomarker Prediction** | ECG와 연결된 검사 수치 또는 생체지표를 예측하는 task입니다. | NT-proBNP |
-| **Future Event / Prognosis Prediction** | 현재 ECG를 바탕으로 향후 발생할 수 있는 심혈관 사건이나 예후를 예측하는 task입니다. | future cardiovascular event, mortality, hospitalization |
-
 #### 1) Cardiac Function Prediction
 
 Cardiac Function Prediction은 ECG 신호를 통해 심장의 기능적 상태를 예측하는 task입니다.

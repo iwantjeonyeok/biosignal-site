@@ -1,3 +1,8 @@
+---
+hide:
+  - toc
+---
+
 # 4.3.2 Cardiac Function and Clinical State Prediction
 Cardiac Function and Clinical State Prediction은 ECG 신호를 이용해 단순한 ECG 판독 label을 넘어, 환자의 심장 기능이나 임상 상태를 예측하는 downstream task입니다.  
 ECG가 부정맥이나 전도장애를 분류하는 도구에 그치지 않고, 심장 기능 저하, 임상 질환, 급성 심혈관 사건, 바이오마커, 향후 예후 예측에도 활용될 수 있음을 보여줍니다.
@@ -32,3 +37,7 @@ Biomarker Prediction은 ECG 신호를 바탕으로 특정 검사 수치나 생�
 Future Event / Prognosis Prediction은 현재의 ECG 신호를 바탕으로 향후 발생할 수 있는 심혈관 사건이나 환자의 예후를 예측하는 task입니다.  
 대표적으로 future cardiovascular event, hospitalization, mortality prediction 등이 포함됩니다.즉, ECG 신호를 입력으로 사용하여 환자가 향후 심혈관 사건을 겪을 가능성이 있는지, 또는 일정 기간 내 사망 위험이 높은지를 예측하는 방식입니다.이 task는 ECG foundation model이 현재의 진단 label을 맞히는 데 그치지 않고, 환자의 장기적인 위험도나 예후를 예측하는 방향으로 확장될 수 있음을 보여줍니다.
 
+#### 정리
+
+Cardiac Function and Clinical State Prediction은 ECG downstream task의 범위를 기존의 ECG 진단 label 분류에서 환자의 임상 상태 예측으로 확장하는 항목입니다.  
+이 항목은 ECG foundation model이 단순히 부정맥, 전도장애, 파형 이상을 분류하는 모델이 아니라, ECG를 통해 심장 기능, 임상 질환, 바이오마커, 향후 예후까지 예측할 수 있는 범용 임상 표현을 학습했는지 평가하는 데 중요합니다.

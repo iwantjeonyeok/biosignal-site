@@ -164,10 +164,10 @@ nav:
         - 4.2.3. Foundation Model: ecg/4-ecg-데이터셋의-정제-및-활용-방안/4-2-통합-활용-방안/4-2-3-foundation-model.md
       - 4.3. Downstream Task:
         - ecg/4-ecg-데이터셋의-정제-및-활용-방안/4-3-downstream-task/index.md
-        - 4.3.1. Arrhythmia Detection (부정맥 검출): ecg/4-ecg-데이터셋의-정제-및-활용-방안/4-3-downstream-task/4-3-1-arrhythmia-detection-부정맥-검출.md
-        - 4.3.2. Rhythm Detection (심장 리듬 분석): ecg/4-ecg-데이터셋의-정제-및-활용-방안/4-3-downstream-task/4-3-2-rhythm-detection-심장-리듬-분석.md
-        - 4.3.3. Abnormality Detection (환자 분류): ecg/4-ecg-데이터셋의-정제-및-활용-방안/4-3-downstream-task/4-3-3-abnormality-detection-환자-분류.md
-        - 4.3.4. Biometric Identification (생체 정보 예측 - 나이, 성별 등): ecg/4-ecg-데이터셋의-정제-및-활용-방안/4-3-downstream-task/4-3-4-biometric-identification-생체-정보-예측-나.md
+        - 4.3.1. ECG Diagnostic Classification: ecg/4-ecg-데이터셋의-정제-및-활용-방안/4-3-downstream-task/4-3-1-ECG-Diagnostic-Classification.md
+        - 4.3.2. Cardiac Function and Clinical State Prediction: ecg/4-ecg-데이터셋의-정제-및-활용-방안/4-3-downstream-task/4-3-2-Cardiac-Function-and-Clinical-State-Prediction.md
+        - 4.3.3. Demographic and Biometric Prediction: ecg/4-ecg-데이터셋의-정제-및-활용-방안/4-3-downstream-task/4-3-3-Demographic-and-Biometric-Prediction.md
+        - 4.3.4. Robustness and Generalization Evaluation: ecg/4-ecg-데이터셋의-정제-및-활용-방안/4-3-downstream-task/4-3-4-Robustness-and-Generalization-Evaluation.md
     - 5. 데이터셋별 상세 소개:
       - ecg/5-데이터셋별-상세-소개/index.md
       - PhysioNet 2017: ecg/physionet-2017.md

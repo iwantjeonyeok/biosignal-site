@@ -1,3 +1,8 @@
+---
+hide:
+  - toc
+---
+
 # 4.3.3 Demographic and Biometric Prediction
 Demographic and Biometric Prediction은 ECG 신호를 이용해 환자의 인구학적 특성이나 개인 고유의 생체적 특징을 예측하는 downstream task입니다.  
 이 항목은 ECG가 심장 질환이나 리듬 이상만을 반영하는 것이 아니라, 나이, 성별, 개인별 ECG 패턴과 같은 환자 특성도 일부 포함할 수 있음을 보여줍니다.
@@ -37,4 +42,9 @@ D-BETA는 PhysioNet 2021 dataset에서 patient identification task를 수행했�
 다만 이 task는 실제 임상 진단 task라기보다는 representation learning 성능을 확인하는 평가에 가깝습니다.  
 따라서 ECG downstream task 페이지에서는 age prediction이나 sex detection보다 낮은 우선순위의 보조 항목으로 정리하는 것이 적절합니다.
 
+#### 정리
 
+Demographic and Biometric Prediction은 ECG foundation model이 질병 진단뿐만 아니라 환자의 나이, 성별, 개인별 ECG 패턴과 같은 생체 정보를 학습할 수 있는지 평가하는 항목입니다.  
+다만 첨부된 논문들 기준으로는 이 항목이 가장 핵심적인 downstream task라기보다는, ECG representation이 환자 특성을 얼마나 포착하는지 확인하는 보조적 평가에 가깝습니다.
+
+따라서 이 섹션은 ECG Diagnostic Classification이나 Cardiac Function and Clinical State Prediction보다 뒤에 배치하는 것이 자연스럽습니다.

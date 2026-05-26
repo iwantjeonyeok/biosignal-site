@@ -1,7 +1,12 @@
+---
+hide:
+  - toc
+---
+
 # 4.3.4 Robustness and Generalization Evaluation
 
 Robustness and Generalization Evaluation은 ECG foundation model이 실제 환경에서 얼마나 안정적으로 작동하는지 평가하는 항목입니다.  
-앞선 항목들이 “무엇을 예측하는가”에 초점을 둔다면, 이 항목은 “어떤 환경에서도 잘 예측할 수 있는가”를 확인하는 평가 설정에 가깝습니다.
+앞선 항목들이 "무엇을 예측하는가"에 초점을 둔다면, 이 항목은 "어떤 환경에서도 잘 예측할 수 있는가"를 확인하는 평가 설정에 가깝습니다.
 
 실제 임상 환경에서는 항상 깨끗한 12-lead ECG만 사용되는 것은 아닙니다.  
 일부 lead가 누락될 수 있고, 움직임이나 전극 접촉 문제로 noise가 포함될 수 있으며, wearable device나 mobile ECG처럼 1-lead 또는 fewer-lead ECG만 제공되는 경우도 있습니다.  
@@ -67,4 +72,10 @@ Low-resource Evaluation은 downstream task에서 사용할 수 있는 labeled da
 여러 ECG foundation model 연구에서는 downstream task에서 1%, 10%, 100% training data를 각각 사용해 성능을 비교합니다.  
 이 평가는 사전학습된 ECG representation이 적은 labeled data만으로도 효과적으로 활용될 수 있는지 확인하는 데 중요합니다.
 
+#### 정리
 
+Robustness and Generalization Evaluation은 특정 질환을 예측하는 downstream task라기보다, ECG foundation model이 실제 환경에서 얼마나 실용적으로 사용될 수 있는지를 평가하는 항목입니다.  
+특히 single-lead 또는 fewer-lead ECG, lead-missing ECG, noisy ECG, 외부 dataset, zero-shot/few-shot setting, low-resource setting은 최근 ECG foundation model 연구에서 반복적으로 사용되는 중요한 평가 조건입니다.
+
+따라서 이 섹션은 ECG downstream task 페이지에서 별도로 정리하는 것이 적절합니다.  
+이 항목을 추가하면 ECG foundation model의 성능을 단순한 classification score가 아니라, 실제 임상 적용 가능성과 일반화 능력의 관점에서 설명할 수 있습니다.

@@ -1,4 +1,3 @@
-<img width="1489" height="671" alt="image" src="https://github.com/user-attachments/assets/82f8b008-c313-415c-89e4-4e7bf41b1f40" /><img width="1489" height="671" alt="image" src="https://github.com/user-attachments/assets/f493bb27-90a9-43fc-b8f7-3af4257c76d0" /># ECG-FM — An Open Electrocardiogram Foundation Model
 
 > **ECG-FM: An Open Electrocardiogram Foundation Model**
 > Kaden McKeen, Sameer Masood, Augustin Toma, Barry Rubin, Bo Wang. **JAMIA Open 2025.**
@@ -7,7 +6,7 @@
 - [Official code](https://github.com/bowang-lab/ECG-FM/.)
 - [Preprocessing scripts folder](https://github.com/Jwoo5/fairseq-signals)
 
-**Motivation**
+## Motivation
 
 기존 ECG 분석 모델은 특정 task에 맞춰 설계되는 경우가 많아, 새로운 임상 과제에 적용하려면 여전히 많은 라벨 데이터와 추가 학습이 필요하다. Foundation model은 자기지도 사전학습을 통해 이러한 부담을 줄일 수 있지만, ECG 분야에서는 공개된 모델 가중치와 코드가 부족해 재현성과 연구 간 비교 가능성이 낮다는 문제가 있다. 또한 기존 생성 기반 자기지도학습은 마스킹된 신호 복원에 집중해 국소적 구조 학습에 치우칠 수 있고, 대조 학습 기반 방법은 데이터 증강 과정에서 ECG의 생리학적 의미가 왜곡되는 문제가 발생할 수 있다. ECG-FM은 이러한 한계를 보완하기 위해 생성 기반 학습과 대조 학습을 결합한 hybrid self-supervised learning 방식으로 사전학습된 open-weight ECG foundation model을 제안하고, ECG foundation model의 활용 장벽을 낮추며 다양한 ECG downstream task에서의 재현 가능한 비교 기준을 제공하는 것을 목표로 한다.
 

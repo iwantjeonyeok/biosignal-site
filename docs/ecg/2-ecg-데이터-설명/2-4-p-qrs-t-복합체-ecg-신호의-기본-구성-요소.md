@@ -20,7 +20,7 @@ ECG 데이터는 **P-QRS-T 복합체**라고 불리는 일정한 패턴을 가�
 - **의미**: 심실 재분극(Ventricular repolarization) - 심실 이완 신호
 - **정상 특성**: 대부분 양성(upright), P파와 같은 방향
 
----
+
 
 ## 주요 간격 (Intervals)
 
@@ -45,7 +45,7 @@ ECG 데이터는 **P-QRS-T 복합체**라고 불리는 일정한 패턴을 가�
 - **정상**: 기저선(Baseline)상에 위치
 - **임상 의미**: 심근경색, 심각한 허혈성 변화 감지
 
----
+
 
 ## 진단적 가치
 
@@ -57,21 +57,4 @@ ECG 데이터는 **P-QRS-T 복합체**라고 불리는 일정한 패턴을 가�
 | **QT 간격** | 남<0.44초 | 심실 재분극 | QT 연장 증후군 |
 | **ST 분절** | 기저선 | 허혈 평가 | 심근경색 |
 
----
 
-## 데이터셋 분석에서의 중요성
-
-머신러닝 모델 개발 시, ECG 신호 처리는 **P-QRS-T 파형 자동 감지(Fiducial Points Detection)**로부터 시작됩니다:
-
-- **QRS 검출**: 심장 박동 인식의 기초
-- **파라미터 추출**: PR, QT, ST 간격 측정을 통한 특징 벡터 생성
-- **분류**: 부정맥, 심근경색 등의 진단 모델링
-
----
-
-## 참고 문헌
-
-- [Conquering the ECG: Cardiology Explained - NCBI Bookshelf](https://www.ncbi.nlm.nih.gov/books/NBK2214/)
-- [Normal Electrocardiography Intervals - Medscape](https://emedicine.medscape.com/article/2172196-overview)
-- [Electrocardiography - Merck Manual Professional Edition](https://www.merckmanuals.com/professional/cardiovascular-disorders/cardiovascular-tests-and-procedures/electrocardiography)
-- [CV Physiology - Electrocardiogram](https://cvphysiology.com/arrhythmias/a009)

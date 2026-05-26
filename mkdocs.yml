@@ -129,7 +129,7 @@ nav:
       - NeuroLM (ICLR 2025): eeg/6-eeg-기반모델/neurolm.md
       - CSBrain (NeurIPS 2025): eeg/6-eeg-기반모델/csbrain.md
       - REVE (NeurIPS 2025): eeg/6-eeg-기반모델/reve.md
-      - NERVE (ICML 2026): eeg/6-eeg-기반모델/nerve.md
+      - NERVE (NeurIPS 2026 under review): eeg/6-eeg-기반모델/nerve.md
     - 7. 결론: eeg/6-결론.md
   - ECG:
     - ECG Overview: ecg/index.md

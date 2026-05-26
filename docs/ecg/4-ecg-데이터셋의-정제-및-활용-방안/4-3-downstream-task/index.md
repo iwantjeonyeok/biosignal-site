@@ -4,7 +4,7 @@ ECG downstream task는 ECG foundation model이 사전학습 이후 실제로 어
 
 [4.3.1 ECG Diagnostic Classification](./4-3-1-ECG-Diagnostic-Classification.md) 
 
-[4.3.2 Cardiac Function and Clinical State Prediction](4-3-2 Cardiac Function and Clinical State Prediction.md)
+[4.3.2 Cardiac Function and Clinical State Prediction](./4-3-2-Cardiac-Function-and-Clinical-State-Prediction.md)
 
 [4.3.3 Demographic and Biometric Prediction](Demographic and Biometric Prediction.md)
 

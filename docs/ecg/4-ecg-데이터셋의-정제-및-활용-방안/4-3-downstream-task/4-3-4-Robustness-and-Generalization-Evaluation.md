@@ -1,21 +1,9 @@
 
 # 4.3.4 Robustness and Generalization Evaluation
 
-Robustness and Generalization Evaluation은 ECG foundation model이 실제 환경에서 얼마나 안정적으로 작동하는지 평가하는 항목입니다.  
-앞선 항목들이 "무엇을 예측하는가"에 초점을 둔다면, 이 항목은 "어떤 환경에서도 잘 예측할 수 있는가"를 확인하는 평가 설정에 가깝습니다.
+Robustness and Generalization Evaluation은 ECG foundation model이 실제 환경에서 얼마나 안정적으로 작동하는지 평가하는 TASK입니다.  
+앞선 항목들이 "무엇을 예측하는가"에 초점을 둔다면, 이 항목은 "어떤 환경에서도 잘 예측할 수 있는가"를 확인하는 평가 설정에 가깝습니다.실제 임상 환경에서는 항상 깨끗한 12-lead ECG만 사용되는 것은 아닙니다. 일부 lead가 누락될 수 있고, 움직임이나 전극 접촉 문제로 noise가 포함될 수 있으며, wearable device나 mobile ECG처럼 1-lead 또는 fewer-lead ECG만 제공되는 경우도 있습니다. 따라서 최근 ECG foundation model 연구에서는 모델이 다양한 lead 구성, noisy signal, 외부 dataset, 새로운 질환, 적은 label 환경에서도 잘 일반화되는지를 중요한 평가 기준으로 사용합니다.
 
-실제 임상 환경에서는 항상 깨끗한 12-lead ECG만 사용되는 것은 아닙니다.  
-일부 lead가 누락될 수 있고, 움직임이나 전극 접촉 문제로 noise가 포함될 수 있으며, wearable device나 mobile ECG처럼 1-lead 또는 fewer-lead ECG만 제공되는 경우도 있습니다.  
-따라서 최근 ECG foundation model 연구에서는 모델이 다양한 lead 구성, noisy signal, 외부 dataset, 새로운 질환, 적은 label 환경에서도 잘 일반화되는지를 중요한 평가 기준으로 사용합니다.
-
-| 세부 항목 | 설명 | 대표 예시 |
-|---|---|---|
-| **Single-lead / Fewer-lead ECG Evaluation** | 12-lead ECG가 아닌 1-lead, 2-lead, 3-lead, 6-lead ECG 조건에서 모델 성능을 평가하는 방식입니다. | single-lead ECG, 2-lead ECG, 6-lead ECG |
-| **Lead-missing ECG Evaluation** | 표준 12-lead ECG 중 일부 lead가 누락된 상황에서도 모델이 진단 성능을 유지하는지 평가하는 방식입니다. | missing lead, masked lead |
-| **Noisy / Low-quality ECG Evaluation** | noise나 artifact가 포함된 ECG 신호에서도 모델이 안정적으로 작동하는지 평가하는 방식입니다. | noisy ECG, corrupted ECG |
-| **Cross-dataset / External Validation** | 학습 또는 개발에 사용한 dataset이 아닌 외부 dataset에서 모델의 일반화 성능을 평가하는 방식입니다. | PTB-XL, CPSC2018, CSN, CODE-test, MIT-BIH |
-| **Zero-shot / Few-shot Diagnosis** | 추가 학습 없이 새로운 dataset이나 질환을 진단하거나, 매우 적은 label만으로 target dataset에 적응하는지 평가하는 방식입니다. | zero-shot diagnosis, few-shot fine-tuning |
-| **Low-resource Evaluation** | 전체 training data가 아니라 1%, 10% 등 제한된 label만 사용해 downstream task 성능을 평가하는 방식입니다. | 1% training data, 10% training data |
 
 #### 1) Single-lead / Fewer-lead ECG Evaluation
 

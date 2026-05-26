@@ -1,8 +1,4 @@
- 4.1.4. Normalization & Imputation
-
-## Normalization
-
-### 목적
+# 4.1.4. Normalization & Imputation
 
 ECG 신호의 진폭 범위는 기록 장비, 전극 위치, 환자의 신체 임피던스에 따라 크게 달라집니다. Normalization은 이러한 스케일 차이를 제거하여 신경망의 학습 안정성을 향상시킵니다.
 

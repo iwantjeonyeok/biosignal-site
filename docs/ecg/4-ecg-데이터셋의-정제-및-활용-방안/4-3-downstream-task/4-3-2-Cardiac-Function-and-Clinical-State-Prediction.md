@@ -1,5 +1,4 @@
-### 4.3.2 Cardiac Function and Clinical State Prediction
-
+# 4.3.2 Cardiac Function and Clinical State Prediction
 Cardiac Function and Clinical State Prediction은 ECG 신호를 이용해 단순한 ECG 판독 label을 넘어, 환자의 심장 기능이나 임상 상태를 예측하는 downstream task입니다.  
 이 항목은 ECG가 부정맥이나 전도장애를 분류하는 도구에 그치지 않고, 심장 기능 저하, 임상 질환, 급성 심혈관 사건, 바이오마커, 향후 예후 예측에도 활용될 수 있음을 보여줍니다.
 
